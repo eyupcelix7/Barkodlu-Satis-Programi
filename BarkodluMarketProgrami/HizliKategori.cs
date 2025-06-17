@@ -12,12 +12,9 @@ namespace BarkodluMarketProgrami
     using System;
     using System.Collections.Generic;
     
-    public partial class HizliUrun
+    public partial class HizliKategori
     {
         public int Id { get; set; }
-        public string Barkod { get; set; }
-        public string UrunAd { get; set; }
-        public Nullable<double> Fiyat { get; set; }
-        public int HizliKategoriID { get; set; }
+        public string KategoriAd { get; set; }
     }
 }

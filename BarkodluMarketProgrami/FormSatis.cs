@@ -14,7 +14,8 @@ namespace BarkodluMarketProgrami
     {
         private void FormSatis_Load(object sender, EventArgs e)
         {
-            hizliUrunDoldur();
+            hizliUrunDoldur(1);
+            hizliKategorileriDoldur();
         }
         BarkodEntities db = new BarkodEntities();
         public FormSatis()
@@ -138,10 +139,41 @@ namespace BarkodluMarketProgrami
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
             }
         }
-        private void hizliUrunDoldur()
+        private void hizliUrunDoldur(int hizliKategoriID)
         {
-
+            var hizliUrun = db.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).ToList(); // Veritabanındaki HizliUrun tablosunu listeledik
+            int count = 0;
+            foreach (var hUrun in hizliUrun) // Foreach döngüsü oluşturarak tüm Hızlı Ürün tuşlarının değerlerini otomatik değiştiriyoruz
+            {
+                count++;
+                Button hUrunButton = this.Controls.Find("btnHizli" + count, true).FirstOrDefault() as Button;
+                if (hUrunButton != null)
+                {
+                    hUrunButton.Text = hUrun.UrunAd + "\n" + hUrun.Fiyat.ToString();
+                }
+            }
         }
-
+        private void hizliKategorileriDoldur()
+        {
+            var hizliKategori = db.HizliKategori.ToList(); // HizliKategori tablosunu listeliyoruz
+            foreach(var hKategori in hizliKategori)
+            {
+                Button hKategoriButton = this.Controls.Find("btnHizliKategori" + hKategori.Id, true).FirstOrDefault() as Button;
+                if(hKategoriButton != null)
+                {
+                    hKategoriButton.Text = hKategori.KategoriAd.ToString();
+                }
+            }
+        }
+        private void btnHizliKategori_Click(object sender, EventArgs e)
+        {
+            Button hKategoriButton = sender as Button;
+            if (hKategoriButton != null)
+            {
+                string hKategoriButtonID = hKategoriButton.Name.Substring(hKategoriButton.Name.Length - 1, 1);
+                int id = Convert.ToInt32(hKategoriButtonID);
+                hizliUrunDoldur(Convert.ToInt32(hKategoriButtonID));
+            }
+        }
     }
 }

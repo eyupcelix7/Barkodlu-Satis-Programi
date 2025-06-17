@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BarkodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HizliKategori">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriAd" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="HizliUrun">
           <Key>
             <PropertyRef Name="Id" />
@@ -13,6 +20,7 @@
           <Property Name="Barkod" Type="nvarchar" MaxLength="50" />
           <Property Name="UrunAd" Type="nvarchar" MaxLength="50" />
           <Property Name="Fiyat" Type="float" />
+          <Property Name="HizliKategoriID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Terazi">
           <Key>
@@ -40,6 +48,7 @@
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="BarkodModelStoreContainer">
+          <EntitySet Name="HizliKategori" EntityType="Self.HizliKategori" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
@@ -70,6 +79,7 @@
           <EntitySet Name="Urun" EntityType="Self.Urun" />
           <EntitySet Name="Terazi" EntityType="BarkodModel.Terazi" />
           <EntitySet Name="HizliUrun" EntityType="BarkodModel.HizliUrun" />
+          <EntitySet Name="HizliKategori" EntityType="BarkodModel.HizliKategori" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -86,6 +96,14 @@
           <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Fiyat" Type="Double" />
+          <Property Name="HizliKategoriID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HizliKategori">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -123,9 +141,18 @@
           <EntitySetMapping Name="HizliUrun">
             <EntityTypeMapping TypeName="BarkodModel.HizliUrun">
               <MappingFragment StoreEntitySet="HizliUrun">
+                <ScalarProperty Name="HizliKategoriID" ColumnName="HizliKategoriID" />
                 <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
                 <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
                 <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HizliKategori">
+            <EntityTypeMapping TypeName="BarkodModel.HizliKategori">
+              <MappingFragment StoreEntitySet="HizliKategori">
+                <ScalarProperty Name="KategoriAd" ColumnName="KategoriAd" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
