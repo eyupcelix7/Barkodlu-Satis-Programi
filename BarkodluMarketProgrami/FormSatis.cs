@@ -12,6 +12,10 @@ namespace BarkodluMarketProgrami
 {
     public partial class FormSatis : Form
     {
+        private void FormSatis_Load(object sender, EventArgs e)
+        {
+            hizliUrunDoldur();
+        }
         BarkodEntities db = new BarkodEntities();
         public FormSatis()
         {
@@ -112,7 +116,6 @@ namespace BarkodluMarketProgrami
             }
             return genelToplam;
         }
-
         private void gridSatisListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // DataGridView'den ürün silme işlemi
@@ -134,6 +137,10 @@ namespace BarkodluMarketProgrami
                 txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
             }
+        }
+        private void hizliUrunDoldur()
+        {
+
         }
 
     }
