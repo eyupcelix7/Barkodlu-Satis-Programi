@@ -12,7 +12,6 @@ namespace BarkodluMarketProgrami
 {
     public partial class FormSatis : Form
     {
-        //saaa
         BarkodEntities db = new BarkodEntities();
         public FormSatis()
         {
