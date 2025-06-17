@@ -35,8 +35,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtToplam = new System.Windows.Forms.TextBox();
-            this.lblToplam = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtParaUstu = new System.Windows.Forms.TextBox();
             this.txtOdenen = new System.Windows.Forms.TextBox();
@@ -49,12 +47,24 @@
             this.lblBarkod = new System.Windows.Forms.Label();
             this.lblMiktar = new System.Windows.Forms.Label();
             this.gridSatisListesi = new System.Windows.Forms.DataGridView();
+            this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button28 = new System.Windows.Forms.Button();
             this.btnVeresiye = new System.Windows.Forms.Button();
             this.btnKart = new System.Windows.Forms.Button();
             this.btnNakit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtToplam = new System.Windows.Forms.TextBox();
+            this.lblToplam = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnHizli25 = new System.Windows.Forms.Button();
@@ -114,16 +124,6 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -200,35 +200,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(679, 179);
             this.panel1.TabIndex = 0;
-            // 
-            // txtToplam
-            // 
-            this.txtToplam.BackColor = System.Drawing.Color.OrangeRed;
-            this.txtToplam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtToplam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtToplam.ForeColor = System.Drawing.Color.White;
-            this.txtToplam.Location = new System.Drawing.Point(3, 36);
-            this.txtToplam.Name = "txtToplam";
-            this.txtToplam.ReadOnly = true;
-            this.txtToplam.Size = new System.Drawing.Size(125, 31);
-            this.txtToplam.TabIndex = 14;
-            this.txtToplam.Text = "0,00 ₺";
-            this.txtToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblToplam
-            // 
-            this.lblToplam.AutoSize = true;
-            this.lblToplam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblToplam.ForeColor = System.Drawing.Color.White;
-            this.lblToplam.Location = new System.Drawing.Point(0, 0);
-            this.lblToplam.Margin = new System.Windows.Forms.Padding(0);
-            this.lblToplam.Name = "lblToplam";
-            this.lblToplam.Size = new System.Drawing.Size(131, 33);
-            this.lblToplam.TabIndex = 13;
-            this.lblToplam.Text = "Toplam";
-            this.lblToplam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkBox1
             // 
@@ -393,6 +364,7 @@
             this.gridSatisListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridSatisListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSatisListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -425,6 +397,89 @@
             this.gridSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSatisListesi.Size = new System.Drawing.Size(679, 391);
             this.gridSatisListesi.TabIndex = 1;
+            this.gridSatisListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSatisListesi_CellContentClick);
+            // 
+            // urunBarkod
+            // 
+            this.urunBarkod.HeaderText = "Barkod";
+            this.urunBarkod.MinimumWidth = 6;
+            this.urunBarkod.Name = "urunBarkod";
+            this.urunBarkod.ReadOnly = true;
+            // 
+            // urunAdi
+            // 
+            this.urunAdi.HeaderText = "Ürün Adı";
+            this.urunAdi.MinimumWidth = 6;
+            this.urunAdi.Name = "urunAdi";
+            this.urunAdi.ReadOnly = true;
+            // 
+            // urunBirim
+            // 
+            this.urunBirim.HeaderText = "Birim";
+            this.urunBirim.MinimumWidth = 6;
+            this.urunBirim.Name = "urunBirim";
+            this.urunBirim.ReadOnly = true;
+            // 
+            // urunMiktar
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle6;
+            this.urunMiktar.HeaderText = "Miktar";
+            this.urunMiktar.MinimumWidth = 6;
+            this.urunMiktar.Name = "urunMiktar";
+            this.urunMiktar.ReadOnly = true;
+            // 
+            // urunFiyat
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C2";
+            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle7;
+            this.urunFiyat.HeaderText = "Fiyat";
+            this.urunFiyat.MinimumWidth = 6;
+            this.urunFiyat.Name = "urunFiyat";
+            this.urunFiyat.ReadOnly = true;
+            // 
+            // urunToplam
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "C2";
+            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle8;
+            this.urunToplam.HeaderText = "Toplam";
+            this.urunToplam.MinimumWidth = 6;
+            this.urunToplam.Name = "urunToplam";
+            this.urunToplam.ReadOnly = true;
+            // 
+            // urunKdv
+            // 
+            this.urunKdv.HeaderText = "Kdv Tutarı";
+            this.urunKdv.MinimumWidth = 6;
+            this.urunKdv.Name = "urunKdv";
+            this.urunKdv.ReadOnly = true;
+            this.urunKdv.Visible = false;
+            // 
+            // urunGrup
+            // 
+            this.urunGrup.HeaderText = "Grup";
+            this.urunGrup.MinimumWidth = 6;
+            this.urunGrup.Name = "urunGrup";
+            this.urunGrup.ReadOnly = true;
+            this.urunGrup.Visible = false;
+            // 
+            // urunAlisFiyat
+            // 
+            this.urunAlisFiyat.HeaderText = "Alış Fiyatı";
+            this.urunAlisFiyat.MinimumWidth = 6;
+            this.urunAlisFiyat.Name = "urunAlisFiyat";
+            this.urunAlisFiyat.ReadOnly = true;
+            this.urunAlisFiyat.Visible = false;
+            // 
+            // urunSil
+            // 
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -535,6 +590,35 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(131, 165);
             this.tableLayoutPanel3.TabIndex = 5;
+            // 
+            // txtToplam
+            // 
+            this.txtToplam.BackColor = System.Drawing.Color.OrangeRed;
+            this.txtToplam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtToplam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtToplam.ForeColor = System.Drawing.Color.White;
+            this.txtToplam.Location = new System.Drawing.Point(3, 36);
+            this.txtToplam.Name = "txtToplam";
+            this.txtToplam.ReadOnly = true;
+            this.txtToplam.Size = new System.Drawing.Size(125, 31);
+            this.txtToplam.TabIndex = 14;
+            this.txtToplam.Text = "0,00 ₺";
+            this.txtToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblToplam
+            // 
+            this.lblToplam.AutoSize = true;
+            this.lblToplam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplam.ForeColor = System.Drawing.Color.White;
+            this.lblToplam.Location = new System.Drawing.Point(0, 0);
+            this.lblToplam.Margin = new System.Windows.Forms.Padding(0);
+            this.lblToplam.Name = "lblToplam";
+            this.lblToplam.Size = new System.Drawing.Size(131, 33);
+            this.lblToplam.TabIndex = 13;
+            this.lblToplam.Text = "Toplam";
+            this.lblToplam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer2
             // 
@@ -1526,88 +1610,6 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // urunBarkod
-            // 
-            this.urunBarkod.HeaderText = "Barkod";
-            this.urunBarkod.MinimumWidth = 6;
-            this.urunBarkod.Name = "urunBarkod";
-            this.urunBarkod.ReadOnly = true;
-            // 
-            // urunAdi
-            // 
-            this.urunAdi.HeaderText = "Ürün Adı";
-            this.urunAdi.MinimumWidth = 6;
-            this.urunAdi.Name = "urunAdi";
-            this.urunAdi.ReadOnly = true;
-            // 
-            // urunBirim
-            // 
-            this.urunBirim.HeaderText = "Birim";
-            this.urunBirim.MinimumWidth = 6;
-            this.urunBirim.Name = "urunBirim";
-            this.urunBirim.ReadOnly = true;
-            // 
-            // urunMiktar
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle6;
-            this.urunMiktar.HeaderText = "Miktar";
-            this.urunMiktar.MinimumWidth = 6;
-            this.urunMiktar.Name = "urunMiktar";
-            this.urunMiktar.ReadOnly = true;
-            // 
-            // urunFiyat
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "C2";
-            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle7;
-            this.urunFiyat.HeaderText = "Fiyat";
-            this.urunFiyat.MinimumWidth = 6;
-            this.urunFiyat.Name = "urunFiyat";
-            this.urunFiyat.ReadOnly = true;
-            // 
-            // urunToplam
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "C2";
-            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle8;
-            this.urunToplam.HeaderText = "Toplam";
-            this.urunToplam.MinimumWidth = 6;
-            this.urunToplam.Name = "urunToplam";
-            this.urunToplam.ReadOnly = true;
-            // 
-            // urunKdv
-            // 
-            this.urunKdv.HeaderText = "Kdv Tutarı";
-            this.urunKdv.MinimumWidth = 6;
-            this.urunKdv.Name = "urunKdv";
-            this.urunKdv.ReadOnly = true;
-            this.urunKdv.Visible = false;
-            // 
-            // urunGrup
-            // 
-            this.urunGrup.HeaderText = "Grup";
-            this.urunGrup.MinimumWidth = 6;
-            this.urunGrup.Name = "urunGrup";
-            this.urunGrup.ReadOnly = true;
-            this.urunGrup.Visible = false;
-            // 
-            // urunAlisFiyat
-            // 
-            this.urunAlisFiyat.HeaderText = "Alış Fiyatı";
-            this.urunAlisFiyat.MinimumWidth = 6;
-            this.urunAlisFiyat.Name = "urunAlisFiyat";
-            this.urunAlisFiyat.ReadOnly = true;
-            this.urunAlisFiyat.Visible = false;
-            // 
-            // urunSil
-            // 
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
             // 
             // FormSatis
             // 

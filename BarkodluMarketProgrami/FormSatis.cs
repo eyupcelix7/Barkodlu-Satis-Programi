@@ -27,33 +27,31 @@ namespace BarkodluMarketProgrami
                     if(db.Urun.Any(a=> a.Barkod == barkod))
                     {
                         var urun = db.Urun.Where(a=> a.Barkod == barkod).FirstOrDefault();
-                        int satirSayisi = gridSatisListesi.Rows.Count;
                         double miktar = Convert.ToDouble(nudMiktar.Value);
-                        bool eklendiMi = false;
-                        if (satirSayisi > 0)
+                        urunGetirListeye(urun, miktar, barkod);
+                    }
+                    else
+                    {
+                        int onEk = Convert.ToInt32(barkod.Substring(0,2));
+                        if(db.Terazi.Any(a=> a.TeraziOnEk == onEk))
                         {
-                            for (int i = 0; i < satirSayisi; i++)
+                            string teraziUrunNo = barkod.Substring(2, 5);
+                            if(db.Urun.Any(a=> a.Barkod == teraziUrunNo))
                             {
-                                if (gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString() == barkod)
-                                {
-                                    gridSatisListesi.Rows[i].Cells["urunMiktar"].Value = miktar + Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
-                                    gridSatisListesi.Rows[i].Cells["urunToplam"].Value = Math.Round(Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value),2);
-                                    eklendiMi = true;
-                                }
+                                var urunTerazi = db.Urun.Where(a => a.Barkod == teraziUrunNo).FirstOrDefault();
+                                double miktarKg = Convert.ToDouble(barkod.Substring(7, 5)) / 1000;
+                                urunGetirListeye(urunTerazi, miktarKg, barkod);
+                            }
+                            else
+                            {
+                                Console.Beep(900,1000);
+                                MessageBox.Show("Kg Ürün Ekleme Sayfası");
                             }
                         }
-                        if (!eklendiMi)
+                        else
                         {
-                            gridSatisListesi.Rows.Add();
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunBarkod"].Value = barkod;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunAdi"].Value = urun.UrunAd;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunGrup"].Value = urun.UrunGrup;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunBirim"].Value = urun.Birim;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = urun.SatisFiyat;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = miktar;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunKdv"].Value = urun.KdvTutari;
-                            gridSatisListesi.Rows[satirSayisi].Cells["urunAlisFiyat"].Value = urun.AlisFiyat;
+                            Console.Beep(900, 1000);
+                            MessageBox.Show("Normal Ürün Ekleme Sayfası");
                         }
                     }
                 }
@@ -67,14 +65,35 @@ namespace BarkodluMarketProgrami
                 txtBarkod.Focus();
             }
         }
-        private double genelToplam()
+        private void urunGetirListeye(Urun urun, double miktar, string barkod) 
         {
-            double genelToplam = 0.00;
-            for (int i = 0; i < gridSatisListesi.Rows.Count; i++) 
+            int satirSayisi = gridSatisListesi.Rows.Count;
+            bool eklendiMi = false;
+            if (satirSayisi > 0)
             {
-                genelToplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunToplam"].Value);
+                for (int i = 0; i < satirSayisi; i++)
+                {
+                    if (gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString() == barkod)
+                    {
+                        gridSatisListesi.Rows[i].Cells["urunMiktar"].Value = miktar + Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
+                        gridSatisListesi.Rows[i].Cells["urunToplam"].Value = Math.Round(Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value), 2);
+                        eklendiMi = true;
+                    }
+                }
             }
-            return genelToplam;
+            if (!eklendiMi)
+            {
+                gridSatisListesi.Rows.Add();
+                gridSatisListesi.Rows[satirSayisi].Cells["urunBarkod"].Value = barkod;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunAdi"].Value = urun.UrunAd;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunGrup"].Value = urun.UrunGrup;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunBirim"].Value = urun.Birim;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = urun.SatisFiyat;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = miktar;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
+                gridSatisListesi.Rows[satirSayisi].Cells["urunKdv"].Value = urun.KdvTutari;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunAlisFiyat"].Value = urun.AlisFiyat;
+            }
         }
         private void FormSatis_KeyDown(object sender, KeyEventArgs e)
         {
@@ -84,5 +103,38 @@ namespace BarkodluMarketProgrami
                 nudMiktar.Value = nudMiktar.Value++;
             }
         }
+        private double genelToplam()
+        {
+            double genelToplam = 0.00;
+            for (int i = 0; i < gridSatisListesi.Rows.Count; i++)
+            {
+                genelToplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunToplam"].Value);
+            }
+            return genelToplam;
+        }
+
+        private void gridSatisListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // DataGridView'den ürün silme işlemi
+            if (e.ColumnIndex == 9) // DataGridView'den seçilenin sil tuşu olduğundan emin oluyoruz
+            {
+                if(Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value) == 1) // Eğer ki ürün miktarı 1 ise zaten eksiltilemeyeceğine göre direkt olarak kaldırıyoruz
+                {
+                    gridSatisListesi.Rows.Remove(gridSatisListesi.CurrentRow); // DataGridView'den kaldırma işlemi
+                }
+                else // Ürün miktarı 1 değil ise direkt olarak DataGridView'den silmek yerine ürün miktarını birer birer azaltıyoruz
+                {
+                    gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value = Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value) - 1; // Ürün miktarınız 1 azaltıyoruz
+                    // Ürün miktarını azalttığımız zaman ürün toplamındaki fiyatın değişikliği için her 1 eksilmede ürünün genel toplamı ile fiyatı çıkarıyoruz
+                    gridSatisListesi.CurrentRow.Cells["urunToplam"].Value = Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunToplam"].Value) - Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunFiyat"].Value);
+                    // DataGridView'den seçimi temizliyoruz
+                    gridSatisListesi.ClearSelection();
+                }
+                txtToplam.Text = genelToplam().ToString("C2"); // Ürün silme işleminden sonra genel toplam bölümüne yazdırıyoruz C2 ile para birimi ekliyoruz(Bilgisayarın konumuna ve diline göre para birimi değişebilmekte)
+                txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
+                txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
+            }
+        }
+
     }
 }
