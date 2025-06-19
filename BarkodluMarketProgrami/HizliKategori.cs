@@ -16,5 +16,6 @@ namespace BarkodluMarketProgrami
     {
         public int Id { get; set; }
         public string KategoriAd { get; set; }
+        public string Renk { get; set; }
     }
 }

@@ -29,5 +29,6 @@ namespace BarkodluMarketProgrami
         public virtual DbSet<Terazi> Terazi { get; set; }
         public virtual DbSet<HizliUrun> HizliUrun { get; set; }
         public virtual DbSet<HizliKategori> HizliKategori { get; set; }
+        public virtual DbSet<HizliFiyat> HizliFiyat { get; set; }
     }
 }

@@ -79,6 +79,9 @@
     <Compile Include="FormSatis.Designer.cs">
       <DependentUpon>FormSatis.cs</DependentUpon>
     </Compile>
+    <Compile Include="HizliFiyat.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="HizliKategori.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
