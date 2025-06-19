@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,15 +13,16 @@ namespace BarkodluMarketProgrami
 {
     public partial class FormSatis : Form
     {
-        private void FormSatis_Load(object sender, EventArgs e)
-        {
-            hizliUrunDoldur(1);
-            hizliKategorileriDoldur();
-        }
         BarkodEntities db = new BarkodEntities();
         public FormSatis()
         {
             InitializeComponent();
+        }
+        private void FormSatis_Load(object sender, EventArgs e)
+        {
+            hizliUrunDoldur(1, db.HizliKategori.Where(a => a.Id == 1).Select(a => a.Renk).FirstOrDefault());
+            hizliKategorilerDoldur();
+            hizliFiyatDoldur();
         }
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
@@ -139,7 +141,7 @@ namespace BarkodluMarketProgrami
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
             }
         }
-        private void hizliUrunDoldur(int hizliKategoriID)
+        private void hizliUrunDoldur(int hizliKategoriID, String renk)
         {
             var hizliUrun = db.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).ToList(); // Veritabanındaki HizliUrun tablosunu listeledik
             int count = 0;
@@ -149,11 +151,13 @@ namespace BarkodluMarketProgrami
                 Button hUrunButton = this.Controls.Find("btnHizli" + count, true).FirstOrDefault() as Button;
                 if (hUrunButton != null)
                 {
-                    hUrunButton.Text = hUrun.UrunAd + "\n" + hUrun.Fiyat.ToString();
+                    hUrunButton.Text = hUrun.UrunAd + "\n" + Convert.ToDecimal(hUrun.Fiyat).ToString("C2");
+                    hUrunButton.BackColor = Color.FromName(renk); // Renkleri veritabanından alıp butonların arka plan rengini değiştiriyoruz
+                    hUrunButton.FlatAppearance.BorderColor = Color.FromName(renk); // Çerçeve rengini de aynı renk yapıyoruz
                 }
             }
         }
-        private void hizliKategorileriDoldur()
+        private void hizliKategorilerDoldur()
         {
             var hizliKategori = db.HizliKategori.ToList(); // HizliKategori tablosunu listeliyoruz
             foreach(var hKategori in hizliKategori)
@@ -172,7 +176,20 @@ namespace BarkodluMarketProgrami
             {
                 string hKategoriButtonID = hKategoriButton.Name.Substring(hKategoriButton.Name.Length - 1, 1);
                 int id = Convert.ToInt32(hKategoriButtonID);
-                hizliUrunDoldur(Convert.ToInt32(hKategoriButtonID));
+                String renk = db.HizliKategori.Where(a => a.Id == id).Select(a => a.Renk).FirstOrDefault(); // Seçilen kategoriye göre rengini alıyoruz
+                hizliUrunDoldur(Convert.ToInt32(hKategoriButtonID), renk);
+            }
+        }
+        private void hizliFiyatDoldur()
+        {
+            var hizliFiyat = db.HizliFiyat.ToList(); // HizliFiyat tablosunu listeliyoruz
+            foreach (var hFiyat in hizliFiyat)
+            {
+                Button hFiyatButton = this.Controls.Find("btnHFiyat" + hFiyat.Id, true).FirstOrDefault() as Button;
+                if (hFiyatButton != null)
+                {
+                    hFiyatButton.Text = Convert.ToDecimal(hFiyat.Fiyat).ToString("C2");
+                }
             }
         }
     }

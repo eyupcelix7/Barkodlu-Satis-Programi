@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -99,11 +100,11 @@
             this.btnHizli1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHFiyat5 = new System.Windows.Forms.Button();
+            this.btnHFiyat4 = new System.Windows.Forms.Button();
+            this.btnHFiyat3 = new System.Windows.Forms.Button();
+            this.btnHFiyat2 = new System.Windows.Forms.Button();
+            this.btnHFiyat1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button17 = new System.Windows.Forms.Button();
@@ -401,15 +402,28 @@
             this.urunGrup,
             this.urunAlisFiyat,
             this.urunSil});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSatisListesi.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridSatisListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSatisListesi.EnableHeadersVisualStyles = false;
+            this.gridSatisListesi.GridColor = System.Drawing.Color.White;
             this.gridSatisListesi.Location = new System.Drawing.Point(2, 152);
             this.gridSatisListesi.Margin = new System.Windows.Forms.Padding(2);
             this.gridSatisListesi.Name = "gridSatisListesi";
             this.gridSatisListesi.ReadOnly = true;
             this.gridSatisListesi.RowHeadersVisible = false;
             this.gridSatisListesi.RowHeadersWidth = 51;
-            this.gridSatisListesi.RowTemplate.Height = 24;
+            this.gridSatisListesi.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gridSatisListesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridSatisListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.gridSatisListesi.RowTemplate.Height = 32;
             this.gridSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSatisListesi.Size = new System.Drawing.Size(787, 518);
             this.gridSatisListesi.TabIndex = 1;
@@ -621,7 +635,7 @@
             this.txtToplam.ReadOnly = true;
             this.txtToplam.Size = new System.Drawing.Size(151, 25);
             this.txtToplam.TabIndex = 14;
-            this.txtToplam.Text = "0,00 ₺";
+            this.txtToplam.Text = "₺0,00";
             this.txtToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblToplam
@@ -655,7 +669,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel5);
             this.splitContainer2.Size = new System.Drawing.Size(1066, 896);
-            this.splitContainer2.SplitterDistance = 515;
+            this.splitContainer2.SplitterDistance = 517;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -708,7 +722,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 515);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 517);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnHizliKategori5
@@ -798,89 +812,89 @@
             // 
             // btnHizli25
             // 
-            this.btnHizli25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli25.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli25.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli25.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli25.ForeColor = System.Drawing.Color.White;
             this.btnHizli25.Location = new System.Drawing.Point(853, 423);
             this.btnHizli25.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli25.Name = "btnHizli25";
-            this.btnHizli25.Size = new System.Drawing.Size(212, 91);
+            this.btnHizli25.Size = new System.Drawing.Size(212, 93);
             this.btnHizli25.TabIndex = 24;
             this.btnHizli25.Text = "btnHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
             // 
             // btnHizli24
             // 
-            this.btnHizli24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli24.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli24.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli24.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli24.ForeColor = System.Drawing.Color.White;
             this.btnHizli24.Location = new System.Drawing.Point(640, 423);
             this.btnHizli24.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli24.Name = "btnHizli24";
-            this.btnHizli24.Size = new System.Drawing.Size(211, 91);
+            this.btnHizli24.Size = new System.Drawing.Size(211, 93);
             this.btnHizli24.TabIndex = 23;
             this.btnHizli24.Text = "btnHizli";
             this.btnHizli24.UseVisualStyleBackColor = false;
             // 
             // btnHizli23
             // 
-            this.btnHizli23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli23.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli23.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli23.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli23.ForeColor = System.Drawing.Color.White;
             this.btnHizli23.Location = new System.Drawing.Point(427, 423);
             this.btnHizli23.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli23.Name = "btnHizli23";
-            this.btnHizli23.Size = new System.Drawing.Size(211, 91);
+            this.btnHizli23.Size = new System.Drawing.Size(211, 93);
             this.btnHizli23.TabIndex = 22;
             this.btnHizli23.Text = "btnHizli";
             this.btnHizli23.UseVisualStyleBackColor = false;
             // 
             // btnHizli22
             // 
-            this.btnHizli22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli22.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli22.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli22.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli22.ForeColor = System.Drawing.Color.White;
             this.btnHizli22.Location = new System.Drawing.Point(214, 423);
             this.btnHizli22.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli22.Name = "btnHizli22";
-            this.btnHizli22.Size = new System.Drawing.Size(211, 91);
+            this.btnHizli22.Size = new System.Drawing.Size(211, 93);
             this.btnHizli22.TabIndex = 21;
             this.btnHizli22.Text = "btnHizli";
             this.btnHizli22.UseVisualStyleBackColor = false;
             // 
             // btnHizli21
             // 
-            this.btnHizli21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli21.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli21.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli21.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli21.ForeColor = System.Drawing.Color.White;
             this.btnHizli21.Location = new System.Drawing.Point(1, 423);
             this.btnHizli21.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli21.Name = "btnHizli21";
-            this.btnHizli21.Size = new System.Drawing.Size(211, 91);
+            this.btnHizli21.Size = new System.Drawing.Size(211, 93);
             this.btnHizli21.TabIndex = 20;
             this.btnHizli21.Text = "btnHizli";
             this.btnHizli21.UseVisualStyleBackColor = false;
             // 
             // btnHizli20
             // 
-            this.btnHizli20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli20.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli20.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli20.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli20.ForeColor = System.Drawing.Color.White;
@@ -894,9 +908,9 @@
             // 
             // btnHizli19
             // 
-            this.btnHizli19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli19.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli19.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli19.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli19.ForeColor = System.Drawing.Color.White;
@@ -910,9 +924,9 @@
             // 
             // btnHizli18
             // 
-            this.btnHizli18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli18.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli18.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli18.ForeColor = System.Drawing.Color.White;
@@ -926,9 +940,9 @@
             // 
             // btnHizli17
             // 
-            this.btnHizli17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli17.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli17.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli17.ForeColor = System.Drawing.Color.White;
@@ -942,9 +956,9 @@
             // 
             // btnHizli16
             // 
-            this.btnHizli16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli16.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli16.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli16.ForeColor = System.Drawing.Color.White;
@@ -958,9 +972,9 @@
             // 
             // btnHizli15
             // 
-            this.btnHizli15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli15.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli15.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli15.ForeColor = System.Drawing.Color.White;
@@ -974,9 +988,9 @@
             // 
             // btnHizli14
             // 
-            this.btnHizli14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli14.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli14.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli14.ForeColor = System.Drawing.Color.White;
@@ -990,9 +1004,9 @@
             // 
             // btnHizli13
             // 
-            this.btnHizli13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli13.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli13.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli13.ForeColor = System.Drawing.Color.White;
@@ -1006,9 +1020,9 @@
             // 
             // btnHizli12
             // 
-            this.btnHizli12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli12.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli12.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli12.ForeColor = System.Drawing.Color.White;
@@ -1022,9 +1036,9 @@
             // 
             // btnHizli11
             // 
-            this.btnHizli11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli11.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli11.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli11.ForeColor = System.Drawing.Color.White;
@@ -1038,9 +1052,9 @@
             // 
             // btnHizli10
             // 
-            this.btnHizli10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli10.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli10.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli10.ForeColor = System.Drawing.Color.White;
@@ -1054,9 +1068,9 @@
             // 
             // btnHizli9
             // 
-            this.btnHizli9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli9.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli9.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli9.ForeColor = System.Drawing.Color.White;
@@ -1070,9 +1084,9 @@
             // 
             // btnHizli8
             // 
-            this.btnHizli8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli8.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli8.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli8.ForeColor = System.Drawing.Color.White;
@@ -1086,9 +1100,9 @@
             // 
             // btnHizli7
             // 
-            this.btnHizli7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli7.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli7.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli7.ForeColor = System.Drawing.Color.White;
@@ -1102,9 +1116,9 @@
             // 
             // btnHizli6
             // 
-            this.btnHizli6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli6.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli6.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli6.ForeColor = System.Drawing.Color.White;
@@ -1118,9 +1132,9 @@
             // 
             // btnHizli5
             // 
-            this.btnHizli5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli5.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli5.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli5.ForeColor = System.Drawing.Color.White;
@@ -1134,9 +1148,9 @@
             // 
             // btnHizli4
             // 
-            this.btnHizli4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli4.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli4.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli4.ForeColor = System.Drawing.Color.White;
@@ -1150,9 +1164,9 @@
             // 
             // btnHizli3
             // 
-            this.btnHizli3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli3.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli3.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli3.ForeColor = System.Drawing.Color.White;
@@ -1166,9 +1180,9 @@
             // 
             // btnHizli2
             // 
-            this.btnHizli2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli2.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli2.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli2.ForeColor = System.Drawing.Color.White;
@@ -1182,9 +1196,9 @@
             // 
             // btnHizli1
             // 
-            this.btnHizli1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli1.BackColor = System.Drawing.Color.Tomato;
             this.btnHizli1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHizli1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnHizli1.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnHizli1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHizli1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHizli1.ForeColor = System.Drawing.Color.White;
@@ -1211,18 +1225,18 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 378);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 376);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.button5, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnHFiyat5, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.btnHFiyat4, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.btnHFiyat3, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.btnHFiyat2, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.btnHFiyat1, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
@@ -1233,88 +1247,88 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 374);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 372);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
-            // button5
+            // btnHFiyat5
             // 
-            this.button5.BackColor = System.Drawing.Color.Navy;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1, 297);
-            this.button5.Margin = new System.Windows.Forms.Padding(1);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(207, 76);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "btnHFiyat";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnHFiyat5.BackColor = System.Drawing.Color.Navy;
+            this.btnHFiyat5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHFiyat5.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHFiyat5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyat5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyat5.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyat5.Location = new System.Drawing.Point(1, 297);
+            this.btnHFiyat5.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyat5.Name = "btnHFiyat5";
+            this.btnHFiyat5.Size = new System.Drawing.Size(207, 74);
+            this.btnHFiyat5.TabIndex = 4;
+            this.btnHFiyat5.Text = "btnHFiyat";
+            this.btnHFiyat5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnHFiyat4
             // 
-            this.button4.BackColor = System.Drawing.Color.Navy;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1, 223);
-            this.button4.Margin = new System.Windows.Forms.Padding(1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 72);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "btnHFiyat";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnHFiyat4.BackColor = System.Drawing.Color.Navy;
+            this.btnHFiyat4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHFiyat4.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHFiyat4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyat4.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyat4.Location = new System.Drawing.Point(1, 223);
+            this.btnHFiyat4.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyat4.Name = "btnHFiyat4";
+            this.btnHFiyat4.Size = new System.Drawing.Size(207, 72);
+            this.btnHFiyat4.TabIndex = 3;
+            this.btnHFiyat4.Text = "btnHFiyat";
+            this.btnHFiyat4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnHFiyat3
             // 
-            this.button3.BackColor = System.Drawing.Color.Navy;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1, 149);
-            this.button3.Margin = new System.Windows.Forms.Padding(1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 72);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "btnHFiyat";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnHFiyat3.BackColor = System.Drawing.Color.Navy;
+            this.btnHFiyat3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHFiyat3.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHFiyat3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyat3.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyat3.Location = new System.Drawing.Point(1, 149);
+            this.btnHFiyat3.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyat3.Name = "btnHFiyat3";
+            this.btnHFiyat3.Size = new System.Drawing.Size(207, 72);
+            this.btnHFiyat3.TabIndex = 2;
+            this.btnHFiyat3.Text = "btnHFiyat";
+            this.btnHFiyat3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnHFiyat2
             // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1, 75);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 72);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "btnHFiyat";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHFiyat2.BackColor = System.Drawing.Color.Navy;
+            this.btnHFiyat2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHFiyat2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHFiyat2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyat2.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyat2.Location = new System.Drawing.Point(1, 75);
+            this.btnHFiyat2.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyat2.Name = "btnHFiyat2";
+            this.btnHFiyat2.Size = new System.Drawing.Size(207, 72);
+            this.btnHFiyat2.TabIndex = 1;
+            this.btnHFiyat2.Text = "btnHFiyat";
+            this.btnHFiyat2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnHFiyat1
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 72);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "btnHFiyat";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHFiyat1.BackColor = System.Drawing.Color.Navy;
+            this.btnHFiyat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHFiyat1.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHFiyat1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyat1.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyat1.Location = new System.Drawing.Point(1, 1);
+            this.btnHFiyat1.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyat1.Name = "btnHFiyat1";
+            this.btnHFiyat1.Size = new System.Drawing.Size(207, 72);
+            this.btnHFiyat1.TabIndex = 0;
+            this.btnHFiyat1.Text = "btnHFiyat";
+            this.btnHFiyat1.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel7
             // 
@@ -1329,7 +1343,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 378);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 376);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -1359,7 +1373,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 337);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 335);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // button17
@@ -1370,10 +1384,10 @@
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(285, 253);
+            this.button17.Location = new System.Drawing.Point(285, 250);
             this.button17.Margin = new System.Windows.Forms.Padding(1);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(140, 83);
+            this.button17.Size = new System.Drawing.Size(140, 84);
             this.button17.TabIndex = 12;
             this.button17.Text = ",";
             this.button17.UseVisualStyleBackColor = false;
@@ -1386,10 +1400,10 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(143, 253);
+            this.button16.Location = new System.Drawing.Point(143, 250);
             this.button16.Margin = new System.Windows.Forms.Padding(1);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(140, 83);
+            this.button16.Size = new System.Drawing.Size(140, 84);
             this.button16.TabIndex = 11;
             this.button16.Text = "0";
             this.button16.UseVisualStyleBackColor = false;
@@ -1402,10 +1416,10 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(1, 253);
+            this.button15.Location = new System.Drawing.Point(1, 250);
             this.button15.Margin = new System.Windows.Forms.Padding(1);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(140, 83);
+            this.button15.Size = new System.Drawing.Size(140, 84);
             this.button15.TabIndex = 10;
             this.button15.Text = "<";
             this.button15.UseVisualStyleBackColor = false;
@@ -1418,10 +1432,10 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(285, 169);
+            this.button14.Location = new System.Drawing.Point(285, 167);
             this.button14.Margin = new System.Windows.Forms.Padding(1);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(140, 82);
+            this.button14.Size = new System.Drawing.Size(140, 81);
             this.button14.TabIndex = 9;
             this.button14.Text = "9";
             this.button14.UseVisualStyleBackColor = false;
@@ -1434,10 +1448,10 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(143, 169);
+            this.button13.Location = new System.Drawing.Point(143, 167);
             this.button13.Margin = new System.Windows.Forms.Padding(1);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(140, 82);
+            this.button13.Size = new System.Drawing.Size(140, 81);
             this.button13.TabIndex = 8;
             this.button13.Text = "8";
             this.button13.UseVisualStyleBackColor = false;
@@ -1450,10 +1464,10 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(1, 169);
+            this.button12.Location = new System.Drawing.Point(1, 167);
             this.button12.Margin = new System.Windows.Forms.Padding(1);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(140, 82);
+            this.button12.Size = new System.Drawing.Size(140, 81);
             this.button12.TabIndex = 7;
             this.button12.Text = "7";
             this.button12.UseVisualStyleBackColor = false;
@@ -1466,10 +1480,10 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(285, 85);
+            this.button11.Location = new System.Drawing.Point(285, 84);
             this.button11.Margin = new System.Windows.Forms.Padding(1);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(140, 82);
+            this.button11.Size = new System.Drawing.Size(140, 81);
             this.button11.TabIndex = 6;
             this.button11.Text = "6";
             this.button11.UseVisualStyleBackColor = false;
@@ -1482,10 +1496,10 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(143, 85);
+            this.button10.Location = new System.Drawing.Point(143, 84);
             this.button10.Margin = new System.Windows.Forms.Padding(1);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(140, 82);
+            this.button10.Size = new System.Drawing.Size(140, 81);
             this.button10.TabIndex = 5;
             this.button10.Text = "5";
             this.button10.UseVisualStyleBackColor = false;
@@ -1498,10 +1512,10 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(1, 85);
+            this.button9.Location = new System.Drawing.Point(1, 84);
             this.button9.Margin = new System.Windows.Forms.Padding(1);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(140, 82);
+            this.button9.Size = new System.Drawing.Size(140, 81);
             this.button9.TabIndex = 4;
             this.button9.Text = "4";
             this.button9.UseVisualStyleBackColor = false;
@@ -1517,7 +1531,7 @@
             this.button8.Location = new System.Drawing.Point(285, 1);
             this.button8.Margin = new System.Windows.Forms.Padding(1);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(140, 82);
+            this.button8.Size = new System.Drawing.Size(140, 81);
             this.button8.TabIndex = 3;
             this.button8.Text = "3";
             this.button8.UseVisualStyleBackColor = false;
@@ -1533,7 +1547,7 @@
             this.button7.Location = new System.Drawing.Point(143, 1);
             this.button7.Margin = new System.Windows.Forms.Padding(1);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(140, 82);
+            this.button7.Size = new System.Drawing.Size(140, 81);
             this.button7.TabIndex = 2;
             this.button7.Text = "2";
             this.button7.UseVisualStyleBackColor = false;
@@ -1549,7 +1563,7 @@
             this.button6.Location = new System.Drawing.Point(1, 1);
             this.button6.Margin = new System.Windows.Forms.Padding(1);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 82);
+            this.button6.Size = new System.Drawing.Size(140, 81);
             this.button6.TabIndex = 1;
             this.button6.Text = "1";
             this.button6.UseVisualStyleBackColor = false;
@@ -1558,11 +1572,11 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox1.Location = new System.Drawing.Point(1, 1);
             this.textBox1.Margin = new System.Windows.Forms.Padding(1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(424, 32);
+            this.textBox1.Size = new System.Drawing.Size(424, 36);
             this.textBox1.TabIndex = 1;
             // 
             // tableLayoutPanel9
@@ -1587,7 +1601,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 374);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 372);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // button25
@@ -1601,7 +1615,7 @@
             this.button25.Location = new System.Drawing.Point(212, 280);
             this.button25.Margin = new System.Windows.Forms.Padding(1);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(210, 93);
+            this.button25.Size = new System.Drawing.Size(210, 91);
             this.button25.TabIndex = 8;
             this.button25.Text = "Temizle";
             this.button25.UseVisualStyleBackColor = false;
@@ -1617,7 +1631,7 @@
             this.button24.Location = new System.Drawing.Point(1, 280);
             this.button24.Margin = new System.Windows.Forms.Padding(1);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(209, 93);
+            this.button24.Size = new System.Drawing.Size(209, 91);
             this.button24.TabIndex = 7;
             this.button24.Text = "Miktar";
             this.button24.UseVisualStyleBackColor = false;
@@ -1699,7 +1713,7 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(210, 91);
             this.button19.TabIndex = 2;
-            this.button19.Text = "Tuş Düzenle";
+            this.button19.Text = "Tuş ve Menü Düzenle";
             this.button19.UseVisualStyleBackColor = false;
             // 
             // button18
@@ -1799,11 +1813,11 @@
         private System.Windows.Forms.Button btnHizli1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHFiyat5;
+        private System.Windows.Forms.Button btnHFiyat4;
+        private System.Windows.Forms.Button btnHFiyat3;
+        private System.Windows.Forms.Button btnHFiyat2;
+        private System.Windows.Forms.Button btnHFiyat1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button button17;
