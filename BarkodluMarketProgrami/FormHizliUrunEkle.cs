@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace BarkodluMarketProgrami
 {
@@ -25,7 +26,8 @@ namespace BarkodluMarketProgrami
 
         private void txtUrunAd_TextChanged(object sender, EventArgs e)
         {
-            if(txtUrunAd.Text.Length > 2)
+            checkBox1.Checked = false;
+            if (txtUrunAd.Text.Length > 2)
             {
                 var urunler = db.Urun.Where(a=> a.UrunAd.Contains(txtUrunAd.Text)).ToList();
                 int satirSayisi = gridUrunListesi.Rows.Count;
@@ -56,10 +58,7 @@ namespace BarkodluMarketProgrami
                             gridUrunListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = miktar.ToString();
                             gridUrunListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = fiyat.ToString("C2");
                         }
-
-
                     }
-
                 }
             }
         }
@@ -70,39 +69,52 @@ namespace BarkodluMarketProgrami
                 string urunBarkod = gridUrunListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
                 string urunAd = gridUrunListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
                 double urunFiyat = Convert.ToDouble(gridUrunListesi.Rows[e.RowIndex].Cells["urunFiyat"].Value.ToString().Replace("₺", "").Trim());
-                int btnId = 0;
-                if (gelenButtonKategoriID == 1)
-                {
-                    btnId = gelenButtonID;
-                }
-                if (gelenButtonKategoriID == 2)
-                {
-                    btnId = gelenButtonID + 25;
-                }
-                if (gelenButtonKategoriID == 3)
-                {
-                    btnId = gelenButtonID + 50;
-                }
-                if (gelenButtonKategoriID == 4)
-                {
-                    btnId = gelenButtonID + 75;
-                }
-                if (gelenButtonKategoriID == 5)
-                {
-                    btnId = gelenButtonID + 100;
-                }
+                FormSatis formSatis = (FormSatis)Application.OpenForms["FormSatis"];
+                int btnId = formSatis.hizliUrunID(gelenButtonKategoriID, gelenButtonID);
                 var urunBul = db.HizliUrun.SingleOrDefault(a => a.Id == btnId && a.HizliKategoriID == gelenButtonKategoriID);
                 urunBul.Barkod = urunBarkod;
                 urunBul.UrunAd = urunAd;
                 urunBul.Fiyat = urunFiyat;
                 db.SaveChanges();
                 MessageBox.Show("Hızlı ürün başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FormSatis formSatis = (FormSatis)Application.OpenForms["FormSatis"];
                 if (formSatis != null)
                 {
                     Button btn = (Button)formSatis.Controls.Find("btnHizli" + gelenButtonID, true).FirstOrDefault();
                     btn.Text = urunAd + "\n" + urunFiyat.ToString("C2");
+                    this.Close();
                 }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtUrunAd.Text = "";
+                var urunler = db.Urun.ToList();
+                int i = 0;
+                if (urunler != null)
+                {
+                    foreach (var urun in urunler)
+                    {
+                        string barkod = urun.Barkod;
+                        string urunAd = urun.UrunAd;
+                        string birim = urun.Birim;
+                        double miktar = (double)urun.Miktar;
+                        double fiyat = (double)urun.SatisFiyat;
+                        gridUrunListesi.Rows.Add();
+                        gridUrunListesi.Rows[i].Cells["urunBarkod"].Value = barkod;
+                        gridUrunListesi.Rows[i].Cells["urunAdi"].Value = urunAd;
+                        gridUrunListesi.Rows[i].Cells["urunBirim"].Value = birim;
+                        gridUrunListesi.Rows[i].Cells["urunMiktar"].Value = miktar.ToString();
+                        gridUrunListesi.Rows[i].Cells["urunFiyat"].Value = fiyat.ToString("C2");
+                        i++;
+                    }
+                }
+            }
+            else
+            {
+                gridUrunListesi.Rows.Clear();
             }
         }
     }

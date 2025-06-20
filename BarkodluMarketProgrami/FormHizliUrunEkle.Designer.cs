@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.lblUrunAd = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.gridUrunListesi = new System.Windows.Forms.DataGridView();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +71,62 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridUrunListesi);
             this.splitContainer1.Size = new System.Drawing.Size(491, 537);
-            this.splitContainer1.SplitterDistance = 122;
+            this.splitContainer1.SplitterDistance = 121;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
+            this.button1.Location = new System.Drawing.Point(10, 65);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(2);
+            this.button1.Size = new System.Drawing.Size(113, 44);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Ürün Ara";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button27
+            // 
+            this.button27.AutoSize = true;
+            this.button27.BackColor = System.Drawing.Color.OrangeRed;
+            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button27.ForeColor = System.Drawing.Color.White;
+            this.button27.Image = global::BarkodluMarketProgrami.Properties.Resources.cancelWhite;
+            this.button27.Location = new System.Drawing.Point(131, 65);
+            this.button27.Margin = new System.Windows.Forms.Padding(1);
+            this.button27.Name = "button27";
+            this.button27.Padding = new System.Windows.Forms.Padding(2);
+            this.button27.Size = new System.Drawing.Size(105, 44);
+            this.button27.TabIndex = 8;
+            this.button27.Text = "Temizle";
+            this.button27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button27.UseVisualStyleBackColor = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.checkBox1.Location = new System.Drawing.Point(374, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(105, 20);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Tümünü Ara";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtUrunAd
             // 
@@ -95,21 +149,6 @@
             this.lblUrunAd.Size = new System.Drawing.Size(72, 18);
             this.lblUrunAd.TabIndex = 4;
             this.lblUrunAd.Text = "Ürün Adı";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.checkBox1.Location = new System.Drawing.Point(374, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 20);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Tümünü Ara";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // gridUrunListesi
             // 
@@ -157,47 +196,9 @@
             this.gridUrunListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.gridUrunListesi.RowTemplate.Height = 32;
             this.gridUrunListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUrunListesi.Size = new System.Drawing.Size(491, 411);
+            this.gridUrunListesi.Size = new System.Drawing.Size(491, 412);
             this.gridUrunListesi.TabIndex = 2;
             this.gridUrunListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUrunListesi_CellContentDoubleClick);
-            // 
-            // button27
-            // 
-            this.button27.AutoSize = true;
-            this.button27.BackColor = System.Drawing.Color.OrangeRed;
-            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Image = global::BarkodluMarketProgrami.Properties.Resources.cancelWhite;
-            this.button27.Location = new System.Drawing.Point(131, 65);
-            this.button27.Margin = new System.Windows.Forms.Padding(1);
-            this.button27.Name = "button27";
-            this.button27.Padding = new System.Windows.Forms.Padding(2);
-            this.button27.Size = new System.Drawing.Size(105, 44);
-            this.button27.TabIndex = 8;
-            this.button27.Text = "Temizle";
-            this.button27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button27.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.button1.Location = new System.Drawing.Point(10, 65);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
-            this.button1.Size = new System.Drawing.Size(113, 44);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Ürün Ara";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // urunBarkod
             // 
