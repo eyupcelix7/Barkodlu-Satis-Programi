@@ -73,7 +73,7 @@ namespace BarkodluMarketProgrami
                     MessageBox.Show("Lütfen Geçerli Bir Barkod Giriniz.");
                 }
                 gridSatisListesi.ClearSelection(); // DataGridView'den seçimi temizliyoruz
-                txtToplam.Text = genelToplam().ToString("C2");
+                genelToplamYazdir();
                 txtBarkod.Text = ""; // Barkod kutusunu temizliyoruz
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
                 nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
@@ -126,6 +126,10 @@ namespace BarkodluMarketProgrami
             }
             return genelToplam;
         }
+        private void genelToplamYazdir()
+        {
+            txtToplam.Text = genelToplam().ToString("C2");
+        }
         private void gridSatisListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // DataGridView'den ürün silme işlemi
@@ -143,7 +147,7 @@ namespace BarkodluMarketProgrami
                     // DataGridView'den seçimi temizliyoruz
                     gridSatisListesi.ClearSelection();
                 }
-                txtToplam.Text = genelToplam().ToString("C2"); // Ürün silme işleminden sonra genel toplam bölümüne yazdırıyoruz C2 ile para birimi ekliyoruz(Bilgisayarın konumuna ve diline göre para birimi değişebilmekte)
+                genelToplamYazdir(); // Ürün silme işleminden sonra genel toplam bölümüne yazdırıyoruz C2 ile para birimi ekliyoruz(Bilgisayarın konumuna ve diline göre para birimi değişebilmekte)
                 txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
             }
@@ -215,7 +219,7 @@ namespace BarkodluMarketProgrami
                     var urun = db.Urun.Where(a => a.Barkod == hizliUrun.Barkod).FirstOrDefault(); // Hızlı ürüne göre veritabanından ürünü alıyoruz
                     double miktar = Convert.ToDouble(nudMiktar.Value); // Miktarı alıyoruz
                     urunGetirListeye(urun, miktar, hizliUrun.Barkod); // Ürünü listeye ekliyoruz
-                    txtToplam.Text = genelToplam().ToString("C2"); // Genel toplamı hesaplıyoruz ve ekrana yazdırıyoruz
+                    genelToplamYazdir(); // Genel toplamı hesaplıyoruz ve ekrana yazdırıyoruz
                 }
             }
         }
@@ -302,6 +306,79 @@ namespace BarkodluMarketProgrami
                 hizliUrun.Fiyat = 0;
                 db.SaveChanges(); // Değişiklikleri kaydediyoruz
                 hizliUrunDoldur(1);
+            }
+        }
+        private void numClick(object sender, EventArgs e) 
+        {
+            Button btn = sender as Button;
+            if(btn.Text == "<" && txtNum.Text.Length>0)
+            {
+                txtNum.Text = txtNum.Text.Substring(0, txtNum.Text.Length - 1);
+            }
+            else if(btn.Text == ",")
+            {
+                int virgulSayisi = txtNum.Text.Count(a => a == ',');
+                if (virgulSayisi<1)
+                {
+                    txtNum.Text += ",";
+                }
+            }
+            else
+            {
+                txtNum.Text += btn.Text;
+            }
+        }
+        private void btnMiktar_Click(object sender, EventArgs e)
+        {
+            nudMiktar.Value = Convert.ToDecimal(txtNum.Text);
+            txtNum.Text = "";
+            txtBarkod.Focus();
+        }
+        private void btnOdenen_Click(object sender, EventArgs e)
+        {
+            if (txtNum.Text != "") 
+            { 
+                double odenen = Convert.ToDouble(txtNum.Text);
+                double paraUstu = Convert.ToDouble(txtNum.Text) - genelToplam();
+                txtOdenen.Text = odenen.ToString("C2");
+                txtParaUstu.Text = paraUstu.ToString("C2");
+                txtNum.Text = "";
+            }
+        }
+        private void hizliFiyatEkle(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int id = Convert.ToInt16(btn.Name.Replace("btnHFiyat", ""));
+            var fiyat = db.HizliFiyat.Where(a => a.Id == id).FirstOrDefault();
+            if (fiyat != null) {
+                if(txtNum.Text == "")
+                {
+                    txtNum.Text = fiyat.Fiyat.ToString();
+                }
+                else
+                {
+                    double yeniNumVeri = Convert.ToDouble(txtNum.Text) + Convert.ToDouble(fiyat.Fiyat);
+                    txtNum.Text = yeniNumVeri.ToString();
+                }
+            }
+        }
+        private void btnBarkod_Click(object sender, EventArgs e)
+        {
+            if(txtNum.Text != "")
+            {
+                string barkod = txtNum.Text;
+                if(db.Urun.Where(a=> a.Barkod == barkod).Any())
+                {
+                    var urun = db.Urun.Where(a => a.Barkod == barkod).FirstOrDefault();
+                    txtNum.Clear();
+                    urunGetirListeye(urun, Convert.ToDouble(nudMiktar.Value), barkod);
+                    txtBarkod.Focus();
+                    genelToplamYazdir();
+                }
+                else
+                {
+                    MessageBox.Show("Ürün Ekleme Sayfası");
+                }
             }
         }
     }
