@@ -14,13 +14,14 @@ namespace BarkodluMarketProgrami
     public partial class FormSatis : Form
     {
         BarkodEntities db = new BarkodEntities();
+        int guncelKategoriID = 1; // Hızlı ürün kategorisi başlangıç değeri
         public FormSatis()
         {
             InitializeComponent();
         }
         private void FormSatis_Load(object sender, EventArgs e)
         {
-            hizliUrunDoldur(1, db.HizliKategori.Where(a => a.Id == 1).Select(a => a.Renk).FirstOrDefault());
+            hizliUrunDoldur(1);
             hizliKategorilerDoldur();
             hizliFiyatDoldur();
         }
@@ -67,9 +68,11 @@ namespace BarkodluMarketProgrami
                     // Barkod numarası 2 karakterden az ise
                     MessageBox.Show("Lütfen Geçerli Bir Barkod Giriniz.");
                 }
-                gridSatisListesi.ClearSelection();
+                gridSatisListesi.ClearSelection(); // DataGridView'den seçimi temizliyoruz
                 txtToplam.Text = genelToplam().ToString("C2");
-                txtBarkod.Focus();
+                txtBarkod.Text = ""; // Barkod kutusunu temizliyoruz
+                txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
+                nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
             }
         }
         private void urunGetirListeye(Urun urun, double miktar, string barkod) 
@@ -141,20 +144,45 @@ namespace BarkodluMarketProgrami
                 txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
             }
         }
-        private void hizliUrunDoldur(int hizliKategoriID, String renk)
+        public void hizliUrunDoldur(int hizliKategoriID)
         {
-            var hizliUrun = db.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).ToList(); // Veritabanındaki HizliUrun tablosunu listeledik
-            int count = 0;
-            foreach (var hUrun in hizliUrun) // Foreach döngüsü oluşturarak tüm Hızlı Ürün tuşlarının değerlerini otomatik değiştiriyoruz
+            using (var yeniDb = new BarkodEntities())
             {
-                count++;
-                Button hUrunButton = this.Controls.Find("btnHizli" + count, true).FirstOrDefault() as Button;
-                if (hUrunButton != null)
+                var hizliUrun = yeniDb.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).ToList(); // Veritabanındaki HizliUrun tablosunu listeledik
+                var hizliUrunKategori = yeniDb.HizliKategori.Where(a => a.Id == hizliKategoriID).FirstOrDefault(); // Seçilen kategoriye göre HizliKategori tablosundan kategori bilgilerini alıyoruz
+                int count = 0;
+                foreach (var hUrun in hizliUrun) // Foreach döngüsü oluşturarak tüm Hızlı Ürün tuşlarının değerlerini otomatik değiştiriyoruz
                 {
-                    hUrunButton.Text = hUrun.UrunAd + "\n" + Convert.ToDecimal(hUrun.Fiyat).ToString("C2");
-                    hUrunButton.BackColor = Color.FromName(renk); // Renkleri veritabanından alıp butonların arka plan rengini değiştiriyoruz
-                    hUrunButton.FlatAppearance.BorderColor = Color.FromName(renk); // Çerçeve rengini de aynı renk yapıyoruz
+                    count++;
+                    Button hUrunButton = this.Controls.Find("btnHizli" + count, true).FirstOrDefault() as Button;
+                    if (hUrunButton != null)
+                    {
+                        hUrunButton.Text = hUrun.UrunAd + "\n" + Convert.ToDecimal(hUrun.Fiyat).ToString("C2");
+                        hUrunButton.BackColor = Color.FromName(hizliUrunKategori.Renk); // Renkleri veritabanından alıp butonların arka plan rengini değiştiriyoruz
+                        hUrunButton.FlatAppearance.BorderColor = Color.FromName(hizliUrunKategori.Renk); // Çerçeve rengini de aynı renk yapıyoruz
+                    }
                 }
+            }
+        }
+        private void hizliUrunEkle(object sender, EventArgs e)
+        {
+            Button hizliBtn = sender as Button; // Butonun kendisini alıyoruz
+            int hizliUrunID = Convert.ToInt32(hizliBtn.Name.Replace("btnHizli", "")); // Butonun ismine göre ID'sini alıyoruz
+
+            if (hizliBtn.Text.StartsWith("-"))
+            {
+                FormHizliUrunEkle formHizliUrunEkle = new FormHizliUrunEkle(); // Hızlı ürün ekleme formunu oluşturuyoruz
+                formHizliUrunEkle.gelenButtonID = hizliUrunID; // Butonun ismine göre ID'sini alıyoruz
+                formHizliUrunEkle.gelenButtonKategoriID = guncelKategoriID; // Hızlı kategori ID'sini alıyoruz
+                formHizliUrunEkle.ShowDialog(); // Formu modal olarak açıyoruz
+            }
+            else
+            {
+                var hizliUrun = db.HizliUrun.Where(a=> a.Id == hizliUrunID && a.HizliKategoriID == guncelKategoriID).FirstOrDefault(); // Butonun ismine göre veritabanından hızlı ürünü alıyoruz
+                var urun = db.Urun.Where(a => a.Barkod == hizliUrun.Barkod).FirstOrDefault(); // Hızlı ürüne göre veritabanından ürünü alıyoruz
+                double miktar = Convert.ToDouble(nudMiktar.Value); // Miktarı alıyoruz
+                urunGetirListeye(urun, miktar, hizliUrun.Barkod); // Ürünü listeye ekliyoruz
+                genelToplam(); // Genel toplamı hesaplıyoruz
             }
         }
         private void hizliKategorilerDoldur()
@@ -176,8 +204,8 @@ namespace BarkodluMarketProgrami
             {
                 string hKategoriButtonID = hKategoriButton.Name.Substring(hKategoriButton.Name.Length - 1, 1);
                 int id = Convert.ToInt32(hKategoriButtonID);
-                String renk = db.HizliKategori.Where(a => a.Id == id).Select(a => a.Renk).FirstOrDefault(); // Seçilen kategoriye göre rengini alıyoruz
-                hizliUrunDoldur(Convert.ToInt32(hKategoriButtonID), renk);
+                guncelKategoriID = id; // Hızlı kategori ID'sini güncelliyoruz
+                hizliUrunDoldur(Convert.ToInt32(hKategoriButtonID));
             }
         }
         private void hizliFiyatDoldur()
@@ -192,5 +220,6 @@ namespace BarkodluMarketProgrami
                 }
             }
         }
+
     }
 }

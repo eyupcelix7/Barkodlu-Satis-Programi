@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHizliUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHizliUrunEkle.Designer.cs">
+      <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="Urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormHizliUrunEkle.resx">
+      <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSatis.resx">
       <DependentUpon>FormSatis.cs</DependentUpon>
     </EmbeddedResource>
