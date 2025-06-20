@@ -220,6 +220,8 @@ namespace BarkodluMarketProgrami
                     double miktar = Convert.ToDouble(nudMiktar.Value); // Miktarı alıyoruz
                     urunGetirListeye(urun, miktar, hizliUrun.Barkod); // Ürünü listeye ekliyoruz
                     genelToplamYazdir(); // Genel toplamı hesaplıyoruz ve ekrana yazdırıyoruz
+                    txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
+                    txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
                 }
             }
         }
@@ -379,6 +381,52 @@ namespace BarkodluMarketProgrami
                 {
                     MessageBox.Show("Ürün Ekleme Sayfası");
                 }
+            }
+        }
+        private void btnDigerUrun_Click(object sender, EventArgs e)
+        {
+            if(txtNum.Text != "")
+            {
+                int satirSayisi = gridSatisListesi.Rows.Count;
+                gridSatisListesi.Rows.Add();
+                gridSatisListesi.Rows[satirSayisi].Cells["urunBarkod"].Value = "-"; // Diger Urun olarak barkod veriyoruz
+                gridSatisListesi.Rows[satirSayisi].Cells["urunAdi"].Value = "Diğer Ürün";
+                gridSatisListesi.Rows[satirSayisi].Cells["urunGrup"].Value = "Diğer Ürün";
+                gridSatisListesi.Rows[satirSayisi].Cells["urunBirim"].Value = "Adet";
+                gridSatisListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = Convert.ToDouble(txtNum.Text);
+                gridSatisListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = nudMiktar.Value;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunToplam"].Value = Convert.ToDouble(txtNum.Text) * Convert.ToDouble(nudMiktar.Value);
+                gridSatisListesi.Rows[satirSayisi].Cells["urunKdv"].Value = 0;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunAlisFiyat"].Value = 0;
+                genelToplamYazdir(); // Genel toplamı hesaplıyoruz ve ekrana yazdırıyoruz
+                gridSatisListesi.ClearSelection(); // DataGridView'den seçimi temizliyoruz
+                txtNum.Clear(); // Numara kutusunu temizliyoruz
+                nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
+                txtBarkod.Focus(); // Barkod kutusuna odaklıyoruz
+            }
+
+        }
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
+            txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
+            txtOdenen.Clear(); // Ödenen kutusunu temizliyoruz
+            txtParaUstu.Clear(); // Para üstü kutusunu temizliyoruz
+            txtToplam.Text = 0.ToString("C2"); // Toplam kutusunu temizliyoruz
+            gridSatisListesi.Rows.Clear(); // DataGridView'den tüm satırları temizliyoruz
+            cbxSatis.Checked = false; // Satış kutusunu Satış Yapılıyor olarak ayarlıyoruz
+        }
+        private void btnIade_Click(object sender, EventArgs e)
+        {
+            if(cbxSatis.Checked == true)
+            {
+                cbxSatis.Checked = false;
+                cbxSatis.Text = "İade Yapılıyor";
+            }
+            else
+            {
+                cbxSatis.Checked = true;
+                cbxSatis.Text = "Satış Yapılıyor";
             }
         }
     }
