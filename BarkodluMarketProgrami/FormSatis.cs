@@ -14,10 +14,14 @@ namespace BarkodluMarketProgrami
     public partial class FormSatis : Form
     {
         BarkodEntities db = new BarkodEntities();
-        int guncelKategoriID = 1; // Hızlı ürün kategorisi başlangıç değeri
+        int guncelKategoriID = 1;   
+        bool basiliMi = false;
+        int basiliBtnID = 0;
+        Button basiliBtn = null;
         public FormSatis()
         {
             InitializeComponent();
+            timerAyarlamalari();
         }
         private void FormSatis_Load(object sender, EventArgs e)
         {
@@ -28,23 +32,23 @@ namespace BarkodluMarketProgrami
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            { 
+            {
                 string barkod = txtBarkod.Text.Trim(); // Trim fonksiyonu ile boşlukları atıyoruz
                 if (barkod.Length > 2)
                 {
-                    if(db.Urun.Any(a=> a.Barkod == barkod))
+                    if (db.Urun.Any(a => a.Barkod == barkod))
                     {
-                        var urun = db.Urun.Where(a=> a.Barkod == barkod).FirstOrDefault();
+                        var urun = db.Urun.Where(a => a.Barkod == barkod).FirstOrDefault();
                         double miktar = Convert.ToDouble(nudMiktar.Value);
                         urunGetirListeye(urun, miktar, barkod);
                     }
                     else
                     {
-                        int onEk = Convert.ToInt32(barkod.Substring(0,2));
-                        if(db.Terazi.Any(a=> a.TeraziOnEk == onEk))
+                        int onEk = Convert.ToInt32(barkod.Substring(0, 2));
+                        if (db.Terazi.Any(a => a.TeraziOnEk == onEk))
                         {
                             string teraziUrunNo = barkod.Substring(2, 5);
-                            if(db.Urun.Any(a=> a.Barkod == teraziUrunNo))
+                            if (db.Urun.Any(a => a.Barkod == teraziUrunNo))
                             {
                                 var urunTerazi = db.Urun.Where(a => a.Barkod == teraziUrunNo).FirstOrDefault();
                                 double miktarKg = Convert.ToDouble(barkod.Substring(7, 5)) / 1000;
@@ -52,7 +56,7 @@ namespace BarkodluMarketProgrami
                             }
                             else
                             {
-                                Console.Beep(900,1000);
+                                Console.Beep(900, 1000);
                                 MessageBox.Show("Kg Ürün Ekleme Sayfası");
                             }
                         }
@@ -75,7 +79,7 @@ namespace BarkodluMarketProgrami
                 nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
             }
         }
-        private void urunGetirListeye(Urun urun, double miktar, string barkod) 
+        private void urunGetirListeye(Urun urun, double miktar, string barkod)
         {
             int satirSayisi = gridSatisListesi.Rows.Count;
             bool eklendiMi = false;
@@ -107,7 +111,7 @@ namespace BarkodluMarketProgrami
         }
         private void FormSatis_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F5) 
+            if (e.KeyCode == Keys.F5)
             {
                 // Her F5 Tuşlayışında Miktar 1 artıcak
                 nudMiktar.Value = nudMiktar.Value++;
@@ -127,7 +131,7 @@ namespace BarkodluMarketProgrami
             // DataGridView'den ürün silme işlemi
             if (e.ColumnIndex == 9) // DataGridView'den seçilenin sil tuşu olduğundan emin oluyoruz
             {
-                if(Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value) == 1) // Eğer ki ürün miktarı 1 ise zaten eksiltilemeyeceğine göre direkt olarak kaldırıyoruz
+                if (Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value) == 1) // Eğer ki ürün miktarı 1 ise zaten eksiltilemeyeceğine göre direkt olarak kaldırıyoruz
                 {
                     gridSatisListesi.Rows.Remove(gridSatisListesi.CurrentRow); // DataGridView'den kaldırma işlemi
                 }
@@ -164,34 +168,64 @@ namespace BarkodluMarketProgrami
                 }
             }
         }
+        public int hizliUrunID(int hizliKategoriID, int hizliUrunID)
+        {
+            int btnId = 0;
+            if (hizliKategoriID == 1)
+            {
+                return btnId = hizliUrunID;
+            }
+            if (hizliKategoriID == 2)
+            {
+                return btnId = hizliUrunID + 25;
+            }
+            if (hizliKategoriID == 3)
+            {
+                return btnId = hizliUrunID + 50;
+            }
+            if (hizliKategoriID == 4)
+            {
+                return btnId = hizliUrunID + 75;
+            }
+            if (hizliKategoriID == 5)
+            {
+                return btnId = hizliUrunID + 100;
+            }
+            return btnId; // Eğer ki hiçbir kategoriye uymadıysa 0 döndürüyoruz
+
+        }
         private void hizliUrunEkle(object sender, EventArgs e)
         {
             Button hizliBtn = sender as Button; // Butonun kendisini alıyoruz
-            int hizliUrunID = Convert.ToInt32(hizliBtn.Name.Replace("btnHizli", "")); // Butonun ismine göre ID'sini alıyoruz
+            int hizliID = Convert.ToInt32(hizliBtn.Name.Replace("btnHizli", "")); // Butonun ismine göre ID'sini alıyoruz
 
             if (hizliBtn.Text.StartsWith("-"))
             {
                 FormHizliUrunEkle formHizliUrunEkle = new FormHizliUrunEkle(); // Hızlı ürün ekleme formunu oluşturuyoruz
-                formHizliUrunEkle.gelenButtonID = hizliUrunID; // Butonun ismine göre ID'sini alıyoruz
+                formHizliUrunEkle.gelenButtonID = hizliID; // Butonun ismine göre ID'sini alıyoruz
                 formHizliUrunEkle.gelenButtonKategoriID = guncelKategoriID; // Hızlı kategori ID'sini alıyoruz
                 formHizliUrunEkle.ShowDialog(); // Formu modal olarak açıyoruz
             }
             else
             {
-                var hizliUrun = db.HizliUrun.Where(a=> a.Id == hizliUrunID && a.HizliKategoriID == guncelKategoriID).FirstOrDefault(); // Butonun ismine göre veritabanından hızlı ürünü alıyoruz
-                var urun = db.Urun.Where(a => a.Barkod == hizliUrun.Barkod).FirstOrDefault(); // Hızlı ürüne göre veritabanından ürünü alıyoruz
-                double miktar = Convert.ToDouble(nudMiktar.Value); // Miktarı alıyoruz
-                urunGetirListeye(urun, miktar, hizliUrun.Barkod); // Ürünü listeye ekliyoruz
-                genelToplam(); // Genel toplamı hesaplıyoruz
+                int btnId = hizliUrunID(guncelKategoriID, hizliID);
+                var hizliUrun = db.HizliUrun.Where(a => a.Id == btnId && a.HizliKategoriID == guncelKategoriID).FirstOrDefault(); // Butonun ismine göre veritabanından hızlı ürünü 
+                if (hizliUrun != null)
+                {
+                    var urun = db.Urun.Where(a => a.Barkod == hizliUrun.Barkod).FirstOrDefault(); // Hızlı ürüne göre veritabanından ürünü alıyoruz
+                    double miktar = Convert.ToDouble(nudMiktar.Value); // Miktarı alıyoruz
+                    urunGetirListeye(urun, miktar, hizliUrun.Barkod); // Ürünü listeye ekliyoruz
+                    txtToplam.Text = genelToplam().ToString("C2"); // Genel toplamı hesaplıyoruz ve ekrana yazdırıyoruz
+                }
             }
         }
         private void hizliKategorilerDoldur()
         {
             var hizliKategori = db.HizliKategori.ToList(); // HizliKategori tablosunu listeliyoruz
-            foreach(var hKategori in hizliKategori)
+            foreach (var hKategori in hizliKategori)
             {
                 Button hKategoriButton = this.Controls.Find("btnHizliKategori" + hKategori.Id, true).FirstOrDefault() as Button;
-                if(hKategoriButton != null)
+                if (hKategoriButton != null)
                 {
                     hKategoriButton.Text = hKategori.KategoriAd.ToString();
                 }
@@ -220,6 +254,55 @@ namespace BarkodluMarketProgrami
                 }
             }
         }
+        private void timerAyarlamalari()
+        {
 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+        }
+        private void btnHizli_MouseDown(object sender, MouseEventArgs e)
+        {
+            basiliMi = true; // Butona basıldığında değişkeni true yapıyoruz
+            timer1.Start(); // Timer'ı başlatıyoruz
+            basiliBtn = sender as Button; // Butonun kendisini alıyoruz
+            basiliBtnID = Convert.ToInt32(basiliBtn.Name.Replace("btnHizli", "")); // Butonun ismine göre ID'sini alıyoruz
+        }
+        private void btnHizli_MouseUp(object sender, MouseEventArgs e)
+        {
+            basiliMi = false; // Butona basılmadığında değişkeni false yapıyoruz
+            timer1.Stop(); // Timer'ı durduruyoruz
+            basiliBtn = sender as Button; // Butonun kendisini alıyoruz
+            basiliBtnID = Convert.ToInt32(basiliBtn.Name.Replace("btnHizli", "")); // Butonun ismine göre ID'sini alıyoruz
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (basiliMi) // Eğer butona basılı ise
+            {
+                if (!basiliBtn.Text.StartsWith("-"))
+                {
+                    ContextMenuStrip st = new ContextMenuStrip();
+                    ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                    menuItem.Text = "Temizle: " + basiliBtn.Text.ToString();
+                    menuItem.Click += hizliUrunSil;
+                    st.Items.Add(menuItem);
+                    this.ContextMenuStrip = st;
+                    st.Show(basiliBtn, new Point(0, basiliBtn.Height));
+                }
+
+            }
+        }
+        private void hizliUrunSil(object sender, EventArgs e)
+        {
+            int hizliUrunId = hizliUrunID(guncelKategoriID, basiliBtnID); // Hızlı ürün ID'sini alıyoruz
+            var hizliUrun = db.HizliUrun.Where(a=> a.Id == hizliUrunId).FirstOrDefault();
+            if(hizliUrun != null)
+            {
+                hizliUrun.Barkod = "-";
+                hizliUrun.UrunAd = "-";
+                hizliUrun.Fiyat = 0;
+                db.SaveChanges(); // Değişiklikleri kaydediyoruz
+                hizliUrunDoldur(1);
+            }
+        }
     }
 }
