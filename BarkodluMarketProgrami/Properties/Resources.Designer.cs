@@ -143,6 +143,16 @@ namespace BarkodluMarketProgrami.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap time_left {
+            get {
+                object obj = ResourceManager.GetObject("time-left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap turkish_lira {
             get {
                 object obj = ResourceManager.GetObject("turkish-lira", resourceCulture);

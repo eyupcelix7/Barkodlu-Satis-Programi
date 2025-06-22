@@ -19,15 +19,12 @@ namespace BarkodluMarketProgrami
         bool basiliMi = false;
         int basiliBtnID = 0;
         Button basiliBtn = null;
-        
         public double nakitKartTutar = 0; // Nakit olarak
-
         public double veresiyeTutar = 0;
         public double veresiyeNakitTutar = 0;
         public double veresiyeKartTutar = 0;
-        // 0 = Veresiye, 1 = Veresiye - Nakit, 3 = Veresiye - Kart
-        public int veresiyeTur = 0;
-
+        public int veresiyeTur = 0; // 0 = Veresiye, 1 = Veresiye-Nakit, 3 = Veresiye-Kart
+        DataGridView gridBeklet = null; // Bekletme işlemi için DataGridView
         public FormSatis()
         {
             InitializeComponent();
@@ -119,13 +116,15 @@ namespace BarkodluMarketProgrami
                 gridSatisListesi.Rows[satirSayisi].Cells["urunAlisFiyat"].Value = urun.AlisFiyat;
             }
         }
-        private void FormSatis_KeyDown(object sender, KeyEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (e.KeyCode == Keys.F5)
+            if (keyData == Keys.F5)
             {
-                // Her F5 Tuşlayışında Miktar 1 artıcak
-                nudMiktar.Value = nudMiktar.Value++;
+                nudMiktar.Value += 1;
+                return true;
             }
+            return base.ProcessCmdKey(ref msg, keyData);
+
         }
         private double genelToplam()
         {
@@ -421,6 +420,10 @@ namespace BarkodluMarketProgrami
         }
         private void btnTemizle_Click(object sender, EventArgs e)
         {
+            Temizle(); // Temizle fonksiyonunu çağırıyoruz
+        }
+        private void Temizle()
+        {
             nudMiktar.Value = 1; // Miktar kutusunu 1'e alıyoruz
             txtBarkod.Clear(); // Barkod kutusunu temizliyoruz
             txtOdenen.Clear(); // Ödenen kutusunu temizliyoruz
@@ -428,6 +431,7 @@ namespace BarkodluMarketProgrami
             txtToplam.Text = 0.ToString("C2"); // Toplam kutusunu temizliyoruz
             gridSatisListesi.Rows.Clear(); // DataGridView'den tüm satırları temizliyoruz
             cbxSatis.Checked = false; // Satış kutusunu Satış Yapılıyor olarak ayarlıyoruz
+
         }
         private void btnIade_Click(object sender, EventArgs e)
         {
@@ -559,5 +563,64 @@ namespace BarkodluMarketProgrami
             FormVeresiye veresiyeForm = new FormVeresiye(genelToplam(), this);
             veresiyeForm.ShowDialog();
         }
+        private void btnBeklet_Click(object sender, EventArgs e)
+        {
+            islemBeklet(); // Bekletme işlemini yapıyoruz
+        }
+        private void islemBeklet()
+        {
+            if (gridSatisListesi.Rows.Count > 0)
+            {
+                btnBeklet.Text = "İŞLEM BEKLİYOR";
+                btnBeklet.BackColor = Color.OrangeRed;
+                btnBeklet.FlatAppearance.BorderColor = Color.OrangeRed;
+                gridBeklet = new DataGridView();
+                gridBeklet.Name = "gridBeklet";
+                gridBeklet.Location = new Point(0,0);
+                gridBeklet.AllowUserToAddRows = false;
+                int satirSayisi = gridSatisListesi.Rows.Count;
+                int sutunSayisi = gridSatisListesi.Columns.Count;
+                foreach (DataGridViewColumn col in gridSatisListesi.Columns)
+                {
+                    gridBeklet.Columns.Add((DataGridViewColumn)col.Clone());
+                }
+                if (satirSayisi > 0)
+                {
+                    for (int i = 0; i < satirSayisi; i++)
+                    {
+                        gridBeklet.Rows.Add();
+                        for (int a = 0; a < sutunSayisi; a++)
+                        {
+                            gridBeklet.Rows[i].Cells[a].Value = gridSatisListesi.Rows[i].Cells[a].Value;
+                        }
+                    }
+                    Temizle(); // Temizleme işlemini yapıyoruz
+                }
+            }
+            else
+            {
+                if(gridBeklet != null)
+                {
+                    btnBeklet.Text = "İŞLEM BEKLET";
+                    btnBeklet.BackColor = Color.Navy;
+                    btnBeklet.FlatAppearance.BorderColor = Color.Navy;
+                    int satirSayisi = gridBeklet.Rows.Count;
+                    int sutunSayisi = gridBeklet.Columns.Count;
+                    for (int i = 0; i < satirSayisi; i++)
+                    {
+                        gridSatisListesi.Rows.Add();
+                        for (int a = 0; a < sutunSayisi-1; a++)
+                        {
+                            gridSatisListesi.Rows[i].Cells[a].Value = gridBeklet.Rows[i].Cells[a].Value;
+                        }
+                    }
+                    gridBeklet = null; // Bekletme işlemi tamamlandıktan sonra gridBeklet'i null yapıyoruz
+                    genelToplamYazdir(); // Bekletme işlemi tamamlandıktan sonra genel toplamı yazdırıyoruz
+
+                }
+
+            }
+        }
+
     }
 }
