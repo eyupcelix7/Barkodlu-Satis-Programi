@@ -53,19 +53,24 @@ namespace BarkodluMarketProgrami
                 result = MessageBox.Show("Veresiye Tutarı: " + veresiyeMiktar.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 odemeSekli = "Veresiye";
                 _formSatis.veresiyeTutar = veresiyeMiktar;
-
+                _formSatis.veresiyeTur = 0;
+                _formSatis.satisYap("Veresiye");
             }
             else if (rdbNakit.Checked)
             {
-                result = MessageBox.Show("Veresiye Tutarı: " + veresiyeMiktar.ToString("C2") +"\nNakit Tutarı: "+ kalan.ToString("C2")+ "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                result = MessageBox.Show("Nakit Tutarı: " + veresiyeMiktar.ToString("C2") +"\nVeresiye Tutarı: "+ kalan.ToString("C2")+ "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 odemeSekli = "Nakit-Veresiye";
                 _formSatis.veresiyeNakitTutar = veresiyeMiktar;
+                _formSatis.veresiyeTur = 1;
+                _formSatis.satisYap("Veresiye-Nakit");
             }
             else
             {
-                result = MessageBox.Show("Veresiye Tutarı: " + veresiyeMiktar.ToString("C2") + "\nNakit Tutarı: " + kalan.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                result = MessageBox.Show("Kart Tutarı: " + veresiyeMiktar.ToString("C2") + "\nVeresiye Tutarı: " + kalan.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 odemeSekli = "Kart-Veresiye";
                 _formSatis.veresiyeKartTutar = veresiyeMiktar;
+                _formSatis.veresiyeTur = 2;
+                _formSatis.satisYap("Veresiye-Kart");
             }
             if (result == DialogResult.Yes)
             {
