@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="BarkodModel.Islem" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="BarkodModel.Satis" Width="1.5" PointX="9" PointY="0.75" />
         <EntityTypeShape EntityType="BarkodModel.IslemOzet" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.Veresiye" Width="1.5" PointX="5.75" PointY="2.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

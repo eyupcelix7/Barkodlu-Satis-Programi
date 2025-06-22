@@ -99,6 +99,14 @@
           <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Veresiye">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IslemNo" Type="int" />
+          <Property Name="Odeme" Type="bit" />
+        </EntityType>
         <EntityContainer Name="BarkodModelStoreContainer">
           <EntitySet Name="HizliFiyat" EntityType="Self.HizliFiyat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HizliKategori" EntityType="Self.HizliKategori" Schema="dbo" store:Type="Tables" />
@@ -108,6 +116,7 @@
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Veresiye" EntityType="Self.Veresiye" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -140,6 +149,7 @@
           <EntitySet Name="Islem" EntityType="BarkodModel.Islem" />
           <EntitySet Name="Satis" EntityType="BarkodModel.Satis" />
           <EntitySet Name="IslemOzet" EntityType="BarkodModel.IslemOzet" />
+          <EntitySet Name="Veresiye" EntityType="BarkodModel.Veresiye" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -216,6 +226,14 @@
           <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Veresiye">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="IslemNo" Type="Int32" />
+          <Property Name="Odeme" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -320,6 +338,15 @@
                 <ScalarProperty Name="Nakit" ColumnName="Nakit" />
                 <ScalarProperty Name="OdemeSekli" ColumnName="OdemeSekli" />
                 <ScalarProperty Name="Iade" ColumnName="Iade" />
+                <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Veresiye">
+            <EntityTypeMapping TypeName="BarkodModel.Veresiye">
+              <MappingFragment StoreEntitySet="Veresiye">
+                <ScalarProperty Name="Odeme" ColumnName="Odeme" />
                 <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

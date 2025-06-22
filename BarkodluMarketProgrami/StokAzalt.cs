@@ -20,7 +20,7 @@ namespace BarkodluMarketProgrami
                 }
                 else
                 {
-                    throw new Exception("Ürün bulunamadı.");
+                    //throw new Exception("Ürün bulunamadı.");
                 }
             }
         }

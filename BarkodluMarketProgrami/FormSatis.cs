@@ -20,10 +20,13 @@ namespace BarkodluMarketProgrami
         int basiliBtnID = 0;
         Button basiliBtn = null;
         
-        public double nakitKartTutar = 0;
+        public double nakitKartTutar = 0; // Nakit olarak
+
         public double veresiyeTutar = 0;
         public double veresiyeNakitTutar = 0;
         public double veresiyeKartTutar = 0;
+        // 0 = Veresiye, 1 = Veresiye - Nakit, 3 = Veresiye - Kart
+        public int veresiyeTur = 0;
 
         public FormSatis()
         {
@@ -320,9 +323,12 @@ namespace BarkodluMarketProgrami
         private void numClick(object sender, EventArgs e) 
         {
             Button btn = sender as Button;
-            if(btn.Text == "<" && txtNum.Text.Length>0)
+            if(btn.Text == "<")
             {
-                txtNum.Text = txtNum.Text.Substring(0, txtNum.Text.Length - 1);
+                if (txtNum.Text.Length > 0)
+                {
+                    txtNum.Text = txtNum.Text.Substring(0, txtNum.Text.Length - 1);
+                }
             }
             else if(btn.Text == ",")
             {
@@ -437,7 +443,7 @@ namespace BarkodluMarketProgrami
             }
             satisYap("Nakit");
         }
-        private void satisYap(string odemeTuru)
+        public void satisYap(string odemeTuru)
         {
             int satirSayisi = gridSatisListesi.Rows.Count;
             bool iade = cbxSatis.Checked;
@@ -482,7 +488,18 @@ namespace BarkodluMarketProgrami
                 islemOzet.Gider = false;
                 if (!iade)
                 {
-                    islemOzet.Aciklama = "Satış İşlemi (" + odemeTuru + ")";
+                    if (odemeTuru == "Nakit" || odemeTuru == "Kart" || odemeTuru == "Kart-Nakit")
+                    {
+                        islemOzet.Aciklama = "Satış İşlemi (" + odemeTuru + ")";
+                    }
+                    else if (odemeTuru == "Veresiye" || odemeTuru == "Veresiye-Kart" || odemeTuru == "Veresiye-Nakit")
+                    {
+                        islemOzet.Aciklama = "Veresiye İşlemi (" + odemeTuru + ")";
+                        Veresiye veresiye = new Veresiye();
+                        veresiye.IslemNo = islemNo;
+                        veresiye.Odeme = false; // Veresiye ödemesi henüz yapılmadı
+                        db.Veresiye.Add(veresiye);
+                    }
                 }
                 else
                 {
@@ -496,24 +513,31 @@ namespace BarkodluMarketProgrami
                     case "Nakit":
                         islemOzet.Nakit = genelToplam();
                         islemOzet.Kart = 0;
-                    break;
+                        break;
                     case "Kart":
                         islemOzet.Nakit = 0;
                         islemOzet.Kart = genelToplam();
-                    break;
+                        break;
                     case "Kart-Nakit":
-                        islemOzet.Nakit = 0; // DÜZENLENECEK
-                        islemOzet.Kart = 0; // DÜZENLENECEK
-                    break;
+                        islemOzet.Nakit = nakitKartTutar;
+                        islemOzet.Kart = genelToplam() - nakitKartTutar;
+                        break;
                     case "Veresiye":
                         islemOzet.Nakit = 0;
                         islemOzet.Kart = 0;
-                    break;
+                        break;
+                    case "Veresiye-Kart":
+                        islemOzet.Kart = veresiyeKartTutar;
+                        islemOzet.Nakit = 0;
+                        break;
+                    case "Veresiye-Nakit":
+                        islemOzet.Nakit = veresiyeNakitTutar;
+                        islemOzet.Kart = 0;
+                        break;
                 }
                 db.IslemOzet.Add(islemOzet);
                 db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
                 db.SaveChanges();
-
                 MessageBox.Show("Yazdırma işlemi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -527,17 +551,13 @@ namespace BarkodluMarketProgrami
         }
         private void btnKartNakit_Click(object sender, EventArgs e)
         {
-            FormNakitKart nakitKartForm = new FormNakitKart(genelToplam());
+            FormNakitKart nakitKartForm = new FormNakitKart(genelToplam(), this);
             nakitKartForm.ShowDialog();
-
-            //satisYap("Kart-Nakit");
         }
         private void btnVeresiye_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(veresiyeKartTutar.ToString("C2") +" \n "+ veresiyeNakitTutar.ToString("C2") + " \n "+ veresiyeTutar.ToString("C2"));
-            FormVeresiye veresiyeForm = new FormVeresiye(genelToplam(),this);
+            FormVeresiye veresiyeForm = new FormVeresiye(genelToplam(), this);
             veresiyeForm.ShowDialog();
-            //satisYap("Veresiye");
         }
     }
 }
