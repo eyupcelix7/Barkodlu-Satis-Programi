@@ -9,7 +9,10 @@
         <EntityTypeShape EntityType="BarkodModel.Terazi" Width="1.5" PointX="2.5" PointY="0.75" />
         <EntityTypeShape EntityType="BarkodModel.HizliUrun" Width="1.5" PointX="2.5" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BarkodModel.HizliKategori" Width="1.5" PointX="4.125" PointY="0.75" />
-        <EntityTypeShape EntityType="BarkodModel.HizliFiyat" Width="1.5" PointX="4.125" PointY="2.25" />
+        <EntityTypeShape EntityType="BarkodModel.HizliFiyat" Width="1.5" PointX="4.125" PointY="2.5" />
+        <EntityTypeShape EntityType="BarkodModel.Islem" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.Satis" Width="1.5" PointX="9" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.IslemOzet" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

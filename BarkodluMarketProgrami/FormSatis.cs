@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -18,6 +19,12 @@ namespace BarkodluMarketProgrami
         bool basiliMi = false;
         int basiliBtnID = 0;
         Button basiliBtn = null;
+        
+        public double nakitKartTutar = 0;
+        public double veresiyeTutar = 0;
+        public double veresiyeNakitTutar = 0;
+        public double veresiyeKartTutar = 0;
+
         public FormSatis()
         {
             InitializeComponent();
@@ -418,16 +425,119 @@ namespace BarkodluMarketProgrami
         }
         private void btnIade_Click(object sender, EventArgs e)
         {
-            if(cbxSatis.Checked == true)
+            if(!cbxSatis.Checked)
             {
-                cbxSatis.Checked = false;
-                cbxSatis.Text = "İade Yapılıyor";
+                cbxSatis.Checked = true;
+                cbxSatis.Text = "İADE YAPILIYOR";
             }
             else
             {
-                cbxSatis.Checked = true;
-                cbxSatis.Text = "Satış Yapılıyor";
+                cbxSatis.Checked = false;
+                cbxSatis.Text = "SATIŞ YAPILIYOR";
             }
+            satisYap("Nakit");
+        }
+        private void satisYap(string odemeTuru)
+        {
+            int satirSayisi = gridSatisListesi.Rows.Count;
+            bool iade = cbxSatis.Checked;
+            double alisFiyatToplam = 0.00;
+            if(satirSayisi > 0)
+            {
+                int? islemNo = db.Islem.First().IslemNo;
+                Satis satis = new Satis();
+                for(int i = 0; i < satirSayisi; i++)
+                {
+                    satis.IslemNo = islemNo;
+                    satis.UrunBarkod = gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString();
+                    satis.UrunAd = gridSatisListesi.Rows[i].Cells["urunAdi"].Value.ToString();
+                    satis.UrunGrup = gridSatisListesi.Rows[i].Cells["urunGrup"].Value.ToString();
+                    satis.UrunBirim = gridSatisListesi.Rows[i].Cells["urunBirim"].Value.ToString();
+                    satis.AlisFiyat = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunAlisFiyat"].Value.ToString().Replace("₺", "").Trim());
+                    satis.SatisFiyat = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value.ToString().Replace("₺", "").Trim());
+                    satis.Miktar = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
+                    satis.Toplam = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunToplam"].Value.ToString().Replace("₺", "").Trim());
+                    satis.KdvTutari = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunKdv"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
+                    satis.Tarih = DateTime.Now;
+                    satis.Kullanici = lblKullanici.Text;
+                    satis.Iade = iade;
+                    satis.OdemeSekli = odemeTuru;
+                    db.Satis.Add(satis);
+                    db.SaveChanges();
+                    alisFiyatToplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunAlisFiyat"].Value.ToString().Replace("₺", "").Trim());
+                    if (!iade)
+                    {
+                        StokAzalt.stokAzalt(gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString(), Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value));
+                    }
+                    else
+                    {
+                        StokArttir.stokArttir(gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString(), Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value));
+                    }
+                }
+                IslemOzet islemOzet = new IslemOzet();
+                islemOzet.IslemNo = islemNo;
+                islemOzet.Iade = iade;
+                islemOzet.AlisFiyatToplam = alisFiyatToplam;
+                islemOzet.Gelir = false;
+                islemOzet.Gider = false;
+                if (!iade)
+                {
+                    islemOzet.Aciklama = "Satış İşlemi (" + odemeTuru + ")";
+                }
+                else
+                {
+                    islemOzet.Aciklama = "İade İşlemi (" + odemeTuru + ")";
+                }
+                islemOzet.OdemeSekli = odemeTuru;
+                islemOzet.Tarih = DateTime.Now;
+                islemOzet.Kullanici = lblKullanici.Text;
+                switch(odemeTuru)
+                {
+                    case "Nakit":
+                        islemOzet.Nakit = genelToplam();
+                        islemOzet.Kart = 0;
+                    break;
+                    case "Kart":
+                        islemOzet.Nakit = 0;
+                        islemOzet.Kart = genelToplam();
+                    break;
+                    case "Kart-Nakit":
+                        islemOzet.Nakit = 0; // DÜZENLENECEK
+                        islemOzet.Kart = 0; // DÜZENLENECEK
+                    break;
+                    case "Veresiye":
+                        islemOzet.Nakit = 0;
+                        islemOzet.Kart = 0;
+                    break;
+                }
+                db.IslemOzet.Add(islemOzet);
+                db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
+                db.SaveChanges();
+
+                MessageBox.Show("Yazdırma işlemi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnNakit_Click(object sender, EventArgs e)
+        {
+            satisYap("Nakit");
+        }
+        private void btnKart_Click(object sender, EventArgs e)
+        {
+            satisYap("Kart");
+        }
+        private void btnKartNakit_Click(object sender, EventArgs e)
+        {
+            FormNakitKart nakitKartForm = new FormNakitKart(genelToplam());
+            nakitKartForm.ShowDialog();
+
+            //satisYap("Kart-Nakit");
+        }
+        private void btnVeresiye_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(veresiyeKartTutar.ToString("C2") +" \n "+ veresiyeNakitTutar.ToString("C2") + " \n "+ veresiyeTutar.ToString("C2"));
+            FormVeresiye veresiyeForm = new FormVeresiye(genelToplam(),this);
+            veresiyeForm.ShowDialog();
+            //satisYap("Veresiye");
         }
     }
 }

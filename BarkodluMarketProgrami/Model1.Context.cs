@@ -30,5 +30,8 @@ namespace BarkodluMarketProgrami
         public virtual DbSet<HizliUrun> HizliUrun { get; set; }
         public virtual DbSet<HizliKategori> HizliKategori { get; set; }
         public virtual DbSet<HizliFiyat> HizliFiyat { get; set; }
+        public virtual DbSet<Islem> Islem { get; set; }
+        public virtual DbSet<Satis> Satis { get; set; }
+        public virtual DbSet<IslemOzet> IslemOzet { get; set; }
     }
 }
