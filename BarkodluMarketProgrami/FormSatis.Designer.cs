@@ -37,10 +37,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBeklet2 = new System.Windows.Forms.Button();
-            this.btnBeklet = new System.Windows.Forms.Button();
             this.lblKullanici = new System.Windows.Forms.Label();
-            this.cbxSatis = new System.Windows.Forms.CheckBox();
             this.txtParaUstu = new System.Windows.Forms.TextBox();
             this.txtOdenen = new System.Windows.Forms.TextBox();
             this.lblParaUstu = new System.Windows.Forms.Label();
@@ -59,12 +56,7 @@
             this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVeresiye = new System.Windows.Forms.Button();
-            this.btnKartNakit = new System.Windows.Forms.Button();
-            this.btnKart = new System.Windows.Forms.Button();
-            this.btnNakit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtToplam = new System.Windows.Forms.TextBox();
             this.lblToplam = new System.Windows.Forms.Label();
@@ -133,6 +125,14 @@
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnBeklet2 = new System.Windows.Forms.Button();
+            this.btnBeklet = new System.Windows.Forms.Button();
+            this.cbxSatis = new System.Windows.Forms.CheckBox();
+            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnVeresiye = new System.Windows.Forms.Button();
+            this.btnKartNakit = new System.Windows.Forms.Button();
+            this.btnKart = new System.Windows.Forms.Button();
+            this.btnNakit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -214,47 +214,6 @@
             this.panel1.Size = new System.Drawing.Size(787, 146);
             this.panel1.TabIndex = 0;
             // 
-            // btnBeklet2
-            // 
-            this.btnBeklet2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBeklet2.BackColor = System.Drawing.Color.Navy;
-            this.btnBeklet2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.btnBeklet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeklet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBeklet2.ForeColor = System.Drawing.Color.White;
-            this.btnBeklet2.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
-            this.btnBeklet2.Location = new System.Drawing.Point(591, 98);
-            this.btnBeklet2.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBeklet2.Name = "btnBeklet2";
-            this.btnBeklet2.Padding = new System.Windows.Forms.Padding(2);
-            this.btnBeklet2.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet2.TabIndex = 17;
-            this.btnBeklet2.Text = "İŞLEM BEKLET";
-            this.btnBeklet2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBeklet2.UseVisualStyleBackColor = false;
-            // 
-            // btnBeklet
-            // 
-            this.btnBeklet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBeklet.BackColor = System.Drawing.Color.Navy;
-            this.btnBeklet.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.btnBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBeklet.ForeColor = System.Drawing.Color.White;
-            this.btnBeklet.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
-            this.btnBeklet.Location = new System.Drawing.Point(388, 98);
-            this.btnBeklet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBeklet.Name = "btnBeklet";
-            this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnBeklet.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet.TabIndex = 16;
-            this.btnBeklet.Text = "İŞLEM BEKLET";
-            this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBeklet.UseVisualStyleBackColor = false;
-            this.btnBeklet.Click += new System.EventHandler(this.btnBeklet_Click);
-            // 
             // lblKullanici
             // 
             this.lblKullanici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -267,27 +226,6 @@
             this.lblKullanici.Size = new System.Drawing.Size(86, 18);
             this.lblKullanici.TabIndex = 14;
             this.lblKullanici.Text = "eyupcelix7";
-            // 
-            // cbxSatis
-            // 
-            this.cbxSatis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxSatis.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSatis.BackColor = System.Drawing.Color.DarkGreen;
-            this.cbxSatis.CausesValidation = false;
-            this.cbxSatis.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cbxSatis.FlatAppearance.CheckedBackColor = System.Drawing.Color.OrangeRed;
-            this.cbxSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbxSatis.ForeColor = System.Drawing.Color.White;
-            this.cbxSatis.Image = global::BarkodluMarketProgrami.Properties.Resources.cart;
-            this.cbxSatis.Location = new System.Drawing.Point(12, 8);
-            this.cbxSatis.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxSatis.Name = "cbxSatis";
-            this.cbxSatis.Size = new System.Drawing.Size(190, 44);
-            this.cbxSatis.TabIndex = 12;
-            this.cbxSatis.Text = "SATIŞ YAPILIYOR";
-            this.cbxSatis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbxSatis.UseVisualStyleBackColor = false;
             // 
             // txtParaUstu
             // 
@@ -528,14 +466,6 @@
             this.urunAlisFiyat.ReadOnly = true;
             this.urunAlisFiyat.Visible = false;
             // 
-            // urunSil
-            // 
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
@@ -557,82 +487,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(791, 224);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // btnVeresiye
-            // 
-            this.btnVeresiye.BackColor = System.Drawing.Color.Navy;
-            this.btnVeresiye.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVeresiye.FlatAppearance.BorderSize = 0;
-            this.btnVeresiye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVeresiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnVeresiye.ForeColor = System.Drawing.Color.White;
-            this.btnVeresiye.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
-            this.btnVeresiye.Location = new System.Drawing.Point(476, 2);
-            this.btnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
-            this.btnVeresiye.Name = "btnVeresiye";
-            this.btnVeresiye.Size = new System.Drawing.Size(154, 221);
-            this.btnVeresiye.TabIndex = 4;
-            this.btnVeresiye.Text = "VERESİYE (F9)";
-            this.btnVeresiye.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnVeresiye.UseVisualStyleBackColor = false;
-            this.btnVeresiye.Click += new System.EventHandler(this.btnVeresiye_Click);
-            // 
-            // btnKartNakit
-            // 
-            this.btnKartNakit.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKartNakit.FlatAppearance.BorderSize = 0;
-            this.btnKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKartNakit.ForeColor = System.Drawing.Color.White;
-            this.btnKartNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
-            this.btnKartNakit.Location = new System.Drawing.Point(318, 2);
-            this.btnKartNakit.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
-            this.btnKartNakit.Name = "btnKartNakit";
-            this.btnKartNakit.Size = new System.Drawing.Size(156, 221);
-            this.btnKartNakit.TabIndex = 2;
-            this.btnKartNakit.Text = " KART + NAKİT\r\n(F10)";
-            this.btnKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnKartNakit.UseVisualStyleBackColor = false;
-            this.btnKartNakit.Click += new System.EventHandler(this.btnKartNakit_Click);
-            // 
-            // btnKart
-            // 
-            this.btnKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.btnKart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKart.FlatAppearance.BorderSize = 0;
-            this.btnKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKart.ForeColor = System.Drawing.Color.White;
-            this.btnKart.Image = global::BarkodluMarketProgrami.Properties.Resources.credit_card;
-            this.btnKart.Location = new System.Drawing.Point(160, 2);
-            this.btnKart.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
-            this.btnKart.Name = "btnKart";
-            this.btnKart.Size = new System.Drawing.Size(156, 221);
-            this.btnKart.TabIndex = 1;
-            this.btnKart.Text = "KREDİ KARTI \r\n(F11)";
-            this.btnKart.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnKart.UseVisualStyleBackColor = false;
-            this.btnKart.Click += new System.EventHandler(this.btnKart_Click);
-            // 
-            // btnNakit
-            // 
-            this.btnNakit.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNakit.FlatAppearance.BorderSize = 0;
-            this.btnNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnNakit.ForeColor = System.Drawing.Color.White;
-            this.btnNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.money;
-            this.btnNakit.Location = new System.Drawing.Point(1, 2);
-            this.btnNakit.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
-            this.btnNakit.Name = "btnNakit";
-            this.btnNakit.Size = new System.Drawing.Size(157, 221);
-            this.btnNakit.TabIndex = 0;
-            this.btnNakit.Text = "NAKİT\r\n(F12)";
-            this.btnNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnNakit.UseVisualStyleBackColor = false;
-            this.btnNakit.Click += new System.EventHandler(this.btnNakit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -1866,6 +1720,152 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // btnBeklet2
+            // 
+            this.btnBeklet2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBeklet2.BackColor = System.Drawing.Color.Navy;
+            this.btnBeklet2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnBeklet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeklet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBeklet2.ForeColor = System.Drawing.Color.White;
+            this.btnBeklet2.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
+            this.btnBeklet2.Location = new System.Drawing.Point(591, 98);
+            this.btnBeklet2.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBeklet2.Name = "btnBeklet2";
+            this.btnBeklet2.Padding = new System.Windows.Forms.Padding(2);
+            this.btnBeklet2.Size = new System.Drawing.Size(190, 44);
+            this.btnBeklet2.TabIndex = 17;
+            this.btnBeklet2.Text = "İŞLEM BEKLET";
+            this.btnBeklet2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBeklet2.UseVisualStyleBackColor = false;
+            // 
+            // btnBeklet
+            // 
+            this.btnBeklet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBeklet.BackColor = System.Drawing.Color.Navy;
+            this.btnBeklet.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBeklet.ForeColor = System.Drawing.Color.White;
+            this.btnBeklet.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
+            this.btnBeklet.Location = new System.Drawing.Point(388, 98);
+            this.btnBeklet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBeklet.Name = "btnBeklet";
+            this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
+            this.btnBeklet.Size = new System.Drawing.Size(190, 44);
+            this.btnBeklet.TabIndex = 16;
+            this.btnBeklet.Text = "İŞLEM BEKLET";
+            this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBeklet.UseVisualStyleBackColor = false;
+            this.btnBeklet.Click += new System.EventHandler(this.btnBeklet_Click);
+            // 
+            // cbxSatis
+            // 
+            this.cbxSatis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxSatis.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbxSatis.BackColor = System.Drawing.Color.DarkGreen;
+            this.cbxSatis.CausesValidation = false;
+            this.cbxSatis.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxSatis.FlatAppearance.CheckedBackColor = System.Drawing.Color.OrangeRed;
+            this.cbxSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxSatis.ForeColor = System.Drawing.Color.White;
+            this.cbxSatis.Image = global::BarkodluMarketProgrami.Properties.Resources.cart;
+            this.cbxSatis.Location = new System.Drawing.Point(12, 8);
+            this.cbxSatis.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSatis.Name = "cbxSatis";
+            this.cbxSatis.Size = new System.Drawing.Size(190, 44);
+            this.cbxSatis.TabIndex = 12;
+            this.cbxSatis.Text = "SATIŞ YAPILIYOR";
+            this.cbxSatis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbxSatis.UseVisualStyleBackColor = false;
+            // 
+            // urunSil
+            // 
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
+            // 
+            // btnVeresiye
+            // 
+            this.btnVeresiye.BackColor = System.Drawing.Color.Navy;
+            this.btnVeresiye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVeresiye.FlatAppearance.BorderSize = 0;
+            this.btnVeresiye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeresiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnVeresiye.ForeColor = System.Drawing.Color.White;
+            this.btnVeresiye.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
+            this.btnVeresiye.Location = new System.Drawing.Point(476, 2);
+            this.btnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
+            this.btnVeresiye.Name = "btnVeresiye";
+            this.btnVeresiye.Size = new System.Drawing.Size(154, 221);
+            this.btnVeresiye.TabIndex = 4;
+            this.btnVeresiye.Text = "VERESİYE (F9)";
+            this.btnVeresiye.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnVeresiye.UseVisualStyleBackColor = false;
+            this.btnVeresiye.Click += new System.EventHandler(this.btnVeresiye_Click);
+            // 
+            // btnKartNakit
+            // 
+            this.btnKartNakit.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKartNakit.FlatAppearance.BorderSize = 0;
+            this.btnKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKartNakit.ForeColor = System.Drawing.Color.White;
+            this.btnKartNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
+            this.btnKartNakit.Location = new System.Drawing.Point(318, 2);
+            this.btnKartNakit.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
+            this.btnKartNakit.Name = "btnKartNakit";
+            this.btnKartNakit.Size = new System.Drawing.Size(156, 221);
+            this.btnKartNakit.TabIndex = 2;
+            this.btnKartNakit.Text = " KART + NAKİT\r\n(F10)";
+            this.btnKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnKartNakit.UseVisualStyleBackColor = false;
+            this.btnKartNakit.Click += new System.EventHandler(this.btnKartNakit_Click);
+            // 
+            // btnKart
+            // 
+            this.btnKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnKart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKart.FlatAppearance.BorderSize = 0;
+            this.btnKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKart.ForeColor = System.Drawing.Color.White;
+            this.btnKart.Image = global::BarkodluMarketProgrami.Properties.Resources.credit_card;
+            this.btnKart.Location = new System.Drawing.Point(160, 2);
+            this.btnKart.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
+            this.btnKart.Name = "btnKart";
+            this.btnKart.Size = new System.Drawing.Size(156, 221);
+            this.btnKart.TabIndex = 1;
+            this.btnKart.Text = "KREDİ KARTI \r\n(F11)";
+            this.btnKart.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnKart.UseVisualStyleBackColor = false;
+            this.btnKart.Click += new System.EventHandler(this.btnKart_Click);
+            // 
+            // btnNakit
+            // 
+            this.btnNakit.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNakit.FlatAppearance.BorderSize = 0;
+            this.btnNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnNakit.ForeColor = System.Drawing.Color.White;
+            this.btnNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.money;
+            this.btnNakit.Location = new System.Drawing.Point(1, 2);
+            this.btnNakit.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
+            this.btnNakit.Name = "btnNakit";
+            this.btnNakit.Size = new System.Drawing.Size(157, 221);
+            this.btnNakit.TabIndex = 0;
+            this.btnNakit.Text = "NAKİT\r\n(F12)";
+            this.btnNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnNakit.UseVisualStyleBackColor = false;
+            this.btnNakit.Click += new System.EventHandler(this.btnNakit_Click);
             // 
             // FormSatis
             // 

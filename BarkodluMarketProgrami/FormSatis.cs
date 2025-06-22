@@ -69,8 +69,9 @@ namespace BarkodluMarketProgrami
                         }
                         else
                         {
-                            Console.Beep(900, 1000);
-                            MessageBox.Show("Normal Ürün Ekleme Sayfası");
+                            Console.Beep(200, 200);
+                            FormUrunGiris formUrunGiris = new FormUrunGiris();
+                            formUrunGiris.ShowDialog();
                         }
                     }
                 }

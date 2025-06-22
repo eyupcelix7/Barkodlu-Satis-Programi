@@ -85,6 +85,12 @@
     <Compile Include="FormSatis.Designer.cs">
       <DependentUpon>FormSatis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUrunGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunGiris.Designer.cs">
+      <DependentUpon>FormUrunGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVeresiye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNakitKart.resx">
       <DependentUpon>FormNakitKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunGiris.resx">
+      <DependentUpon>FormUrunGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiye.resx">
       <DependentUpon>FormVeresiye.cs</DependentUpon>
