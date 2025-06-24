@@ -47,5 +47,24 @@ namespace BarkodluMarketProgrami
                 _form.urunGrubuDoldur();
             }
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            string grupAdi = lstGruplar.Text;
+            string grupId = lstGruplar.SelectedValue.ToString();
+            DialogResult result = MessageBox.Show(grupAdi + " adlı grup silinecek. Onaylıyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                var silinecekGrup = db.UrunGrubu.Find(Convert.ToInt32(grupId));
+                if (silinecekGrup != null)
+                {
+                    db.UrunGrubu.Remove(silinecekGrup);
+                    db.SaveChanges();
+                    MessageBox.Show("Grup başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grupDoldur();
+                    _form.urunGrubuDoldur();
+                }
+            }
+        }
     }
 }

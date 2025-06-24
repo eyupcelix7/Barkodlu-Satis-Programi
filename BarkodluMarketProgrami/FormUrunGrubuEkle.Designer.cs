@@ -34,6 +34,8 @@
             this.lstGruplar = new System.Windows.Forms.ListBox();
             this.txtGrupAdi = new System.Windows.Forms.TextBox();
             this.lblGrupAdi = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -42,6 +44,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -79,7 +82,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.btnEkle);
+            this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer2.Size = new System.Drawing.Size(491, 446);
             this.splitContainer2.SplitterDistance = 342;
             this.splitContainer2.TabIndex = 0;
@@ -90,10 +93,10 @@
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(0, 0);
+            this.btnEkle.Location = new System.Drawing.Point(1, 1);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(491, 100);
+            this.btnEkle.Size = new System.Drawing.Size(243, 98);
             this.btnEkle.TabIndex = 0;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
@@ -108,7 +111,6 @@
             this.lstGruplar.ItemHeight = 25;
             this.lstGruplar.Location = new System.Drawing.Point(0, 0);
             this.lstGruplar.Name = "lstGruplar";
-            this.lstGruplar.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstGruplar.Size = new System.Drawing.Size(491, 342);
             this.lstGruplar.TabIndex = 0;
             // 
@@ -138,6 +140,36 @@
             this.lblGrupAdi.Text = "Grup Adı";
             this.lblGrupAdi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnSil, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnEkle, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(491, 100);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // btnSil
+            // 
+            this.btnSil.BackColor = System.Drawing.Color.DarkRed;
+            this.btnSil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.ForeColor = System.Drawing.Color.White;
+            this.btnSil.Location = new System.Drawing.Point(246, 1);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(1);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(244, 98);
+            this.btnSil.TabIndex = 1;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // FormUrunGrubuEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +190,7 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -170,5 +203,7 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.TextBox txtGrupAdi;
         private System.Windows.Forms.Label lblGrupAdi;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnSil;
     }
 }
