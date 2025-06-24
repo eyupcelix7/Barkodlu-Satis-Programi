@@ -71,8 +71,6 @@ namespace BarkodluMarketProgrami
                 int btnId = formSatis.hizliUrunID(gelenButtonKategoriID, gelenButtonID);
                 var urunBul = db.HizliUrun.SingleOrDefault(a => a.Id == btnId && a.HizliKategoriID == gelenButtonKategoriID);
                 urunBul.Barkod = urunBarkod;
-                urunBul.UrunAd = urunAd;
-                urunBul.Fiyat = urunFiyat;
                 db.SaveChanges();
                 MessageBox.Show("Hızlı ürün başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (formSatis != null)

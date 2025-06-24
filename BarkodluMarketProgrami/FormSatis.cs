@@ -166,16 +166,28 @@ namespace BarkodluMarketProgrami
         {
             using (var yeniDb = new BarkodEntities())
             {
-                var hizliUrun = yeniDb.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).ToList(); // Veritabanındaki HizliUrun tablosunu listeledik
+                var hizliUrun = yeniDb.HizliUrun.Where(a => a.HizliKategoriID == hizliKategoriID).OrderBy(x=> x.Id).ToArray(); // Veritabanındaki HizliUrun tablosunu listeledik
                 var hizliUrunKategori = yeniDb.HizliKategori.Where(a => a.Id == hizliKategoriID).FirstOrDefault(); // Seçilen kategoriye göre HizliKategori tablosundan kategori bilgilerini alıyoruz
                 int count = 0;
+                var urun = yeniDb.Urun.ToList();
                 foreach (var hUrun in hizliUrun) // Foreach döngüsü oluşturarak tüm Hızlı Ürün tuşlarının değerlerini otomatik değiştiriyoruz
                 {
                     count++;
                     Button hUrunButton = this.Controls.Find("btnHizli" + count, true).FirstOrDefault() as Button;
                     if (hUrunButton != null)
                     {
-                        hUrunButton.Text = hUrun.UrunAd + "\n" + Convert.ToDecimal(hUrun.Fiyat).ToString("C2");
+                        var bakilacakUrun = urun.Where(a => a.Barkod == hUrun.Barkod).FirstOrDefault(); // Hızlı ürünün barkoduna göre veritabanından ürünü alıyoruz
+                        if(bakilacakUrun != null)
+                        {
+                            if (hUrun.Barkod == bakilacakUrun.Barkod)
+                            {
+                                hUrunButton.Text = bakilacakUrun.UrunAd + "\n" + Convert.ToDecimal(bakilacakUrun.SatisFiyat).ToString("C2");
+                            }
+                        }
+                        else
+                        {
+                            hUrunButton.Text = "-" + "\n" + Convert.ToDecimal(0).ToString("C2");
+                        }
                         hUrunButton.BackColor = Color.FromName(hizliUrunKategori.Renk); // Renkleri veritabanından alıp butonların arka plan rengini değiştiriyoruz
                         hUrunButton.FlatAppearance.BorderColor = Color.FromName(hizliUrunKategori.Renk); // Çerçeve rengini de aynı renk yapıyoruz
                     }
@@ -314,8 +326,6 @@ namespace BarkodluMarketProgrami
             if(hizliUrun != null)
             {
                 hizliUrun.Barkod = "-";
-                hizliUrun.UrunAd = "-";
-                hizliUrun.Fiyat = 0;
                 db.SaveChanges(); // Değişiklikleri kaydediyoruz
                 hizliUrunDoldur(1);
             }
@@ -622,6 +632,5 @@ namespace BarkodluMarketProgrami
 
             }
         }
-
     }
 }

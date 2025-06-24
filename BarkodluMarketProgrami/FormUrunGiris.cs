@@ -141,7 +141,7 @@ namespace BarkodluMarketProgrami
             nudKdvOrani.Value = 1;
             txtBarkod.Focus();
         }
-        private void sonUrunler(int max)
+        private void sonUrunler(int max = 20)
         {
             var urunler = db.Urun.OrderByDescending(a => a.Tarih).Take(max).ToList();
             int i = 0;
@@ -166,7 +166,7 @@ namespace BarkodluMarketProgrami
         {
             if (cbxSonUrunleriGoster.Checked) 
             {
-                sonUrunler(20);
+                sonUrunler();
                 txtUrunAdiAranan.Text = "";
                 nudBulunanUrunSayisi.Value = gridSonucListesi.Rows.Count;
                 nudKayitliUrunSayisi.Value = db.Urun.Count();
@@ -235,14 +235,17 @@ namespace BarkodluMarketProgrami
         }
         private void gridSonucListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtBarkod.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
-            txtUrunAdi.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
-            txtUrunAciklama.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAciklama"].Value.ToString();
-            cmbUrunGrubu.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunGrup"].Value.ToString();
-            cmbBirim.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBirim"].Value.ToString();
-            nudAlisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunAlisFiyati"].Value.ToString().Replace("₺",""));
-            nudSatisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunSatisFiyati"].Value.ToString().Replace("₺", ""));
-            nudMiktar.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunMiktar"].Value);
+            if(e.ColumnIndex != 12)
+            {
+                txtBarkod.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
+                txtUrunAdi.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
+                txtUrunAciklama.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAciklama"].Value.ToString();
+                cmbUrunGrubu.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunGrup"].Value.ToString();
+                cmbBirim.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBirim"].Value.ToString();
+                nudAlisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunAlisFiyati"].Value.ToString().Replace("₺",""));
+                nudSatisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunSatisFiyati"].Value.ToString().Replace("₺", ""));
+                nudMiktar.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunMiktar"].Value);
+            }
         }
         private void btnUrunGrubuEkle_Click(object sender, EventArgs e)
         {
@@ -271,10 +274,37 @@ namespace BarkodluMarketProgrami
                 }
             }
         }
-        private String barkodOlustur()
+        private string barkodOlustur()
         {
-            String yeniBarkod = 0.ToString() + 0.ToString() + rastgeleBarkod.Next(100000, 999999).ToString();
+            string yeniBarkod = 0.ToString() + 0.ToString() + rastgeleBarkod.Next(100000, 999999).ToString();
             return yeniBarkod;
+
+        }
+        private void gridSonucListesi_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 12)
+            {
+                DialogResult result = MessageBox.Show(gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString() +" ürünü adlı silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string barkod = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
+                    var urun = db.Urun.Where(x => x.Barkod == barkod).SingleOrDefault();
+                    if (urun != null)
+                    {
+                        db.Urun.Remove(urun);
+                        db.SaveChanges();
+                        MessageBox.Show("Ürün başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        kayitliUrunSayisiGetir();
+                        Temizle();
+                        cbxSonUrunleriGoster.Checked = true;
+                        //sonUrunler();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ürün bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
 
         }
     }

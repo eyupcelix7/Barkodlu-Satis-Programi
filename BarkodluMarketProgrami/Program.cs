@@ -16,7 +16,7 @@ namespace BarkodluMarketProgrami
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormUrunGiris(""));
+            Application.Run(new FormSatis());
         }
     }
 }

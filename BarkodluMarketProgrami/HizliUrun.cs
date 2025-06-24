@@ -16,8 +16,6 @@ namespace BarkodluMarketProgrami
     {
         public int Id { get; set; }
         public string Barkod { get; set; }
-        public string UrunAd { get; set; }
-        public Nullable<double> Fiyat { get; set; }
         public int HizliKategoriID { get; set; }
     }
 }

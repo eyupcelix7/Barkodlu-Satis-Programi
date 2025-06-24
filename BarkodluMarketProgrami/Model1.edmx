@@ -26,8 +26,6 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Barkod" Type="nvarchar" MaxLength="50" />
-          <Property Name="UrunAd" Type="nvarchar" MaxLength="50" />
-          <Property Name="Fiyat" Type="float" />
           <Property Name="HizliKategoriID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Islem">
@@ -173,8 +171,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Fiyat" Type="Double" />
           <Property Name="HizliKategoriID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="HizliKategori">
@@ -288,8 +284,6 @@
             <EntityTypeMapping TypeName="BarkodModel.HizliUrun">
               <MappingFragment StoreEntitySet="HizliUrun">
                 <ScalarProperty Name="HizliKategoriID" ColumnName="HizliKategoriID" />
-                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
-                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
                 <ScalarProperty Name="Barkod" ColumnName="Barkod" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
