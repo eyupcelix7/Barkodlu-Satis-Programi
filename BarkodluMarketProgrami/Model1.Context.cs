@@ -34,5 +34,6 @@ namespace BarkodluMarketProgrami
         public virtual DbSet<Satis> Satis { get; set; }
         public virtual DbSet<IslemOzet> IslemOzet { get; set; }
         public virtual DbSet<Veresiye> Veresiye { get; set; }
+        public virtual DbSet<UrunGrubu> UrunGrubu { get; set; }
     }
 }

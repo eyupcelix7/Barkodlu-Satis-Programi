@@ -99,6 +99,13 @@
           <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="UrunGrubu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GrupAdi" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="Veresiye">
           <Key>
             <PropertyRef Name="Id" />
@@ -116,6 +123,7 @@
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UrunGrubu" EntityType="Self.UrunGrubu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Veresiye" EntityType="Self.Veresiye" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -150,6 +158,7 @@
           <EntitySet Name="Satis" EntityType="BarkodModel.Satis" />
           <EntitySet Name="IslemOzet" EntityType="BarkodModel.IslemOzet" />
           <EntitySet Name="Veresiye" EntityType="BarkodModel.Veresiye" />
+          <EntitySet Name="UrunGrubu" EntityType="BarkodModel.UrunGrubu" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -234,6 +243,13 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="IslemNo" Type="Int32" />
           <Property Name="Odeme" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="UrunGrubu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GrupAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -348,6 +364,14 @@
               <MappingFragment StoreEntitySet="Veresiye">
                 <ScalarProperty Name="Odeme" ColumnName="Odeme" />
                 <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UrunGrubu">
+            <EntityTypeMapping TypeName="BarkodModel.UrunGrubu">
+              <MappingFragment StoreEntitySet="UrunGrubu">
+                <ScalarProperty Name="GrupAdi" ColumnName="GrupAdi" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

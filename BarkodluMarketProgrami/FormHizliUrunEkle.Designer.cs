@@ -247,6 +247,7 @@
             this.ClientSize = new System.Drawing.Size(491, 537);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormHizliUrunEkle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hızlı Ürün Ekle";
             this.Load += new System.EventHandler(this.FormHizliUrunEkle_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

@@ -15,11 +15,14 @@ namespace BarkodluMarketProgrami
     public partial class FormUrunGiris : Form
     {
         BarkodEntities db = new BarkodEntities();
-        public FormUrunGiris(string barkod)
+        Random rastgeleBarkod = new Random();
+        public FormUrunGiris(string barkod = "")
         {
             InitializeComponent();
             txtBarkod.Text = barkod;
             kayitliUrunSayisiGetir();
+            urunGrubuDoldur();
+            
         }
         private void btnEkranKlavyesi_Click(object sender, EventArgs e)
         {
@@ -37,8 +40,8 @@ namespace BarkodluMarketProgrami
                         var urun = db.Urun.Where(x => x.Barkod == txtBarkod.Text.Trim()).SingleOrDefault();
                         txtUrunAdi.Text = urun.UrunAd;
                         txtUrunAciklama.Text = urun.Aciklama;
-                        cbxUrunGrubu.Text = urun.UrunGrup;
-                        cbxBirim.Text = urun.Birim;
+                        cmbUrunGrubu.Text = urun.UrunGrup;
+                        cmbBirim.Text = urun.Birim;
                         nudAlisFiyati.Value = Convert.ToDecimal(urun.AlisFiyat);
                         nudSatisFiyati.Value = Convert.ToDecimal(urun.SatisFiyat);
                         nudMiktar.Value = Convert.ToDecimal(urun.Miktar);
@@ -59,15 +62,15 @@ namespace BarkodluMarketProgrami
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtBarkod.Text.ToString()) && !String.IsNullOrEmpty(txtUrunAdi.Text.ToString()) && !String.IsNullOrEmpty(cbxBirim.Text.ToString()) && !String.IsNullOrEmpty(cbxUrunGrubu.Text.ToString()))
+            if (!String.IsNullOrEmpty(txtBarkod.Text.ToString()) && !String.IsNullOrEmpty(txtUrunAdi.Text.ToString()) && !String.IsNullOrEmpty(cmbBirim.Text.ToString()) && !String.IsNullOrEmpty(cmbUrunGrubu.Text.ToString()))
             {
                 if (db.Urun.Any(x => x.Barkod == txtBarkod.Text.Trim()))
                 {
                     var guncellenecekUrun = db.Urun.Where(x => x.Barkod == txtBarkod.Text.Trim()).SingleOrDefault();
                     guncellenecekUrun.UrunAd = txtUrunAdi.Text.Trim();
                     guncellenecekUrun.Aciklama = txtUrunAciklama.Text.Trim();
-                    guncellenecekUrun.UrunGrup = cbxUrunGrubu.Text.Trim();
-                    guncellenecekUrun.Birim = cbxBirim.Text.Trim();
+                    guncellenecekUrun.UrunGrup = cmbUrunGrubu.Text.Trim();
+                    guncellenecekUrun.Birim = cmbBirim.Text.Trim();
                     guncellenecekUrun.AlisFiyat = Convert.ToDouble(nudAlisFiyati.Value);
                     guncellenecekUrun.SatisFiyat = Convert.ToDouble(nudSatisFiyati.Value);
                     guncellenecekUrun.KdvOrani = Convert.ToInt32(nudKdvOrani.Value);
@@ -88,8 +91,8 @@ namespace BarkodluMarketProgrami
                         urun.Barkod = txtBarkod.Text.Trim();
                         urun.UrunAd = txtUrunAdi.Text.Trim();
                         urun.Aciklama = txtUrunAciklama.Text.Trim();
-                        urun.UrunGrup = cbxUrunGrubu.Text.Trim();
-                        urun.Birim = cbxBirim.Text.Trim();
+                        urun.UrunGrup = cmbUrunGrubu.Text.Trim();
+                        urun.Birim = cmbBirim.Text.Trim();
                         urun.AlisFiyat = Convert.ToDouble(nudAlisFiyati.Value);
                         urun.SatisFiyat = Convert.ToDouble(nudSatisFiyati.Value);
                         urun.KdvOrani = Convert.ToInt32(nudKdvOrani.Value);
@@ -108,8 +111,8 @@ namespace BarkodluMarketProgrami
                         var urun = db.Urun.Where(x => x.Barkod == txtBarkod.Text.Trim()).SingleOrDefault();
                         txtUrunAdi.Text = urun.UrunAd;
                         txtUrunAciklama.Text = urun.Aciklama;
-                        cbxUrunGrubu.Text = urun.UrunGrup;
-                        cbxBirim.Text = urun.Birim;
+                        cmbUrunGrubu.Text = urun.UrunGrup;
+                        cmbBirim.Text = urun.Birim;
                         nudAlisFiyati.Value = Convert.ToDecimal(urun.AlisFiyat);
                         nudSatisFiyati.Value = Convert.ToDecimal(urun.SatisFiyat);
                         nudMiktar.Value = Convert.ToDecimal(urun.Miktar);
@@ -130,8 +133,8 @@ namespace BarkodluMarketProgrami
             txtBarkod.Clear();
             txtUrunAdi.Clear();
             txtUrunAciklama.Clear();
-            cbxUrunGrubu.Text = "";
-            cbxBirim.Text = "";
+            cmbUrunGrubu.Text = "";
+            cmbBirim.Text = "";
             nudAlisFiyati.Value = 1;
             nudSatisFiyati.Value = 1;
             nudMiktar.Value = 1;
@@ -159,7 +162,6 @@ namespace BarkodluMarketProgrami
                 i++;
             }
         }
-
         private void cbxSonUrunleriGoster_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxSonUrunleriGoster.Checked) 
@@ -175,7 +177,6 @@ namespace BarkodluMarketProgrami
                 nudBulunanUrunSayisi.Value = 0;
             }
         }
-
         private void txtUrunAdiAranan_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(txtUrunAdiAranan.Text.Length > 2)
@@ -224,7 +225,6 @@ namespace BarkodluMarketProgrami
                 nudBulunanUrunSayisi.Value = 0;
             } 
         }
-
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
@@ -233,17 +233,49 @@ namespace BarkodluMarketProgrami
         {
             nudKayitliUrunSayisi.Value = db.Urun.Count();
         }
-
         private void gridSonucListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtBarkod.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
             txtUrunAdi.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
             txtUrunAciklama.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAciklama"].Value.ToString();
-            cbxUrunGrubu.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunGrup"].Value.ToString();
-            cbxBirim.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBirim"].Value.ToString();
+            cmbUrunGrubu.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunGrup"].Value.ToString();
+            cmbBirim.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBirim"].Value.ToString();
             nudAlisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunAlisFiyati"].Value.ToString().Replace("₺",""));
             nudSatisFiyati.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunSatisFiyati"].Value.ToString().Replace("₺", ""));
             nudMiktar.Value = Convert.ToDecimal(gridSonucListesi.Rows[e.RowIndex].Cells["urunMiktar"].Value);
+        }
+        private void btnUrunGrubuEkle_Click(object sender, EventArgs e)
+        {
+            FormUrunGrubuEkle formUrunGrubuEkle = new FormUrunGrubuEkle(this);
+            formUrunGrubuEkle.ShowDialog();
+        }
+        public void urunGrubuDoldur()
+        {
+            cmbUrunGrubu.DisplayMember = "GrupAdi";
+            cmbUrunGrubu.ValueMember = "Id";
+            cmbUrunGrubu.DataSource = db.UrunGrubu.OrderBy(a=> a.GrupAdi).ToList();
+            cmbUrunGrubu.SelectedIndex = -1; // İlk başta seçili olmasın
+        }
+        private void btnBarkod_Click(object sender, EventArgs e)
+        {
+            String yeniBarkod = barkodOlustur();
+            if (!String.IsNullOrEmpty(yeniBarkod))
+            {
+                if(!db.Urun.Any(x=> x.Barkod == yeniBarkod))
+                {
+                    txtBarkod.Text = yeniBarkod;
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private String barkodOlustur()
+        {
+            String yeniBarkod = 0.ToString() + 0.ToString() + rastgeleBarkod.Next(100000, 999999).ToString();
+            return yeniBarkod;
+
         }
     }
 }

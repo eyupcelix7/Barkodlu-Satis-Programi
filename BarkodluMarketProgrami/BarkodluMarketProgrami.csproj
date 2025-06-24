@@ -91,6 +91,12 @@
     <Compile Include="FormUrunGiris.Designer.cs">
       <DependentUpon>FormUrunGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUrunGrubuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunGrubuEkle.Designer.cs">
+      <DependentUpon>FormUrunGrubuEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVeresiye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <Compile Include="Urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UrunGrubu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Veresiye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -160,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUrunGiris.resx">
       <DependentUpon>FormUrunGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunGrubuEkle.resx">
+      <DependentUpon>FormUrunGrubuEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiye.resx">
       <DependentUpon>FormVeresiye.cs</DependentUpon>

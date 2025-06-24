@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,18 +46,18 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnBarkod = new System.Windows.Forms.Button();
-            this.btnUrunGrubu = new System.Windows.Forms.Button();
+            this.btnUrunGrubuEkle = new System.Windows.Forms.Button();
             this.lblKdvOrani = new System.Windows.Forms.Label();
             this.nudKdvOrani = new System.Windows.Forms.NumericUpDown();
             this.nudMiktar = new System.Windows.Forms.NumericUpDown();
             this.nudSatisFiyati = new System.Windows.Forms.NumericUpDown();
             this.nudAlisFiyati = new System.Windows.Forms.NumericUpDown();
-            this.cbxBirim = new System.Windows.Forms.ComboBox();
+            this.cmbBirim = new System.Windows.Forms.ComboBox();
             this.lblBirim = new System.Windows.Forms.Label();
             this.lblMiktar = new System.Windows.Forms.Label();
             this.lblSatisFiyati = new System.Windows.Forms.Label();
             this.lblAlisFiyati = new System.Windows.Forms.Label();
-            this.cbxUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.txtUrunAciklama = new System.Windows.Forms.TextBox();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.txtBarkod = new System.Windows.Forms.TextBox();
@@ -85,6 +85,8 @@
             this.urunKdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunKullanici = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunDuzenle = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -124,18 +126,18 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnKaydet);
             this.splitContainer1.Panel1.Controls.Add(this.btnTemizle);
             this.splitContainer1.Panel1.Controls.Add(this.btnBarkod);
-            this.splitContainer1.Panel1.Controls.Add(this.btnUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.btnUrunGrubuEkle);
             this.splitContainer1.Panel1.Controls.Add(this.lblKdvOrani);
             this.splitContainer1.Panel1.Controls.Add(this.nudKdvOrani);
             this.splitContainer1.Panel1.Controls.Add(this.nudMiktar);
             this.splitContainer1.Panel1.Controls.Add(this.nudSatisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.nudAlisFiyati);
-            this.splitContainer1.Panel1.Controls.Add(this.cbxBirim);
+            this.splitContainer1.Panel1.Controls.Add(this.cmbBirim);
             this.splitContainer1.Panel1.Controls.Add(this.lblBirim);
             this.splitContainer1.Panel1.Controls.Add(this.lblMiktar);
             this.splitContainer1.Panel1.Controls.Add(this.lblSatisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.lblAlisFiyati);
-            this.splitContainer1.Panel1.Controls.Add(this.cbxUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.cmbUrunGrubu);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunAciklama);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunAdi);
             this.splitContainer1.Panel1.Controls.Add(this.txtBarkod);
@@ -315,24 +317,26 @@
             this.btnBarkod.Text = "Barkod Oluştur";
             this.btnBarkod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBarkod.UseVisualStyleBackColor = false;
+            this.btnBarkod.Click += new System.EventHandler(this.btnBarkod_Click);
             // 
-            // btnUrunGrubu
+            // btnUrunGrubuEkle
             // 
-            this.btnUrunGrubu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUrunGrubu.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnUrunGrubu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnUrunGrubu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGrubu.ForeColor = System.Drawing.Color.White;
-            this.btnUrunGrubu.Location = new System.Drawing.Point(1232, 136);
-            this.btnUrunGrubu.Margin = new System.Windows.Forms.Padding(1);
-            this.btnUrunGrubu.Name = "btnUrunGrubu";
-            this.btnUrunGrubu.Padding = new System.Windows.Forms.Padding(2);
-            this.btnUrunGrubu.Size = new System.Drawing.Size(121, 90);
-            this.btnUrunGrubu.TabIndex = 23;
-            this.btnUrunGrubu.Text = "Ürün Grubu Ekle";
-            this.btnUrunGrubu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnUrunGrubu.UseVisualStyleBackColor = false;
+            this.btnUrunGrubuEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUrunGrubuEkle.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnUrunGrubuEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnUrunGrubuEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGrubuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunGrubuEkle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunGrubuEkle.Location = new System.Drawing.Point(1232, 136);
+            this.btnUrunGrubuEkle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnUrunGrubuEkle.Name = "btnUrunGrubuEkle";
+            this.btnUrunGrubuEkle.Padding = new System.Windows.Forms.Padding(2);
+            this.btnUrunGrubuEkle.Size = new System.Drawing.Size(121, 90);
+            this.btnUrunGrubuEkle.TabIndex = 23;
+            this.btnUrunGrubuEkle.Text = "Ürün Grubu Ekle";
+            this.btnUrunGrubuEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUrunGrubuEkle.UseVisualStyleBackColor = false;
+            this.btnUrunGrubuEkle.Click += new System.EventHandler(this.btnUrunGrubuEkle_Click);
             // 
             // lblKdvOrani
             // 
@@ -397,16 +401,17 @@
             0,
             0});
             // 
-            // cbxBirim
+            // cmbBirim
             // 
-            this.cbxBirim.FormattingEnabled = true;
-            this.cbxBirim.Items.AddRange(new object[] {
+            this.cmbBirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBirim.FormattingEnabled = true;
+            this.cmbBirim.Items.AddRange(new object[] {
             "Adet",
             "Kilo"});
-            this.cbxBirim.Location = new System.Drawing.Point(133, 168);
-            this.cbxBirim.Name = "cbxBirim";
-            this.cbxBirim.Size = new System.Drawing.Size(190, 21);
-            this.cbxBirim.TabIndex = 17;
+            this.cmbBirim.Location = new System.Drawing.Point(133, 168);
+            this.cmbBirim.Name = "cmbBirim";
+            this.cmbBirim.Size = new System.Drawing.Size(190, 24);
+            this.cmbBirim.TabIndex = 17;
             // 
             // lblBirim
             // 
@@ -456,33 +461,37 @@
             this.lblAlisFiyati.TabIndex = 10;
             this.lblAlisFiyati.Text = "Alış Fiyatı";
             // 
-            // cbxUrunGrubu
+            // cmbUrunGrubu
             // 
-            this.cbxUrunGrubu.FormattingEnabled = true;
-            this.cbxUrunGrubu.Location = new System.Drawing.Point(133, 130);
-            this.cbxUrunGrubu.Name = "cbxUrunGrubu";
-            this.cbxUrunGrubu.Size = new System.Drawing.Size(187, 21);
-            this.cbxUrunGrubu.TabIndex = 9;
+            this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbUrunGrubu.FormattingEnabled = true;
+            this.cmbUrunGrubu.Location = new System.Drawing.Point(133, 130);
+            this.cmbUrunGrubu.Name = "cmbUrunGrubu";
+            this.cmbUrunGrubu.Size = new System.Drawing.Size(187, 24);
+            this.cmbUrunGrubu.TabIndex = 9;
             // 
             // txtUrunAciklama
             // 
+            this.txtUrunAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunAciklama.Location = new System.Drawing.Point(133, 100);
             this.txtUrunAciklama.Name = "txtUrunAciklama";
-            this.txtUrunAciklama.Size = new System.Drawing.Size(165, 20);
+            this.txtUrunAciklama.Size = new System.Drawing.Size(165, 22);
             this.txtUrunAciklama.TabIndex = 8;
             // 
             // txtUrunAdi
             // 
+            this.txtUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunAdi.Location = new System.Drawing.Point(133, 70);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(210, 20);
+            this.txtUrunAdi.Size = new System.Drawing.Size(210, 22);
             this.txtUrunAdi.TabIndex = 6;
             // 
             // txtBarkod
             // 
+            this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkod.Location = new System.Drawing.Point(133, 40);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(220, 20);
+            this.txtBarkod.Size = new System.Drawing.Size(220, 22);
             this.txtBarkod.TabIndex = 5;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
@@ -640,15 +649,15 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
             this.gridSonucListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.urunBarkod,
@@ -664,15 +673,15 @@
             this.urunKullanici,
             this.urunDuzenle,
             this.urunSil});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle12;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -730,8 +739,8 @@
             // 
             // urunMiktar
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle8;
             this.urunMiktar.FillWeight = 104.8223F;
             this.urunMiktar.HeaderText = "Miktar";
             this.urunMiktar.MinimumWidth = 6;
@@ -740,8 +749,8 @@
             // 
             // urunAlisFiyati
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunAlisFiyati.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunAlisFiyati.DefaultCellStyle = dataGridViewCellStyle9;
             this.urunAlisFiyati.HeaderText = "Alış Fiyatı";
             this.urunAlisFiyati.MinimumWidth = 6;
             this.urunAlisFiyati.Name = "urunAlisFiyati";
@@ -749,9 +758,9 @@
             // 
             // urunSatisFiyati
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "C2";
-            this.urunSatisFiyati.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "C2";
+            this.urunSatisFiyati.DefaultCellStyle = dataGridViewCellStyle10;
             this.urunSatisFiyati.FillWeight = 104.8223F;
             this.urunSatisFiyati.HeaderText = "Satış Fiyatı";
             this.urunSatisFiyati.MinimumWidth = 6;
@@ -760,8 +769,8 @@
             // 
             // urunKdvTutari
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunKdvTutari.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunKdvTutari.DefaultCellStyle = dataGridViewCellStyle11;
             this.urunKdvTutari.HeaderText = "Kdv Tutarı";
             this.urunKdvTutari.MinimumWidth = 6;
             this.urunKdvTutari.Name = "urunKdvTutari";
@@ -778,6 +787,24 @@
             this.urunKullanici.HeaderText = "Kullanıcı";
             this.urunKullanici.Name = "urunKullanici";
             this.urunKullanici.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Düzenle";
+            this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 130;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.FillWeight = 71.06599F;
+            this.dataGridViewImageColumn2.HeaderText = "Sil";
+            this.dataGridViewImageColumn2.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 92;
             // 
             // urunDuzenle
             // 
@@ -831,7 +858,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label lblBarkod;
-        private System.Windows.Forms.ComboBox cbxUrunGrubu;
+        private System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.TextBox txtUrunAciklama;
         private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.TextBox txtBarkod;
@@ -843,12 +870,12 @@
         private System.Windows.Forms.NumericUpDown nudMiktar;
         private System.Windows.Forms.NumericUpDown nudSatisFiyati;
         private System.Windows.Forms.NumericUpDown nudAlisFiyati;
-        private System.Windows.Forms.ComboBox cbxBirim;
+        private System.Windows.Forms.ComboBox cmbBirim;
         private System.Windows.Forms.Label lblBirim;
         private System.Windows.Forms.Label lblMiktar;
         private System.Windows.Forms.Label lblSatisFiyati;
         private System.Windows.Forms.Label lblAlisFiyati;
-        private System.Windows.Forms.Button btnUrunGrubu;
+        private System.Windows.Forms.Button btnUrunGrubuEkle;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
@@ -882,5 +909,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
