@@ -16,6 +16,7 @@ namespace BarkodluMarketProgrami
         public int gelenButtonID = 0;
         public int gelenButtonKategoriID = 0;
         BarkodEntities db = new BarkodEntities();
+        bool eklendiMi = false;
         public FormHizliUrunEkle()
         {
             InitializeComponent();
@@ -30,33 +31,30 @@ namespace BarkodluMarketProgrami
             if (txtUrunAd.Text.Length > 2)
             {
                 var urunler = db.Urun.Where(a=> a.UrunAd.Contains(txtUrunAd.Text)).ToList();
-                int satirSayisi = gridUrunListesi.Rows.Count;
-                bool eklendiMi = false;
-                int i = 0;
                 if (urunler != null)
                 {
                     foreach (var urun in urunler)
                     {
-                        if(satirSayisi > 0)
+                        if (!string.IsNullOrEmpty(urun.Barkod.ToString()))
                         {
-                            if (gridUrunListesi.Rows[i].Cells["urunBarkod"].Value.ToString() == urun.Barkod.ToString())
+                            bool barkodZatenVar = false;
+                            foreach (DataGridViewRow row in gridUrunListesi.Rows)
                             {
-                                eklendiMi = true;
+                                if (row.Cells["urunBarkod"].Value.ToString() == urun.Barkod.ToString())
+                                {
+                                    barkodZatenVar = true;
+                                    break;
+                                }
                             }
-                        }
-                        if (eklendiMi == false)
-                        {
-                            string barkod = urun.Barkod;
-                            string urunAd = urun.UrunAd;
-                            string birim = urun.Birim;
-                            double miktar = (double)urun.Miktar;
-                            double fiyat = (double)urun.SatisFiyat;
-                            gridUrunListesi.Rows.Add();
-                            gridUrunListesi.Rows[satirSayisi].Cells["urunBarkod"].Value = barkod;
-                            gridUrunListesi.Rows[satirSayisi].Cells["urunAdi"].Value = urunAd;
-                            gridUrunListesi.Rows[satirSayisi].Cells["urunBirim"].Value = birim;
-                            gridUrunListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = miktar.ToString();
-                            gridUrunListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = fiyat.ToString("C2");
+                            if (!barkodZatenVar)
+                            {
+                                int yeniSatir = gridUrunListesi.Rows.Add();
+                                gridUrunListesi.Rows[yeniSatir].Cells["urunBarkod"].Value = urun.Barkod;
+                                gridUrunListesi.Rows[yeniSatir].Cells["urunAdi"].Value = urun.UrunAd;
+                                gridUrunListesi.Rows[yeniSatir].Cells["urunBirim"].Value = urun.Birim;
+                                gridUrunListesi.Rows[yeniSatir].Cells["urunMiktar"].Value = urun.Miktar.ToString();
+                                gridUrunListesi.Rows[yeniSatir].Cells["urunFiyat"].Value = Convert.ToDouble(urun.SatisFiyat).ToString("C2");
+                            }
                         }
                     }
                 }
@@ -90,6 +88,7 @@ namespace BarkodluMarketProgrami
         {
             if (checkBox1.Checked)
             {
+                eklendiMi = false;
                 txtUrunAd.Text = "";
                 var urunler = db.Urun.ToList();
                 int i = 0;

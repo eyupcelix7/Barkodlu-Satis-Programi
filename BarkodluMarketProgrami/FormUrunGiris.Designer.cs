@@ -28,71 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnIptal = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBeklet = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.cbxBirim = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
+            this.btnEkranKlavyesi = new System.Windows.Forms.Button();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnBarkod = new System.Windows.Forms.Button();
+            this.btnUrunGrubu = new System.Windows.Forms.Button();
+            this.lblKdvOrani = new System.Windows.Forms.Label();
+            this.nudKdvOrani = new System.Windows.Forms.NumericUpDown();
+            this.nudMiktar = new System.Windows.Forms.NumericUpDown();
+            this.nudSatisFiyati = new System.Windows.Forms.NumericUpDown();
+            this.nudAlisFiyati = new System.Windows.Forms.NumericUpDown();
+            this.cbxBirim = new System.Windows.Forms.ComboBox();
+            this.lblBirim = new System.Windows.Forms.Label();
+            this.lblMiktar = new System.Windows.Forms.Label();
+            this.lblSatisFiyati = new System.Windows.Forms.Label();
+            this.lblAlisFiyati = new System.Windows.Forms.Label();
+            this.cbxUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.txtUrunAciklama = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
+            this.txtBarkod = new System.Windows.Forms.TextBox();
+            this.lblUrunGrubu = new System.Windows.Forms.Label();
+            this.lblUrunAciklama = new System.Windows.Forms.Label();
+            this.lblUrunAdi = new System.Windows.Forms.Label();
             this.lblBarkod = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.gridSatisListesi = new System.Windows.Forms.DataGridView();
-            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.cbxSonUrunleriGoster = new System.Windows.Forms.CheckBox();
+            this.nudBulunanUrunSayisi = new System.Windows.Forms.NumericUpDown();
+            this.nudKayitliUrunSayisi = new System.Windows.Forms.NumericUpDown();
+            this.lblBulunanUrunSayisi = new System.Windows.Forms.Label();
+            this.lblKayitliUrunSayisi = new System.Windows.Forms.Label();
+            this.txtUrunAdiAranan = new System.Windows.Forms.TextBox();
+            this.lblUrunAdiAranan = new System.Windows.Forms.Label();
+            this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAlisFiyati = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunSatisFiyati = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunKdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunKullanici = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEkranKlavyesi = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.urunDuzenle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKdvOrani)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMiktar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisFiyati)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlisFiyati)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSatisListesi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBulunanUrunSayisi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKayitliUrunSayisi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -104,30 +113,35 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.btnEkranKlavyesi);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
-            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
-            this.splitContainer1.Panel1.Controls.Add(this.btnKaydet);
-            this.splitContainer1.Panel1.Controls.Add(this.btnIptal);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnBeklet);
-            this.splitContainer1.Panel1.Controls.Add(this.label8);
-            this.splitContainer1.Panel1.Controls.Add(this.numericUpDown4);
-            this.splitContainer1.Panel1.Controls.Add(this.numericUpDown3);
-            this.splitContainer1.Panel1.Controls.Add(this.numericUpDown2);
-            this.splitContainer1.Panel1.Controls.Add(this.numericUpDown1);
-            this.splitContainer1.Panel1.Controls.Add(this.cbxBirim);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
-            this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox4);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
+            this.splitContainer1.Panel1.Controls.Add(this.btnEkranKlavyesi);
+            this.splitContainer1.Panel1.Controls.Add(this.btnPdf);
+            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
+            this.splitContainer1.Panel1.Controls.Add(this.btnKaydet);
+            this.splitContainer1.Panel1.Controls.Add(this.btnTemizle);
+            this.splitContainer1.Panel1.Controls.Add(this.btnBarkod);
+            this.splitContainer1.Panel1.Controls.Add(this.btnUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.lblKdvOrani);
+            this.splitContainer1.Panel1.Controls.Add(this.nudKdvOrani);
+            this.splitContainer1.Panel1.Controls.Add(this.nudMiktar);
+            this.splitContainer1.Panel1.Controls.Add(this.nudSatisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.nudAlisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.cbxBirim);
+            this.splitContainer1.Panel1.Controls.Add(this.lblBirim);
+            this.splitContainer1.Panel1.Controls.Add(this.lblMiktar);
+            this.splitContainer1.Panel1.Controls.Add(this.lblSatisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.lblAlisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.cbxUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.txtUrunAciklama);
+            this.splitContainer1.Panel1.Controls.Add(this.txtUrunAdi);
+            this.splitContainer1.Panel1.Controls.Add(this.txtBarkod);
+            this.splitContainer1.Panel1.Controls.Add(this.lblUrunGrubu);
+            this.splitContainer1.Panel1.Controls.Add(this.lblUrunAciklama);
+            this.splitContainer1.Panel1.Controls.Add(this.lblUrunAdi);
             this.splitContainer1.Panel1.Controls.Add(this.lblBarkod);
             // 
             // splitContainer1.Panel2
@@ -136,6 +150,97 @@
             this.splitContainer1.Size = new System.Drawing.Size(1679, 1012);
             this.splitContainer1.SplitterDistance = 240;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(329, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 16);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(326, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 16);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(349, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 16);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(359, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 16);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "*";
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.Location = new System.Drawing.Point(14, 13);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(76, 18);
+            this.lblKullanici.TabIndex = 30;
+            this.lblKullanici.Text = "eyupcelix7";
+            // 
+            // btnEkranKlavyesi
+            // 
+            this.btnEkranKlavyesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEkranKlavyesi.BackColor = System.Drawing.Color.Navy;
+            this.btnEkranKlavyesi.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnEkranKlavyesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkranKlavyesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkranKlavyesi.ForeColor = System.Drawing.Color.White;
+            this.btnEkranKlavyesi.Location = new System.Drawing.Point(1086, 28);
+            this.btnEkranKlavyesi.Margin = new System.Windows.Forms.Padding(1);
+            this.btnEkranKlavyesi.Name = "btnEkranKlavyesi";
+            this.btnEkranKlavyesi.Padding = new System.Windows.Forms.Padding(2);
+            this.btnEkranKlavyesi.Size = new System.Drawing.Size(121, 90);
+            this.btnEkranKlavyesi.TabIndex = 29;
+            this.btnEkranKlavyesi.Text = "Ekran Klavyesi";
+            this.btnEkranKlavyesi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEkranKlavyesi.UseVisualStyleBackColor = false;
+            this.btnEkranKlavyesi.Click += new System.EventHandler(this.btnEkranKlavyesi_Click);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.BackColor = System.Drawing.Color.Tomato;
+            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Location = new System.Drawing.Point(1505, 28);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Padding = new System.Windows.Forms.Padding(2);
+            this.btnPdf.Size = new System.Drawing.Size(121, 90);
+            this.btnPdf.TabIndex = 28;
+            this.btnPdf.Text = "Pdf\'e Aktar";
+            this.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnPdf.UseVisualStyleBackColor = false;
             // 
             // btnExcel
             // 
@@ -163,7 +268,7 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(1232, 136);
+            this.btnKaydet.Location = new System.Drawing.Point(1086, 136);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
@@ -172,100 +277,125 @@
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // btnIptal
+            // btnTemizle
             // 
-            this.btnIptal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIptal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.btnIptal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.btnIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnIptal.ForeColor = System.Drawing.Color.White;
-            this.btnIptal.Location = new System.Drawing.Point(1368, 28);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(1);
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Padding = new System.Windows.Forms.Padding(2);
-            this.btnIptal.Size = new System.Drawing.Size(121, 90);
-            this.btnIptal.TabIndex = 25;
-            this.btnIptal.Text = "İptal";
-            this.btnIptal.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnIptal.UseVisualStyleBackColor = false;
+            this.btnTemizle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnTemizle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.ForeColor = System.Drawing.Color.White;
+            this.btnTemizle.Location = new System.Drawing.Point(1232, 28);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Padding = new System.Windows.Forms.Padding(2);
+            this.btnTemizle.Size = new System.Drawing.Size(121, 90);
+            this.btnTemizle.TabIndex = 25;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
-            // button1
+            // btnBarkod
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1086, 136);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(2);
-            this.button1.Size = new System.Drawing.Size(121, 90);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Barkod Oluştur";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBarkod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBarkod.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnBarkod.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnBarkod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBarkod.ForeColor = System.Drawing.Color.White;
+            this.btnBarkod.Location = new System.Drawing.Point(1368, 28);
+            this.btnBarkod.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBarkod.Name = "btnBarkod";
+            this.btnBarkod.Padding = new System.Windows.Forms.Padding(2);
+            this.btnBarkod.Size = new System.Drawing.Size(121, 90);
+            this.btnBarkod.TabIndex = 24;
+            this.btnBarkod.Text = "Barkod Oluştur";
+            this.btnBarkod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBarkod.UseVisualStyleBackColor = false;
             // 
-            // btnBeklet
+            // btnUrunGrubu
             // 
-            this.btnBeklet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBeklet.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBeklet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBeklet.ForeColor = System.Drawing.Color.White;
-            this.btnBeklet.Location = new System.Drawing.Point(1232, 28);
-            this.btnBeklet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBeklet.Name = "btnBeklet";
-            this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnBeklet.Size = new System.Drawing.Size(121, 90);
-            this.btnBeklet.TabIndex = 23;
-            this.btnBeklet.Text = "Ürün Grubu Ekle";
-            this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBeklet.UseVisualStyleBackColor = false;
+            this.btnUrunGrubu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUrunGrubu.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnUrunGrubu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnUrunGrubu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunGrubu.ForeColor = System.Drawing.Color.White;
+            this.btnUrunGrubu.Location = new System.Drawing.Point(1232, 136);
+            this.btnUrunGrubu.Margin = new System.Windows.Forms.Padding(1);
+            this.btnUrunGrubu.Name = "btnUrunGrubu";
+            this.btnUrunGrubu.Padding = new System.Windows.Forms.Padding(2);
+            this.btnUrunGrubu.Size = new System.Drawing.Size(121, 90);
+            this.btnUrunGrubu.TabIndex = 23;
+            this.btnUrunGrubu.Text = "Ürün Grubu Ekle";
+            this.btnUrunGrubu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUrunGrubu.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // lblKdvOrani
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(392, 130);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 18);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "KDV Oranı";
+            this.lblKdvOrani.AutoSize = true;
+            this.lblKdvOrani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKdvOrani.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblKdvOrani.Location = new System.Drawing.Point(392, 130);
+            this.lblKdvOrani.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKdvOrani.Name = "lblKdvOrani";
+            this.lblKdvOrani.Size = new System.Drawing.Size(87, 18);
+            this.lblKdvOrani.TabIndex = 22;
+            this.lblKdvOrani.Text = "KDV Oranı";
             // 
-            // numericUpDown4
+            // nudKdvOrani
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(488, 130);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown4.TabIndex = 21;
+            this.nudKdvOrani.Location = new System.Drawing.Point(488, 130);
+            this.nudKdvOrani.Name = "nudKdvOrani";
+            this.nudKdvOrani.Size = new System.Drawing.Size(124, 20);
+            this.nudKdvOrani.TabIndex = 21;
+            this.nudKdvOrani.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown3
+            // nudMiktar
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(488, 100);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown3.TabIndex = 20;
+            this.nudMiktar.DecimalPlaces = 2;
+            this.nudMiktar.Location = new System.Drawing.Point(488, 100);
+            this.nudMiktar.Name = "nudMiktar";
+            this.nudMiktar.Size = new System.Drawing.Size(124, 20);
+            this.nudMiktar.TabIndex = 20;
+            this.nudMiktar.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown2
+            // nudSatisFiyati
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(488, 70);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown2.TabIndex = 19;
+            this.nudSatisFiyati.DecimalPlaces = 2;
+            this.nudSatisFiyati.Location = new System.Drawing.Point(488, 70);
+            this.nudSatisFiyati.Name = "nudSatisFiyati";
+            this.nudSatisFiyati.Size = new System.Drawing.Size(124, 20);
+            this.nudSatisFiyati.TabIndex = 19;
+            this.nudSatisFiyati.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown1
+            // nudAlisFiyati
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(488, 40);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown1.TabIndex = 18;
+            this.nudAlisFiyati.DecimalPlaces = 2;
+            this.nudAlisFiyati.Location = new System.Drawing.Point(488, 40);
+            this.nudAlisFiyati.Name = "nudAlisFiyati";
+            this.nudAlisFiyati.Size = new System.Drawing.Size(124, 20);
+            this.nudAlisFiyati.TabIndex = 18;
+            this.nudAlisFiyati.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cbxBirim
             // 
@@ -278,118 +408,119 @@
             this.cbxBirim.Size = new System.Drawing.Size(190, 21);
             this.cbxBirim.TabIndex = 17;
             // 
-            // label4
+            // lblBirim
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(11, 160);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Birim";
+            this.lblBirim.AutoSize = true;
+            this.lblBirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirim.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblBirim.Location = new System.Drawing.Point(11, 160);
+            this.lblBirim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirim.Name = "lblBirim";
+            this.lblBirim.Size = new System.Drawing.Size(47, 18);
+            this.lblBirim.TabIndex = 13;
+            this.lblBirim.Text = "Birim";
             // 
-            // label5
+            // lblMiktar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(392, 100);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Miktar";
+            this.lblMiktar.AutoSize = true;
+            this.lblMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMiktar.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMiktar.Location = new System.Drawing.Point(392, 100);
+            this.lblMiktar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiktar.Name = "lblMiktar";
+            this.lblMiktar.Size = new System.Drawing.Size(55, 18);
+            this.lblMiktar.TabIndex = 12;
+            this.lblMiktar.Text = "Miktar";
             // 
-            // label6
+            // lblSatisFiyati
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(392, 70);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Satış Fiyatı";
+            this.lblSatisFiyati.AutoSize = true;
+            this.lblSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatisFiyati.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblSatisFiyati.Location = new System.Drawing.Point(392, 70);
+            this.lblSatisFiyati.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSatisFiyati.Name = "lblSatisFiyati";
+            this.lblSatisFiyati.Size = new System.Drawing.Size(91, 18);
+            this.lblSatisFiyati.TabIndex = 11;
+            this.lblSatisFiyati.Text = "Satış Fiyatı";
             // 
-            // label7
+            // lblAlisFiyati
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(392, 40);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 18);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Alış Fiyatı";
+            this.lblAlisFiyati.AutoSize = true;
+            this.lblAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAlisFiyati.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblAlisFiyati.Location = new System.Drawing.Point(392, 40);
+            this.lblAlisFiyati.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAlisFiyati.Name = "lblAlisFiyati";
+            this.lblAlisFiyati.Size = new System.Drawing.Size(80, 18);
+            this.lblAlisFiyati.TabIndex = 10;
+            this.lblAlisFiyati.Text = "Alış Fiyatı";
             // 
-            // comboBox1
+            // cbxUrunGrubu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(133, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cbxUrunGrubu.FormattingEnabled = true;
+            this.cbxUrunGrubu.Location = new System.Drawing.Point(133, 130);
+            this.cbxUrunGrubu.Name = "cbxUrunGrubu";
+            this.cbxUrunGrubu.Size = new System.Drawing.Size(187, 21);
+            this.cbxUrunGrubu.TabIndex = 9;
             // 
-            // textBox4
+            // txtUrunAciklama
             // 
-            this.textBox4.Location = new System.Drawing.Point(133, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtUrunAciklama.Location = new System.Drawing.Point(133, 100);
+            this.txtUrunAciklama.Name = "txtUrunAciklama";
+            this.txtUrunAciklama.Size = new System.Drawing.Size(165, 20);
+            this.txtUrunAciklama.TabIndex = 8;
             // 
-            // textBox2
+            // txtUrunAdi
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtUrunAdi.Location = new System.Drawing.Point(133, 70);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(210, 20);
+            this.txtUrunAdi.TabIndex = 6;
             // 
-            // textBox1
+            // txtBarkod
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtBarkod.Location = new System.Drawing.Point(133, 40);
+            this.txtBarkod.Name = "txtBarkod";
+            this.txtBarkod.Size = new System.Drawing.Size(220, 20);
+            this.txtBarkod.TabIndex = 5;
+            this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
-            // label3
+            // lblUrunGrubu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(11, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ürün Grubu";
+            this.lblUrunGrubu.AutoSize = true;
+            this.lblUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunGrubu.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblUrunGrubu.Location = new System.Drawing.Point(11, 130);
+            this.lblUrunGrubu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUrunGrubu.Name = "lblUrunGrubu";
+            this.lblUrunGrubu.Size = new System.Drawing.Size(95, 18);
+            this.lblUrunGrubu.TabIndex = 4;
+            this.lblUrunGrubu.Text = "Ürün Grubu";
             // 
-            // label2
+            // lblUrunAciklama
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(11, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Ürün Açıklama";
+            this.lblUrunAciklama.AutoSize = true;
+            this.lblUrunAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunAciklama.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblUrunAciklama.Location = new System.Drawing.Point(11, 100);
+            this.lblUrunAciklama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUrunAciklama.Name = "lblUrunAciklama";
+            this.lblUrunAciklama.Size = new System.Drawing.Size(117, 18);
+            this.lblUrunAciklama.TabIndex = 3;
+            this.lblUrunAciklama.Text = "Ürün Açıklama";
             // 
-            // label1
+            // lblUrunAdi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(11, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ürün Adı";
+            this.lblUrunAdi.AutoSize = true;
+            this.lblUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunAdi.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblUrunAdi.Location = new System.Drawing.Point(11, 70);
+            this.lblUrunAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUrunAdi.Name = "lblUrunAdi";
+            this.lblUrunAdi.Size = new System.Drawing.Size(72, 18);
+            this.lblUrunAdi.TabIndex = 2;
+            this.lblUrunAdi.Text = "Ürün Adı";
             // 
             // lblBarkod
             // 
@@ -412,141 +543,153 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.numericUpDown6);
-            this.splitContainer2.Panel1.Controls.Add(this.numericUpDown5);
-            this.splitContainer2.Panel1.Controls.Add(this.label11);
-            this.splitContainer2.Panel1.Controls.Add(this.label10);
-            this.splitContainer2.Panel1.Controls.Add(this.textBox3);
-            this.splitContainer2.Panel1.Controls.Add(this.label9);
+            this.splitContainer2.Panel1.Controls.Add(this.cbxSonUrunleriGoster);
+            this.splitContainer2.Panel1.Controls.Add(this.nudBulunanUrunSayisi);
+            this.splitContainer2.Panel1.Controls.Add(this.nudKayitliUrunSayisi);
+            this.splitContainer2.Panel1.Controls.Add(this.lblBulunanUrunSayisi);
+            this.splitContainer2.Panel1.Controls.Add(this.lblKayitliUrunSayisi);
+            this.splitContainer2.Panel1.Controls.Add(this.txtUrunAdiAranan);
+            this.splitContainer2.Panel1.Controls.Add(this.lblUrunAdiAranan);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.gridSatisListesi);
+            this.splitContainer2.Panel2.Controls.Add(this.gridSonucListesi);
             this.splitContainer2.Size = new System.Drawing.Size(1679, 768);
             this.splitContainer2.SplitterDistance = 62;
             this.splitContainer2.TabIndex = 0;
             // 
-            // textBox3
+            // cbxSonUrunleriGoster
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 20);
-            this.textBox3.TabIndex = 7;
+            this.cbxSonUrunleriGoster.AutoSize = true;
+            this.cbxSonUrunleriGoster.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.cbxSonUrunleriGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSonUrunleriGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxSonUrunleriGoster.ForeColor = System.Drawing.Color.Navy;
+            this.cbxSonUrunleriGoster.Location = new System.Drawing.Point(17, 26);
+            this.cbxSonUrunleriGoster.Name = "cbxSonUrunleriGoster";
+            this.cbxSonUrunleriGoster.Size = new System.Drawing.Size(336, 22);
+            this.cbxSonUrunleriGoster.TabIndex = 22;
+            this.cbxSonUrunleriGoster.Text = "SON EKLENEN ÜRÜNLERİ LİSTELE (20)";
+            this.cbxSonUrunleriGoster.UseVisualStyleBackColor = true;
+            this.cbxSonUrunleriGoster.CheckedChanged += new System.EventHandler(this.cbxSonUrunleriGoster_CheckedChanged);
             // 
-            // label9
+            // nudBulunanUrunSayisi
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(11, 22);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 18);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "ÜRÜN ADI";
+            this.nudBulunanUrunSayisi.Location = new System.Drawing.Point(875, 38);
+            this.nudBulunanUrunSayisi.Name = "nudBulunanUrunSayisi";
+            this.nudBulunanUrunSayisi.ReadOnly = true;
+            this.nudBulunanUrunSayisi.Size = new System.Drawing.Size(124, 20);
+            this.nudBulunanUrunSayisi.TabIndex = 20;
             // 
-            // label10
+            // nudKayitliUrunSayisi
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(365, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 18);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "KAYITLI ÜRÜN SAYISI";
+            this.nudKayitliUrunSayisi.Location = new System.Drawing.Point(695, 38);
+            this.nudKayitliUrunSayisi.Name = "nudKayitliUrunSayisi";
+            this.nudKayitliUrunSayisi.ReadOnly = true;
+            this.nudKayitliUrunSayisi.Size = new System.Drawing.Size(124, 20);
+            this.nudKayitliUrunSayisi.TabIndex = 19;
             // 
-            // label11
+            // lblBulunanUrunSayisi
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(717, 22);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(194, 18);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "BULUNAN ÜRÜN SAYISI";
+            this.lblBulunanUrunSayisi.AutoSize = true;
+            this.lblBulunanUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBulunanUrunSayisi.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblBulunanUrunSayisi.Location = new System.Drawing.Point(872, 12);
+            this.lblBulunanUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBulunanUrunSayisi.Name = "lblBulunanUrunSayisi";
+            this.lblBulunanUrunSayisi.Size = new System.Drawing.Size(194, 18);
+            this.lblBulunanUrunSayisi.TabIndex = 10;
+            this.lblBulunanUrunSayisi.Text = "BULUNAN ÜRÜN SAYISI";
             // 
-            // numericUpDown5
+            // lblKayitliUrunSayisi
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(544, 22);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown5.TabIndex = 19;
+            this.lblKayitliUrunSayisi.AutoSize = true;
+            this.lblKayitliUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKayitliUrunSayisi.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblKayitliUrunSayisi.Location = new System.Drawing.Point(692, 12);
+            this.lblKayitliUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKayitliUrunSayisi.Name = "lblKayitliUrunSayisi";
+            this.lblKayitliUrunSayisi.Size = new System.Drawing.Size(174, 18);
+            this.lblKayitliUrunSayisi.TabIndex = 8;
+            this.lblKayitliUrunSayisi.Text = "KAYITLI ÜRÜN SAYISI";
             // 
-            // numericUpDown6
+            // txtUrunAdiAranan
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(916, 20);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(124, 20);
-            this.numericUpDown6.TabIndex = 20;
+            this.txtUrunAdiAranan.Location = new System.Drawing.Point(455, 29);
+            this.txtUrunAdiAranan.Name = "txtUrunAdiAranan";
+            this.txtUrunAdiAranan.Size = new System.Drawing.Size(220, 20);
+            this.txtUrunAdiAranan.TabIndex = 7;
+            this.txtUrunAdiAranan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAdiAranan_KeyPress);
             // 
-            // gridSatisListesi
+            // lblUrunAdiAranan
             // 
-            this.gridSatisListesi.AllowUserToAddRows = false;
-            this.gridSatisListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridSatisListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.gridSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridSatisListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.gridSatisListesi.ColumnHeadersHeight = 29;
-            this.gridSatisListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.urunSil,
+            this.lblUrunAdiAranan.AutoSize = true;
+            this.lblUrunAdiAranan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunAdiAranan.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblUrunAdiAranan.Location = new System.Drawing.Point(363, 29);
+            this.lblUrunAdiAranan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUrunAdiAranan.Name = "lblUrunAdiAranan";
+            this.lblUrunAdiAranan.Size = new System.Drawing.Size(87, 18);
+            this.lblUrunAdiAranan.TabIndex = 6;
+            this.lblUrunAdiAranan.Text = "ÜRÜN ADI";
+            // 
+            // gridSonucListesi
+            // 
+            this.gridSonucListesi.AllowUserToAddRows = false;
+            this.gridSonucListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridSonucListesi.ColumnHeadersHeight = 29;
+            this.gridSonucListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.urunBarkod,
             this.urunAdi,
             this.urunAciklama,
             this.urunGrup,
-            this.urunAlisFiyat,
-            this.urunFiyat,
-            this.urunKdv,
             this.urunBirim,
             this.urunMiktar,
+            this.urunAlisFiyati,
+            this.urunSatisFiyati,
+            this.urunKdvTutari,
             this.urunTarih,
-            this.urunKullanici});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSatisListesi.DefaultCellStyle = dataGridViewCellStyle8;
-            this.gridSatisListesi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridSatisListesi.EnableHeadersVisualStyles = false;
-            this.gridSatisListesi.GridColor = System.Drawing.Color.White;
-            this.gridSatisListesi.Location = new System.Drawing.Point(0, 0);
-            this.gridSatisListesi.Margin = new System.Windows.Forms.Padding(2);
-            this.gridSatisListesi.Name = "gridSatisListesi";
-            this.gridSatisListesi.ReadOnly = true;
-            this.gridSatisListesi.RowHeadersVisible = false;
-            this.gridSatisListesi.RowHeadersWidth = 51;
-            this.gridSatisListesi.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridSatisListesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridSatisListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.gridSatisListesi.RowTemplate.Height = 32;
-            this.gridSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSatisListesi.Size = new System.Drawing.Size(1679, 702);
-            this.gridSatisListesi.TabIndex = 2;
-            // 
-            // urunSil
-            // 
-            this.urunSil.FillWeight = 71.06599F;
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
+            this.urunKullanici,
+            this.urunDuzenle,
+            this.urunSil});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSonucListesi.EnableHeadersVisualStyles = false;
+            this.gridSonucListesi.GridColor = System.Drawing.Color.White;
+            this.gridSonucListesi.Location = new System.Drawing.Point(0, 0);
+            this.gridSonucListesi.Margin = new System.Windows.Forms.Padding(2);
+            this.gridSonucListesi.Name = "gridSonucListesi";
+            this.gridSonucListesi.ReadOnly = true;
+            this.gridSonucListesi.RowHeadersVisible = false;
+            this.gridSonucListesi.RowHeadersWidth = 51;
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.gridSonucListesi.RowTemplate.Height = 32;
+            this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSonucListesi.Size = new System.Drawing.Size(1679, 702);
+            this.gridSonucListesi.TabIndex = 2;
+            this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellContentClick);
             // 
             // urunBarkod
             // 
@@ -577,31 +720,6 @@
             this.urunGrup.Name = "urunGrup";
             this.urunGrup.ReadOnly = true;
             // 
-            // urunAlisFiyat
-            // 
-            this.urunAlisFiyat.HeaderText = "Alış Fiyatı";
-            this.urunAlisFiyat.MinimumWidth = 6;
-            this.urunAlisFiyat.Name = "urunAlisFiyat";
-            this.urunAlisFiyat.ReadOnly = true;
-            // 
-            // urunFiyat
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "C2";
-            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle6;
-            this.urunFiyat.FillWeight = 104.8223F;
-            this.urunFiyat.HeaderText = "Satış Fiyatı";
-            this.urunFiyat.MinimumWidth = 6;
-            this.urunFiyat.Name = "urunFiyat";
-            this.urunFiyat.ReadOnly = true;
-            // 
-            // urunKdv
-            // 
-            this.urunKdv.HeaderText = "Kdv Tutarı";
-            this.urunKdv.MinimumWidth = 6;
-            this.urunKdv.Name = "urunKdv";
-            this.urunKdv.ReadOnly = true;
-            // 
             // urunBirim
             // 
             this.urunBirim.FillWeight = 104.8223F;
@@ -612,13 +730,42 @@
             // 
             // urunMiktar
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle2;
             this.urunMiktar.FillWeight = 104.8223F;
             this.urunMiktar.HeaderText = "Miktar";
             this.urunMiktar.MinimumWidth = 6;
             this.urunMiktar.Name = "urunMiktar";
             this.urunMiktar.ReadOnly = true;
+            // 
+            // urunAlisFiyati
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunAlisFiyati.DefaultCellStyle = dataGridViewCellStyle3;
+            this.urunAlisFiyati.HeaderText = "Alış Fiyatı";
+            this.urunAlisFiyati.MinimumWidth = 6;
+            this.urunAlisFiyati.Name = "urunAlisFiyati";
+            this.urunAlisFiyati.ReadOnly = true;
+            // 
+            // urunSatisFiyati
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "C2";
+            this.urunSatisFiyati.DefaultCellStyle = dataGridViewCellStyle4;
+            this.urunSatisFiyati.FillWeight = 104.8223F;
+            this.urunSatisFiyati.HeaderText = "Satış Fiyatı";
+            this.urunSatisFiyati.MinimumWidth = 6;
+            this.urunSatisFiyati.Name = "urunSatisFiyati";
+            this.urunSatisFiyati.ReadOnly = true;
+            // 
+            // urunKdvTutari
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunKdvTutari.DefaultCellStyle = dataGridViewCellStyle5;
+            this.urunKdvTutari.HeaderText = "Kdv Tutarı";
+            this.urunKdvTutari.MinimumWidth = 6;
+            this.urunKdvTutari.Name = "urunKdvTutari";
+            this.urunKdvTutari.ReadOnly = true;
             // 
             // urunTarih
             // 
@@ -632,42 +779,23 @@
             this.urunKullanici.Name = "urunKullanici";
             this.urunKullanici.ReadOnly = true;
             // 
-            // btnEkranKlavyesi
+            // urunDuzenle
             // 
-            this.btnEkranKlavyesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEkranKlavyesi.BackColor = System.Drawing.Color.Navy;
-            this.btnEkranKlavyesi.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.btnEkranKlavyesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkranKlavyesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkranKlavyesi.ForeColor = System.Drawing.Color.White;
-            this.btnEkranKlavyesi.Location = new System.Drawing.Point(1086, 28);
-            this.btnEkranKlavyesi.Margin = new System.Windows.Forms.Padding(1);
-            this.btnEkranKlavyesi.Name = "btnEkranKlavyesi";
-            this.btnEkranKlavyesi.Padding = new System.Windows.Forms.Padding(2);
-            this.btnEkranKlavyesi.Size = new System.Drawing.Size(121, 90);
-            this.btnEkranKlavyesi.TabIndex = 29;
-            this.btnEkranKlavyesi.Text = "Ekran Klavyesi";
-            this.btnEkranKlavyesi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEkranKlavyesi.UseVisualStyleBackColor = false;
-            this.btnEkranKlavyesi.Click += new System.EventHandler(this.btnEkranKlavyesi_Click);
+            this.urunDuzenle.HeaderText = "Düzenle";
+            this.urunDuzenle.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunDuzenle.Name = "urunDuzenle";
+            this.urunDuzenle.ReadOnly = true;
+            this.urunDuzenle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunDuzenle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // button4
+            // urunSil
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Tomato;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1505, 28);
-            this.button4.Margin = new System.Windows.Forms.Padding(1);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(2);
-            this.button4.Size = new System.Drawing.Size(121, 90);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Pdf\'e Aktar";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button4.UseVisualStyleBackColor = false;
+            this.urunSil.FillWeight = 71.06599F;
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
             // 
             // FormUrunGiris
             // 
@@ -683,18 +811,18 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKdvOrani)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMiktar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisFiyati)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlisFiyati)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSatisListesi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBulunanUrunSayisi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKayitliUrunSayisi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -703,49 +831,56 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label lblBarkod;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox cbxUrunGrubu;
+        private System.Windows.Forms.TextBox txtUrunAciklama;
+        private System.Windows.Forms.TextBox txtUrunAdi;
+        private System.Windows.Forms.TextBox txtBarkod;
+        private System.Windows.Forms.Label lblUrunGrubu;
+        private System.Windows.Forms.Label lblUrunAciklama;
+        private System.Windows.Forms.Label lblUrunAdi;
+        private System.Windows.Forms.Label lblKdvOrani;
+        private System.Windows.Forms.NumericUpDown nudKdvOrani;
+        private System.Windows.Forms.NumericUpDown nudMiktar;
+        private System.Windows.Forms.NumericUpDown nudSatisFiyati;
+        private System.Windows.Forms.NumericUpDown nudAlisFiyati;
         private System.Windows.Forms.ComboBox cbxBirim;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnBeklet;
+        private System.Windows.Forms.Label lblBirim;
+        private System.Windows.Forms.Label lblMiktar;
+        private System.Windows.Forms.Label lblSatisFiyati;
+        private System.Windows.Forms.Label lblAlisFiyati;
+        private System.Windows.Forms.Button btnUrunGrubu;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnKaydet;
-        private System.Windows.Forms.Button btnIptal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnBarkod;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.DataGridView gridSatisListesi;
-        private System.Windows.Forms.DataGridViewImageColumn urunSil;
+        private System.Windows.Forms.Label lblBulunanUrunSayisi;
+        private System.Windows.Forms.Label lblKayitliUrunSayisi;
+        private System.Windows.Forms.TextBox txtUrunAdiAranan;
+        private System.Windows.Forms.Label lblUrunAdiAranan;
+        private System.Windows.Forms.NumericUpDown nudBulunanUrunSayisi;
+        private System.Windows.Forms.NumericUpDown nudKayitliUrunSayisi;
+        private System.Windows.Forms.DataGridView gridSonucListesi;
+        private System.Windows.Forms.Button btnEkranKlavyesi;
+        private System.Windows.Forms.Button btnPdf;
+        private System.Windows.Forms.Label lblKullanici;
+        private System.Windows.Forms.CheckBox cbxSonUrunleriGoster;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunBarkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunAciklama;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunGrup;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunAlisFiyat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunFiyat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunKdv;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunBirim;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunMiktar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunAlisFiyati;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunSatisFiyati;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunKdvTutari;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunTarih;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunKullanici;
-        private System.Windows.Forms.Button btnEkranKlavyesi;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewImageColumn urunDuzenle;
+        private System.Windows.Forms.DataGridViewImageColumn urunSil;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

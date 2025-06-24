@@ -70,7 +70,7 @@ namespace BarkodluMarketProgrami
                         else
                         {
                             Console.Beep(200, 200);
-                            FormUrunGiris formUrunGiris = new FormUrunGiris();
+                            FormUrunGiris formUrunGiris = new FormUrunGiris(barkod);
                             formUrunGiris.ShowDialog();
                         }
                     }
