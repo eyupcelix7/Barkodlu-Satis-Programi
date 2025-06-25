@@ -235,8 +235,9 @@ namespace BarkodluMarketProgrami
         }
         private void gridSonucListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex != 12)
+            if(e.ColumnIndex != 12 && e.RowIndex != -1)
             {
+                MessageBox.Show(e.RowIndex.ToString());
                 txtBarkod.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
                 txtUrunAdi.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
                 txtUrunAciklama.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAciklama"].Value.ToString();
