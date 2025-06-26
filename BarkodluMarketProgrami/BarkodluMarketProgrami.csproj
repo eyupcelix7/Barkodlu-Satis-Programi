@@ -152,6 +152,10 @@
     </Compile>
     <Compile Include="StokArttir.cs" />
     <Compile Include="StokAzalt.cs" />
+    <Compile Include="StokHareket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StokHareketEkle.cs" />
     <Compile Include="Terazi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

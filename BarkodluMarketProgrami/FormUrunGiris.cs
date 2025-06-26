@@ -80,6 +80,7 @@ namespace BarkodluMarketProgrami
                     guncellenecekUrun.Kullanici = lblKullanici.Text.Trim();
                     db.SaveChanges();
                     MessageBox.Show("Ürün başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    StokHareketEkle stokHareketEkle = new StokHareketEkle(txtBarkod.Text.Trim(), txtUrunAdi.Text.Trim(), cmbBirim.Text.Trim(), cmbUrunGrubu.Text.Trim(), Convert.ToDouble(nudMiktar.Value), lblKullanici.Text.Trim(), DateTime.Now);
                     Temizle();
                     kayitliUrunSayisiGetir();
                 }
@@ -103,6 +104,7 @@ namespace BarkodluMarketProgrami
                         db.Urun.Add(urun);
                         db.SaveChanges();
                         MessageBox.Show("Ürün başarıyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        StokHareketEkle stokHareketEkle = new StokHareketEkle(txtBarkod.Text.Trim(), txtUrunAdi.Text.Trim(), cmbBirim.Text.Trim(), cmbUrunGrubu.Text.Trim(), Convert.ToDouble(nudMiktar.Value), lblKullanici.Text.Trim(), DateTime.Now);
                         Temizle();
                         kayitliUrunSayisiGetir();
                     }
@@ -237,7 +239,6 @@ namespace BarkodluMarketProgrami
         {
             if(e.ColumnIndex != 12 && e.RowIndex != -1)
             {
-                MessageBox.Show(e.RowIndex.ToString());
                 txtBarkod.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunBarkod"].Value.ToString();
                 txtUrunAdi.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAdi"].Value.ToString();
                 txtUrunAciklama.Text = gridSonucListesi.Rows[e.RowIndex].Cells["urunAciklama"].Value.ToString();
