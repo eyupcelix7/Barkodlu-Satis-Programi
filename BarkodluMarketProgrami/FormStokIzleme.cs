@@ -76,26 +76,50 @@ namespace BarkodluMarketProgrami
         }
         private void txtUrunAdi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(txtUrunAdi.Text.Length > 2)
+            if (cmbIslemTuru.SelectedIndex != -1)
             {
-                var urunler = db.Urun.Where(x => x.UrunAd.Contains(txtUrunAdi.Text)).ToList();
-                gridSonucListesi.DataSource = urunler;
-                gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
-                gridSonucListesi.Columns["Id"].Visible = false;
-                bulunanSayisiniDegistir(urunler.Count);
+                if (txtUrunAdi.Text.Length > 2)
+                {
+                    var urunler = db.Urun.Where(x => x.UrunAd.Contains(txtUrunAdi.Text)).ToList();
+                    gridSonucListesi.DataSource = urunler;
+                    gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
+                    gridSonucListesi.Columns["Id"].Visible = false;
+                    bulunanSayisiniDegistir(urunler.Count);
+                }
+                else
+                {
+                    if (e.KeyChar == (char)Keys.Back)
+                    {
+                        gridSonucListesi.DataSource = null;
+                        bulunanSayisiniDegistir(0);
+                    }
+                }
             }
             else
             {
-                if(e.KeyChar == (char)Keys.Back)
-                {
-                    gridSonucListesi.DataSource = null;
-                    bulunanSayisiniDegistir(0);
-                }
+                MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUrunAdi.Text = string.Empty;
             }
         }
         private void bulunanSayisiniDegistir(int sayi)
         {
             nudBulunanUrunSayisi.Value = sayi;
+        }
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+        private void Temizle()
+        {
+            cmbIslemTuru.SelectedIndex = -1;
+            rdbTumu.Checked = false;
+            rdbUrunGrubunaGore.Checked = false;
+            cmbUrunGrubu.SelectedIndex = -1;
+            dtpBaslangicTarihi.Value = DateTime.Now;
+            dtpBitisTarihi.Value = DateTime.Now;
+            txtUrunAdi.Text = string.Empty;
+            gridSonucListesi.DataSource = null;
+            nudBulunanUrunSayisi.Value = 0;
         }
     }
 }
