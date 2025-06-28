@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BarkodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ayarlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KartKomisyon" Type="float" />
+        </EntityType>
         <EntityType Name="HizliFiyat">
           <Key>
             <PropertyRef Name="Id" />
@@ -127,6 +134,7 @@
           <Property Name="Odeme" Type="bit" />
         </EntityType>
         <EntityContainer Name="BarkodModelStoreContainer">
+          <EntitySet Name="Ayarlar" EntityType="Self.Ayarlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HizliFiyat" EntityType="Self.HizliFiyat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HizliKategori" EntityType="Self.HizliKategori" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
@@ -173,6 +181,7 @@
           <EntitySet Name="Veresiye" EntityType="BarkodModel.Veresiye" />
           <EntitySet Name="UrunGrubu" EntityType="BarkodModel.UrunGrubu" />
           <EntitySet Name="StokHareket" EntityType="BarkodModel.StokHareket" />
+          <EntitySet Name="Ayarlar" EntityType="BarkodModel.Ayarlar" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -276,6 +285,13 @@
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Ayarlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KartKomisyon" Type="Double" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -411,6 +427,14 @@
                 <ScalarProperty Name="Birim" ColumnName="Birim" />
                 <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
                 <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ayarlar">
+            <EntityTypeMapping TypeName="BarkodModel.Ayarlar">
+              <MappingFragment StoreEntitySet="Ayarlar">
+                <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

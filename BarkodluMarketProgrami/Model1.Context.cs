@@ -36,5 +36,6 @@ namespace BarkodluMarketProgrami
         public virtual DbSet<Veresiye> Veresiye { get; set; }
         public virtual DbSet<UrunGrubu> UrunGrubu { get; set; }
         public virtual DbSet<StokHareket> StokHareket { get; set; }
+        public virtual DbSet<Ayarlar> Ayarlar { get; set; }
     }
 }
