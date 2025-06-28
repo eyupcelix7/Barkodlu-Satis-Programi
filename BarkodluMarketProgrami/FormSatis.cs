@@ -485,7 +485,7 @@ namespace BarkodluMarketProgrami
                     satis.OdemeSekli = odemeTuru;
                     db.Satis.Add(satis);
                     db.SaveChanges();
-                    alisFiyatToplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunAlisFiyat"].Value.ToString().Replace("₺", "").Trim());
+                    alisFiyatToplam += Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunAlisFiyat"].Value.ToString().Replace("₺", "").Trim()) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
                     if (!iade)
                     {
                         StokAzalt.stokAzalt(gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString(), Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value));
