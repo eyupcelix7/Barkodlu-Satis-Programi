@@ -64,8 +64,12 @@ namespace BarkodluMarketProgrami
                     }
                     else
                     {
-                        stokHareketler = db.StokHareket
-                        .Where(x => x.UrunGrup == cmbUrunGrubu.Text && x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(x => x.Tarih).ToList();
+                        if (cmbUrunGrubu.Text != "")
+                        {
+                            stokHareketler = db.
+                                StokHareket.Where(x => x.UrunGrup == cmbUrunGrubu.Text && x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(x => x.Tarih).ToList();
+                        }
+
                     }
                     gridSonucListesi.DataSource = stokHareketler;
                     gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";

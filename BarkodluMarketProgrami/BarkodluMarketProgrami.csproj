@@ -79,6 +79,12 @@
     <Compile Include="FormHizliUrunEkle.Designer.cs">
       <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRapor.Designer.cs">
+      <DependentUpon>FormRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="FormHizliUrunEkle.resx">
       <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRapor.resx">
+      <DependentUpon>FormRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSatis.resx">
       <DependentUpon>FormSatis.cs</DependentUpon>
