@@ -94,6 +94,12 @@
     <Compile Include="FormRapor.Designer.cs">
       <DependentUpon>FormRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRaporDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRaporDetay.Designer.cs">
+      <DependentUpon>FormRaporDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRapor.resx">
       <DependentUpon>FormRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRaporDetay.resx">
+      <DependentUpon>FormRaporDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSatis.resx">
       <DependentUpon>FormSatis.cs</DependentUpon>

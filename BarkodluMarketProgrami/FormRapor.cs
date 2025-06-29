@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,8 @@ namespace BarkodluMarketProgrami
 {
     public partial class FormRapor : Form
     {
+        bool basiliMi = false;
+        int basiliRowIndex = 0, hitX = 0, hitY = 0;
         public FormRapor()
         {
             InitializeComponent();
@@ -222,20 +226,63 @@ namespace BarkodluMarketProgrami
             }
             MessageBox.Show(detay);
         }
-
         private void btnGelirEkle_Click(object sender, EventArgs e)
         {
             FormGelirGiderEkle formGelirGiderEkle = new FormGelirGiderEkle();
             formGelirGiderEkle.gelir = true;
             formGelirGiderEkle.ShowDialog();
         }
-
         private void btnGiderEkle_Click(object sender, EventArgs e)
         {
             FormGelirGiderEkle formGelirGiderEkle = new FormGelirGiderEkle();
             formGelirGiderEkle.gelir = false;
             formGelirGiderEkle.ShowDialog();
 
+        }
+        private void gridSonucListesi_MouseDown(object sender, MouseEventArgs e)
+        {
+            var hit = gridSonucListesi.HitTest(e.X, e.Y);
+            hitX = e.X;
+            hitY = e.Y;
+            if (hit.RowIndex >= 0 && hit.ColumnIndex >= 0) 
+            {
+                basiliMi = true;
+                timer1.Start();
+                basiliRowIndex = hit.RowIndex;
+            }
+        }
+        private void gridSonucListesi_MouseUp(object sender, MouseEventArgs e)
+        {
+            var hit = gridSonucListesi.HitTest(e.X, e.Y);
+            hitX = e.X;
+            hitY = e.Y;
+            if (hit.RowIndex >= 0 && hit.ColumnIndex >= 0)
+            {
+                basiliMi = false;
+                timer1.Stop();
+                basiliRowIndex = hit.RowIndex;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (basiliMi) // Eğer butona basılı ise
+            {
+                ContextMenuStrip st = new ContextMenuStrip();
+                ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                menuItem.Text = "Detaylar";
+                st.Items.Add(menuItem);
+                menuItem.Click += detayGoster;
+                this.ContextMenuStrip = st;
+                st.Show(gridSonucListesi,new Point(hitX,hitY));
+            }
+        }
+        private void detayGoster(object sender, EventArgs e)
+        {
+            int id = (int) gridSonucListesi.Rows[basiliRowIndex].Cells[0].Value;
+            FormRaporDetay formRaporDetay = new FormRaporDetay();
+            formRaporDetay.islemId = id;
+            formRaporDetay.ShowDialog();
         }
     }
 }
