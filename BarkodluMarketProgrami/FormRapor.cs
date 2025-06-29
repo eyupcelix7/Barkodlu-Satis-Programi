@@ -222,5 +222,20 @@ namespace BarkodluMarketProgrami
             }
             MessageBox.Show(detay);
         }
+
+        private void btnGelirEkle_Click(object sender, EventArgs e)
+        {
+            FormGelirGiderEkle formGelirGiderEkle = new FormGelirGiderEkle();
+            formGelirGiderEkle.gelir = true;
+            formGelirGiderEkle.ShowDialog();
+        }
+
+        private void btnGiderEkle_Click(object sender, EventArgs e)
+        {
+            FormGelirGiderEkle formGelirGiderEkle = new FormGelirGiderEkle();
+            formGelirGiderEkle.gelir = false;
+            formGelirGiderEkle.ShowDialog();
+
+        }
     }
 }

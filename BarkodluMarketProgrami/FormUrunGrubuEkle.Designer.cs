@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.lstGruplar = new System.Windows.Forms.ListBox();
             this.txtGrupAdi = new System.Windows.Forms.TextBox();
             this.lblGrupAdi = new System.Windows.Forms.Label();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lstGruplar = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,53 +67,6 @@
             this.splitContainer1.SplitterDistance = 87;
             this.splitContainer1.TabIndex = 0;
             // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(1);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.lstGruplar);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer2.Size = new System.Drawing.Size(491, 446);
-            this.splitContainer2.SplitterDistance = 342;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnEkle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.ForeColor = System.Drawing.Color.White;
-            this.btnEkle.Location = new System.Drawing.Point(1, 1);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(1);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(243, 98);
-            this.btnEkle.TabIndex = 0;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = false;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
-            // lstGruplar
-            // 
-            this.lstGruplar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstGruplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lstGruplar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lstGruplar.FormattingEnabled = true;
-            this.lstGruplar.ItemHeight = 25;
-            this.lstGruplar.Location = new System.Drawing.Point(0, 0);
-            this.lstGruplar.Name = "lstGruplar";
-            this.lstGruplar.Size = new System.Drawing.Size(491, 342);
-            this.lstGruplar.TabIndex = 0;
-            // 
             // txtGrupAdi
             // 
             this.txtGrupAdi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -139,6 +92,38 @@
             this.lblGrupAdi.TabIndex = 6;
             this.lblGrupAdi.Text = "Grup Adı";
             this.lblGrupAdi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(1);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.lstGruplar);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer2.Size = new System.Drawing.Size(491, 446);
+            this.splitContainer2.SplitterDistance = 342;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // lstGruplar
+            // 
+            this.lstGruplar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstGruplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lstGruplar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lstGruplar.FormattingEnabled = true;
+            this.lstGruplar.ItemHeight = 25;
+            this.lstGruplar.Location = new System.Drawing.Point(0, 0);
+            this.lstGruplar.Name = "lstGruplar";
+            this.lstGruplar.Size = new System.Drawing.Size(491, 342);
+            this.lstGruplar.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -170,6 +155,21 @@
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // btnEkle
+            // 
+            this.btnEkle.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnEkle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(1, 1);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(243, 98);
+            this.btnEkle.TabIndex = 0;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
             // FormUrunGrubuEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +177,8 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
             this.Controls.Add(this.splitContainer1);
+            this.MaximumSize = new System.Drawing.Size(507, 576);
+            this.MinimumSize = new System.Drawing.Size(507, 576);
             this.Name = "FormUrunGrubuEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Grubu Ekle";

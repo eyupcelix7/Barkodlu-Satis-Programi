@@ -40,6 +40,7 @@
             this.lblTarih = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.lblKasiyer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudKart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNakit)).BeginInit();
             this.SuspendLayout();
@@ -71,10 +72,15 @@
             this.cmbOdemeTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOdemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbOdemeTuru.FormattingEnabled = true;
+            this.cmbOdemeTuru.Items.AddRange(new object[] {
+            "Nakit",
+            "Kart",
+            "Kart-Nakit"});
             this.cmbOdemeTuru.Location = new System.Drawing.Point(17, 86);
             this.cmbOdemeTuru.Name = "cmbOdemeTuru";
             this.cmbOdemeTuru.Size = new System.Drawing.Size(229, 28);
             this.cmbOdemeTuru.TabIndex = 36;
+            this.cmbOdemeTuru.SelectedIndexChanged += new System.EventHandler(this.cmbOdemeTuru_SelectedIndexChanged);
             // 
             // lblNakit
             // 
@@ -100,14 +106,26 @@
             // 
             // nudKart
             // 
+            this.nudKart.DecimalPlaces = 2;
             this.nudKart.Location = new System.Drawing.Point(140, 158);
+            this.nudKart.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nudKart.Name = "nudKart";
             this.nudKart.Size = new System.Drawing.Size(106, 20);
             this.nudKart.TabIndex = 40;
             // 
             // nudNakit
             // 
+            this.nudNakit.DecimalPlaces = 2;
             this.nudNakit.Location = new System.Drawing.Point(18, 158);
+            this.nudNakit.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nudNakit.Name = "nudNakit";
             this.nudNakit.Size = new System.Drawing.Size(116, 20);
             this.nudNakit.TabIndex = 41;
@@ -125,6 +143,7 @@
             // 
             // rtbAciklama
             // 
+            this.rtbAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rtbAciklama.Location = new System.Drawing.Point(18, 217);
             this.rtbAciklama.Name = "rtbAciklama";
             this.rtbAciklama.Size = new System.Drawing.Size(228, 136);
@@ -144,6 +163,7 @@
             // 
             // dtpTarih
             // 
+            this.dtpTarih.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpTarih.Location = new System.Drawing.Point(18, 397);
             this.dtpTarih.Name = "dtpTarih";
             this.dtpTarih.Size = new System.Drawing.Size(228, 20);
@@ -163,6 +183,19 @@
             this.btnEkle.TabIndex = 46;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // lblKasiyer
+            // 
+            this.lblKasiyer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblKasiyer.Location = new System.Drawing.Point(338, 9);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(141, 16);
+            this.lblKasiyer.TabIndex = 47;
+            this.lblKasiyer.Text = "Kasiyer: eyupcelix7";
             // 
             // FormGelirGiderEkle
             // 
@@ -170,6 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
+            this.Controls.Add(this.lblKasiyer);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.lblTarih);
@@ -208,5 +242,6 @@
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.DateTimePicker dtpTarih;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Label lblKasiyer;
     }
 }
