@@ -265,11 +265,16 @@ namespace BarkodluMarketProgrami
                 basiliRowIndex = hit.RowIndex;
             }
         }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             Excel excel = new Excel(gridSonucListesi, "Genel Rapor");
         }
+
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            Pdf pdf = new Pdf(gridSonucListesi, "Genel Rapor");
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (basiliMi)
