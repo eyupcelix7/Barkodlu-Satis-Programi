@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -264,9 +266,13 @@ namespace BarkodluMarketProgrami
             }
         }
 
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel excel = new Excel(gridSonucListesi, "Genel Rapor");
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (basiliMi) // Eğer butona basılı ise
+            if (basiliMi)
             {
                 ContextMenuStrip st = new ContextMenuStrip();
                 ToolStripMenuItem menuItem = new ToolStripMenuItem();

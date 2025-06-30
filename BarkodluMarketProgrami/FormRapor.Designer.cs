@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.nudKdvToplam = new System.Windows.Forms.NumericUpDown();
             this.lblKdvToplam = new System.Windows.Forms.Label();
@@ -71,6 +71,8 @@
             this.lblRaporlamaTuru = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,12 +93,15 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
             this.splitContainer1.Panel1.Controls.Add(this.nudKdvToplam);
             this.splitContainer1.Panel1.Controls.Add(this.lblKdvToplam);
             this.splitContainer1.Panel1.Controls.Add(this.nudKartKomisyon);
@@ -139,13 +144,13 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridSonucListesi);
             this.splitContainer1.Size = new System.Drawing.Size(1425, 818);
-            this.splitContainer1.SplitterDistance = 215;
+            this.splitContainer1.SplitterDistance = 218;
             this.splitContainer1.TabIndex = 0;
             // 
             // nudKdvToplam
             // 
             this.nudKdvToplam.DecimalPlaces = 2;
-            this.nudKdvToplam.Location = new System.Drawing.Point(703, 172);
+            this.nudKdvToplam.Location = new System.Drawing.Point(668, 172);
             this.nudKdvToplam.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -160,7 +165,7 @@
             this.lblKdvToplam.AutoSize = true;
             this.lblKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKdvToplam.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblKdvToplam.Location = new System.Drawing.Point(701, 141);
+            this.lblKdvToplam.Location = new System.Drawing.Point(666, 141);
             this.lblKdvToplam.Name = "lblKdvToplam";
             this.lblKdvToplam.Size = new System.Drawing.Size(108, 20);
             this.lblKdvToplam.TabIndex = 70;
@@ -169,7 +174,7 @@
             // nudKartKomisyon
             // 
             this.nudKartKomisyon.DecimalPlaces = 2;
-            this.nudKartKomisyon.Location = new System.Drawing.Point(898, 173);
+            this.nudKartKomisyon.Location = new System.Drawing.Point(863, 173);
             this.nudKartKomisyon.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -184,7 +189,7 @@
             this.lblKartKomisyon.AutoSize = true;
             this.lblKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKartKomisyon.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblKartKomisyon.Location = new System.Drawing.Point(894, 142);
+            this.lblKartKomisyon.Location = new System.Drawing.Point(859, 142);
             this.lblKartKomisyon.Name = "lblKartKomisyon";
             this.lblKartKomisyon.Size = new System.Drawing.Size(123, 20);
             this.lblKartKomisyon.TabIndex = 68;
@@ -192,15 +197,16 @@
             // 
             // btnGiderEkle
             // 
-            this.btnGiderEkle.BackColor = System.Drawing.Color.Sienna;
-            this.btnGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
+            this.btnGiderEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGiderEkle.BackColor = System.Drawing.Color.DarkRed;
+            this.btnGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiderEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiderEkle.ForeColor = System.Drawing.Color.White;
-            this.btnGiderEkle.Location = new System.Drawing.Point(1230, 130);
+            this.btnGiderEkle.Location = new System.Drawing.Point(1195, 122);
             this.btnGiderEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnGiderEkle.Name = "btnGiderEkle";
-            this.btnGiderEkle.Size = new System.Drawing.Size(88, 66);
+            this.btnGiderEkle.Size = new System.Drawing.Size(88, 74);
             this.btnGiderEkle.TabIndex = 67;
             this.btnGiderEkle.Text = "+";
             this.btnGiderEkle.UseVisualStyleBackColor = false;
@@ -208,12 +214,13 @@
             // 
             // btnGelirEkle
             // 
-            this.btnGelirEkle.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnGelirEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGelirEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
             this.btnGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGelirEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGelirEkle.ForeColor = System.Drawing.Color.White;
-            this.btnGelirEkle.Location = new System.Drawing.Point(1230, 31);
+            this.btnGelirEkle.Location = new System.Drawing.Point(1195, 31);
             this.btnGelirEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnGelirEkle.Name = "btnGelirEkle";
             this.btnGelirEkle.Size = new System.Drawing.Size(88, 66);
@@ -225,7 +232,7 @@
             // nudGiderKart
             // 
             this.nudGiderKart.DecimalPlaces = 2;
-            this.nudGiderKart.Location = new System.Drawing.Point(1135, 176);
+            this.nudGiderKart.Location = new System.Drawing.Point(1100, 176);
             this.nudGiderKart.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -238,7 +245,7 @@
             // nudGiderNakit
             // 
             this.nudGiderNakit.DecimalPlaces = 2;
-            this.nudGiderNakit.Location = new System.Drawing.Point(1135, 141);
+            this.nudGiderNakit.Location = new System.Drawing.Point(1100, 141);
             this.nudGiderNakit.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -253,7 +260,7 @@
             this.lblGiderKart.AutoSize = true;
             this.lblGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGiderKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGiderKart.Location = new System.Drawing.Point(1091, 176);
+            this.lblGiderKart.Location = new System.Drawing.Point(1056, 176);
             this.lblGiderKart.Name = "lblGiderKart";
             this.lblGiderKart.Size = new System.Drawing.Size(38, 20);
             this.lblGiderKart.TabIndex = 63;
@@ -264,7 +271,7 @@
             this.lblGiderNakit.AutoSize = true;
             this.lblGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGiderNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblGiderNakit.Location = new System.Drawing.Point(1083, 141);
+            this.lblGiderNakit.Location = new System.Drawing.Point(1048, 141);
             this.lblGiderNakit.Name = "lblGiderNakit";
             this.lblGiderNakit.Size = new System.Drawing.Size(45, 20);
             this.lblGiderNakit.TabIndex = 62;
@@ -275,7 +282,7 @@
             this.lblGider.AutoSize = true;
             this.lblGider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGider.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblGider.Location = new System.Drawing.Point(1119, 107);
+            this.lblGider.Location = new System.Drawing.Point(1084, 107);
             this.lblGider.Name = "lblGider";
             this.lblGider.Size = new System.Drawing.Size(61, 24);
             this.lblGider.TabIndex = 61;
@@ -284,7 +291,7 @@
             // nudSatisToplamKart
             // 
             this.nudSatisToplamKart.DecimalPlaces = 2;
-            this.nudSatisToplamKart.Location = new System.Drawing.Point(743, 92);
+            this.nudSatisToplamKart.Location = new System.Drawing.Point(708, 92);
             this.nudSatisToplamKart.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -297,7 +304,7 @@
             // nudSatisToplamNakit
             // 
             this.nudSatisToplamNakit.DecimalPlaces = 2;
-            this.nudSatisToplamNakit.Location = new System.Drawing.Point(743, 57);
+            this.nudSatisToplamNakit.Location = new System.Drawing.Point(708, 57);
             this.nudSatisToplamNakit.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -310,7 +317,7 @@
             // nudGelirKart
             // 
             this.nudGelirKart.DecimalPlaces = 2;
-            this.nudGelirKart.Location = new System.Drawing.Point(1135, 76);
+            this.nudGelirKart.Location = new System.Drawing.Point(1100, 76);
             this.nudGelirKart.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -323,7 +330,7 @@
             // nudGelirNakit
             // 
             this.nudGelirNakit.DecimalPlaces = 2;
-            this.nudGelirNakit.Location = new System.Drawing.Point(1135, 41);
+            this.nudGelirNakit.Location = new System.Drawing.Point(1100, 41);
             this.nudGelirNakit.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -338,7 +345,7 @@
             this.lblGelirKart.AutoSize = true;
             this.lblGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGelirKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGelirKart.Location = new System.Drawing.Point(1090, 76);
+            this.lblGelirKart.Location = new System.Drawing.Point(1055, 76);
             this.lblGelirKart.Name = "lblGelirKart";
             this.lblGelirKart.Size = new System.Drawing.Size(38, 20);
             this.lblGelirKart.TabIndex = 56;
@@ -349,7 +356,7 @@
             this.lblGelirNakit.AutoSize = true;
             this.lblGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGelirNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblGelirNakit.Location = new System.Drawing.Point(1083, 43);
+            this.lblGelirNakit.Location = new System.Drawing.Point(1048, 43);
             this.lblGelirNakit.Name = "lblGelirNakit";
             this.lblGelirNakit.Size = new System.Drawing.Size(45, 20);
             this.lblGelirNakit.TabIndex = 55;
@@ -360,7 +367,7 @@
             this.lblGelir.AutoSize = true;
             this.lblGelir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGelir.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblGelir.Location = new System.Drawing.Point(1119, 7);
+            this.lblGelir.Location = new System.Drawing.Point(1084, 7);
             this.lblGelir.Name = "lblGelir";
             this.lblGelir.Size = new System.Drawing.Size(54, 24);
             this.lblGelir.TabIndex = 54;
@@ -369,7 +376,7 @@
             // nudIadeToplamKart
             // 
             this.nudIadeToplamKart.DecimalPlaces = 2;
-            this.nudIadeToplamKart.Location = new System.Drawing.Point(939, 90);
+            this.nudIadeToplamKart.Location = new System.Drawing.Point(904, 90);
             this.nudIadeToplamKart.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -382,7 +389,7 @@
             // nudIadeToplamNakit
             // 
             this.nudIadeToplamNakit.DecimalPlaces = 2;
-            this.nudIadeToplamNakit.Location = new System.Drawing.Point(939, 55);
+            this.nudIadeToplamNakit.Location = new System.Drawing.Point(904, 55);
             this.nudIadeToplamNakit.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -397,7 +404,7 @@
             this.lblIadeToplamKart.AutoSize = true;
             this.lblIadeToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblIadeToplamKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadeToplamKart.Location = new System.Drawing.Point(894, 90);
+            this.lblIadeToplamKart.Location = new System.Drawing.Point(859, 90);
             this.lblIadeToplamKart.Name = "lblIadeToplamKart";
             this.lblIadeToplamKart.Size = new System.Drawing.Size(38, 20);
             this.lblIadeToplamKart.TabIndex = 51;
@@ -408,7 +415,7 @@
             this.lblIadeToplamNakit.AutoSize = true;
             this.lblIadeToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblIadeToplamNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadeToplamNakit.Location = new System.Drawing.Point(887, 57);
+            this.lblIadeToplamNakit.Location = new System.Drawing.Point(852, 57);
             this.lblIadeToplamNakit.Name = "lblIadeToplamNakit";
             this.lblIadeToplamNakit.Size = new System.Drawing.Size(45, 20);
             this.lblIadeToplamNakit.TabIndex = 50;
@@ -419,7 +426,7 @@
             this.lblIadeToplam.AutoSize = true;
             this.lblIadeToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblIadeToplam.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblIadeToplam.Location = new System.Drawing.Point(887, 21);
+            this.lblIadeToplam.Location = new System.Drawing.Point(852, 21);
             this.lblIadeToplam.Name = "lblIadeToplam";
             this.lblIadeToplam.Size = new System.Drawing.Size(126, 24);
             this.lblIadeToplam.TabIndex = 49;
@@ -430,7 +437,7 @@
             this.lblSatisToplamKart.AutoSize = true;
             this.lblSatisToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSatisToplamKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatisToplamKart.Location = new System.Drawing.Point(699, 90);
+            this.lblSatisToplamKart.Location = new System.Drawing.Point(664, 90);
             this.lblSatisToplamKart.Name = "lblSatisToplamKart";
             this.lblSatisToplamKart.Size = new System.Drawing.Size(38, 20);
             this.lblSatisToplamKart.TabIndex = 46;
@@ -441,7 +448,7 @@
             this.lblSatisToplamNakit.AutoSize = true;
             this.lblSatisToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSatisToplamNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatisToplamNakit.Location = new System.Drawing.Point(692, 57);
+            this.lblSatisToplamNakit.Location = new System.Drawing.Point(657, 57);
             this.lblSatisToplamNakit.Name = "lblSatisToplamNakit";
             this.lblSatisToplamNakit.Size = new System.Drawing.Size(45, 20);
             this.lblSatisToplamNakit.TabIndex = 45;
@@ -452,7 +459,7 @@
             this.lblSatisToplam.AutoSize = true;
             this.lblSatisToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSatisToplam.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSatisToplam.Location = new System.Drawing.Point(692, 21);
+            this.lblSatisToplam.Location = new System.Drawing.Point(657, 21);
             this.lblSatisToplam.Name = "lblSatisToplam";
             this.lblSatisToplam.Size = new System.Drawing.Size(130, 24);
             this.lblSatisToplam.TabIndex = 44;
@@ -465,10 +472,10 @@
             this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Location = new System.Drawing.Point(463, 21);
+            this.btnAra.Location = new System.Drawing.Point(456, 21);
             this.btnAra.Margin = new System.Windows.Forms.Padding(1);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(126, 175);
+            this.btnAra.Size = new System.Drawing.Size(126, 145);
             this.btnAra.TabIndex = 43;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = false;
@@ -594,25 +601,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -627,7 +634,7 @@
             this.gridSonucListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.gridSonucListesi.RowTemplate.Height = 32;
             this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSonucListesi.Size = new System.Drawing.Size(1425, 599);
+            this.gridSonucListesi.Size = new System.Drawing.Size(1425, 596);
             this.gridSonucListesi.TabIndex = 4;
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellDoubleClick);
             this.gridSonucListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSonucListesi_CellFormatting);
@@ -638,6 +645,39 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
+            this.button2.Location = new System.Drawing.Point(1305, 122);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 74);
+            this.button2.TabIndex = 73;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
+            this.btnExcel.Location = new System.Drawing.Point(1305, 31);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(98, 65);
+            this.btnExcel.TabIndex = 72;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // FormRapor
             // 
@@ -710,5 +750,7 @@
         private System.Windows.Forms.Label lblGider;
         private System.Windows.Forms.DataGridView gridSonucListesi;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
