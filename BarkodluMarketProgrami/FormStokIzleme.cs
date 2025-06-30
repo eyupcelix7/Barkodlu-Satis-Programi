@@ -125,5 +125,38 @@ namespace BarkodluMarketProgrami
             gridSonucListesi.DataSource = null;
             nudBulunanUrunSayisi.Value = 0;
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if(cmbIslemTuru.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(cmbIslemTuru.SelectedIndex == 0)
+            {
+                Excel excel = new Excel(gridSonucListesi, "Stok Durumu");
+            }
+            else if(cmbIslemTuru.SelectedIndex == 1)
+            {
+                Excel excel = new Excel(gridSonucListesi, "Stok Girişi");
+            }
+        }
+
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            if (cmbIslemTuru.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (cmbIslemTuru.SelectedIndex == 0)
+            {
+                Pdf pdf = new Pdf(gridSonucListesi, "Stok Durumu");
+            }
+            else if (cmbIslemTuru.SelectedIndex == 1)
+            {
+                Pdf pdf = new Pdf(gridSonucListesi, "Stok Girişi");
+            }
+
+        }
     }
 }

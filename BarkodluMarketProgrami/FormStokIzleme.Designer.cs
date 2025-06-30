@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,6 +54,8 @@
             this.nudBulunanUrunSayisi = new System.Windows.Forms.NumericUpDown();
             this.lblBulunanUrunSayisi = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -390,6 +392,8 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.btnPdf);
+            this.splitContainer3.Panel1.Controls.Add(this.btnExcel);
             this.splitContainer3.Panel1.Controls.Add(this.nudBulunanUrunSayisi);
             this.splitContainer3.Panel1.Controls.Add(this.lblBulunanUrunSayisi);
             // 
@@ -427,25 +431,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle10;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -462,6 +466,40 @@
             this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSonucListesi.Size = new System.Drawing.Size(1466, 812);
             this.gridSonucListesi.TabIndex = 3;
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
+            this.btnPdf.Location = new System.Drawing.Point(1353, 1);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(88, 74);
+            this.btnPdf.TabIndex = 75;
+            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
+            this.btnExcel.Location = new System.Drawing.Point(1243, 1);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(88, 74);
+            this.btnExcel.TabIndex = 74;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // FormStokIzleme
             // 
@@ -524,5 +562,7 @@
         private System.Windows.Forms.Label lblBulunanUrunSayisi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnPdf;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

@@ -15,6 +15,8 @@ namespace BarkodluMarketProgrami
         {
             try
             {
+                Cursor guncelCursor = Cursor.Current;
+                Cursor.Current = Cursors.WaitCursor;
                 var workbook = new XLWorkbook();
                 DateTime tarih = DateTime.Now;
                 string dosyaYolu = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\" + baslik + "-" + tarih.ToString("d") + ".xlsx";
@@ -53,6 +55,7 @@ namespace BarkodluMarketProgrami
                 }
                 worksheet.Columns().AdjustToContents();
                 workbook.SaveAs(dosyaYolu);
+                Cursor.Current = guncelCursor;
                 DialogResult result = MessageBox.Show("Excel dosyası başarıyla kaydedildi. Açmak ister misiniz ? ", "Başarılı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {

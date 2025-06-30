@@ -22,10 +22,11 @@ namespace BarkodluMarketProgrami
         {
             try
             {
+                Cursor guncelCursor = Cursor.Current;
+                Cursor.Current = Cursors.WaitCursor;
                 Document dosya = new Document(PageSize.A4, 10f, 10f, 10f, 10f);
                 string dosyaYolu = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\" + baslik + "-" + DateTime.Now.ToString("d") + ".pdf";
                 PdfWriter.GetInstance(dosya, new FileStream(dosyaYolu, FileMode.Create));
-
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 Font fontBody = new Font(baseFont, 10);
@@ -54,6 +55,7 @@ namespace BarkodluMarketProgrami
                     dosya.Add(new Paragraph("\n"));
                 }
                 dosya.Close();
+                Cursor.Current = guncelCursor;
                 DialogResult result = MessageBox.Show("PDF dosyası başarıyla kaydedildi. Açmak ister misiniz ? ", "Başarılı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
