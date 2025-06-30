@@ -127,6 +127,12 @@
     <Compile Include="FormGelirGiderEkle.Designer.cs">
       <DependentUpon>FormGelirGiderEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHizliUrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="FormGelirGiderEkle.resx">
       <DependentUpon>FormGelirGiderEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHizliUrunEkle.resx">
       <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>

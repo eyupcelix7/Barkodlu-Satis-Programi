@@ -17,7 +17,6 @@ namespace BarkodluMarketProgrami
         {
             InitializeComponent();
         }
-
         private void FormStokIzleme_Load(object sender, EventArgs e)
         {
             UrunGrubuDoldur();
@@ -125,7 +124,6 @@ namespace BarkodluMarketProgrami
             gridSonucListesi.DataSource = null;
             nudBulunanUrunSayisi.Value = 0;
         }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             if(cmbIslemTuru.SelectedIndex == -1)
@@ -141,7 +139,6 @@ namespace BarkodluMarketProgrami
                 Excel excel = new Excel(gridSonucListesi, "Stok Girişi");
             }
         }
-
         private void btnPdf_Click(object sender, EventArgs e)
         {
             if (cmbIslemTuru.SelectedIndex == -1)
@@ -156,7 +153,6 @@ namespace BarkodluMarketProgrami
             {
                 Pdf pdf = new Pdf(gridSonucListesi, "Stok Girişi");
             }
-
         }
     }
 }
