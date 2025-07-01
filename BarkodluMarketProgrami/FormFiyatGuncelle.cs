@@ -55,6 +55,7 @@ namespace BarkodluMarketProgrami
                 string barkod = txtBarkodSonuc.Text;
                 var urun = db.Urun.Where(x => x.Barkod == barkod).FirstOrDefault();
                 urun.SatisFiyat = (double) nudYeniFiyatSonuc.Value;
+                urun.KdvTutari = Math.Round(Convert.ToDouble(nudYeniFiyatSonuc.Value) * Convert.ToInt32(urun.KdvOrani) / 100, 2);
                 db.SaveChanges();
                 MessageBox.Show("Ürün fiyatı başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBarkod.Text = string.Empty;

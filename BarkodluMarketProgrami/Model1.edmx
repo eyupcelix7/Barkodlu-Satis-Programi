@@ -59,6 +59,26 @@
           <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Kullanici">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="KullaniciKod" Type="int" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Satis" Type="bit" />
+          <Property Name="GenelRapor" Type="bit" />
+          <Property Name="StokTakibi" Type="bit" />
+          <Property Name="UrunGiris" Type="bit" />
+          <Property Name="FiyatGuncelle" Type="bit" />
+          <Property Name="Veresiye" Type="bit" />
+          <Property Name="Ayarlar" Type="bit" />
+          <Property Name="Yedekleme" Type="bit" />
+          <Property Name="KullaniciAyarlari" Type="bit" />
+          <Property Name="Tarih" Type="datetime" />
+        </EntityType>
         <EntityType Name="Satis">
           <Key>
             <PropertyRef Name="Id" />
@@ -140,6 +160,7 @@
           <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IslemOzet" EntityType="Self.IslemOzet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kullanici" EntityType="Self.Kullanici" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StokHareket" EntityType="Self.StokHareket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
@@ -182,6 +203,7 @@
           <EntitySet Name="UrunGrubu" EntityType="BarkodModel.UrunGrubu" />
           <EntitySet Name="StokHareket" EntityType="BarkodModel.StokHareket" />
           <EntitySet Name="Ayarlar" EntityType="BarkodModel.Ayarlar" />
+          <EntitySet Name="Kullanici" EntityType="BarkodModel.Kullanici" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -292,6 +314,26 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KartKomisyon" Type="Double" />
+        </EntityType>
+        <EntityType Name="Kullanici">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="KullaniciKod" Type="Int32" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Satis" Type="Boolean" />
+          <Property Name="GenelRapor" Type="Boolean" />
+          <Property Name="StokTakibi" Type="Boolean" />
+          <Property Name="UrunGiris" Type="Boolean" />
+          <Property Name="Ayarlar" Type="Boolean" />
+          <Property Name="FiyatGuncelle" Type="Boolean" />
+          <Property Name="Yedekleme" Type="Boolean" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Veresiye" Type="Boolean" />
+          <Property Name="KullaniciAyarlari" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -435,6 +477,27 @@
             <EntityTypeMapping TypeName="BarkodModel.Ayarlar">
               <MappingFragment StoreEntitySet="Ayarlar">
                 <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanici">
+            <EntityTypeMapping TypeName="BarkodModel.Kullanici">
+              <MappingFragment StoreEntitySet="Kullanici">
+                <ScalarProperty Name="KullaniciAyarlari" ColumnName="KullaniciAyarlari" />
+                <ScalarProperty Name="Veresiye" ColumnName="Veresiye" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Yedekleme" ColumnName="Yedekleme" />
+                <ScalarProperty Name="FiyatGuncelle" ColumnName="FiyatGuncelle" />
+                <ScalarProperty Name="Ayarlar" ColumnName="Ayarlar" />
+                <ScalarProperty Name="UrunGiris" ColumnName="UrunGiris" />
+                <ScalarProperty Name="StokTakibi" ColumnName="StokTakibi" />
+                <ScalarProperty Name="GenelRapor" ColumnName="GenelRapor" />
+                <ScalarProperty Name="Satis" ColumnName="Satis" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="KullaniciKod" ColumnName="KullaniciKod" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

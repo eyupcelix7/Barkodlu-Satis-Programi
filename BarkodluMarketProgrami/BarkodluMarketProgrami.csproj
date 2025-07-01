@@ -145,6 +145,12 @@
     <Compile Include="FormHizliUrunEkle.Designer.cs">
       <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKullaniciAyarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKullaniciAyarlari.Designer.cs">
+      <DependentUpon>FormKullaniciAyarlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRapor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="KartKomisyon.cs" />
+    <Compile Include="Kullanici.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -259,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHizliUrunEkle.resx">
       <DependentUpon>FormHizliUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKullaniciAyarlari.resx">
+      <DependentUpon>FormKullaniciAyarlari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRapor.resx">
       <DependentUpon>FormRapor.cs</DependentUpon>
