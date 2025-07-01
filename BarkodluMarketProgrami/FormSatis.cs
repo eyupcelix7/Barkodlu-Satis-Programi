@@ -627,9 +627,7 @@ namespace BarkodluMarketProgrami
                     }
                     gridBeklet = null; // Bekletme işlemi tamamlandıktan sonra gridBeklet'i null yapıyoruz
                     genelToplamYazdir(); // Bekletme işlemi tamamlandıktan sonra genel toplamı yazdırıyoruz
-
                 }
-
             }
         }
     }
