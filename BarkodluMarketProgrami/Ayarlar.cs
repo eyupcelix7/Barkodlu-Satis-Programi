@@ -16,5 +16,9 @@ namespace BarkodluMarketProgrami
     {
         public int Id { get; set; }
         public Nullable<double> KartKomisyon { get; set; }
+        public Nullable<bool> Yazici { get; set; }
+        public string AdSoyad { get; set; }
+        public string Adres { get; set; }
+        public string Telefon { get; set; }
     }
 }

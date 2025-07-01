@@ -11,6 +11,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KartKomisyon" Type="float" />
+          <Property Name="Yazici" Type="bit" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="HizliFiyat">
           <Key>
@@ -314,6 +318,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KartKomisyon" Type="Double" />
+          <Property Name="Yazici" Type="Boolean" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Kullanici">
           <Key>
@@ -476,6 +484,10 @@
           <EntitySetMapping Name="Ayarlar">
             <EntityTypeMapping TypeName="BarkodModel.Ayarlar">
               <MappingFragment StoreEntitySet="Ayarlar">
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Yazici" ColumnName="Yazici" />
                 <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
