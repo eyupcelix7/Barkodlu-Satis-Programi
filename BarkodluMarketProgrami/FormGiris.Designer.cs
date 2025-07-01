@@ -38,8 +38,8 @@
             this.btnYedekle = new System.Windows.Forms.Button();
             this.btnKullaniciDegistir = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblKasiyer = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +81,7 @@
             this.btnSatis.TabIndex = 0;
             this.btnSatis.Text = "Satış";
             this.btnSatis.UseVisualStyleBackColor = false;
+            this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // btnGenelRapor
             // 
@@ -96,6 +97,7 @@
             this.btnGenelRapor.TabIndex = 1;
             this.btnGenelRapor.Text = "Genel Rapor";
             this.btnGenelRapor.UseVisualStyleBackColor = false;
+            this.btnGenelRapor.Click += new System.EventHandler(this.btnGenelRapor_Click);
             // 
             // btnStokTakibi
             // 
@@ -111,6 +113,7 @@
             this.btnStokTakibi.TabIndex = 2;
             this.btnStokTakibi.Text = "Stok Takibi";
             this.btnStokTakibi.UseVisualStyleBackColor = false;
+            this.btnStokTakibi.Click += new System.EventHandler(this.btnStokTakibi_Click);
             // 
             // btnUrunGiris
             // 
@@ -126,6 +129,7 @@
             this.btnUrunGiris.TabIndex = 3;
             this.btnUrunGiris.Text = "Ürün Giriş";
             this.btnUrunGiris.UseVisualStyleBackColor = false;
+            this.btnUrunGiris.Click += new System.EventHandler(this.btnUrunGiris_Click);
             // 
             // btnAyarlar
             // 
@@ -203,29 +207,29 @@
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
-            // label1
+            // lblKasiyer
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kasiyer: ";
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.BackColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.White;
+            this.lblKasiyer.Location = new System.Drawing.Point(30, 20);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(74, 18);
+            this.lblKasiyer.TabIndex = 1;
+            this.lblKasiyer.Text = "Kasiyer: ";
             // 
-            // label2
+            // lblKullanici
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(94, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "eyupcelix7";
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.BackColor = System.Drawing.Color.Black;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.White;
+            this.lblKullanici.Location = new System.Drawing.Point(94, 22);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
+            this.lblKullanici.TabIndex = 2;
+            this.lblKullanici.Text = "eyupcelix7";
             // 
             // FormGiris
             // 
@@ -233,8 +237,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(791, 455);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblKullanici);
+            this.Controls.Add(this.lblKasiyer);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -257,7 +261,7 @@
         private System.Windows.Forms.Button btnUrunGiris;
         private System.Windows.Forms.Button btnStokTakibi;
         private System.Windows.Forms.Button btnGenelRapor;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblKasiyer;
+        private System.Windows.Forms.Label lblKullanici;
     }
 }
