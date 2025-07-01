@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,11 +51,13 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnAra = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.nudBulunanUrunSayisi = new System.Windows.Forms.NumericUpDown();
             this.lblBulunanUrunSayisi = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.btnPdf = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
+            this.lblKasiyer = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -392,6 +394,8 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.lblKasiyer);
+            this.splitContainer3.Panel1.Controls.Add(this.lblKullanici);
             this.splitContainer3.Panel1.Controls.Add(this.btnPdf);
             this.splitContainer3.Panel1.Controls.Add(this.btnExcel);
             this.splitContainer3.Panel1.Controls.Add(this.nudBulunanUrunSayisi);
@@ -403,69 +407,6 @@
             this.splitContainer3.Size = new System.Drawing.Size(1466, 896);
             this.splitContainer3.SplitterDistance = 80;
             this.splitContainer3.TabIndex = 0;
-            // 
-            // nudBulunanUrunSayisi
-            // 
-            this.nudBulunanUrunSayisi.Location = new System.Drawing.Point(5, 46);
-            this.nudBulunanUrunSayisi.Name = "nudBulunanUrunSayisi";
-            this.nudBulunanUrunSayisi.ReadOnly = true;
-            this.nudBulunanUrunSayisi.Size = new System.Drawing.Size(124, 20);
-            this.nudBulunanUrunSayisi.TabIndex = 24;
-            // 
-            // lblBulunanUrunSayisi
-            // 
-            this.lblBulunanUrunSayisi.AutoSize = true;
-            this.lblBulunanUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBulunanUrunSayisi.ForeColor = System.Drawing.Color.Black;
-            this.lblBulunanUrunSayisi.Location = new System.Drawing.Point(2, 20);
-            this.lblBulunanUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBulunanUrunSayisi.Name = "lblBulunanUrunSayisi";
-            this.lblBulunanUrunSayisi.Size = new System.Drawing.Size(194, 18);
-            this.lblBulunanUrunSayisi.TabIndex = 22;
-            this.lblBulunanUrunSayisi.Text = "BULUNAN ÜRÜN SAYISI";
-            // 
-            // gridSonucListesi
-            // 
-            this.gridSonucListesi.AllowUserToAddRows = false;
-            this.gridSonucListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle10;
-            this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridSonucListesi.EnableHeadersVisualStyles = false;
-            this.gridSonucListesi.GridColor = System.Drawing.Color.White;
-            this.gridSonucListesi.Location = new System.Drawing.Point(0, 0);
-            this.gridSonucListesi.Margin = new System.Windows.Forms.Padding(2);
-            this.gridSonucListesi.Name = "gridSonucListesi";
-            this.gridSonucListesi.ReadOnly = true;
-            this.gridSonucListesi.RowHeadersVisible = false;
-            this.gridSonucListesi.RowHeadersWidth = 51;
-            this.gridSonucListesi.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridSonucListesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridSonucListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.gridSonucListesi.RowTemplate.Height = 32;
-            this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSonucListesi.Size = new System.Drawing.Size(1466, 812);
-            this.gridSonucListesi.TabIndex = 3;
             // 
             // btnPdf
             // 
@@ -501,6 +442,93 @@
             this.btnExcel.UseVisualStyleBackColor = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
+            // nudBulunanUrunSayisi
+            // 
+            this.nudBulunanUrunSayisi.Location = new System.Drawing.Point(210, 50);
+            this.nudBulunanUrunSayisi.Name = "nudBulunanUrunSayisi";
+            this.nudBulunanUrunSayisi.ReadOnly = true;
+            this.nudBulunanUrunSayisi.Size = new System.Drawing.Size(124, 20);
+            this.nudBulunanUrunSayisi.TabIndex = 24;
+            // 
+            // lblBulunanUrunSayisi
+            // 
+            this.lblBulunanUrunSayisi.AutoSize = true;
+            this.lblBulunanUrunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBulunanUrunSayisi.ForeColor = System.Drawing.Color.Black;
+            this.lblBulunanUrunSayisi.Location = new System.Drawing.Point(11, 52);
+            this.lblBulunanUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBulunanUrunSayisi.Name = "lblBulunanUrunSayisi";
+            this.lblBulunanUrunSayisi.Size = new System.Drawing.Size(194, 18);
+            this.lblBulunanUrunSayisi.TabIndex = 22;
+            this.lblBulunanUrunSayisi.Text = "BULUNAN ÜRÜN SAYISI";
+            // 
+            // gridSonucListesi
+            // 
+            this.gridSonucListesi.AllowUserToAddRows = false;
+            this.gridSonucListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridSonucListesi.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSonucListesi.EnableHeadersVisualStyles = false;
+            this.gridSonucListesi.GridColor = System.Drawing.Color.White;
+            this.gridSonucListesi.Location = new System.Drawing.Point(0, 0);
+            this.gridSonucListesi.Margin = new System.Windows.Forms.Padding(2);
+            this.gridSonucListesi.Name = "gridSonucListesi";
+            this.gridSonucListesi.ReadOnly = true;
+            this.gridSonucListesi.RowHeadersVisible = false;
+            this.gridSonucListesi.RowHeadersWidth = 51;
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridSonucListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.gridSonucListesi.RowTemplate.Height = 32;
+            this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSonucListesi.Size = new System.Drawing.Size(1466, 812);
+            this.gridSonucListesi.TabIndex = 3;
+            // 
+            // lblKasiyer
+            // 
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Location = new System.Drawing.Point(11, 9);
+            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(69, 18);
+            this.lblKasiyer.TabIndex = 77;
+            this.lblKasiyer.Text = "Kasiyer:";
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(78, 11);
+            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
+            this.lblKullanici.TabIndex = 76;
+            this.lblKullanici.Text = "eyupcelix7";
+            // 
             // FormStokIzleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,6 +537,7 @@
             this.ClientSize = new System.Drawing.Size(1860, 896);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormStokIzleme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok İzleme";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormStokIzleme_Load);
@@ -564,5 +593,7 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Label lblKasiyer;
+        public System.Windows.Forms.Label lblKullanici;
     }
 }
