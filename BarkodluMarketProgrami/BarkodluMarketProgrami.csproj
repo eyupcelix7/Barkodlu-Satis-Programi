@@ -121,6 +121,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Excel.cs" />
+    <Compile Include="FormAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyarlar.Designer.cs">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFiyatGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <Compile Include="Veresiye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAyarlar.resx">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFiyatGuncelle.resx">
       <DependentUpon>FormFiyatGuncelle.cs</DependentUpon>
     </EmbeddedResource>

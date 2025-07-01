@@ -57,7 +57,15 @@ namespace BarkodluMarketProgrami
         private void btnKullaniciAyarlari_Click(object sender, EventArgs e)
         {
             FormKullaniciAyarlari form = new FormKullaniciAyarlari();
-            //form.lblKullanici.Text = lblKullanici.Text;
+            form.lblKullanici.Text = lblKullanici.Text;
+            form.ShowDialog();
+
+        }
+
+        private void btnAyarlar_Click(object sender, EventArgs e)
+        {
+            FormAyarlar form = new FormAyarlar();
+            form.lblKullanici.Text = lblKullanici.Text;
             form.ShowDialog();
 
         }
