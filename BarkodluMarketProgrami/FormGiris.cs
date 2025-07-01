@@ -46,5 +46,12 @@ namespace BarkodluMarketProgrami
             form.ShowDialog();
 
         }
+
+        private void btnFiyatGuncelle_Click(object sender, EventArgs e)
+        {
+            FormFiyatGuncelle form = new FormFiyatGuncelle();
+            form.lblKullanici.Text = lblKullanici.Text;
+            form.ShowDialog();
+        }
     }
 }

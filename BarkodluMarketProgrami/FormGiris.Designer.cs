@@ -160,6 +160,7 @@
             this.btnFiyatGuncelle.TabIndex = 5;
             this.btnFiyatGuncelle.Text = "Fiyat Güncelle";
             this.btnFiyatGuncelle.UseVisualStyleBackColor = false;
+            this.btnFiyatGuncelle.Click += new System.EventHandler(this.btnFiyatGuncelle_Click);
             // 
             // btnYedekle
             // 
