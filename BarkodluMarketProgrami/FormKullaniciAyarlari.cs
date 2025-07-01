@@ -100,26 +100,50 @@ namespace BarkodluMarketProgrami
             {
                 if(txtSifreTkr.Text.Trim() == txtSifre.Text.Trim())
                 {
-                    Kullanici kullanici = new Kullanici();
-                    kullanici.AdSoyad = txtAdSoyad.Text.Trim();
-                    kullanici.Telefon = txtTelNo.Text.Trim();
-                    kullanici.KullaniciKod = Convert.ToInt16(txtKullaniciKodu.Text.Trim());
-                    kullanici.Sifre = txtSifre.Text.Trim();
-                    kullanici.Satis = cbxSatis.Checked;
-                    kullanici.GenelRapor = cbxGenelRapor.Checked;
-                    kullanici.StokTakibi = cbxStokTakibi.Checked;
-                    kullanici.UrunGiris = cbxUrunGiris.Checked;
-                    kullanici.FiyatGuncelle = cbxUrunGuncelle.Checked;
-                    kullanici.Veresiye = cbxVeresiye.Checked;
-                    kullanici.Ayarlar = cbxAyarlar.Checked;
-                    kullanici.Yedekleme = cbxYedekleme.Checked;
-                    kullanici.KullaniciAyarlari = cbxAyarlar.Checked;
-                    kullanici.Tarih = DateTime.Now;
-                    db.Kullanici.Add(kullanici);
-                    db.SaveChanges();
+                    int kKod = Convert.ToInt16(txtKullaniciKodu.Text.Trim());
+                    if (db.Kullanici.Where(x => x.KullaniciKod == kKod).Any())
+                    {
+                        var kullanici = db.Kullanici.Where(x => x.KullaniciKod == kKod).FirstOrDefault();
+                        kullanici.AdSoyad = txtAdSoyad.Text.Trim();
+                        kullanici.Telefon = txtTelNo.Text.Trim();
+                        kullanici.KullaniciKod = Convert.ToInt16(txtKullaniciKodu.Text);
+                        kullanici.Sifre = txtSifre.Text.Trim();
+                        kullanici.Satis = cbxSatis.Checked;
+                        kullanici.GenelRapor = cbxGenelRapor.Checked;
+                        kullanici.StokTakibi = cbxStokTakibi.Checked;
+                        kullanici.UrunGiris = cbxUrunGiris.Checked;
+                        kullanici.FiyatGuncelle = cbxUrunGuncelle.Checked;
+                        kullanici.Veresiye = cbxVeresiye.Checked;
+                        kullanici.Ayarlar = cbxAyarlar.Checked;
+                        kullanici.Yedekleme = cbxYedekleme.Checked;
+                        kullanici.KullaniciAyarlari = cbxKullaniciAyarlari.Checked;
+                        kullanici.Tarih = DateTime.Now;
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        Kullanici kullanici = new Kullanici();
+                        kullanici.AdSoyad = txtAdSoyad.Text.Trim();
+                        kullanici.Telefon = txtTelNo.Text.Trim();
+                        kullanici.KullaniciKod = Convert.ToInt16(txtKullaniciKodu.Text.Trim());
+                        kullanici.Sifre = txtSifre.Text.Trim();
+                        kullanici.Satis = cbxSatis.Checked;
+                        kullanici.GenelRapor = cbxGenelRapor.Checked;
+                        kullanici.StokTakibi = cbxStokTakibi.Checked;
+                        kullanici.UrunGiris = cbxUrunGiris.Checked;
+                        kullanici.FiyatGuncelle = cbxUrunGuncelle.Checked;
+                        kullanici.Veresiye = cbxVeresiye.Checked;
+                        kullanici.Ayarlar = cbxAyarlar.Checked;
+                        kullanici.Yedekleme = cbxYedekleme.Checked;
+                        kullanici.KullaniciAyarlari = cbxAyarlar.Checked;
+                        kullanici.Tarih = DateTime.Now;
+                        db.Kullanici.Add(kullanici);
+                        db.SaveChanges();
+                    }
                     MessageBox.Show("Kullanıcı başarı ile kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tabloDoldur();
                     Temizle();
+
                 }
                 else
                 {
@@ -133,7 +157,7 @@ namespace BarkodluMarketProgrami
         }
         private void gridSonucListesi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           int kKod = Convert.ToInt16(gridSonucListesi.Rows[e.RowIndex].Cells[2].Value);
+            int kKod = Convert.ToInt16(gridSonucListesi.Rows[e.RowIndex].Cells[2].Value);
             if (db.Kullanici.Where(x => x.KullaniciKod == kKod).Any()) 
             { 
                 var kullanici = db.Kullanici.Where(x => x.KullaniciKod == kKod).FirstOrDefault();
