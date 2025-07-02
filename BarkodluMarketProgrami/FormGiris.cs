@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,17 @@ namespace BarkodluMarketProgrami
             form.lblKullanici.Text = lblKullanici.Text;
             form.ShowDialog();
 
+        }
+
+        private void btnYedekleme_Click(object sender, EventArgs e)
+        {
+            new Yedekle();
+        }
+
+        private void btnYedekYükle_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + @"\BarkodluSatisProgramiRestore.exe");
+            Application.Exit();
         }
     }
 }

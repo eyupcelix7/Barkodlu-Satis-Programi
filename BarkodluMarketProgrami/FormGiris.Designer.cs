@@ -30,7 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.btnProgramHakkinda = new System.Windows.Forms.Button();
+            this.btnYedekYükle = new System.Windows.Forms.Button();
             this.btnKullaniciAyarlari = new System.Windows.Forms.Button();
             this.btnKullaniciDegistir = new System.Windows.Forms.Button();
             this.btnYedekleme = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.btnCikis, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnProgramHakkinda, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnYedekYükle, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnKullaniciAyarlari, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnKullaniciDegistir, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnYedekleme, 1, 2);
@@ -91,21 +91,22 @@
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
-            // btnProgramHakkinda
+            // btnYedekYükle
             // 
-            this.btnProgramHakkinda.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnProgramHakkinda.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnProgramHakkinda.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnProgramHakkinda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProgramHakkinda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnProgramHakkinda.ForeColor = System.Drawing.Color.White;
-            this.btnProgramHakkinda.Location = new System.Drawing.Point(253, 310);
-            this.btnProgramHakkinda.Margin = new System.Windows.Forms.Padding(1);
-            this.btnProgramHakkinda.Name = "btnProgramHakkinda";
-            this.btnProgramHakkinda.Size = new System.Drawing.Size(250, 102);
-            this.btnProgramHakkinda.TabIndex = 10;
-            this.btnProgramHakkinda.Text = "Program Hakkında";
-            this.btnProgramHakkinda.UseVisualStyleBackColor = false;
+            this.btnYedekYükle.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnYedekYükle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnYedekYükle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnYedekYükle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYedekYükle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYedekYükle.ForeColor = System.Drawing.Color.White;
+            this.btnYedekYükle.Location = new System.Drawing.Point(253, 310);
+            this.btnYedekYükle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnYedekYükle.Name = "btnYedekYükle";
+            this.btnYedekYükle.Size = new System.Drawing.Size(250, 102);
+            this.btnYedekYükle.TabIndex = 10;
+            this.btnYedekYükle.Text = "Yedek Yükle";
+            this.btnYedekYükle.UseVisualStyleBackColor = false;
+            this.btnYedekYükle.Click += new System.EventHandler(this.btnYedekYükle_Click);
             // 
             // btnKullaniciAyarlari
             // 
@@ -155,6 +156,7 @@
             this.btnYedekleme.TabIndex = 7;
             this.btnYedekleme.Text = "Yedekleme";
             this.btnYedekleme.UseVisualStyleBackColor = false;
+            this.btnYedekleme.Click += new System.EventHandler(this.btnYedekleme_Click);
             // 
             // btnAyarlar
             // 
@@ -330,7 +332,7 @@
         private System.Windows.Forms.Label lblKasiyer;
         private System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Button btnProgramHakkinda;
+        private System.Windows.Forms.Button btnYedekYükle;
         private System.Windows.Forms.Button btnKullaniciAyarlari;
         private System.Windows.Forms.Button btnFiyatGuncelle;
     }
