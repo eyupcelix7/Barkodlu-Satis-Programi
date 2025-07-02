@@ -553,7 +553,7 @@ namespace BarkodluMarketProgrami
                 db.IslemOzet.Add(islemOzet);
                 db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
                 db.SaveChanges();
-                MessageBox.Show("Yazdırma işlemi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Yazdir yazdir = new Yazdir(islemNo);
             }
         }
         private void btnNakit_Click(object sender, EventArgs e)
