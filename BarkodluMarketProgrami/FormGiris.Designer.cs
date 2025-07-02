@@ -95,6 +95,7 @@
             // 
             this.btnYedekYükle.BackColor = System.Drawing.Color.DarkGreen;
             this.btnYedekYükle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnYedekYükle.Enabled = false;
             this.btnYedekYükle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnYedekYükle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYedekYükle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -309,9 +310,12 @@
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.lblKasiyer);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(833, 534);
+            this.MinimumSize = new System.Drawing.Size(833, 534);
             this.Name = "FormGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barkodlu Satış Sistemi";
+            this.Load += new System.EventHandler(this.FormGiris_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,10 +334,10 @@
         private System.Windows.Forms.Button btnStokTakibi;
         private System.Windows.Forms.Button btnGenelRapor;
         private System.Windows.Forms.Label lblKasiyer;
-        private System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Button btnYedekYükle;
         private System.Windows.Forms.Button btnKullaniciAyarlari;
         private System.Windows.Forms.Button btnFiyatGuncelle;
+        public System.Windows.Forms.Label lblKullanici;
     }
 }

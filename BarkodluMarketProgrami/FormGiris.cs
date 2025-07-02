@@ -13,9 +13,27 @@ namespace BarkodluMarketProgrami
 {
     public partial class FormGiris : Form
     {
+        public int kulKodu = 0;
         public FormGiris()
         {
             InitializeComponent();
+        }
+
+        private void FormGiris_Load(object sender, EventArgs e)
+        {
+            using(var db = new BarkodEntities())
+            {
+                var kullanici = db.Kullanici.Where(x=> x.KullaniciKod == kulKodu).SingleOrDefault();
+                btnSatis.Enabled = (bool)kullanici.Satis;
+                btnGenelRapor.Enabled = (bool)kullanici.GenelRapor;
+                btnStokTakibi.Enabled = (bool)kullanici.StokTakibi;
+                btnUrunGiris.Enabled = (bool)kullanici.UrunGiris;
+                btnFiyatGuncelle.Enabled = (bool)kullanici.FiyatGuncelle;
+                btnAyarlar.Enabled = (bool)kullanici.Ayarlar;
+                btnKullaniciAyarlari.Enabled = (bool)kullanici.KullaniciAyarlari;
+                btnVeresiyeIslemleri.Enabled = (bool)kullanici.Veresiye;
+                btnYedekleme.Enabled = (bool)kullanici.Yedekleme;
+            }
         }
         private void btnCikis_Click(object sender, EventArgs e)
         {
@@ -81,5 +99,6 @@ namespace BarkodluMarketProgrami
             Process.Start(Application.StartupPath + @"\BarkodluSatisProgramiRestore.exe");
             Application.Exit();
         }
+
     }
 }
