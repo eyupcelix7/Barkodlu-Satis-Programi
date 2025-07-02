@@ -264,6 +264,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Yazdir.cs" />
+    <Compile Include="Yedekle.cs" />
     <EmbeddedResource Include="FormAyarlar.resx">
       <DependentUpon>FormAyarlar.cs</DependentUpon>
     </EmbeddedResource>
