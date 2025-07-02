@@ -20,5 +20,6 @@ namespace BarkodluMarketProgrami
         public string AdSoyad { get; set; }
         public string Adres { get; set; }
         public string Telefon { get; set; }
+        public string FirmaAd { get; set; }
     }
 }

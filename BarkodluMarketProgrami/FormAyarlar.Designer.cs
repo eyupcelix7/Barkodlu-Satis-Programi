@@ -42,6 +42,8 @@
             this.nudKartKomisyon = new System.Windows.Forms.NumericUpDown();
             this.txtTeraziOnEk = new System.Windows.Forms.TextBox();
             this.lblTeraziOnEk = new System.Windows.Forms.Label();
+            this.txtFirmaAd = new System.Windows.Forms.TextBox();
+            this.lblFirmaAd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             this.cbxYazici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxYazici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxYazici.ForeColor = System.Drawing.Color.OrangeRed;
-            this.cbxYazici.Location = new System.Drawing.Point(10, 276);
+            this.cbxYazici.Location = new System.Drawing.Point(10, 317);
             this.cbxYazici.Name = "cbxYazici";
             this.cbxYazici.Size = new System.Drawing.Size(133, 22);
             this.cbxYazici.TabIndex = 82;
@@ -88,7 +90,7 @@
             this.lblKartKomisyon.AutoSize = true;
             this.lblKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKartKomisyon.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblKartKomisyon.Location = new System.Drawing.Point(7, 233);
+            this.lblKartKomisyon.Location = new System.Drawing.Point(7, 274);
             this.lblKartKomisyon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKartKomisyon.Name = "lblKartKomisyon";
             this.lblKartKomisyon.Size = new System.Drawing.Size(119, 18);
@@ -98,7 +100,7 @@
             // txtAdSoyad
             // 
             this.txtAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdSoyad.Location = new System.Drawing.Point(90, 52);
+            this.txtAdSoyad.Location = new System.Drawing.Point(90, 93);
             this.txtAdSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.Size = new System.Drawing.Size(225, 23);
@@ -109,7 +111,7 @@
             this.lblAdSoyad.AutoSize = true;
             this.lblAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdSoyad.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblAdSoyad.Location = new System.Drawing.Point(7, 55);
+            this.lblAdSoyad.Location = new System.Drawing.Point(7, 96);
             this.lblAdSoyad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(79, 18);
@@ -119,7 +121,7 @@
             // txtAdres
             // 
             this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdres.Location = new System.Drawing.Point(62, 96);
+            this.txtAdres.Location = new System.Drawing.Point(62, 137);
             this.txtAdres.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(253, 23);
@@ -130,7 +132,7 @@
             this.lblAdres.AutoSize = true;
             this.lblAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdres.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblAdres.Location = new System.Drawing.Point(7, 99);
+            this.lblAdres.Location = new System.Drawing.Point(7, 140);
             this.lblAdres.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdres.Name = "lblAdres";
             this.lblAdres.Size = new System.Drawing.Size(51, 18);
@@ -140,7 +142,7 @@
             // txtTelNo
             // 
             this.txtTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTelNo.Location = new System.Drawing.Point(152, 141);
+            this.txtTelNo.Location = new System.Drawing.Point(152, 182);
             this.txtTelNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.Size = new System.Drawing.Size(163, 23);
@@ -151,7 +153,7 @@
             this.lblTelNo.AutoSize = true;
             this.lblTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTelNo.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTelNo.Location = new System.Drawing.Point(7, 144);
+            this.lblTelNo.Location = new System.Drawing.Point(7, 185);
             this.lblTelNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelNo.Name = "lblTelNo";
             this.lblTelNo.Size = new System.Drawing.Size(141, 18);
@@ -167,7 +169,7 @@
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnKaydet.Location = new System.Drawing.Point(10, 316);
+            this.btnKaydet.Location = new System.Drawing.Point(10, 357);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
@@ -182,7 +184,7 @@
             // 
             this.nudKartKomisyon.DecimalPlaces = 2;
             this.nudKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nudKartKomisyon.Location = new System.Drawing.Point(131, 230);
+            this.nudKartKomisyon.Location = new System.Drawing.Point(131, 271);
             this.nudKartKomisyon.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -195,7 +197,7 @@
             // txtTeraziOnEk
             // 
             this.txtTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTeraziOnEk.Location = new System.Drawing.Point(118, 187);
+            this.txtTeraziOnEk.Location = new System.Drawing.Point(118, 228);
             this.txtTeraziOnEk.Margin = new System.Windows.Forms.Padding(2);
             this.txtTeraziOnEk.Name = "txtTeraziOnEk";
             this.txtTeraziOnEk.Size = new System.Drawing.Size(197, 23);
@@ -206,12 +208,33 @@
             this.lblTeraziOnEk.AutoSize = true;
             this.lblTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTeraziOnEk.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTeraziOnEk.Location = new System.Drawing.Point(7, 190);
+            this.lblTeraziOnEk.Location = new System.Drawing.Point(7, 231);
             this.lblTeraziOnEk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTeraziOnEk.Name = "lblTeraziOnEk";
             this.lblTeraziOnEk.Size = new System.Drawing.Size(107, 18);
             this.lblTeraziOnEk.TabIndex = 93;
             this.lblTeraziOnEk.Text = "Terazi Ön Ek";
+            // 
+            // txtFirmaAd
+            // 
+            this.txtFirmaAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtFirmaAd.Location = new System.Drawing.Point(90, 54);
+            this.txtFirmaAd.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirmaAd.Name = "txtFirmaAd";
+            this.txtFirmaAd.Size = new System.Drawing.Size(225, 23);
+            this.txtFirmaAd.TabIndex = 96;
+            // 
+            // lblFirmaAd
+            // 
+            this.lblFirmaAd.AutoSize = true;
+            this.lblFirmaAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFirmaAd.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblFirmaAd.Location = new System.Drawing.Point(7, 57);
+            this.lblFirmaAd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirmaAd.Name = "lblFirmaAd";
+            this.lblFirmaAd.Size = new System.Drawing.Size(79, 18);
+            this.lblFirmaAd.TabIndex = 95;
+            this.lblFirmaAd.Text = "Firma Adı";
             // 
             // FormAyarlar
             // 
@@ -219,6 +242,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
+            this.Controls.Add(this.txtFirmaAd);
+            this.Controls.Add(this.lblFirmaAd);
             this.Controls.Add(this.txtTeraziOnEk);
             this.Controls.Add(this.lblTeraziOnEk);
             this.Controls.Add(this.nudKartKomisyon);
@@ -259,5 +284,7 @@
         private System.Windows.Forms.NumericUpDown nudKartKomisyon;
         private System.Windows.Forms.TextBox txtTeraziOnEk;
         private System.Windows.Forms.Label lblTeraziOnEk;
+        private System.Windows.Forms.TextBox txtFirmaAd;
+        private System.Windows.Forms.Label lblFirmaAd;
     }
 }

@@ -26,10 +26,11 @@ namespace BarkodluMarketProgrami
             var ayarlar = db.Ayarlar.SingleOrDefault();
             var terazi = db.Terazi.SingleOrDefault();
             if (ayarlar != null)
-            { 
-                txtAdSoyad.Text = ayarlar.AdSoyad.ToString();
-                txtAdres.Text = ayarlar.Adres.ToString();
-                txtTelNo.Text = ayarlar.Telefon.ToString();
+            {
+                txtFirmaAd.Text = ayarlar.FirmaAd;
+                txtAdSoyad.Text = ayarlar.AdSoyad;
+                txtAdres.Text = ayarlar.Adres;
+                txtTelNo.Text = ayarlar.Telefon;
                 nudKartKomisyon.Value = (decimal) ayarlar.KartKomisyon;
                 cbxYazici.Checked = (bool)ayarlar.Yazici;
                 // Terazi Ayarları
@@ -47,6 +48,7 @@ namespace BarkodluMarketProgrami
                 ayarlar.Telefon = txtTelNo.Text.Trim();
                 ayarlar.KartKomisyon = (double) nudKartKomisyon.Value;
                 ayarlar.Yazici = cbxYazici.Checked;
+                ayarlar.FirmaAd = txtFirmaAd.Text.Trim();
                 terazi.TeraziOnEk = Convert.ToInt16(txtTeraziOnEk.Text.Trim());
                 db.SaveChanges();
                 MessageBox.Show("Ayarlar Başarı İle Kaydedildi","Başarılı",MessageBoxButtons.OK, MessageBoxIcon.Information);
