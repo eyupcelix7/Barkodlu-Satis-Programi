@@ -40,6 +40,8 @@
             this.lblTelNo = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.nudKartKomisyon = new System.Windows.Forms.NumericUpDown();
+            this.txtTeraziOnEk = new System.Windows.Forms.TextBox();
+            this.lblTeraziOnEk = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.cbxYazici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxYazici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxYazici.ForeColor = System.Drawing.Color.OrangeRed;
-            this.cbxYazici.Location = new System.Drawing.Point(10, 227);
+            this.cbxYazici.Location = new System.Drawing.Point(10, 276);
             this.cbxYazici.Name = "cbxYazici";
             this.cbxYazici.Size = new System.Drawing.Size(133, 22);
             this.cbxYazici.TabIndex = 82;
@@ -86,7 +88,7 @@
             this.lblKartKomisyon.AutoSize = true;
             this.lblKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKartKomisyon.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblKartKomisyon.Location = new System.Drawing.Point(7, 184);
+            this.lblKartKomisyon.Location = new System.Drawing.Point(7, 233);
             this.lblKartKomisyon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKartKomisyon.Name = "lblKartKomisyon";
             this.lblKartKomisyon.Size = new System.Drawing.Size(119, 18);
@@ -165,7 +167,7 @@
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnKaydet.Location = new System.Drawing.Point(10, 267);
+            this.btnKaydet.Location = new System.Drawing.Point(10, 316);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
@@ -180,15 +182,36 @@
             // 
             this.nudKartKomisyon.DecimalPlaces = 2;
             this.nudKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nudKartKomisyon.Location = new System.Drawing.Point(152, 181);
+            this.nudKartKomisyon.Location = new System.Drawing.Point(131, 230);
             this.nudKartKomisyon.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nudKartKomisyon.Name = "nudKartKomisyon";
-            this.nudKartKomisyon.Size = new System.Drawing.Size(163, 23);
+            this.nudKartKomisyon.Size = new System.Drawing.Size(184, 23);
             this.nudKartKomisyon.TabIndex = 92;
+            // 
+            // txtTeraziOnEk
+            // 
+            this.txtTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeraziOnEk.Location = new System.Drawing.Point(118, 187);
+            this.txtTeraziOnEk.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTeraziOnEk.Name = "txtTeraziOnEk";
+            this.txtTeraziOnEk.Size = new System.Drawing.Size(197, 23);
+            this.txtTeraziOnEk.TabIndex = 94;
+            // 
+            // lblTeraziOnEk
+            // 
+            this.lblTeraziOnEk.AutoSize = true;
+            this.lblTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeraziOnEk.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTeraziOnEk.Location = new System.Drawing.Point(7, 190);
+            this.lblTeraziOnEk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTeraziOnEk.Name = "lblTeraziOnEk";
+            this.lblTeraziOnEk.Size = new System.Drawing.Size(107, 18);
+            this.lblTeraziOnEk.TabIndex = 93;
+            this.lblTeraziOnEk.Text = "Terazi Ön Ek";
             // 
             // FormAyarlar
             // 
@@ -196,6 +219,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
+            this.Controls.Add(this.txtTeraziOnEk);
+            this.Controls.Add(this.lblTeraziOnEk);
             this.Controls.Add(this.nudKartKomisyon);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.txtTelNo);
@@ -232,5 +257,7 @@
         private System.Windows.Forms.Label lblTelNo;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.NumericUpDown nudKartKomisyon;
+        private System.Windows.Forms.TextBox txtTeraziOnEk;
+        private System.Windows.Forms.Label lblTeraziOnEk;
     }
 }
