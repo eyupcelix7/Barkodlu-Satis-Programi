@@ -34,6 +34,14 @@ namespace BarkodluMarketProgrami
             var satisListe = db.Satis.Where(x=> x.IslemNo == _islemNo).ToList();
             if (satisListe != null)
             {
+                int kagitUzunlugu = 125;
+                for (int j = 0; j < satisListe.Count; j++)
+                {
+                    kagitUzunlugu += 20;
+                }
+                PaperSize ps58 = new PaperSize("58mm Termal", 220, kagitUzunlugu + 120);
+                printDoc.DefaultPageSettings.PaperSize = ps58;
+
                 Font baslikFont = new Font("Arial", 7, FontStyle.Bold);
                 Font bilgiFont = new Font("Arial", 5,FontStyle.Bold);
                 Font icerikBaslik = new Font("Arial", 5,FontStyle.Underline);
@@ -43,7 +51,7 @@ namespace BarkodluMarketProgrami
                 e.Graphics.DrawString(firma.FirmaAd, baslikFont, Brushes.Black, rcBaslik,baslikOrtala);
                 e.Graphics.DrawString("İşlem No: " + _islemNo.ToString(), bilgiFont, Brushes.Black, new Point(5,45));
                 e.Graphics.DrawString("Telefon Numarası: "+ firma.Telefon, bilgiFont, Brushes.Black, new Point(5,60));
-                e.Graphics.DrawString("İşlem No: ", bilgiFont, Brushes.Black, new Point(5,75));
+                e.Graphics.DrawString("Tarih: "+DateTime.Now.ToString(), bilgiFont, Brushes.Black, new Point(5,75));
                 e.Graphics.DrawString("----------------------------------------------------------------------------------------", bilgiFont, Brushes.Black, new Point(5,90));
                 
                 e.Graphics.DrawString("Ürün Adı", icerikBaslik, Brushes.Black, new Point(5, 105));
@@ -66,9 +74,6 @@ namespace BarkodluMarketProgrami
                 e.Graphics.DrawString("Toplam Tutar: "+genelToplam.ToString("C2"), bilgiFont, Brushes.Black, new Point(5, i+20));
                 e.Graphics.DrawString("----------------------------------------------------------------------------------------", bilgiFont, Brushes.Black, new Point(5, i+40));
                 e.Graphics.DrawString("(Mali Değeri Yoktur)", bilgiFont, Brushes.Black, new Point(5, i+60));
-
-                PaperSize ps58 = new PaperSize("58mm Termal", 220,i + 80);
-                printDoc.DefaultPageSettings.PaperSize = ps58;
             }
         }
     }
