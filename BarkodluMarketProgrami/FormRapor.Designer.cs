@@ -29,52 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.nudIadeSayisi = new System.Windows.Forms.NumericUpDown();
-            this.lblIadeSayisi = new System.Windows.Forms.Label();
-            this.nudSatisSayisi = new System.Windows.Forms.NumericUpDown();
-            this.lblSatisSayisi = new System.Windows.Forms.Label();
-            this.nudGiderlerToplam = new System.Windows.Forms.NumericUpDown();
-            this.lblGiderlerToplam = new System.Windows.Forms.Label();
-            this.nudGelirlerToplam = new System.Windows.Forms.NumericUpDown();
-            this.lblGelirlerToplam = new System.Windows.Forms.Label();
-            this.nudIadelerToplam = new System.Windows.Forms.NumericUpDown();
-            this.lblIadelerToplam = new System.Windows.Forms.Label();
-            this.nudSatislarToplam = new System.Windows.Forms.NumericUpDown();
-            this.lblSatislarToplam = new System.Windows.Forms.Label();
             this.lblKasiyer = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
-            this.btnPdf = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.nudKdvToplam = new System.Windows.Forms.NumericUpDown();
-            this.lblKdvToplam = new System.Windows.Forms.Label();
-            this.nudKartKomisyon = new System.Windows.Forms.NumericUpDown();
-            this.lblKartKomisyon = new System.Windows.Forms.Label();
-            this.btnGiderEkle = new System.Windows.Forms.Button();
-            this.btnGelirEkle = new System.Windows.Forms.Button();
-            this.nudGiderKart = new System.Windows.Forms.NumericUpDown();
-            this.nudGiderNakit = new System.Windows.Forms.NumericUpDown();
-            this.lblGiderKart = new System.Windows.Forms.Label();
-            this.lblGiderNakit = new System.Windows.Forms.Label();
-            this.lblGider = new System.Windows.Forms.Label();
-            this.nudSatisToplamKart = new System.Windows.Forms.NumericUpDown();
-            this.nudSatisToplamNakit = new System.Windows.Forms.NumericUpDown();
-            this.nudGelirKart = new System.Windows.Forms.NumericUpDown();
-            this.nudGelirNakit = new System.Windows.Forms.NumericUpDown();
-            this.lblGelirKart = new System.Windows.Forms.Label();
-            this.lblGelirNakit = new System.Windows.Forms.Label();
-            this.lblGelir = new System.Windows.Forms.Label();
-            this.nudIadeToplamKart = new System.Windows.Forms.NumericUpDown();
-            this.nudIadeToplamNakit = new System.Windows.Forms.NumericUpDown();
-            this.lblIadeToplamKart = new System.Windows.Forms.Label();
-            this.lblIadeToplamNakit = new System.Windows.Forms.Label();
-            this.lblIadeler = new System.Windows.Forms.Label();
-            this.lblSatisToplamKart = new System.Windows.Forms.Label();
-            this.lblSatisToplamNakit = new System.Windows.Forms.Label();
-            this.lblSatislar = new System.Windows.Forms.Label();
-            this.btnAra = new System.Windows.Forms.Button();
             this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
             this.dtpBaslangicTarihi = new System.Windows.Forms.DateTimePicker();
             this.lblBitisTarihi = new System.Windows.Forms.Label();
@@ -87,27 +46,70 @@
             this.lblRaporlamaTuru = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlIstatistik = new System.Windows.Forms.Panel();
+            this.nudIadeSayisi = new System.Windows.Forms.NumericUpDown();
+            this.lblIadeSayisi = new System.Windows.Forms.Label();
+            this.lblSatislar = new System.Windows.Forms.Label();
+            this.nudSatisSayisi = new System.Windows.Forms.NumericUpDown();
+            this.lblSatisToplamNakit = new System.Windows.Forms.Label();
+            this.lblSatisSayisi = new System.Windows.Forms.Label();
+            this.lblSatisToplamKart = new System.Windows.Forms.Label();
+            this.nudGiderlerToplam = new System.Windows.Forms.NumericUpDown();
+            this.lblIadeler = new System.Windows.Forms.Label();
+            this.lblGiderlerToplam = new System.Windows.Forms.Label();
+            this.lblIadeToplamNakit = new System.Windows.Forms.Label();
+            this.nudGelirlerToplam = new System.Windows.Forms.NumericUpDown();
+            this.lblIadeToplamKart = new System.Windows.Forms.Label();
+            this.nudGiderNakit = new System.Windows.Forms.NumericUpDown();
+            this.lblGelirlerToplam = new System.Windows.Forms.Label();
+            this.nudIadeToplamNakit = new System.Windows.Forms.NumericUpDown();
+            this.nudGiderKart = new System.Windows.Forms.NumericUpDown();
+            this.nudIadelerToplam = new System.Windows.Forms.NumericUpDown();
+            this.btnGiderEkle = new System.Windows.Forms.Button();
+            this.nudIadeToplamKart = new System.Windows.Forms.NumericUpDown();
+            this.lblKartKomisyon = new System.Windows.Forms.Label();
+            this.lblIadelerToplam = new System.Windows.Forms.Label();
+            this.lblGiderKart = new System.Windows.Forms.Label();
+            this.lblGelir = new System.Windows.Forms.Label();
+            this.nudKartKomisyon = new System.Windows.Forms.NumericUpDown();
+            this.nudSatislarToplam = new System.Windows.Forms.NumericUpDown();
+            this.lblGiderNakit = new System.Windows.Forms.Label();
+            this.lblGelirNakit = new System.Windows.Forms.Label();
+            this.lblKdvToplam = new System.Windows.Forms.Label();
+            this.lblSatislarToplam = new System.Windows.Forms.Label();
+            this.lblGider = new System.Windows.Forms.Label();
+            this.lblGelirKart = new System.Windows.Forms.Label();
+            this.nudKdvToplam = new System.Windows.Forms.NumericUpDown();
+            this.nudGelirNakit = new System.Windows.Forms.NumericUpDown();
+            this.nudSatisToplamKart = new System.Windows.Forms.NumericUpDown();
+            this.nudGelirKart = new System.Windows.Forms.NumericUpDown();
+            this.nudSatisToplamNakit = new System.Windows.Forms.NumericUpDown();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnGelirEkle = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnAra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
+            this.pnlIstatistik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudIadeSayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatisSayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiderlerToplam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGelirlerToplam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiderNakit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamNakit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiderKart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIadelerToplam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamKart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatislarToplam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKdvToplam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiderKart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiderNakit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamKart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamNakit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGelirKart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGelirNakit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamKart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamNakit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamKart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGelirKart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamNakit)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -120,48 +122,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.nudIadeSayisi);
-            this.splitContainer1.Panel1.Controls.Add(this.lblIadeSayisi);
-            this.splitContainer1.Panel1.Controls.Add(this.nudSatisSayisi);
-            this.splitContainer1.Panel1.Controls.Add(this.lblSatisSayisi);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGiderlerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGiderlerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGelirlerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGelirlerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.nudIadelerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.lblIadelerToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.nudSatislarToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.lblSatislarToplam);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlIstatistik);
             this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
-            this.splitContainer1.Panel1.Controls.Add(this.btnPdf);
-            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
-            this.splitContainer1.Panel1.Controls.Add(this.nudKdvToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.lblKdvToplam);
-            this.splitContainer1.Panel1.Controls.Add(this.nudKartKomisyon);
-            this.splitContainer1.Panel1.Controls.Add(this.lblKartKomisyon);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGiderEkle);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGelirEkle);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGiderKart);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGiderNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGiderKart);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGiderNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGider);
-            this.splitContainer1.Panel1.Controls.Add(this.nudSatisToplamKart);
-            this.splitContainer1.Panel1.Controls.Add(this.nudSatisToplamNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGelirKart);
-            this.splitContainer1.Panel1.Controls.Add(this.nudGelirNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGelirKart);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGelirNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblGelir);
-            this.splitContainer1.Panel1.Controls.Add(this.nudIadeToplamKart);
-            this.splitContainer1.Panel1.Controls.Add(this.nudIadeToplamNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblIadeToplamKart);
-            this.splitContainer1.Panel1.Controls.Add(this.lblIadeToplamNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblIadeler);
-            this.splitContainer1.Panel1.Controls.Add(this.lblSatisToplamKart);
-            this.splitContainer1.Panel1.Controls.Add(this.lblSatisToplamNakit);
-            this.splitContainer1.Panel1.Controls.Add(this.lblSatislar);
             this.splitContainer1.Panel1.Controls.Add(this.btnAra);
             this.splitContainer1.Panel1.Controls.Add(this.dtpBitisTarihi);
             this.splitContainer1.Panel1.Controls.Add(this.dtpBaslangicTarihi);
@@ -177,159 +140,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridSonucListesi);
-            this.splitContainer1.Size = new System.Drawing.Size(1425, 818);
+            this.splitContainer1.Size = new System.Drawing.Size(1479, 818);
             this.splitContainer1.SplitterDistance = 229;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // nudIadeSayisi
-            // 
-            this.nudIadeSayisi.Location = new System.Drawing.Point(808, 148);
-            this.nudIadeSayisi.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.nudIadeSayisi.Name = "nudIadeSayisi";
-            this.nudIadeSayisi.ReadOnly = true;
-            this.nudIadeSayisi.Size = new System.Drawing.Size(70, 20);
-            this.nudIadeSayisi.TabIndex = 87;
-            this.nudIadeSayisi.ThousandsSeparator = true;
-            // 
-            // lblIadeSayisi
-            // 
-            this.lblIadeSayisi.AutoSize = true;
-            this.lblIadeSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIadeSayisi.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadeSayisi.Location = new System.Drawing.Point(707, 148);
-            this.lblIadeSayisi.Name = "lblIadeSayisi";
-            this.lblIadeSayisi.Size = new System.Drawing.Size(86, 20);
-            this.lblIadeSayisi.TabIndex = 86;
-            this.lblIadeSayisi.Text = "İade Sayısı";
-            // 
-            // nudSatisSayisi
-            // 
-            this.nudSatisSayisi.Location = new System.Drawing.Point(616, 147);
-            this.nudSatisSayisi.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudSatisSayisi.Name = "nudSatisSayisi";
-            this.nudSatisSayisi.ReadOnly = true;
-            this.nudSatisSayisi.Size = new System.Drawing.Size(70, 20);
-            this.nudSatisSayisi.TabIndex = 85;
-            this.nudSatisSayisi.ThousandsSeparator = true;
-            // 
-            // lblSatisSayisi
-            // 
-            this.lblSatisSayisi.AutoSize = true;
-            this.lblSatisSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatisSayisi.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatisSayisi.Location = new System.Drawing.Point(524, 148);
-            this.lblSatisSayisi.Name = "lblSatisSayisi";
-            this.lblSatisSayisi.Size = new System.Drawing.Size(90, 20);
-            this.lblSatisSayisi.TabIndex = 84;
-            this.lblSatisSayisi.Text = "Satış Sayısı";
-            // 
-            // nudGiderlerToplam
-            // 
-            this.nudGiderlerToplam.Location = new System.Drawing.Point(1124, 115);
-            this.nudGiderlerToplam.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGiderlerToplam.Name = "nudGiderlerToplam";
-            this.nudGiderlerToplam.ReadOnly = true;
-            this.nudGiderlerToplam.Size = new System.Drawing.Size(105, 20);
-            this.nudGiderlerToplam.TabIndex = 83;
-            this.nudGiderlerToplam.ThousandsSeparator = true;
-            // 
-            // lblGiderlerToplam
-            // 
-            this.lblGiderlerToplam.AutoSize = true;
-            this.lblGiderlerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGiderlerToplam.ForeColor = System.Drawing.Color.Navy;
-            this.lblGiderlerToplam.Location = new System.Drawing.Point(1061, 115);
-            this.lblGiderlerToplam.Name = "lblGiderlerToplam";
-            this.lblGiderlerToplam.Size = new System.Drawing.Size(61, 20);
-            this.lblGiderlerToplam.TabIndex = 82;
-            this.lblGiderlerToplam.Text = "Toplam";
-            // 
-            // nudGelirlerToplam
-            // 
-            this.nudGelirlerToplam.Location = new System.Drawing.Point(950, 115);
-            this.nudGelirlerToplam.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGelirlerToplam.Name = "nudGelirlerToplam";
-            this.nudGelirlerToplam.ReadOnly = true;
-            this.nudGelirlerToplam.Size = new System.Drawing.Size(105, 20);
-            this.nudGelirlerToplam.TabIndex = 81;
-            this.nudGelirlerToplam.ThousandsSeparator = true;
-            // 
-            // lblGelirlerToplam
-            // 
-            this.lblGelirlerToplam.AutoSize = true;
-            this.lblGelirlerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGelirlerToplam.ForeColor = System.Drawing.Color.Navy;
-            this.lblGelirlerToplam.Location = new System.Drawing.Point(888, 115);
-            this.lblGelirlerToplam.Name = "lblGelirlerToplam";
-            this.lblGelirlerToplam.Size = new System.Drawing.Size(61, 20);
-            this.lblGelirlerToplam.TabIndex = 80;
-            this.lblGelirlerToplam.Text = "Toplam";
-            // 
-            // nudIadelerToplam
-            // 
-            this.nudIadelerToplam.Location = new System.Drawing.Point(773, 115);
-            this.nudIadelerToplam.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudIadelerToplam.Name = "nudIadelerToplam";
-            this.nudIadelerToplam.ReadOnly = true;
-            this.nudIadelerToplam.Size = new System.Drawing.Size(105, 20);
-            this.nudIadelerToplam.TabIndex = 79;
-            this.nudIadelerToplam.ThousandsSeparator = true;
-            // 
-            // lblIadelerToplam
-            // 
-            this.lblIadelerToplam.AutoSize = true;
-            this.lblIadelerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIadelerToplam.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadelerToplam.Location = new System.Drawing.Point(707, 115);
-            this.lblIadelerToplam.Name = "lblIadelerToplam";
-            this.lblIadelerToplam.Size = new System.Drawing.Size(61, 20);
-            this.lblIadelerToplam.TabIndex = 78;
-            this.lblIadelerToplam.Text = "Toplam";
-            // 
-            // nudSatislarToplam
-            // 
-            this.nudSatislarToplam.Location = new System.Drawing.Point(591, 115);
-            this.nudSatislarToplam.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudSatislarToplam.Name = "nudSatislarToplam";
-            this.nudSatislarToplam.ReadOnly = true;
-            this.nudSatislarToplam.Size = new System.Drawing.Size(95, 20);
-            this.nudSatislarToplam.TabIndex = 77;
-            this.nudSatislarToplam.ThousandsSeparator = true;
-            // 
-            // lblSatislarToplam
-            // 
-            this.lblSatislarToplam.AutoSize = true;
-            this.lblSatislarToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatislarToplam.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatislarToplam.Location = new System.Drawing.Point(524, 115);
-            this.lblSatislarToplam.Name = "lblSatislarToplam";
-            this.lblSatislarToplam.Size = new System.Drawing.Size(61, 20);
-            this.lblSatislarToplam.TabIndex = 76;
-            this.lblSatislarToplam.Text = "Toplam";
             // 
             // lblKasiyer
             // 
@@ -354,384 +167,6 @@
             this.lblKullanici.Size = new System.Drawing.Size(71, 16);
             this.lblKullanici.TabIndex = 74;
             this.lblKullanici.Text = "eyupcelix7";
-            // 
-            // btnPdf
-            // 
-            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
-            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdf.ForeColor = System.Drawing.Color.White;
-            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
-            this.btnPdf.Location = new System.Drawing.Point(1310, 133);
-            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Size = new System.Drawing.Size(100, 70);
-            this.btnPdf.TabIndex = 73;
-            this.btnPdf.UseVisualStyleBackColor = false;
-            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
-            this.btnExcel.Location = new System.Drawing.Point(1310, 34);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(100, 70);
-            this.btnExcel.TabIndex = 72;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // nudKdvToplam
-            // 
-            this.nudKdvToplam.Location = new System.Drawing.Point(613, 195);
-            this.nudKdvToplam.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudKdvToplam.Name = "nudKdvToplam";
-            this.nudKdvToplam.ReadOnly = true;
-            this.nudKdvToplam.Size = new System.Drawing.Size(80, 20);
-            this.nudKdvToplam.TabIndex = 71;
-            this.nudKdvToplam.ThousandsSeparator = true;
-            // 
-            // lblKdvToplam
-            // 
-            this.lblKdvToplam.AutoSize = true;
-            this.lblKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKdvToplam.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblKdvToplam.Location = new System.Drawing.Point(506, 195);
-            this.lblKdvToplam.Name = "lblKdvToplam";
-            this.lblKdvToplam.Size = new System.Drawing.Size(101, 20);
-            this.lblKdvToplam.TabIndex = 70;
-            this.lblKdvToplam.Text = "Kdv Toplam";
-            // 
-            // nudKartKomisyon
-            // 
-            this.nudKartKomisyon.Location = new System.Drawing.Point(838, 195);
-            this.nudKartKomisyon.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudKartKomisyon.Name = "nudKartKomisyon";
-            this.nudKartKomisyon.ReadOnly = true;
-            this.nudKartKomisyon.Size = new System.Drawing.Size(65, 20);
-            this.nudKartKomisyon.TabIndex = 69;
-            this.nudKartKomisyon.ThousandsSeparator = true;
-            // 
-            // lblKartKomisyon
-            // 
-            this.lblKartKomisyon.AutoSize = true;
-            this.lblKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKartKomisyon.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblKartKomisyon.Location = new System.Drawing.Point(709, 195);
-            this.lblKartKomisyon.Name = "lblKartKomisyon";
-            this.lblKartKomisyon.Size = new System.Drawing.Size(123, 20);
-            this.lblKartKomisyon.TabIndex = 68;
-            this.lblKartKomisyon.Text = "Kart Komisyon";
-            // 
-            // btnGiderEkle
-            // 
-            this.btnGiderEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGiderEkle.BackColor = System.Drawing.Color.DarkRed;
-            this.btnGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiderEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGiderEkle.ForeColor = System.Drawing.Color.White;
-            this.btnGiderEkle.Location = new System.Drawing.Point(1124, 147);
-            this.btnGiderEkle.Margin = new System.Windows.Forms.Padding(1);
-            this.btnGiderEkle.Name = "btnGiderEkle";
-            this.btnGiderEkle.Size = new System.Drawing.Size(100, 51);
-            this.btnGiderEkle.TabIndex = 67;
-            this.btnGiderEkle.Text = "+";
-            this.btnGiderEkle.UseVisualStyleBackColor = false;
-            this.btnGiderEkle.Click += new System.EventHandler(this.btnGiderEkle_Click);
-            // 
-            // btnGelirEkle
-            // 
-            this.btnGelirEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGelirEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGelirEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGelirEkle.ForeColor = System.Drawing.Color.White;
-            this.btnGelirEkle.Location = new System.Drawing.Point(955, 147);
-            this.btnGelirEkle.Margin = new System.Windows.Forms.Padding(1);
-            this.btnGelirEkle.Name = "btnGelirEkle";
-            this.btnGelirEkle.Size = new System.Drawing.Size(100, 51);
-            this.btnGelirEkle.TabIndex = 66;
-            this.btnGelirEkle.Text = "+";
-            this.btnGelirEkle.UseVisualStyleBackColor = false;
-            this.btnGelirEkle.Click += new System.EventHandler(this.btnGelirEkle_Click);
-            // 
-            // nudGiderKart
-            // 
-            this.nudGiderKart.Location = new System.Drawing.Point(1113, 84);
-            this.nudGiderKart.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGiderKart.Name = "nudGiderKart";
-            this.nudGiderKart.ReadOnly = true;
-            this.nudGiderKart.Size = new System.Drawing.Size(115, 20);
-            this.nudGiderKart.TabIndex = 65;
-            this.nudGiderKart.ThousandsSeparator = true;
-            // 
-            // nudGiderNakit
-            // 
-            this.nudGiderNakit.Location = new System.Drawing.Point(1113, 52);
-            this.nudGiderNakit.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGiderNakit.Name = "nudGiderNakit";
-            this.nudGiderNakit.ReadOnly = true;
-            this.nudGiderNakit.Size = new System.Drawing.Size(115, 20);
-            this.nudGiderNakit.TabIndex = 64;
-            this.nudGiderNakit.ThousandsSeparator = true;
-            // 
-            // lblGiderKart
-            // 
-            this.lblGiderKart.AutoSize = true;
-            this.lblGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGiderKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGiderKart.Location = new System.Drawing.Point(1061, 84);
-            this.lblGiderKart.Name = "lblGiderKart";
-            this.lblGiderKart.Size = new System.Drawing.Size(38, 20);
-            this.lblGiderKart.TabIndex = 63;
-            this.lblGiderKart.Text = "Kart";
-            // 
-            // lblGiderNakit
-            // 
-            this.lblGiderNakit.AutoSize = true;
-            this.lblGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGiderNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblGiderNakit.Location = new System.Drawing.Point(1061, 52);
-            this.lblGiderNakit.Name = "lblGiderNakit";
-            this.lblGiderNakit.Size = new System.Drawing.Size(45, 20);
-            this.lblGiderNakit.TabIndex = 62;
-            this.lblGiderNakit.Text = "Nakit";
-            // 
-            // lblGider
-            // 
-            this.lblGider.AutoSize = true;
-            this.lblGider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGider.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblGider.Location = new System.Drawing.Point(1109, 16);
-            this.lblGider.Name = "lblGider";
-            this.lblGider.Size = new System.Drawing.Size(61, 24);
-            this.lblGider.TabIndex = 61;
-            this.lblGider.Text = "Gider";
-            // 
-            // nudSatisToplamKart
-            // 
-            this.nudSatisToplamKart.Location = new System.Drawing.Point(575, 84);
-            this.nudSatisToplamKart.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudSatisToplamKart.Name = "nudSatisToplamKart";
-            this.nudSatisToplamKart.ReadOnly = true;
-            this.nudSatisToplamKart.Size = new System.Drawing.Size(111, 20);
-            this.nudSatisToplamKart.TabIndex = 60;
-            this.nudSatisToplamKart.ThousandsSeparator = true;
-            // 
-            // nudSatisToplamNakit
-            // 
-            this.nudSatisToplamNakit.Location = new System.Drawing.Point(575, 52);
-            this.nudSatisToplamNakit.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudSatisToplamNakit.Name = "nudSatisToplamNakit";
-            this.nudSatisToplamNakit.ReadOnly = true;
-            this.nudSatisToplamNakit.Size = new System.Drawing.Size(111, 20);
-            this.nudSatisToplamNakit.TabIndex = 59;
-            this.nudSatisToplamNakit.ThousandsSeparator = true;
-            // 
-            // nudGelirKart
-            // 
-            this.nudGelirKart.Location = new System.Drawing.Point(940, 84);
-            this.nudGelirKart.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGelirKart.Name = "nudGelirKart";
-            this.nudGelirKart.ReadOnly = true;
-            this.nudGelirKart.Size = new System.Drawing.Size(115, 20);
-            this.nudGelirKart.TabIndex = 58;
-            this.nudGelirKart.ThousandsSeparator = true;
-            // 
-            // nudGelirNakit
-            // 
-            this.nudGelirNakit.Location = new System.Drawing.Point(940, 52);
-            this.nudGelirNakit.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudGelirNakit.Name = "nudGelirNakit";
-            this.nudGelirNakit.ReadOnly = true;
-            this.nudGelirNakit.Size = new System.Drawing.Size(115, 20);
-            this.nudGelirNakit.TabIndex = 57;
-            this.nudGelirNakit.ThousandsSeparator = true;
-            // 
-            // lblGelirKart
-            // 
-            this.lblGelirKart.AutoSize = true;
-            this.lblGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGelirKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblGelirKart.Location = new System.Drawing.Point(888, 84);
-            this.lblGelirKart.Name = "lblGelirKart";
-            this.lblGelirKart.Size = new System.Drawing.Size(38, 20);
-            this.lblGelirKart.TabIndex = 56;
-            this.lblGelirKart.Text = "Kart";
-            // 
-            // lblGelirNakit
-            // 
-            this.lblGelirNakit.AutoSize = true;
-            this.lblGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGelirNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblGelirNakit.Location = new System.Drawing.Point(888, 52);
-            this.lblGelirNakit.Name = "lblGelirNakit";
-            this.lblGelirNakit.Size = new System.Drawing.Size(45, 20);
-            this.lblGelirNakit.TabIndex = 55;
-            this.lblGelirNakit.Text = "Nakit";
-            // 
-            // lblGelir
-            // 
-            this.lblGelir.AutoSize = true;
-            this.lblGelir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGelir.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblGelir.Location = new System.Drawing.Point(936, 16);
-            this.lblGelir.Name = "lblGelir";
-            this.lblGelir.Size = new System.Drawing.Size(78, 24);
-            this.lblGelir.TabIndex = 54;
-            this.lblGelir.Text = "Gelirler";
-            // 
-            // nudIadeToplamKart
-            // 
-            this.nudIadeToplamKart.Location = new System.Drawing.Point(762, 84);
-            this.nudIadeToplamKart.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudIadeToplamKart.Name = "nudIadeToplamKart";
-            this.nudIadeToplamKart.ReadOnly = true;
-            this.nudIadeToplamKart.Size = new System.Drawing.Size(116, 20);
-            this.nudIadeToplamKart.TabIndex = 53;
-            this.nudIadeToplamKart.ThousandsSeparator = true;
-            // 
-            // nudIadeToplamNakit
-            // 
-            this.nudIadeToplamNakit.Location = new System.Drawing.Point(762, 52);
-            this.nudIadeToplamNakit.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudIadeToplamNakit.Name = "nudIadeToplamNakit";
-            this.nudIadeToplamNakit.ReadOnly = true;
-            this.nudIadeToplamNakit.Size = new System.Drawing.Size(116, 20);
-            this.nudIadeToplamNakit.TabIndex = 52;
-            this.nudIadeToplamNakit.ThousandsSeparator = true;
-            // 
-            // lblIadeToplamKart
-            // 
-            this.lblIadeToplamKart.AutoSize = true;
-            this.lblIadeToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIadeToplamKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadeToplamKart.Location = new System.Drawing.Point(707, 84);
-            this.lblIadeToplamKart.Name = "lblIadeToplamKart";
-            this.lblIadeToplamKart.Size = new System.Drawing.Size(38, 20);
-            this.lblIadeToplamKart.TabIndex = 51;
-            this.lblIadeToplamKart.Text = "Kart";
-            // 
-            // lblIadeToplamNakit
-            // 
-            this.lblIadeToplamNakit.AutoSize = true;
-            this.lblIadeToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIadeToplamNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblIadeToplamNakit.Location = new System.Drawing.Point(707, 52);
-            this.lblIadeToplamNakit.Name = "lblIadeToplamNakit";
-            this.lblIadeToplamNakit.Size = new System.Drawing.Size(45, 20);
-            this.lblIadeToplamNakit.TabIndex = 50;
-            this.lblIadeToplamNakit.Text = "Nakit";
-            // 
-            // lblIadeler
-            // 
-            this.lblIadeler.AutoSize = true;
-            this.lblIadeler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIadeler.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblIadeler.Location = new System.Drawing.Point(758, 16);
-            this.lblIadeler.Name = "lblIadeler";
-            this.lblIadeler.Size = new System.Drawing.Size(74, 24);
-            this.lblIadeler.TabIndex = 49;
-            this.lblIadeler.Text = "İadeler";
-            // 
-            // lblSatisToplamKart
-            // 
-            this.lblSatisToplamKart.AutoSize = true;
-            this.lblSatisToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatisToplamKart.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatisToplamKart.Location = new System.Drawing.Point(524, 84);
-            this.lblSatisToplamKart.Name = "lblSatisToplamKart";
-            this.lblSatisToplamKart.Size = new System.Drawing.Size(38, 20);
-            this.lblSatisToplamKart.TabIndex = 46;
-            this.lblSatisToplamKart.Text = "Kart";
-            // 
-            // lblSatisToplamNakit
-            // 
-            this.lblSatisToplamNakit.AutoSize = true;
-            this.lblSatisToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatisToplamNakit.ForeColor = System.Drawing.Color.Navy;
-            this.lblSatisToplamNakit.Location = new System.Drawing.Point(524, 52);
-            this.lblSatisToplamNakit.Name = "lblSatisToplamNakit";
-            this.lblSatisToplamNakit.Size = new System.Drawing.Size(45, 20);
-            this.lblSatisToplamNakit.TabIndex = 45;
-            this.lblSatisToplamNakit.Text = "Nakit";
-            // 
-            // lblSatislar
-            // 
-            this.lblSatislar.AutoSize = true;
-            this.lblSatislar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatislar.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSatislar.Location = new System.Drawing.Point(571, 16);
-            this.lblSatislar.Name = "lblSatislar";
-            this.lblSatislar.Size = new System.Drawing.Size(77, 24);
-            this.lblSatislar.TabIndex = 44;
-            this.lblSatislar.Text = "Satışlar";
-            // 
-            // btnAra
-            // 
-            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnAra.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Location = new System.Drawing.Point(315, 160);
-            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(126, 51);
-            this.btnAra.TabIndex = 43;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = false;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // dtpBitisTarihi
             // 
@@ -853,25 +288,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -886,7 +321,7 @@
             this.gridSonucListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.gridSonucListesi.RowTemplate.Height = 32;
             this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSonucListesi.Size = new System.Drawing.Size(1425, 585);
+            this.gridSonucListesi.Size = new System.Drawing.Size(1479, 585);
             this.gridSonucListesi.TabIndex = 4;
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellDoubleClick);
             this.gridSonucListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSonucListesi_CellFormatting);
@@ -898,11 +333,581 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pnlIstatistik
+            // 
+            this.pnlIstatistik.Controls.Add(this.nudIadeSayisi);
+            this.pnlIstatistik.Controls.Add(this.btnPdf);
+            this.pnlIstatistik.Controls.Add(this.lblIadeSayisi);
+            this.pnlIstatistik.Controls.Add(this.lblSatislar);
+            this.pnlIstatistik.Controls.Add(this.nudSatisSayisi);
+            this.pnlIstatistik.Controls.Add(this.lblSatisToplamNakit);
+            this.pnlIstatistik.Controls.Add(this.lblSatisSayisi);
+            this.pnlIstatistik.Controls.Add(this.lblSatisToplamKart);
+            this.pnlIstatistik.Controls.Add(this.nudGiderlerToplam);
+            this.pnlIstatistik.Controls.Add(this.lblIadeler);
+            this.pnlIstatistik.Controls.Add(this.lblGiderlerToplam);
+            this.pnlIstatistik.Controls.Add(this.lblIadeToplamNakit);
+            this.pnlIstatistik.Controls.Add(this.nudGelirlerToplam);
+            this.pnlIstatistik.Controls.Add(this.lblIadeToplamKart);
+            this.pnlIstatistik.Controls.Add(this.nudGiderNakit);
+            this.pnlIstatistik.Controls.Add(this.lblGelirlerToplam);
+            this.pnlIstatistik.Controls.Add(this.btnGelirEkle);
+            this.pnlIstatistik.Controls.Add(this.nudIadeToplamNakit);
+            this.pnlIstatistik.Controls.Add(this.nudGiderKart);
+            this.pnlIstatistik.Controls.Add(this.nudIadelerToplam);
+            this.pnlIstatistik.Controls.Add(this.btnGiderEkle);
+            this.pnlIstatistik.Controls.Add(this.nudIadeToplamKart);
+            this.pnlIstatistik.Controls.Add(this.lblKartKomisyon);
+            this.pnlIstatistik.Controls.Add(this.lblIadelerToplam);
+            this.pnlIstatistik.Controls.Add(this.lblGiderKart);
+            this.pnlIstatistik.Controls.Add(this.lblGelir);
+            this.pnlIstatistik.Controls.Add(this.nudKartKomisyon);
+            this.pnlIstatistik.Controls.Add(this.nudSatislarToplam);
+            this.pnlIstatistik.Controls.Add(this.lblGiderNakit);
+            this.pnlIstatistik.Controls.Add(this.lblGelirNakit);
+            this.pnlIstatistik.Controls.Add(this.lblKdvToplam);
+            this.pnlIstatistik.Controls.Add(this.lblSatislarToplam);
+            this.pnlIstatistik.Controls.Add(this.lblGider);
+            this.pnlIstatistik.Controls.Add(this.lblGelirKart);
+            this.pnlIstatistik.Controls.Add(this.nudKdvToplam);
+            this.pnlIstatistik.Controls.Add(this.nudGelirNakit);
+            this.pnlIstatistik.Controls.Add(this.nudSatisToplamKart);
+            this.pnlIstatistik.Controls.Add(this.nudGelirKart);
+            this.pnlIstatistik.Controls.Add(this.btnExcel);
+            this.pnlIstatistik.Controls.Add(this.nudSatisToplamNakit);
+            this.pnlIstatistik.Location = new System.Drawing.Point(491, 0);
+            this.pnlIstatistik.Name = "pnlIstatistik";
+            this.pnlIstatistik.Size = new System.Drawing.Size(985, 223);
+            this.pnlIstatistik.TabIndex = 88;
+            this.pnlIstatistik.Visible = false;
+            // 
+            // nudIadeSayisi
+            // 
+            this.nudIadeSayisi.Location = new System.Drawing.Point(342, 145);
+            this.nudIadeSayisi.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.nudIadeSayisi.Name = "nudIadeSayisi";
+            this.nudIadeSayisi.ReadOnly = true;
+            this.nudIadeSayisi.Size = new System.Drawing.Size(90, 20);
+            this.nudIadeSayisi.TabIndex = 127;
+            this.nudIadeSayisi.ThousandsSeparator = true;
+            // 
+            // lblIadeSayisi
+            // 
+            this.lblIadeSayisi.AutoSize = true;
+            this.lblIadeSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIadeSayisi.ForeColor = System.Drawing.Color.Navy;
+            this.lblIadeSayisi.Location = new System.Drawing.Point(250, 145);
+            this.lblIadeSayisi.Name = "lblIadeSayisi";
+            this.lblIadeSayisi.Size = new System.Drawing.Size(86, 20);
+            this.lblIadeSayisi.TabIndex = 126;
+            this.lblIadeSayisi.Text = "İade Sayısı";
+            // 
+            // lblSatislar
+            // 
+            this.lblSatislar.AutoSize = true;
+            this.lblSatislar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatislar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblSatislar.Location = new System.Drawing.Point(121, 13);
+            this.lblSatislar.Name = "lblSatislar";
+            this.lblSatislar.Size = new System.Drawing.Size(77, 24);
+            this.lblSatislar.TabIndex = 88;
+            this.lblSatislar.Text = "Satışlar";
+            // 
+            // nudSatisSayisi
+            // 
+            this.nudSatisSayisi.Location = new System.Drawing.Point(125, 145);
+            this.nudSatisSayisi.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudSatisSayisi.Name = "nudSatisSayisi";
+            this.nudSatisSayisi.ReadOnly = true;
+            this.nudSatisSayisi.Size = new System.Drawing.Size(90, 20);
+            this.nudSatisSayisi.TabIndex = 125;
+            this.nudSatisSayisi.ThousandsSeparator = true;
+            // 
+            // lblSatisToplamNakit
+            // 
+            this.lblSatisToplamNakit.AutoSize = true;
+            this.lblSatisToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatisToplamNakit.ForeColor = System.Drawing.Color.Navy;
+            this.lblSatisToplamNakit.Location = new System.Drawing.Point(74, 49);
+            this.lblSatisToplamNakit.Name = "lblSatisToplamNakit";
+            this.lblSatisToplamNakit.Size = new System.Drawing.Size(45, 20);
+            this.lblSatisToplamNakit.TabIndex = 89;
+            this.lblSatisToplamNakit.Text = "Nakit";
+            // 
+            // lblSatisSayisi
+            // 
+            this.lblSatisSayisi.AutoSize = true;
+            this.lblSatisSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatisSayisi.ForeColor = System.Drawing.Color.Navy;
+            this.lblSatisSayisi.Location = new System.Drawing.Point(29, 145);
+            this.lblSatisSayisi.Name = "lblSatisSayisi";
+            this.lblSatisSayisi.Size = new System.Drawing.Size(90, 20);
+            this.lblSatisSayisi.TabIndex = 124;
+            this.lblSatisSayisi.Text = "Satış Sayısı";
+            // 
+            // lblSatisToplamKart
+            // 
+            this.lblSatisToplamKart.AutoSize = true;
+            this.lblSatisToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatisToplamKart.ForeColor = System.Drawing.Color.Navy;
+            this.lblSatisToplamKart.Location = new System.Drawing.Point(81, 81);
+            this.lblSatisToplamKart.Name = "lblSatisToplamKart";
+            this.lblSatisToplamKart.Size = new System.Drawing.Size(38, 20);
+            this.lblSatisToplamKart.TabIndex = 90;
+            this.lblSatisToplamKart.Text = "Kart";
+            // 
+            // nudGiderlerToplam
+            // 
+            this.nudGiderlerToplam.Location = new System.Drawing.Point(754, 112);
+            this.nudGiderlerToplam.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGiderlerToplam.Name = "nudGiderlerToplam";
+            this.nudGiderlerToplam.ReadOnly = true;
+            this.nudGiderlerToplam.Size = new System.Drawing.Size(90, 20);
+            this.nudGiderlerToplam.TabIndex = 123;
+            this.nudGiderlerToplam.ThousandsSeparator = true;
+            // 
+            // lblIadeler
+            // 
+            this.lblIadeler.AutoSize = true;
+            this.lblIadeler.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIadeler.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblIadeler.Location = new System.Drawing.Point(327, 13);
+            this.lblIadeler.Name = "lblIadeler";
+            this.lblIadeler.Size = new System.Drawing.Size(74, 24);
+            this.lblIadeler.TabIndex = 91;
+            this.lblIadeler.Text = "İadeler";
+            // 
+            // lblGiderlerToplam
+            // 
+            this.lblGiderlerToplam.AutoSize = true;
+            this.lblGiderlerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiderlerToplam.ForeColor = System.Drawing.Color.Navy;
+            this.lblGiderlerToplam.Location = new System.Drawing.Point(649, 112);
+            this.lblGiderlerToplam.Name = "lblGiderlerToplam";
+            this.lblGiderlerToplam.Size = new System.Drawing.Size(102, 20);
+            this.lblGiderlerToplam.TabIndex = 122;
+            this.lblGiderlerToplam.Text = "Toplam Tutar";
+            // 
+            // lblIadeToplamNakit
+            // 
+            this.lblIadeToplamNakit.AutoSize = true;
+            this.lblIadeToplamNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIadeToplamNakit.ForeColor = System.Drawing.Color.Navy;
+            this.lblIadeToplamNakit.Location = new System.Drawing.Point(285, 49);
+            this.lblIadeToplamNakit.Name = "lblIadeToplamNakit";
+            this.lblIadeToplamNakit.Size = new System.Drawing.Size(45, 20);
+            this.lblIadeToplamNakit.TabIndex = 92;
+            this.lblIadeToplamNakit.Text = "Nakit";
+            // 
+            // nudGelirlerToplam
+            // 
+            this.nudGelirlerToplam.Location = new System.Drawing.Point(553, 112);
+            this.nudGelirlerToplam.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGelirlerToplam.Name = "nudGelirlerToplam";
+            this.nudGelirlerToplam.ReadOnly = true;
+            this.nudGelirlerToplam.Size = new System.Drawing.Size(90, 20);
+            this.nudGelirlerToplam.TabIndex = 121;
+            this.nudGelirlerToplam.ThousandsSeparator = true;
+            // 
+            // lblIadeToplamKart
+            // 
+            this.lblIadeToplamKart.AutoSize = true;
+            this.lblIadeToplamKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIadeToplamKart.ForeColor = System.Drawing.Color.Navy;
+            this.lblIadeToplamKart.Location = new System.Drawing.Point(292, 78);
+            this.lblIadeToplamKart.Name = "lblIadeToplamKart";
+            this.lblIadeToplamKart.Size = new System.Drawing.Size(38, 20);
+            this.lblIadeToplamKart.TabIndex = 93;
+            this.lblIadeToplamKart.Text = "Kart";
+            // 
+            // nudGiderNakit
+            // 
+            this.nudGiderNakit.Location = new System.Drawing.Point(754, 49);
+            this.nudGiderNakit.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGiderNakit.Name = "nudGiderNakit";
+            this.nudGiderNakit.ReadOnly = true;
+            this.nudGiderNakit.Size = new System.Drawing.Size(90, 20);
+            this.nudGiderNakit.TabIndex = 106;
+            this.nudGiderNakit.ThousandsSeparator = true;
+            // 
+            // lblGelirlerToplam
+            // 
+            this.lblGelirlerToplam.AutoSize = true;
+            this.lblGelirlerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGelirlerToplam.ForeColor = System.Drawing.Color.Navy;
+            this.lblGelirlerToplam.Location = new System.Drawing.Point(445, 112);
+            this.lblGelirlerToplam.Name = "lblGelirlerToplam";
+            this.lblGelirlerToplam.Size = new System.Drawing.Size(102, 20);
+            this.lblGelirlerToplam.TabIndex = 120;
+            this.lblGelirlerToplam.Text = "Toplam Tutar";
+            // 
+            // nudIadeToplamNakit
+            // 
+            this.nudIadeToplamNakit.Location = new System.Drawing.Point(342, 49);
+            this.nudIadeToplamNakit.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudIadeToplamNakit.Name = "nudIadeToplamNakit";
+            this.nudIadeToplamNakit.ReadOnly = true;
+            this.nudIadeToplamNakit.Size = new System.Drawing.Size(90, 20);
+            this.nudIadeToplamNakit.TabIndex = 94;
+            this.nudIadeToplamNakit.ThousandsSeparator = true;
+            // 
+            // nudGiderKart
+            // 
+            this.nudGiderKart.Location = new System.Drawing.Point(754, 81);
+            this.nudGiderKart.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGiderKart.Name = "nudGiderKart";
+            this.nudGiderKart.ReadOnly = true;
+            this.nudGiderKart.Size = new System.Drawing.Size(90, 20);
+            this.nudGiderKart.TabIndex = 107;
+            this.nudGiderKart.ThousandsSeparator = true;
+            // 
+            // nudIadelerToplam
+            // 
+            this.nudIadelerToplam.Location = new System.Drawing.Point(342, 112);
+            this.nudIadelerToplam.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudIadelerToplam.Name = "nudIadelerToplam";
+            this.nudIadelerToplam.ReadOnly = true;
+            this.nudIadelerToplam.Size = new System.Drawing.Size(90, 20);
+            this.nudIadelerToplam.TabIndex = 119;
+            this.nudIadelerToplam.ThousandsSeparator = true;
+            // 
+            // btnGiderEkle
+            // 
+            this.btnGiderEkle.BackColor = System.Drawing.Color.DarkRed;
+            this.btnGiderEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnGiderEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiderEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiderEkle.ForeColor = System.Drawing.Color.White;
+            this.btnGiderEkle.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
+            this.btnGiderEkle.Location = new System.Drawing.Point(744, 145);
+            this.btnGiderEkle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGiderEkle.Name = "btnGiderEkle";
+            this.btnGiderEkle.Size = new System.Drawing.Size(100, 51);
+            this.btnGiderEkle.TabIndex = 109;
+            this.btnGiderEkle.UseVisualStyleBackColor = false;
+            // 
+            // nudIadeToplamKart
+            // 
+            this.nudIadeToplamKart.Location = new System.Drawing.Point(342, 81);
+            this.nudIadeToplamKart.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudIadeToplamKart.Name = "nudIadeToplamKart";
+            this.nudIadeToplamKart.ReadOnly = true;
+            this.nudIadeToplamKart.Size = new System.Drawing.Size(90, 20);
+            this.nudIadeToplamKart.TabIndex = 95;
+            this.nudIadeToplamKart.ThousandsSeparator = true;
+            // 
+            // lblKartKomisyon
+            // 
+            this.lblKartKomisyon.AutoSize = true;
+            this.lblKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKartKomisyon.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblKartKomisyon.Location = new System.Drawing.Point(253, 188);
+            this.lblKartKomisyon.Name = "lblKartKomisyon";
+            this.lblKartKomisyon.Size = new System.Drawing.Size(123, 20);
+            this.lblKartKomisyon.TabIndex = 110;
+            this.lblKartKomisyon.Text = "Kart Komisyon";
+            // 
+            // lblIadelerToplam
+            // 
+            this.lblIadelerToplam.AutoSize = true;
+            this.lblIadelerToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIadelerToplam.ForeColor = System.Drawing.Color.Navy;
+            this.lblIadelerToplam.Location = new System.Drawing.Point(234, 112);
+            this.lblIadelerToplam.Name = "lblIadelerToplam";
+            this.lblIadelerToplam.Size = new System.Drawing.Size(102, 20);
+            this.lblIadelerToplam.TabIndex = 118;
+            this.lblIadelerToplam.Text = "Toplam Tutar";
+            // 
+            // lblGiderKart
+            // 
+            this.lblGiderKart.AutoSize = true;
+            this.lblGiderKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiderKart.ForeColor = System.Drawing.Color.Navy;
+            this.lblGiderKart.Location = new System.Drawing.Point(709, 81);
+            this.lblGiderKart.Name = "lblGiderKart";
+            this.lblGiderKart.Size = new System.Drawing.Size(38, 20);
+            this.lblGiderKart.TabIndex = 105;
+            this.lblGiderKart.Text = "Kart";
+            // 
+            // lblGelir
+            // 
+            this.lblGelir.AutoSize = true;
+            this.lblGelir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGelir.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGelir.Location = new System.Drawing.Point(539, 13);
+            this.lblGelir.Name = "lblGelir";
+            this.lblGelir.Size = new System.Drawing.Size(78, 24);
+            this.lblGelir.TabIndex = 96;
+            this.lblGelir.Text = "Gelirler";
+            // 
+            // nudKartKomisyon
+            // 
+            this.nudKartKomisyon.Location = new System.Drawing.Point(382, 188);
+            this.nudKartKomisyon.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudKartKomisyon.Name = "nudKartKomisyon";
+            this.nudKartKomisyon.ReadOnly = true;
+            this.nudKartKomisyon.Size = new System.Drawing.Size(65, 20);
+            this.nudKartKomisyon.TabIndex = 111;
+            this.nudKartKomisyon.ThousandsSeparator = true;
+            // 
+            // nudSatislarToplam
+            // 
+            this.nudSatislarToplam.Location = new System.Drawing.Point(125, 112);
+            this.nudSatislarToplam.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudSatislarToplam.Name = "nudSatislarToplam";
+            this.nudSatislarToplam.ReadOnly = true;
+            this.nudSatislarToplam.Size = new System.Drawing.Size(90, 20);
+            this.nudSatislarToplam.TabIndex = 117;
+            this.nudSatislarToplam.ThousandsSeparator = true;
+            // 
+            // lblGiderNakit
+            // 
+            this.lblGiderNakit.AutoSize = true;
+            this.lblGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiderNakit.ForeColor = System.Drawing.Color.Navy;
+            this.lblGiderNakit.Location = new System.Drawing.Point(702, 49);
+            this.lblGiderNakit.Name = "lblGiderNakit";
+            this.lblGiderNakit.Size = new System.Drawing.Size(45, 20);
+            this.lblGiderNakit.TabIndex = 104;
+            this.lblGiderNakit.Text = "Nakit";
+            // 
+            // lblGelirNakit
+            // 
+            this.lblGelirNakit.AutoSize = true;
+            this.lblGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGelirNakit.ForeColor = System.Drawing.Color.Navy;
+            this.lblGelirNakit.Location = new System.Drawing.Point(502, 52);
+            this.lblGelirNakit.Name = "lblGelirNakit";
+            this.lblGelirNakit.Size = new System.Drawing.Size(45, 20);
+            this.lblGelirNakit.TabIndex = 97;
+            this.lblGelirNakit.Text = "Nakit";
+            // 
+            // lblKdvToplam
+            // 
+            this.lblKdvToplam.AutoSize = true;
+            this.lblKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKdvToplam.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblKdvToplam.Location = new System.Drawing.Point(49, 189);
+            this.lblKdvToplam.Name = "lblKdvToplam";
+            this.lblKdvToplam.Size = new System.Drawing.Size(101, 20);
+            this.lblKdvToplam.TabIndex = 112;
+            this.lblKdvToplam.Text = "Kdv Toplam";
+            // 
+            // lblSatislarToplam
+            // 
+            this.lblSatislarToplam.AutoSize = true;
+            this.lblSatislarToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSatislarToplam.ForeColor = System.Drawing.Color.Navy;
+            this.lblSatislarToplam.Location = new System.Drawing.Point(17, 112);
+            this.lblSatislarToplam.Name = "lblSatislarToplam";
+            this.lblSatislarToplam.Size = new System.Drawing.Size(102, 20);
+            this.lblSatislarToplam.TabIndex = 116;
+            this.lblSatislarToplam.Text = "Toplam Tutar";
+            // 
+            // lblGider
+            // 
+            this.lblGider.AutoSize = true;
+            this.lblGider.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGider.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGider.Location = new System.Drawing.Point(750, 13);
+            this.lblGider.Name = "lblGider";
+            this.lblGider.Size = new System.Drawing.Size(61, 24);
+            this.lblGider.TabIndex = 103;
+            this.lblGider.Text = "Gider";
+            // 
+            // lblGelirKart
+            // 
+            this.lblGelirKart.AutoSize = true;
+            this.lblGelirKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGelirKart.ForeColor = System.Drawing.Color.Navy;
+            this.lblGelirKart.Location = new System.Drawing.Point(509, 81);
+            this.lblGelirKart.Name = "lblGelirKart";
+            this.lblGelirKart.Size = new System.Drawing.Size(38, 20);
+            this.lblGelirKart.TabIndex = 98;
+            this.lblGelirKart.Text = "Kart";
+            // 
+            // nudKdvToplam
+            // 
+            this.nudKdvToplam.Location = new System.Drawing.Point(156, 189);
+            this.nudKdvToplam.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudKdvToplam.Name = "nudKdvToplam";
+            this.nudKdvToplam.ReadOnly = true;
+            this.nudKdvToplam.Size = new System.Drawing.Size(80, 20);
+            this.nudKdvToplam.TabIndex = 113;
+            this.nudKdvToplam.ThousandsSeparator = true;
+            // 
+            // nudGelirNakit
+            // 
+            this.nudGelirNakit.Location = new System.Drawing.Point(553, 49);
+            this.nudGelirNakit.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGelirNakit.Name = "nudGelirNakit";
+            this.nudGelirNakit.ReadOnly = true;
+            this.nudGelirNakit.Size = new System.Drawing.Size(90, 20);
+            this.nudGelirNakit.TabIndex = 99;
+            this.nudGelirNakit.ThousandsSeparator = true;
+            // 
+            // nudSatisToplamKart
+            // 
+            this.nudSatisToplamKart.Location = new System.Drawing.Point(125, 81);
+            this.nudSatisToplamKart.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudSatisToplamKart.Name = "nudSatisToplamKart";
+            this.nudSatisToplamKart.ReadOnly = true;
+            this.nudSatisToplamKart.Size = new System.Drawing.Size(90, 20);
+            this.nudSatisToplamKart.TabIndex = 102;
+            this.nudSatisToplamKart.ThousandsSeparator = true;
+            // 
+            // nudGelirKart
+            // 
+            this.nudGelirKart.Location = new System.Drawing.Point(553, 81);
+            this.nudGelirKart.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudGelirKart.Name = "nudGelirKart";
+            this.nudGelirKart.ReadOnly = true;
+            this.nudGelirKart.Size = new System.Drawing.Size(90, 20);
+            this.nudGelirKart.TabIndex = 100;
+            this.nudGelirKart.ThousandsSeparator = true;
+            // 
+            // nudSatisToplamNakit
+            // 
+            this.nudSatisToplamNakit.Location = new System.Drawing.Point(125, 49);
+            this.nudSatisToplamNakit.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudSatisToplamNakit.Name = "nudSatisToplamNakit";
+            this.nudSatisToplamNakit.ReadOnly = true;
+            this.nudSatisToplamNakit.Size = new System.Drawing.Size(90, 20);
+            this.nudSatisToplamNakit.TabIndex = 101;
+            this.nudSatisToplamNakit.ThousandsSeparator = true;
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
+            this.btnPdf.Location = new System.Drawing.Point(867, 130);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(100, 70);
+            this.btnPdf.TabIndex = 115;
+            this.btnPdf.UseVisualStyleBackColor = false;
+            // 
+            // btnGelirEkle
+            // 
+            this.btnGelirEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnGelirEkle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnGelirEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGelirEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGelirEkle.ForeColor = System.Drawing.Color.White;
+            this.btnGelirEkle.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
+            this.btnGelirEkle.Location = new System.Drawing.Point(543, 145);
+            this.btnGelirEkle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGelirEkle.Name = "btnGelirEkle";
+            this.btnGelirEkle.Size = new System.Drawing.Size(100, 51);
+            this.btnGelirEkle.TabIndex = 108;
+            this.btnGelirEkle.UseVisualStyleBackColor = false;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
+            this.btnExcel.Location = new System.Drawing.Point(867, 31);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(100, 70);
+            this.btnExcel.TabIndex = 114;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnAra
+            // 
+            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnAra.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
+            this.btnAra.Location = new System.Drawing.Point(315, 160);
+            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(126, 51);
+            this.btnAra.TabIndex = 43;
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
+            // 
             // FormRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1425, 818);
+            this.ClientSize = new System.Drawing.Size(1479, 818);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -914,23 +919,25 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
+            this.pnlIstatistik.ResumeLayout(false);
+            this.pnlIstatistik.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudIadeSayisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatisSayisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiderlerToplam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGelirlerToplam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiderNakit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamNakit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiderKart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIadelerToplam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamKart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSatislarToplam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKdvToplam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiderKart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiderNakit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamKart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamNakit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGelirKart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGelirNakit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamKart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIadeToplamNakit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamKart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGelirKart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSatisToplamNakit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,21 +945,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.NumericUpDown nudSatisToplamKart;
-        private System.Windows.Forms.NumericUpDown nudSatisToplamNakit;
-        private System.Windows.Forms.NumericUpDown nudGelirKart;
-        private System.Windows.Forms.NumericUpDown nudGelirNakit;
-        private System.Windows.Forms.Label lblGelirKart;
-        private System.Windows.Forms.Label lblGelirNakit;
-        private System.Windows.Forms.Label lblGelir;
-        private System.Windows.Forms.NumericUpDown nudIadeToplamKart;
-        private System.Windows.Forms.NumericUpDown nudIadeToplamNakit;
-        private System.Windows.Forms.Label lblIadeToplamKart;
-        private System.Windows.Forms.Label lblIadeToplamNakit;
-        private System.Windows.Forms.Label lblIadeler;
-        private System.Windows.Forms.Label lblSatisToplamKart;
-        private System.Windows.Forms.Label lblSatisToplamNakit;
-        private System.Windows.Forms.Label lblSatislar;
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.DateTimePicker dtpBitisTarihi;
         private System.Windows.Forms.DateTimePicker dtpBaslangicTarihi;
@@ -964,34 +956,50 @@
         private System.Windows.Forms.RadioButton rdbSatislar;
         private System.Windows.Forms.RadioButton rdbTumu;
         private System.Windows.Forms.Label lblRaporlamaTuru;
-        private System.Windows.Forms.NumericUpDown nudKdvToplam;
-        private System.Windows.Forms.Label lblKdvToplam;
-        private System.Windows.Forms.NumericUpDown nudKartKomisyon;
-        private System.Windows.Forms.Label lblKartKomisyon;
-        private System.Windows.Forms.Button btnGiderEkle;
-        private System.Windows.Forms.Button btnGelirEkle;
-        private System.Windows.Forms.NumericUpDown nudGiderKart;
-        private System.Windows.Forms.NumericUpDown nudGiderNakit;
-        private System.Windows.Forms.Label lblGiderKart;
-        private System.Windows.Forms.Label lblGiderNakit;
-        private System.Windows.Forms.Label lblGider;
         private System.Windows.Forms.DataGridView gridSonucListesi;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnPdf;
-        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Label lblKasiyer;
         public System.Windows.Forms.Label lblKullanici;
-        private System.Windows.Forms.NumericUpDown nudIadelerToplam;
-        private System.Windows.Forms.Label lblIadelerToplam;
-        private System.Windows.Forms.NumericUpDown nudSatislarToplam;
-        private System.Windows.Forms.Label lblSatislarToplam;
-        private System.Windows.Forms.NumericUpDown nudGiderlerToplam;
-        private System.Windows.Forms.Label lblGiderlerToplam;
-        private System.Windows.Forms.NumericUpDown nudGelirlerToplam;
-        private System.Windows.Forms.Label lblGelirlerToplam;
+        private System.Windows.Forms.Panel pnlIstatistik;
         private System.Windows.Forms.NumericUpDown nudIadeSayisi;
+        private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.Label lblIadeSayisi;
+        private System.Windows.Forms.Label lblSatislar;
         private System.Windows.Forms.NumericUpDown nudSatisSayisi;
+        private System.Windows.Forms.Label lblSatisToplamNakit;
         private System.Windows.Forms.Label lblSatisSayisi;
+        private System.Windows.Forms.Label lblSatisToplamKart;
+        private System.Windows.Forms.NumericUpDown nudGiderlerToplam;
+        private System.Windows.Forms.Label lblIadeler;
+        private System.Windows.Forms.Label lblGiderlerToplam;
+        private System.Windows.Forms.Label lblIadeToplamNakit;
+        private System.Windows.Forms.NumericUpDown nudGelirlerToplam;
+        private System.Windows.Forms.Label lblIadeToplamKart;
+        private System.Windows.Forms.NumericUpDown nudGiderNakit;
+        private System.Windows.Forms.Label lblGelirlerToplam;
+        private System.Windows.Forms.Button btnGelirEkle;
+        private System.Windows.Forms.NumericUpDown nudIadeToplamNakit;
+        private System.Windows.Forms.NumericUpDown nudGiderKart;
+        private System.Windows.Forms.NumericUpDown nudIadelerToplam;
+        private System.Windows.Forms.Button btnGiderEkle;
+        private System.Windows.Forms.NumericUpDown nudIadeToplamKart;
+        private System.Windows.Forms.Label lblKartKomisyon;
+        private System.Windows.Forms.Label lblIadelerToplam;
+        private System.Windows.Forms.Label lblGiderKart;
+        private System.Windows.Forms.Label lblGelir;
+        private System.Windows.Forms.NumericUpDown nudKartKomisyon;
+        private System.Windows.Forms.NumericUpDown nudSatislarToplam;
+        private System.Windows.Forms.Label lblGiderNakit;
+        private System.Windows.Forms.Label lblGelirNakit;
+        private System.Windows.Forms.Label lblKdvToplam;
+        private System.Windows.Forms.Label lblSatislarToplam;
+        private System.Windows.Forms.Label lblGider;
+        private System.Windows.Forms.Label lblGelirKart;
+        private System.Windows.Forms.NumericUpDown nudKdvToplam;
+        private System.Windows.Forms.NumericUpDown nudGelirNakit;
+        private System.Windows.Forms.NumericUpDown nudSatisToplamKart;
+        private System.Windows.Forms.NumericUpDown nudGelirKart;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.NumericUpDown nudSatisToplamNakit;
     }
 }

@@ -397,6 +397,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\add.png" />
     <None Include="Resources\pdf.png" />
     <None Include="Resources\excel.png" />
     <None Include="Resources\time-left.png" />

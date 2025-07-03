@@ -40,148 +40,62 @@ namespace BarkodluMarketProgrami
                 {
                     var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(a => a.Tarih).ToList();
                     var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-
-                    double satisKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == false).Sum(x => x.KdvTutari));
-                    double iadeKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == true).Sum(x => x.KdvTutari));
-
-                    nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
-                    nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
-
-                    nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
-                    nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
-
-                    nudKdvToplam.Value = (decimal)Convert.ToDouble(satisKdvToplam - iadeKdvToplam);
-
-                    gridSonucListesi.DataSource = islemOzet;
-                    tabloDuzenle();
-
-                    if (islemOzet.Count == 0)
-                    {
-                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    tabloDoldur(islemOzet,satisOzet);
                 }
                 else if (rdbSatislar.Checked)
                 {
                     var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == false && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
                     var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-
-                    double satisKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == false).Sum(x => x.KdvTutari));
-                    double iadeKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == true).Sum(x => x.KdvTutari));
-
-                    nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
-                    nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
-
-                    nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
-                    nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
-
-                    nudKdvToplam.Value = (decimal)Convert.ToDouble(satisKdvToplam - iadeKdvToplam);
-
-                    gridSonucListesi.DataSource = islemOzet;
-                    tabloDuzenle();
-
-                    if (islemOzet.Count == 0)
-                    {
-                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
+                    tabloDoldur(islemOzet, satisOzet);
                 }
                 else if (rdbIadeler.Checked)
                 {
                     var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == true && x.Gelir == false && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
                     var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-
-                    double satisKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == false).Sum(x => x.KdvTutari));
-                    double iadeKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == true).Sum(x => x.KdvTutari));
-
-                    nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
-                    nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
-
-                    nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
-                    nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
-
-                    nudKdvToplam.Value = (decimal)Convert.ToDouble(satisKdvToplam - iadeKdvToplam);
-
-                    gridSonucListesi.DataSource = islemOzet;
-                    tabloDuzenle();
-
-                    if (islemOzet.Count == 0)
-                    {
-                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    tabloDoldur(islemOzet, satisOzet);
                 }
                 else if (rdbGelirler.Checked)
                 {
                     var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == true && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
-
-                    nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
-                    nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
-
-                    nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
-                    nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
-
-                    nudKdvToplam.Value = 0;
-
-                    gridSonucListesi.DataSource = islemOzet;
-                    tabloDuzenle();
-
-                    if (islemOzet.Count == 0)
-                    {
-                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
+                    tabloDoldur(islemOzet, null);
                 }
                 else if (rdbGiderler.Checked)
                 {
                     var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == false && x.Gider == true).OrderByDescending(a => a.Tarih).ToList();
-
-                    nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
-                    nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
-
-                    nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
-                    nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
-
-                    nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
-                    nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
-
-                    nudKdvToplam.Value = 0;
-
-                    gridSonucListesi.DataSource = islemOzet;
-                    tabloDuzenle();
-
-                    if (islemOzet.Count == 0)
-                    {
-                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    tabloDoldur(islemOzet, null);
                 }
             }
             Cursor.Current = guncelCursor;
+        }
+        private void tabloDoldur(List<IslemOzet> islemOzet, List<Satis> satisOzet)
+        {
+            if(satisOzet != null)
+            {
+                double satisKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == false).Sum(x => x.KdvTutari));
+                double iadeKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == true).Sum(x => x.KdvTutari));
+                nudKdvToplam.Value = (decimal)Convert.ToDouble(satisKdvToplam - iadeKdvToplam);
+            }
+            nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
+            nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
+            nudSatislarToplam.Value = Convert.ToDecimal(nudSatisToplamNakit.Value) + Convert.ToDecimal(nudSatisToplamKart.Value);
+            nudSatisSayisi.Value = islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Count();
+            nudIadeToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Nakit));
+            nudIadeToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Sum(x => x.Kart));
+            nudIadelerToplam.Value = Convert.ToDecimal(nudIadeToplamNakit.Value) + Convert.ToDecimal(nudIadeToplamKart.Value);
+            nudIadeSayisi.Value = islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == true).Count();
+            nudGelirNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
+            nudGelirKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == true && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
+            nudGelirlerToplam.Value = Convert.ToDecimal(nudGelirNakit.Value) + Convert.ToDecimal(nudGelirKart.Value);
+            nudGiderNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Nakit));
+            nudGiderKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == true && x.Iade == false).Sum(x => x.Kart));
+            nudGiderlerToplam.Value = Convert.ToDecimal(nudGiderNakit.Value) + Convert.ToDecimal(nudGiderKart.Value);
+            gridSonucListesi.DataSource = islemOzet;
+            tabloDuzenle();
+            pnlIstatistik.Visible = true;
+            if (islemOzet.Count == 0)
+            {
+                MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void tabloDuzenle()
         {
