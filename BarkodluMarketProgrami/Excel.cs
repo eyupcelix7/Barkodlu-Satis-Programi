@@ -30,25 +30,31 @@ namespace BarkodluMarketProgrami
                 worksheet.Range(1, 1, 1, dataGridView.Columns.Count).Style.Fill.BackgroundColor = XLColor.LightGray;
                 for (int i = 0; i < dataGridView.Columns.Count; i++)
                 {
-                    worksheet.Cell(2, i + 1).Value = dataGridView.Columns[i].HeaderText;
-                    worksheet.Cell(2, i + 1).Style.Font.Bold = true;
-                    worksheet.Cell(2, i + 1).Style.Font.FontSize = 12;
+                    if (dataGridView.Columns[i].HeaderText != "Düzenle" && dataGridView.Columns[i].HeaderText != "Sil")
+                    {
+                        worksheet.Cell(2, i + 1).Value = dataGridView.Columns[i].HeaderText;
+                        worksheet.Cell(2, i + 1).Style.Font.Bold = true;
+                        worksheet.Cell(2, i + 1).Style.Font.FontSize = 12;
+                    }
                 }
                 for (int i = 0; i < dataGridView.Rows.Count; i++)
                 {
                     for (int j = 0; j < dataGridView.Columns.Count; j++)
                     {
-                        if(dataGridView.Rows[i].Cells[j].Value?.ToString() == "True")
+                        if (dataGridView.Columns[dataGridView.Rows[i].Cells[j].ColumnIndex].HeaderText != "Düzenle" && dataGridView.Columns[dataGridView.Rows[i].Cells[j].ColumnIndex].HeaderText != "Sil")
                         {
-                            worksheet.Cell(i + 3, j + 1).Value = "Evet";
-                        }
-                        else if(dataGridView.Rows[i].Cells[j].Value?.ToString() == "False")
-                        {
-                            worksheet.Cell(i + 3, j + 1).Value = "Hayır";
-                        }
-                        else
-                        {
-                            worksheet.Cell(i + 3, j + 1).Value = dataGridView.Rows[i].Cells[j].Value?.ToString();
+                            if (dataGridView.Rows[i].Cells[j].Value?.ToString() == "True")
+                            {
+                                worksheet.Cell(i + 3, j + 1).Value = "Evet";
+                            }
+                            else if (dataGridView.Rows[i].Cells[j].Value?.ToString() == "False")
+                            {
+                                worksheet.Cell(i + 3, j + 1).Value = "Hayır";
+                            }
+                            else
+                            {
+                                worksheet.Cell(i + 3, j + 1).Value = dataGridView.Rows[i].Cells[j].Value?.ToString();
+                            }
                         }
 
                     }

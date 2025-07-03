@@ -40,6 +40,8 @@ namespace BarkodluMarketProgrami
                     {
                         string header = dataGridView.Columns[i].HeaderText;
                         string value = row.Cells[i].Value?.ToString() ?? "";
+                        if(header == "Düzenle" || header == "Sil") continue;
+
                         if (value == "True")
                         {
                             value = "Evet";
