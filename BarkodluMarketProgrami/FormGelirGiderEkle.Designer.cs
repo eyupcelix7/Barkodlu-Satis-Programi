@@ -40,6 +40,7 @@
             this.lblTarih = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblKasiyer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudKart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNakit)).BeginInit();
@@ -185,17 +186,29 @@
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(342, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Kasiyer:";
+            // 
             // lblKasiyer
             // 
-            this.lblKasiyer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKasiyer.AutoSize = true;
-            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKasiyer.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblKasiyer.Location = new System.Drawing.Point(338, 9);
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Location = new System.Drawing.Point(409, 9);
+            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKasiyer.Name = "lblKasiyer";
-            this.lblKasiyer.Size = new System.Drawing.Size(141, 16);
-            this.lblKasiyer.TabIndex = 47;
-            this.lblKasiyer.Text = "Kasiyer: eyupcelix7";
+            this.lblKasiyer.Size = new System.Drawing.Size(71, 16);
+            this.lblKasiyer.TabIndex = 76;
+            this.lblKasiyer.Text = "eyupcelix7";
             // 
             // FormGelirGiderEkle
             // 
@@ -203,6 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblKasiyer);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dtpTarih);
@@ -242,6 +256,7 @@
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.DateTimePicker dtpTarih;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Label lblKasiyer;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblKasiyer;
     }
 }

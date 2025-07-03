@@ -19,13 +19,17 @@ namespace BarkodluMarketProgrami
         }
         private void FormRaporDetay_Load(object sender, EventArgs e)
         {
-            this.Text = "#" + islemId.ToString() + " İşlem Detayları";
-            lblIslemId.Text = "#"+islemId.ToString()+" Numaralı İşlem";
             using(var db = new BarkodEntities())
             {
-                if (db.IslemOzet.Where(x => x.Id == islemId).Any()) 
+                islemId = (int)db.IslemOzet.Where(x=> x.Id == islemId).FirstOrDefault().IslemNo;
+
+                this.Text = "#" + islemId.ToString() + " İşlem Detayları";
+                lblIslemId.Text = "#" + islemId.ToString() + " Numaralı İşlem";
+
+                if (db.IslemOzet.Where(x => x.IslemNo == islemId).Any()) 
                 {
-                    var islemOzet = db.IslemOzet.Where(x => x.Id == islemId).FirstOrDefault();
+                    // Tekli İşlem Page
+                    var islemOzet = db.IslemOzet.Where(x => x.IslemNo == islemId).FirstOrDefault();
                     txtIadeMi.Text = (bool)islemOzet.Iade ? "Evet" : "Hayır";
                     txtOdemeSekli.Text = islemOzet.OdemeSekli;
                     txtGelirMi.Text = (bool)islemOzet.Gelir ? "Evet" : "Hayır";
@@ -47,6 +51,22 @@ namespace BarkodluMarketProgrami
                     dtpTarih.MinDate = (DateTime)islemOzet.Tarih;
                     txtKullanici.Text = islemOzet.Kullanici;
                     rtbAciklama.Text = islemOzet.Aciklama;
+
+                    // Tüm İşlem Page
+                    var urunler = db.Satis.Where(x => x.IslemNo == islemId).Select(x => new
+                    {
+                        x.UrunAd,
+                        x.SatisFiyat,
+                        x.Miktar,
+                        x.Toplam,
+                        x.Tarih
+                    }).ToList();
+                    gridUrunListesi.DataSource = urunler;
+                    gridUrunListesi.Columns[0].HeaderText = "Ürün Adı";
+                    gridUrunListesi.Columns[1].HeaderText = "Satış Fiyatı";
+                    gridUrunListesi.Columns[1].DefaultCellStyle.Format = "C2";
+                    gridUrunListesi.Columns[3].HeaderText = "Toplam Fiyat";
+                    gridUrunListesi.Columns[3].DefaultCellStyle.Format = "C2";
                 }
             }
         }

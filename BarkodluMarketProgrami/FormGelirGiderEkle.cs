@@ -74,6 +74,7 @@ namespace BarkodluMarketProgrami
                 islemOzet.Tarih = dtpTarih.Value;
                 islemOzet.Kullanici = lblKasiyer.Text.Trim();
                 db.IslemOzet.Add(islemOzet);
+                db.Islem.SingleOrDefault().IslemNo = islemNo+1;
                 db.SaveChanges();
                 switch (gelir) 
                 {

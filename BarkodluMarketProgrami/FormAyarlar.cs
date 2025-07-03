@@ -33,7 +33,6 @@ namespace BarkodluMarketProgrami
                 txtTelNo.Text = ayarlar.Telefon;
                 nudKartKomisyon.Value = (decimal) ayarlar.KartKomisyon;
                 cbxYazici.Checked = (bool)ayarlar.Yazici;
-                // Terazi Ayarları
                 txtTeraziOnEk.Text = terazi.TeraziOnEk.ToString();
             }
         }
