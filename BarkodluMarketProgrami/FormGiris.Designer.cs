@@ -141,6 +141,7 @@
             this.btnKullaniciDegistir.TabIndex = 8;
             this.btnKullaniciDegistir.Text = "Kullanıcı Değiştir";
             this.btnKullaniciDegistir.UseVisualStyleBackColor = false;
+            this.btnKullaniciDegistir.Click += new System.EventHandler(this.btnKullaniciDegistir_Click);
             // 
             // btnYedekleme
             // 

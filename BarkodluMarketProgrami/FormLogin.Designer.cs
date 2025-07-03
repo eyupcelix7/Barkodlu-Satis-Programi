@@ -71,6 +71,7 @@
             this.txtKulKod.Name = "txtKulKod";
             this.txtKulKod.Size = new System.Drawing.Size(83, 26);
             this.txtKulKod.TabIndex = 3;
+            this.txtKulKod.Text = "171";
             // 
             // label2
             // 
@@ -104,6 +105,7 @@
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(157, 26);
             this.txtSifre.TabIndex = 5;
+            this.txtSifre.Text = "eyup.123";
             // 
             // FormLogin
             // 
@@ -121,7 +123,7 @@
             this.MinimumSize = new System.Drawing.Size(407, 317);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giriş";
+            this.Text = "wwwwwwwwww33q3";
             this.ResumeLayout(false);
             this.PerformLayout();
 

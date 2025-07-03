@@ -37,7 +37,7 @@ namespace BarkodluMarketProgrami
         }
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         private void btnSatis_Click(object sender, EventArgs e)
         {
@@ -65,7 +65,6 @@ namespace BarkodluMarketProgrami
             form.ShowDialog();
 
         }
-
         private void btnFiyatGuncelle_Click(object sender, EventArgs e)
         {
             FormFiyatGuncelle form = new FormFiyatGuncelle();
@@ -100,5 +99,11 @@ namespace BarkodluMarketProgrami
             Application.Exit();
         }
 
+        private void btnKullaniciDegistir_Click(object sender, EventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            form.Show();
+            this.Hide();
+        }
     }
 }

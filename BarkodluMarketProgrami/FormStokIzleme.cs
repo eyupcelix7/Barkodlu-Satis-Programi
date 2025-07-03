@@ -13,6 +13,8 @@ namespace BarkodluMarketProgrami
     public partial class FormStokIzleme : Form
     {
         BarkodEntities db = new BarkodEntities();
+        DateTime baslangicTarihi = DateTime.Now;
+        DateTime bitisTarihi = DateTime.Now;
         public FormStokIzleme()
         {
             InitializeComponent();
@@ -30,51 +32,109 @@ namespace BarkodluMarketProgrami
         }
         private void btnAra_Click(object sender, EventArgs e)
         {
-            if(cmbIslemTuru.Text != "")
+            if(cmbIslemTuru.SelectedIndex != -1)
             {
-                DateTime baslangicTarihi = DateTime.Parse(dtpBaslangicTarihi.Value.ToShortDateString());
-                DateTime bitisTarihi = DateTime.Parse(dtpBitisTarihi.Value.ToShortDateString()).AddDays(1);
 
+                if(dtpBaslangicTarihi.Enabled == false && dtpBitisTarihi.Enabled == false)
+                {
+                    baslangicTarihi = DateTime.Parse(dtpBaslangicTarihi.MinDate.ToShortDateString());
+                    bitisTarihi = DateTime.Parse(dtpBaslangicTarihi.MaxDate.ToShortDateString());
+                }
+                else
+                {
+                    baslangicTarihi = DateTime.Parse(dtpBaslangicTarihi.Value.ToShortDateString());
+                    bitisTarihi = DateTime.Parse(dtpBitisTarihi.Value.ToShortDateString()).AddDays(1);
+                }
                 if (cmbIslemTuru.SelectedIndex == 0)
                 {
                     var urunler = new List<Urun>();
                     if (rdbTumu.Checked)
                     {
                         urunler = db.Urun.Where(x => x.Miktar > 0 && x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
+                        if (urunler.Count > 0)
+                        {
+                            gridSonucListesi.DataSource = urunler;
+                            gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
+                            gridSonucListesi.Columns["Id"].Visible = false;
+                            bulunanSayisiniDegistir(urunler.Count);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seçilen Tarihler Arasında Bir Stok Durumu Bulunamamıştır", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        if(cmbUrunGrubu.Text != "")
+                        if (cmbUrunGrubu.SelectedIndex != -1)
                         {
                             urunler = db.Urun.Where(a => a.UrunGrup == cmbUrunGrubu.Text && a.Tarih >= baslangicTarihi && a.Tarih <= bitisTarihi).ToList();
+                            if (urunler.Count > 0)
+                            {
+                                gridSonucListesi.DataSource = urunler;
+                                gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
+                                gridSonucListesi.Columns["Id"].Visible = false;
+                                bulunanSayisiniDegistir(urunler.Count);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Seçilen Seçenekler Arasında Bir Stok Durumu Bulunamamıştır", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lütfen Bir Ürün Grubu Seçiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    gridSonucListesi.DataSource = urunler;
-                    gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
-                    gridSonucListesi.Columns["Id"].Visible = false;
-                    bulunanSayisiniDegistir(urunler.Count);
                 }
-                else if(cmbIslemTuru.SelectedIndex == 1)
+                else if (cmbIslemTuru.SelectedIndex == 1)
                 {
                     var stokHareketler = new List<StokHareket>();
                     if (rdbTumu.Checked)
                     {
                         stokHareketler = db.StokHareket.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(x => x.Tarih).ToList();
+                        if (stokHareketler.Count > 0)
+                        {
+                            gridSonucListesi.DataSource = stokHareketler;
+                            gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
+                            gridSonucListesi.Columns["Barkod"].HeaderText = "Barkod";
+                            gridSonucListesi.Columns["Id"].Visible = false;
+                            bulunanSayisiniDegistir(stokHareketler.Count);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seçilen Tarihler Arasında Bir Stok Girişi Bulunamamıştır", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        if (cmbUrunGrubu.Text != "")
+                        if (cmbUrunGrubu.SelectedIndex != -1)
                         {
                             stokHareketler = db.
                                 StokHareket.Where(x => x.UrunGrup == cmbUrunGrubu.Text && x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(x => x.Tarih).ToList();
+                            if (stokHareketler.Count > 0)
+                            {
+                                gridSonucListesi.DataSource = stokHareketler;
+                                gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
+                                gridSonucListesi.Columns["Barkod"].HeaderText = "Barkod";
+                                gridSonucListesi.Columns["Id"].Visible = false;
+                                bulunanSayisiniDegistir(stokHareketler.Count);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Seçilen Seçenekler Arasında Bir Stok Girişi Bulunamamıştır", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lütfen Bir Ürün Grubu Seçiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                     }
-                    gridSonucListesi.DataSource = stokHareketler;
-                    gridSonucListesi.Columns["UrunAd"].HeaderText = "Ürün Adı";
-                    gridSonucListesi.Columns["Barkod"].HeaderText = "Barkod";
-                    gridSonucListesi.Columns["Id"].Visible = false;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Bir Işlem Türü Seçiniz","Hata",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         private void txtUrunAdi_KeyPress(object sender, KeyPressEventArgs e)
@@ -152,6 +212,20 @@ namespace BarkodluMarketProgrami
             else if (cmbIslemTuru.SelectedIndex == 1)
             {
                 Pdf pdf = new Pdf(gridSonucListesi, "Stok Girişi");
+            }
+        }
+
+        private void cbxTumZamanlar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxTumZamanlar.Checked)
+            {
+                dtpBaslangicTarihi.Enabled = false;
+                dtpBitisTarihi.Enabled = false;
+            }
+            else
+            {
+                dtpBaslangicTarihi.Enabled = true;
+                dtpBitisTarihi.Enabled = true;
             }
         }
     }
