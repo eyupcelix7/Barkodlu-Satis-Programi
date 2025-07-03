@@ -214,7 +214,6 @@ namespace BarkodluMarketProgrami
                 Pdf pdf = new Pdf(gridSonucListesi, "Stok Girişi");
             }
         }
-
         private void cbxTumZamanlar_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxTumZamanlar.Checked)

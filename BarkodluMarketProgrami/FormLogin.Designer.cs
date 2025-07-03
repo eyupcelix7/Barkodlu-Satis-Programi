@@ -123,7 +123,7 @@
             this.MinimumSize = new System.Drawing.Size(407, 317);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "wwwwwwwwww33q3";
+            this.Text = "Giriş Yap";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,6 +28,10 @@ namespace BarkodluMarketProgrami
         {
             Process.Start("osk.exe");
         }
+        private void btnHesapMakinesi_Click(object sender, EventArgs e)
+        {
+            Process.Start("calc.exe");
+        }
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -308,6 +312,29 @@ namespace BarkodluMarketProgrami
                 }
             }
 
+        }
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            if (gridSonucListesi.Rows.Count != 0)
+            {
+                Pdf pdf = new Pdf(gridSonucListesi, "Ürün Girişi");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (gridSonucListesi.Rows.Count != 0)
+            {
+                Excel excel = new Excel(gridSonucListesi, "Ürün Girişi");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

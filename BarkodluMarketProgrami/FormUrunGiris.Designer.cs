@@ -35,13 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnHesapMakinesi = new System.Windows.Forms.Button();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.lblKasiyer = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEkranKlavyesi = new System.Windows.Forms.Button();
-            this.btnPdf = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnBarkod = new System.Windows.Forms.Button();
@@ -84,12 +87,10 @@
             this.urunKdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunKullanici = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblKasiyer = new System.Windows.Forms.Label();
-            this.lblKullanici = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunDuzenle = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -116,6 +117,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnHesapMakinesi);
+            this.splitContainer1.Panel1.Controls.Add(this.btnPdf);
+            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
             this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
@@ -123,8 +127,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.btnEkranKlavyesi);
-            this.splitContainer1.Panel1.Controls.Add(this.btnPdf);
-            this.splitContainer1.Panel1.Controls.Add(this.btnExcel);
             this.splitContainer1.Panel1.Controls.Add(this.btnKaydet);
             this.splitContainer1.Panel1.Controls.Add(this.btnTemizle);
             this.splitContainer1.Panel1.Controls.Add(this.btnBarkod);
@@ -154,6 +156,83 @@
             this.splitContainer1.Size = new System.Drawing.Size(1679, 1012);
             this.splitContainer1.SplitterDistance = 240;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnHesapMakinesi
+            // 
+            this.btnHesapMakinesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHesapMakinesi.BackColor = System.Drawing.Color.Navy;
+            this.btnHesapMakinesi.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnHesapMakinesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHesapMakinesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHesapMakinesi.ForeColor = System.Drawing.Color.White;
+            this.btnHesapMakinesi.Location = new System.Drawing.Point(1304, 133);
+            this.btnHesapMakinesi.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHesapMakinesi.Name = "btnHesapMakinesi";
+            this.btnHesapMakinesi.Padding = new System.Windows.Forms.Padding(2);
+            this.btnHesapMakinesi.Size = new System.Drawing.Size(121, 90);
+            this.btnHesapMakinesi.TabIndex = 80;
+            this.btnHesapMakinesi.Text = "Hesap Makinesi";
+            this.btnHesapMakinesi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnHesapMakinesi.UseVisualStyleBackColor = false;
+            this.btnHesapMakinesi.Click += new System.EventHandler(this.btnHesapMakinesi_Click);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
+            this.btnPdf.Location = new System.Drawing.Point(1522, 30);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(121, 90);
+            this.btnPdf.TabIndex = 79;
+            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
+            this.btnExcel.Location = new System.Drawing.Point(1522, 130);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(121, 90);
+            this.btnExcel.TabIndex = 78;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // lblKasiyer
+            // 
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Location = new System.Drawing.Point(10, 7);
+            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(69, 18);
+            this.lblKasiyer.TabIndex = 77;
+            this.lblKasiyer.Text = "Kasiyer:";
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(77, 9);
+            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
+            this.lblKullanici.TabIndex = 76;
+            this.lblKullanici.Text = "eyupcelix7";
             // 
             // label4
             // 
@@ -207,7 +286,7 @@
             this.btnEkranKlavyesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkranKlavyesi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkranKlavyesi.ForeColor = System.Drawing.Color.White;
-            this.btnEkranKlavyesi.Location = new System.Drawing.Point(1086, 28);
+            this.btnEkranKlavyesi.Location = new System.Drawing.Point(1304, 28);
             this.btnEkranKlavyesi.Margin = new System.Windows.Forms.Padding(1);
             this.btnEkranKlavyesi.Name = "btnEkranKlavyesi";
             this.btnEkranKlavyesi.Padding = new System.Windows.Forms.Padding(2);
@@ -218,42 +297,6 @@
             this.btnEkranKlavyesi.UseVisualStyleBackColor = false;
             this.btnEkranKlavyesi.Click += new System.EventHandler(this.btnEkranKlavyesi_Click);
             // 
-            // btnPdf
-            // 
-            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.BackColor = System.Drawing.Color.Tomato;
-            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdf.ForeColor = System.Drawing.Color.White;
-            this.btnPdf.Location = new System.Drawing.Point(1505, 28);
-            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Padding = new System.Windows.Forms.Padding(2);
-            this.btnPdf.Size = new System.Drawing.Size(121, 90);
-            this.btnPdf.TabIndex = 28;
-            this.btnPdf.Text = "Pdf\'e Aktar";
-            this.btnPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnPdf.UseVisualStyleBackColor = false;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.Tomato;
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Location = new System.Drawing.Point(1368, 136);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Padding = new System.Windows.Forms.Padding(2);
-            this.btnExcel.Size = new System.Drawing.Size(121, 90);
-            this.btnExcel.TabIndex = 27;
-            this.btnExcel.Text = "Excel\'e Aktar";
-            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            // 
             // btnKaydet
             // 
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -262,7 +305,7 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(1086, 136);
+            this.btnKaydet.Location = new System.Drawing.Point(1017, 136);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
@@ -281,7 +324,7 @@
             this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTemizle.ForeColor = System.Drawing.Color.White;
-            this.btnTemizle.Location = new System.Drawing.Point(1232, 28);
+            this.btnTemizle.Location = new System.Drawing.Point(1017, 28);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Padding = new System.Windows.Forms.Padding(2);
@@ -295,12 +338,12 @@
             // btnBarkod
             // 
             this.btnBarkod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBarkod.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBarkod.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnBarkod.BackColor = System.Drawing.Color.Tomato;
+            this.btnBarkod.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnBarkod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBarkod.ForeColor = System.Drawing.Color.White;
-            this.btnBarkod.Location = new System.Drawing.Point(1368, 28);
+            this.btnBarkod.Location = new System.Drawing.Point(1163, 28);
             this.btnBarkod.Margin = new System.Windows.Forms.Padding(1);
             this.btnBarkod.Name = "btnBarkod";
             this.btnBarkod.Padding = new System.Windows.Forms.Padding(2);
@@ -314,12 +357,12 @@
             // btnUrunGrubuEkle
             // 
             this.btnUrunGrubuEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUrunGrubuEkle.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnUrunGrubuEkle.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnUrunGrubuEkle.BackColor = System.Drawing.Color.Tomato;
+            this.btnUrunGrubuEkle.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnUrunGrubuEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunGrubuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunGrubuEkle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunGrubuEkle.Location = new System.Drawing.Point(1232, 136);
+            this.btnUrunGrubuEkle.Location = new System.Drawing.Point(1163, 136);
             this.btnUrunGrubuEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnUrunGrubuEkle.Name = "btnUrunGrubuEkle";
             this.btnUrunGrubuEkle.Padding = new System.Windows.Forms.Padding(2);
@@ -353,6 +396,7 @@
             this.nudKdvOrani.Name = "nudKdvOrani";
             this.nudKdvOrani.Size = new System.Drawing.Size(124, 20);
             this.nudKdvOrani.TabIndex = 21;
+            this.nudKdvOrani.ThousandsSeparator = true;
             this.nudKdvOrani.Value = new decimal(new int[] {
             8,
             0,
@@ -361,7 +405,6 @@
             // 
             // nudMiktar
             // 
-            this.nudMiktar.DecimalPlaces = 2;
             this.nudMiktar.Location = new System.Drawing.Point(488, 100);
             this.nudMiktar.Maximum = new decimal(new int[] {
             10000,
@@ -371,6 +414,7 @@
             this.nudMiktar.Name = "nudMiktar";
             this.nudMiktar.Size = new System.Drawing.Size(124, 20);
             this.nudMiktar.TabIndex = 20;
+            this.nudMiktar.ThousandsSeparator = true;
             this.nudMiktar.Value = new decimal(new int[] {
             1,
             0,
@@ -379,7 +423,6 @@
             // 
             // nudSatisFiyati
             // 
-            this.nudSatisFiyati.DecimalPlaces = 2;
             this.nudSatisFiyati.Location = new System.Drawing.Point(488, 70);
             this.nudSatisFiyati.Maximum = new decimal(new int[] {
             10000,
@@ -389,6 +432,7 @@
             this.nudSatisFiyati.Name = "nudSatisFiyati";
             this.nudSatisFiyati.Size = new System.Drawing.Size(124, 20);
             this.nudSatisFiyati.TabIndex = 19;
+            this.nudSatisFiyati.ThousandsSeparator = true;
             this.nudSatisFiyati.Value = new decimal(new int[] {
             1,
             0,
@@ -397,7 +441,6 @@
             // 
             // nudAlisFiyati
             // 
-            this.nudAlisFiyati.DecimalPlaces = 2;
             this.nudAlisFiyati.Location = new System.Drawing.Point(488, 40);
             this.nudAlisFiyati.Maximum = new decimal(new int[] {
             10000,
@@ -407,6 +450,7 @@
             this.nudAlisFiyati.Name = "nudAlisFiyati";
             this.nudAlisFiyati.Size = new System.Drawing.Size(124, 20);
             this.nudAlisFiyati.TabIndex = 18;
+            this.nudAlisFiyati.ThousandsSeparator = true;
             this.nudAlisFiyati.Value = new decimal(new int[] {
             1,
             0,
@@ -603,6 +647,7 @@
             this.nudBulunanUrunSayisi.ReadOnly = true;
             this.nudBulunanUrunSayisi.Size = new System.Drawing.Size(124, 20);
             this.nudBulunanUrunSayisi.TabIndex = 20;
+            this.nudBulunanUrunSayisi.ThousandsSeparator = true;
             // 
             // nudKayitliUrunSayisi
             // 
@@ -611,6 +656,7 @@
             this.nudKayitliUrunSayisi.ReadOnly = true;
             this.nudKayitliUrunSayisi.Size = new System.Drawing.Size(124, 20);
             this.nudKayitliUrunSayisi.TabIndex = 19;
+            this.nudKayitliUrunSayisi.ThousandsSeparator = true;
             // 
             // lblBulunanUrunSayisi
             // 
@@ -803,29 +849,23 @@
             this.urunKullanici.Name = "urunKullanici";
             this.urunKullanici.ReadOnly = true;
             // 
-            // lblKasiyer
+            // urunDuzenle
             // 
-            this.lblKasiyer.AutoSize = true;
-            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
-            this.lblKasiyer.Location = new System.Drawing.Point(10, 7);
-            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblKasiyer.Name = "lblKasiyer";
-            this.lblKasiyer.Size = new System.Drawing.Size(69, 18);
-            this.lblKasiyer.TabIndex = 77;
-            this.lblKasiyer.Text = "Kasiyer:";
+            this.urunDuzenle.HeaderText = "Düzenle";
+            this.urunDuzenle.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunDuzenle.Name = "urunDuzenle";
+            this.urunDuzenle.ReadOnly = true;
+            this.urunDuzenle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunDuzenle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // lblKullanici
+            // urunSil
             // 
-            this.lblKullanici.AutoSize = true;
-            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(77, 9);
-            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
-            this.lblKullanici.TabIndex = 76;
-            this.lblKullanici.Text = "eyupcelix7";
+            this.urunSil.FillWeight = 71.06599F;
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
             // 
             // dataGridViewImageColumn1
             // 
@@ -844,24 +884,6 @@
             this.dataGridViewImageColumn2.MinimumWidth = 6;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 92;
-            // 
-            // urunDuzenle
-            // 
-            this.urunDuzenle.HeaderText = "Düzenle";
-            this.urunDuzenle.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunDuzenle.Name = "urunDuzenle";
-            this.urunDuzenle.ReadOnly = true;
-            this.urunDuzenle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.urunDuzenle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // urunSil
-            // 
-            this.urunSil.FillWeight = 71.06599F;
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
             // 
             // FormUrunGiris
             // 
@@ -917,7 +939,6 @@
         private System.Windows.Forms.Label lblSatisFiyati;
         private System.Windows.Forms.Label lblAlisFiyati;
         private System.Windows.Forms.Button btnUrunGrubuEkle;
-        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnBarkod;
@@ -930,7 +951,6 @@
         private System.Windows.Forms.NumericUpDown nudKayitliUrunSayisi;
         private System.Windows.Forms.DataGridView gridSonucListesi;
         private System.Windows.Forms.Button btnEkranKlavyesi;
-        private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.CheckBox cbxSonUrunleriGoster;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -953,5 +973,8 @@
         private System.Windows.Forms.DataGridViewImageColumn urunSil;
         private System.Windows.Forms.Label lblKasiyer;
         public System.Windows.Forms.Label lblKullanici;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnHesapMakinesi;
+        private System.Windows.Forms.Button btnPdf;
     }
 }
