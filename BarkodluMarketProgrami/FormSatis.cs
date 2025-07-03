@@ -24,7 +24,7 @@ namespace BarkodluMarketProgrami
         public double veresiyeNakitTutar = 0;
         public double veresiyeKartTutar = 0;
         public int veresiyeTur = 0; // 0 = Veresiye, 1 = Veresiye-Nakit, 3 = Veresiye-Kart
-        DataGridView gridBeklet = null; // Bekletme işlemi için DataGridView
+        DataGridView gridBeklet = null, gridBeklet2 = null; // Bekletme işlemi için DataGridView
         public FormSatis()
         {
             InitializeComponent();
@@ -554,6 +554,7 @@ namespace BarkodluMarketProgrami
                 db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
                 db.SaveChanges();
                 Yazdir yazdir = new Yazdir(islemNo);
+                Temizle();
             }
         }
         private void btnNakit_Click(object sender, EventArgs e)
@@ -576,18 +577,14 @@ namespace BarkodluMarketProgrami
         }
         private void btnBeklet_Click(object sender, EventArgs e)
         {
-            islemBeklet(); // Bekletme işlemini yapıyoruz
-        }
-        private void islemBeklet()
-        {
-            if (gridSatisListesi.Rows.Count > 0)
+            if (gridSatisListesi.Rows.Count > 0 && gridBeklet == null)
             {
                 btnBeklet.Text = "İŞLEM BEKLİYOR";
                 btnBeklet.BackColor = Color.OrangeRed;
                 btnBeklet.FlatAppearance.BorderColor = Color.OrangeRed;
                 gridBeklet = new DataGridView();
                 gridBeklet.Name = "gridBeklet";
-                gridBeklet.Location = new Point(0,0);
+                gridBeklet.Location = new Point(0, 0);
                 gridBeklet.AllowUserToAddRows = false;
                 int satirSayisi = gridSatisListesi.Rows.Count;
                 int sutunSayisi = gridSatisListesi.Columns.Count;
@@ -610,7 +607,7 @@ namespace BarkodluMarketProgrami
             }
             else
             {
-                if(gridBeklet != null)
+                if (gridBeklet != null)
                 {
                     btnBeklet.Text = "İŞLEM BEKLET";
                     btnBeklet.BackColor = Color.Navy;
@@ -620,12 +617,64 @@ namespace BarkodluMarketProgrami
                     for (int i = 0; i < satirSayisi; i++)
                     {
                         gridSatisListesi.Rows.Add();
-                        for (int a = 0; a < sutunSayisi-1; a++)
+                        for (int a = 0; a < sutunSayisi - 1; a++)
                         {
                             gridSatisListesi.Rows[i].Cells[a].Value = gridBeklet.Rows[i].Cells[a].Value;
                         }
                     }
                     gridBeklet = null; // Bekletme işlemi tamamlandıktan sonra gridBeklet'i null yapıyoruz
+                    genelToplamYazdir(); // Bekletme işlemi tamamlandıktan sonra genel toplamı yazdırıyoruz
+                }
+            }
+        }
+        private void btnBeklet2_Click(object sender, EventArgs e)
+        {
+            if (gridSatisListesi.Rows.Count > 0 && gridBeklet2 == null)
+            {
+                btnBeklet2.Text = "İŞLEM BEKLİYOR";
+                btnBeklet2.BackColor = Color.OrangeRed;
+                btnBeklet2.FlatAppearance.BorderColor = Color.OrangeRed;
+                gridBeklet2 = new DataGridView();
+                gridBeklet2.Name = "gridBeklet";
+                gridBeklet2.Location = new Point(0, 0);
+                gridBeklet2.AllowUserToAddRows = false;
+                int satirSayisi = gridSatisListesi.Rows.Count;
+                int sutunSayisi = gridSatisListesi.Columns.Count;
+                foreach (DataGridViewColumn col in gridSatisListesi.Columns)
+                {
+                    gridBeklet2.Columns.Add((DataGridViewColumn)col.Clone());
+                }
+                if (satirSayisi > 0)
+                {
+                    for (int i = 0; i < satirSayisi; i++)
+                    {
+                        gridBeklet2.Rows.Add();
+                        for (int a = 0; a < sutunSayisi; a++)
+                        {
+                            gridBeklet2.Rows[i].Cells[a].Value = gridSatisListesi.Rows[i].Cells[a].Value;
+                        }
+                    }
+                    Temizle(); // Temizleme işlemini yapıyoruz
+                }
+            }
+            else
+            {
+                if (gridBeklet2 != null)
+                {
+                    btnBeklet2.Text = "İŞLEM BEKLET";
+                    btnBeklet2.BackColor = Color.Navy;
+                    btnBeklet2.FlatAppearance.BorderColor = Color.Navy;
+                    int satirSayisi = gridBeklet2.Rows.Count;
+                    int sutunSayisi = gridBeklet2.Columns.Count;
+                    for (int i = 0; i < satirSayisi; i++)
+                    {
+                        gridSatisListesi.Rows.Add();
+                        for (int a = 0; a < sutunSayisi - 1; a++)
+                        {
+                            gridSatisListesi.Rows[i].Cells[a].Value = gridBeklet2.Rows[i].Cells[a].Value;
+                        }
+                    }
+                    gridBeklet2 = null; // Bekletme işlemi tamamlandıktan sonra gridBeklet'i null yapıyoruz
                     genelToplamYazdir(); // Bekletme işlemi tamamlandıktan sonra genel toplamı yazdırıyoruz
                 }
             }
