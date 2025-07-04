@@ -31,10 +31,16 @@ namespace BarkodluMarketProgrami
                         var urun = db.Urun.Where(x=> x.Barkod == barkod).FirstOrDefault();
                         txtBarkodSonuc.Text = urun.Barkod;
                         txtUrunAdiSonuc.Text = urun.UrunAd;
-                        nudGuncelFiyatSonuc.Value = (decimal)urun.SatisFiyat;
-                        nudGuncelFiyatSonuc.Maximum = (decimal)urun.SatisFiyat;
-                        nudGuncelFiyatSonuc.Minimum = (decimal)urun.SatisFiyat;
-                        nudYeniFiyatSonuc.Value = (decimal)urun.SatisFiyat;
+                        // Güncel Fiyatlar
+                        nudGuncelSatisFiyat.Value = (decimal)urun.SatisFiyat;
+                        nudGuncelSatisFiyat.Maximum = (decimal)urun.SatisFiyat;
+                        nudGuncelSatisFiyat.Minimum = (decimal)urun.SatisFiyat;
+                        nudGuncelAlisFiyat.Value = (decimal)urun.AlisFiyat;
+                        nudGuncelAlisFiyat.Maximum = (decimal)urun.AlisFiyat;
+                        nudGuncelAlisFiyat.Minimum = (decimal)urun.AlisFiyat;
+                        // Yeni Fiyatlar
+                        nudYeniSatisFiyat.Value = (decimal)urun.SatisFiyat;
+                        nudYeniAlisFiyat.Value = (decimal)urun.AlisFiyat;
                     }
                     else
                     {
@@ -54,17 +60,22 @@ namespace BarkodluMarketProgrami
             {
                 string barkod = txtBarkodSonuc.Text;
                 var urun = db.Urun.Where(x => x.Barkod == barkod).FirstOrDefault();
-                urun.SatisFiyat = (double) nudYeniFiyatSonuc.Value;
-                urun.KdvTutari = Math.Round(Convert.ToDouble(nudYeniFiyatSonuc.Value) * Convert.ToInt32(urun.KdvOrani) / 100, 2);
+                urun.SatisFiyat = (double) nudYeniSatisFiyat.Value;
+                urun.AlisFiyat = (double)nudYeniAlisFiyat.Value;
+                urun.KdvTutari = Math.Round(Convert.ToDouble(nudYeniSatisFiyat.Value) * Convert.ToInt32(urun.KdvOrani) / 100, 2);
                 db.SaveChanges();
                 MessageBox.Show("Ürün fiyatı başarıyla güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBarkod.Text = string.Empty;
                 txtBarkodSonuc.Text = string.Empty;
                 txtUrunAdiSonuc.Text = string.Empty;
-                nudGuncelFiyatSonuc.Maximum = 99999999;
-                nudGuncelFiyatSonuc.Minimum = 0;
-                nudGuncelFiyatSonuc.Value = 0;
-                nudYeniFiyatSonuc.Value = 0;
+                nudGuncelSatisFiyat.Maximum = 99999999;
+                nudGuncelAlisFiyat.Maximum = 99999999;
+                nudGuncelSatisFiyat.Minimum = 0;
+                nudGuncelAlisFiyat.Minimum = 0;
+                nudGuncelSatisFiyat.Value = 0;
+                nudGuncelAlisFiyat.Value = 0;
+                nudYeniSatisFiyat.Value = 0;
+                txtBarkod.Focus();
             }
             else
             {
