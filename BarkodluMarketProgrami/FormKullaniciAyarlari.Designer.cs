@@ -31,6 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtSifreTkr = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblKasiyer = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,8 +59,7 @@
             this.txtKullaniciKodu = new System.Windows.Forms.TextBox();
             this.lblKullaniciKodu = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.txtSifre = new System.Windows.Forms.TextBox();
-            this.txtSifreTkr = new System.Windows.Forms.TextBox();
+            this.btnKullaniciKodOlustur = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnKullaniciKodOlustur);
             this.splitContainer1.Panel1.Controls.Add(this.txtSifreTkr);
             this.splitContainer1.Panel1.Controls.Add(this.txtSifre);
             this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
@@ -109,6 +111,22 @@
             this.splitContainer1.Size = new System.Drawing.Size(1425, 818);
             this.splitContainer1.SplitterDistance = 550;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // txtSifreTkr
+            // 
+            this.txtSifreTkr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifreTkr.Location = new System.Drawing.Point(16, 468);
+            this.txtSifreTkr.Name = "txtSifreTkr";
+            this.txtSifreTkr.Size = new System.Drawing.Size(216, 26);
+            this.txtSifreTkr.TabIndex = 81;
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(16, 375);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(216, 26);
+            this.txtSifre.TabIndex = 80;
             // 
             // lblKasiyer
             // 
@@ -440,21 +458,22 @@
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellDoubleClick);
             this.gridSonucListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSonucListesi_CellFormatting);
             // 
-            // txtSifre
+            // btnKullaniciKodOlustur
             // 
-            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(16, 375);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(216, 26);
-            this.txtSifre.TabIndex = 80;
-            // 
-            // txtSifreTkr
-            // 
-            this.txtSifreTkr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifreTkr.Location = new System.Drawing.Point(16, 468);
-            this.txtSifreTkr.Name = "txtSifreTkr";
-            this.txtSifreTkr.Size = new System.Drawing.Size(216, 26);
-            this.txtSifreTkr.TabIndex = 81;
+            this.btnKullaniciKodOlustur.AutoSize = true;
+            this.btnKullaniciKodOlustur.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnKullaniciKodOlustur.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnKullaniciKodOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKullaniciKodOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullaniciKodOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnKullaniciKodOlustur.Location = new System.Drawing.Point(16, 583);
+            this.btnKullaniciKodOlustur.Margin = new System.Windows.Forms.Padding(1);
+            this.btnKullaniciKodOlustur.Name = "btnKullaniciKodOlustur";
+            this.btnKullaniciKodOlustur.Size = new System.Drawing.Size(284, 46);
+            this.btnKullaniciKodOlustur.TabIndex = 82;
+            this.btnKullaniciKodOlustur.Text = "Kullanıcı Kodu Oluştur";
+            this.btnKullaniciKodOlustur.UseVisualStyleBackColor = false;
+            this.btnKullaniciKodOlustur.Click += new System.EventHandler(this.btnKullaniciKodOlustur_Click);
             // 
             // FormKullaniciAyarlari
             // 
@@ -508,5 +527,6 @@
         public System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.TextBox txtSifreTkr;
         private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.Button btnKullaniciKodOlustur;
     }
 }

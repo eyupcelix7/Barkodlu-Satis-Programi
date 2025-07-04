@@ -22,7 +22,6 @@ namespace BarkodluMarketProgrami
         private void FormKullaniciAyarlari_Load(object sender, EventArgs e)
         {
             tabloDoldur();
-            rastgeleKullaniciKodu();
             txtAdSoyad.Focus();
         }
         private void tabloDoldur(int kullaniciKod = 0)
@@ -75,7 +74,7 @@ namespace BarkodluMarketProgrami
         }
         private void rastgeleKullaniciKodu()
         {
-            txtKullaniciKodu.Text = rastgele.Next(000, 999).ToString();
+            txtKullaniciKodu.Text = rastgele.Next(100, 999).ToString();
         }
         private void Temizle()
         {
@@ -176,6 +175,11 @@ namespace BarkodluMarketProgrami
                 cbxYedekleme.Checked = kullanici.Yedekleme ?? false;
                 cbxKullaniciAyarlari.Checked = kullanici.KullaniciAyarlari ?? false;
             }
+        }
+
+        private void btnKullaniciKodOlustur_Click(object sender, EventArgs e)
+        {
+            rastgeleKullaniciKodu();
         }
     }
 }
