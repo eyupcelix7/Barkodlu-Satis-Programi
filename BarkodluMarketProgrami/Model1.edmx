@@ -156,7 +156,19 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IslemNo" Type="int" />
+          <Property Name="KullaniciId" Type="int" />
           <Property Name="Odeme" Type="bit" />
+          <Property Name="AlinmaTarih" Type="datetime" />
+          <Property Name="VerilmeTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VeresiyeKullanicilar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="100" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="BarkodModelStoreContainer">
           <EntitySet Name="Ayarlar" EntityType="Self.Ayarlar" Schema="dbo" store:Type="Tables" />
@@ -172,6 +184,7 @@
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UrunGrubu" EntityType="Self.UrunGrubu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Veresiye" EntityType="Self.Veresiye" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VeresiyeKullanicilar" EntityType="Self.VeresiyeKullanicilar" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -209,6 +222,7 @@
           <EntitySet Name="StokHareket" EntityType="BarkodModel.StokHareket" />
           <EntitySet Name="Ayarlar" EntityType="BarkodModel.Ayarlar" />
           <EntitySet Name="Kullanici" EntityType="BarkodModel.Kullanici" />
+          <EntitySet Name="VeresiyeKullanicilar" EntityType="BarkodModel.VeresiyeKullanicilar" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -291,6 +305,9 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="IslemNo" Type="Int32" />
           <Property Name="Odeme" Type="Boolean" />
+          <Property Name="KullaniciId" Type="Int32" />
+          <Property Name="AlinmaTarih" Type="DateTime" Precision="3" />
+          <Property Name="VerilmeTarih" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="UrunGrubu">
           <Key>
@@ -344,6 +361,15 @@
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Veresiye" Type="Boolean" />
           <Property Name="KullaniciAyarlari" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="VeresiyeKullanicilar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -454,6 +480,9 @@
           <EntitySetMapping Name="Veresiye">
             <EntityTypeMapping TypeName="BarkodModel.Veresiye">
               <MappingFragment StoreEntitySet="Veresiye">
+                <ScalarProperty Name="VerilmeTarih" ColumnName="VerilmeTarih" />
+                <ScalarProperty Name="AlinmaTarih" ColumnName="AlinmaTarih" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
                 <ScalarProperty Name="Odeme" ColumnName="Odeme" />
                 <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -511,6 +540,16 @@
                 <ScalarProperty Name="Satis" ColumnName="Satis" />
                 <ScalarProperty Name="Sifre" ColumnName="Sifre" />
                 <ScalarProperty Name="KullaniciKod" ColumnName="KullaniciKod" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VeresiyeKullanicilar">
+            <EntityTypeMapping TypeName="BarkodModel.VeresiyeKullanicilar">
+              <MappingFragment StoreEntitySet="VeresiyeKullanicilar">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

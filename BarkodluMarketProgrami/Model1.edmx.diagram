@@ -16,8 +16,9 @@
         <EntityTypeShape EntityType="BarkodModel.Veresiye" Width="1.5" PointX="5.75" PointY="2.375" />
         <EntityTypeShape EntityType="BarkodModel.UrunGrubu" Width="1.5" PointX="10.625" PointY="3.625" />
         <EntityTypeShape EntityType="BarkodModel.StokHareket" Width="1.5" PointX="10.625" PointY="0.75" />
-        <EntityTypeShape EntityType="BarkodModel.Ayarlar" Width="1.5" PointX="14" PointY="0.75" />
-        <EntityTypeShape EntityType="BarkodModel.Kullanici" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.Ayarlar" Width="1.5" PointX="13.875" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.Kullanici" Width="1.5" PointX="12.25" PointY="0.75" />
+        <EntityTypeShape EntityType="BarkodModel.VeresiyeKullanicilar" Width="1.5" PointX="15.5" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

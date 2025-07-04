@@ -38,5 +38,6 @@ namespace BarkodluMarketProgrami
         public virtual DbSet<StokHareket> StokHareket { get; set; }
         public virtual DbSet<Ayarlar> Ayarlar { get; set; }
         public virtual DbSet<Kullanici> Kullanici { get; set; }
+        public virtual DbSet<VeresiyeKullanicilar> VeresiyeKullanicilar { get; set; }
     }
 }
