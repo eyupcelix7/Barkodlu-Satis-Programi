@@ -205,6 +205,18 @@
     <Compile Include="FormVeresiye.Designer.cs">
       <DependentUpon>FormVeresiye.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVeresiyeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVeresiyeEkle.Designer.cs">
+      <DependentUpon>FormVeresiyeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVeresiyeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVeresiyeRapor.Designer.cs">
+      <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="HizliFiyat.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -269,6 +281,9 @@
     <Compile Include="Veresiye.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="VeresiyeKullanicilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Yazdir.cs" />
     <Compile Include="Yedekle.cs" />
     <EmbeddedResource Include="FormAyarlar.resx">
@@ -315,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiye.resx">
       <DependentUpon>FormVeresiye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVeresiyeEkle.resx">
+      <DependentUpon>FormVeresiyeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVeresiyeRapor.resx">
+      <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -397,6 +418,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\minus.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\pdf.png" />
     <None Include="Resources\excel.png" />

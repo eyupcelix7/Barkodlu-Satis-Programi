@@ -12,13 +12,11 @@ namespace BarkodluMarketProgrami
     using System;
     using System.Collections.Generic;
     
-    public partial class Veresiye
+    public partial class VeresiyeKullanicilar
     {
         public int Id { get; set; }
-        public Nullable<int> IslemNo { get; set; }
-        public Nullable<bool> Odeme { get; set; }
-        public Nullable<int> KullaniciId { get; set; }
-        public Nullable<System.DateTime> AlinmaTarih { get; set; }
-        public Nullable<System.DateTime> VerilmeTarih { get; set; }
+        public string AdSoyad { get; set; }
+        public string Telefon { get; set; }
+        public string Aciklama { get; set; }
     }
 }

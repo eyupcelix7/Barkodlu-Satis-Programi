@@ -187,6 +187,7 @@ namespace BarkodluMarketProgrami
         {
             Pdf pdf = new Pdf(gridSonucListesi, "Genel Rapor");
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (basiliMi)

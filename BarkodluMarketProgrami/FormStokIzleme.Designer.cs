@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
-            this.lblBitisTarihi = new System.Windows.Forms.Label();
-            this.lblBaslangicTarihi = new System.Windows.Forms.Label();
-            this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
-            this.lblUrunGrubu = new System.Windows.Forms.Label();
-            this.lblFiltrelemeTuru = new System.Windows.Forms.Label();
-            this.lblIslemTuru = new System.Windows.Forms.Label();
-            this.cmbIslemTuru = new System.Windows.Forms.ComboBox();
-            this.rdbUrunGrubunaGore = new System.Windows.Forms.RadioButton();
-            this.rdbTumu = new System.Windows.Forms.RadioButton();
-            this.dtpBaslangicTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cbxTumZamanlar = new System.Windows.Forms.CheckBox();
+            this.pnlUrunAdi = new System.Windows.Forms.Panel();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.lblUrunAdi = new System.Windows.Forms.Label();
+            this.lblBitisTarihi = new System.Windows.Forms.Label();
+            this.rdbUrunGrubunaGore = new System.Windows.Forms.RadioButton();
+            this.lblUrunGrubu = new System.Windows.Forms.Label();
+            this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cmbIslemTuru = new System.Windows.Forms.ComboBox();
+            this.lblBaslangicTarihi = new System.Windows.Forms.Label();
+            this.dtpBaslangicTarihi = new System.Windows.Forms.DateTimePicker();
+            this.lblFiltrelemeTuru = new System.Windows.Forms.Label();
+            this.rdbTumu = new System.Windows.Forms.RadioButton();
+            this.lblIslemTuru = new System.Windows.Forms.Label();
+            this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnAra = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.nudBulunanUrunSayisi = new System.Windows.Forms.NumericUpDown();
             this.lblBulunanUrunSayisi = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.pnlUrunAdi = new System.Windows.Forms.Panel();
-            this.cbxTumZamanlar = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,6 +66,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.pnlUrunAdi.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -73,7 +74,6 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBulunanUrunSayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
-            this.pnlUrunAdi.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -126,138 +126,28 @@
             this.splitContainer2.SplitterDistance = 785;
             this.splitContainer2.TabIndex = 0;
             // 
-            // dtpBitisTarihi
+            // cbxTumZamanlar
             // 
-            this.dtpBitisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpBitisTarihi.Location = new System.Drawing.Point(14, 416);
-            this.dtpBitisTarihi.Margin = new System.Windows.Forms.Padding(0);
-            this.dtpBitisTarihi.Name = "dtpBitisTarihi";
-            this.dtpBitisTarihi.Size = new System.Drawing.Size(226, 26);
-            this.dtpBitisTarihi.TabIndex = 9;
+            this.cbxTumZamanlar.AutoSize = true;
+            this.cbxTumZamanlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxTumZamanlar.ForeColor = System.Drawing.Color.Navy;
+            this.cbxTumZamanlar.Location = new System.Drawing.Point(14, 465);
+            this.cbxTumZamanlar.Name = "cbxTumZamanlar";
+            this.cbxTumZamanlar.Size = new System.Drawing.Size(142, 24);
+            this.cbxTumZamanlar.TabIndex = 13;
+            this.cbxTumZamanlar.Text = "Tüm Zamanlar";
+            this.cbxTumZamanlar.UseVisualStyleBackColor = true;
+            this.cbxTumZamanlar.CheckedChanged += new System.EventHandler(this.cbxTumZamanlar_CheckedChanged);
             // 
-            // lblBitisTarihi
+            // pnlUrunAdi
             // 
-            this.lblBitisTarihi.AutoSize = true;
-            this.lblBitisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBitisTarihi.Location = new System.Drawing.Point(9, 375);
-            this.lblBitisTarihi.Margin = new System.Windows.Forms.Padding(0);
-            this.lblBitisTarihi.Name = "lblBitisTarihi";
-            this.lblBitisTarihi.Size = new System.Drawing.Size(125, 25);
-            this.lblBitisTarihi.TabIndex = 8;
-            this.lblBitisTarihi.Text = "Bitiş Tarihi";
-            this.lblBitisTarihi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblBaslangicTarihi
-            // 
-            this.lblBaslangicTarihi.AutoSize = true;
-            this.lblBaslangicTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslangicTarihi.Location = new System.Drawing.Point(9, 291);
-            this.lblBaslangicTarihi.Margin = new System.Windows.Forms.Padding(0);
-            this.lblBaslangicTarihi.Name = "lblBaslangicTarihi";
-            this.lblBaslangicTarihi.Size = new System.Drawing.Size(182, 25);
-            this.lblBaslangicTarihi.TabIndex = 6;
-            this.lblBaslangicTarihi.Text = "Başlangıç Tarihi";
-            this.lblBaslangicTarihi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbUrunGrubu
-            // 
-            this.cmbUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbUrunGrubu.FormattingEnabled = true;
-            this.cmbUrunGrubu.Location = new System.Drawing.Point(14, 225);
-            this.cmbUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbUrunGrubu.Name = "cmbUrunGrubu";
-            this.cmbUrunGrubu.Size = new System.Drawing.Size(226, 28);
-            this.cmbUrunGrubu.TabIndex = 5;
-            // 
-            // lblUrunGrubu
-            // 
-            this.lblUrunGrubu.AutoSize = true;
-            this.lblUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunGrubu.Location = new System.Drawing.Point(9, 189);
-            this.lblUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
-            this.lblUrunGrubu.Name = "lblUrunGrubu";
-            this.lblUrunGrubu.Size = new System.Drawing.Size(133, 25);
-            this.lblUrunGrubu.TabIndex = 4;
-            this.lblUrunGrubu.Text = "Ürün Grubu";
-            this.lblUrunGrubu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFiltrelemeTuru
-            // 
-            this.lblFiltrelemeTuru.AutoSize = true;
-            this.lblFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFiltrelemeTuru.Location = new System.Drawing.Point(9, 9);
-            this.lblFiltrelemeTuru.Margin = new System.Windows.Forms.Padding(0);
-            this.lblFiltrelemeTuru.Name = "lblFiltrelemeTuru";
-            this.lblFiltrelemeTuru.Size = new System.Drawing.Size(171, 25);
-            this.lblFiltrelemeTuru.TabIndex = 2;
-            this.lblFiltrelemeTuru.Text = "Filtreleme Türü";
-            this.lblFiltrelemeTuru.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblIslemTuru
-            // 
-            this.lblIslemTuru.AutoSize = true;
-            this.lblIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIslemTuru.Location = new System.Drawing.Point(9, 109);
-            this.lblIslemTuru.Margin = new System.Windows.Forms.Padding(0);
-            this.lblIslemTuru.Name = "lblIslemTuru";
-            this.lblIslemTuru.Size = new System.Drawing.Size(122, 25);
-            this.lblIslemTuru.TabIndex = 0;
-            this.lblIslemTuru.Text = "İşlem Türü";
-            this.lblIslemTuru.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbIslemTuru
-            // 
-            this.cmbIslemTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbIslemTuru.FormattingEnabled = true;
-            this.cmbIslemTuru.Items.AddRange(new object[] {
-            "Stok Durumu",
-            "Stok Giriş İzleme"});
-            this.cmbIslemTuru.Location = new System.Drawing.Point(14, 137);
-            this.cmbIslemTuru.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbIslemTuru.Name = "cmbIslemTuru";
-            this.cmbIslemTuru.Size = new System.Drawing.Size(226, 28);
-            this.cmbIslemTuru.TabIndex = 1;
-            // 
-            // rdbUrunGrubunaGore
-            // 
-            this.rdbUrunGrubunaGore.AutoSize = true;
-            this.rdbUrunGrubunaGore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbUrunGrubunaGore.ForeColor = System.Drawing.Color.Navy;
-            this.rdbUrunGrubunaGore.Location = new System.Drawing.Point(14, 70);
-            this.rdbUrunGrubunaGore.Margin = new System.Windows.Forms.Padding(0);
-            this.rdbUrunGrubunaGore.Name = "rdbUrunGrubunaGore";
-            this.rdbUrunGrubunaGore.Size = new System.Drawing.Size(212, 28);
-            this.rdbUrunGrubunaGore.TabIndex = 1;
-            this.rdbUrunGrubunaGore.Text = "Ürün Grubuna Göre";
-            this.rdbUrunGrubunaGore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbUrunGrubunaGore.UseVisualStyleBackColor = true;
-            // 
-            // rdbTumu
-            // 
-            this.rdbTumu.AutoSize = true;
-            this.rdbTumu.Checked = true;
-            this.rdbTumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbTumu.ForeColor = System.Drawing.Color.Navy;
-            this.rdbTumu.Location = new System.Drawing.Point(14, 47);
-            this.rdbTumu.Margin = new System.Windows.Forms.Padding(0);
-            this.rdbTumu.Name = "rdbTumu";
-            this.rdbTumu.Size = new System.Drawing.Size(82, 28);
-            this.rdbTumu.TabIndex = 0;
-            this.rdbTumu.TabStop = true;
-            this.rdbTumu.Text = "Tümü";
-            this.rdbTumu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbTumu.UseVisualStyleBackColor = true;
-            // 
-            // dtpBaslangicTarihi
-            // 
-            this.dtpBaslangicTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpBaslangicTarihi.Location = new System.Drawing.Point(14, 330);
-            this.dtpBaslangicTarihi.Margin = new System.Windows.Forms.Padding(0);
-            this.dtpBaslangicTarihi.Name = "dtpBaslangicTarihi";
-            this.dtpBaslangicTarihi.Size = new System.Drawing.Size(226, 26);
-            this.dtpBaslangicTarihi.TabIndex = 7;
+            this.pnlUrunAdi.Controls.Add(this.txtUrunAdi);
+            this.pnlUrunAdi.Controls.Add(this.lblUrunAdi);
+            this.pnlUrunAdi.Location = new System.Drawing.Point(4, 515);
+            this.pnlUrunAdi.Name = "pnlUrunAdi";
+            this.pnlUrunAdi.Size = new System.Drawing.Size(299, 100);
+            this.pnlUrunAdi.TabIndex = 12;
+            this.pnlUrunAdi.Visible = false;
             // 
             // txtUrunAdi
             // 
@@ -281,6 +171,139 @@
             this.lblUrunAdi.TabIndex = 11;
             this.lblUrunAdi.Text = "Ürün Adı";
             this.lblUrunAdi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBitisTarihi
+            // 
+            this.lblBitisTarihi.AutoSize = true;
+            this.lblBitisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBitisTarihi.Location = new System.Drawing.Point(9, 375);
+            this.lblBitisTarihi.Margin = new System.Windows.Forms.Padding(0);
+            this.lblBitisTarihi.Name = "lblBitisTarihi";
+            this.lblBitisTarihi.Size = new System.Drawing.Size(125, 25);
+            this.lblBitisTarihi.TabIndex = 8;
+            this.lblBitisTarihi.Text = "Bitiş Tarihi";
+            this.lblBitisTarihi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rdbUrunGrubunaGore
+            // 
+            this.rdbUrunGrubunaGore.AutoSize = true;
+            this.rdbUrunGrubunaGore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbUrunGrubunaGore.ForeColor = System.Drawing.Color.Navy;
+            this.rdbUrunGrubunaGore.Location = new System.Drawing.Point(14, 70);
+            this.rdbUrunGrubunaGore.Margin = new System.Windows.Forms.Padding(0);
+            this.rdbUrunGrubunaGore.Name = "rdbUrunGrubunaGore";
+            this.rdbUrunGrubunaGore.Size = new System.Drawing.Size(212, 28);
+            this.rdbUrunGrubunaGore.TabIndex = 1;
+            this.rdbUrunGrubunaGore.Text = "Ürün Grubuna Göre";
+            this.rdbUrunGrubunaGore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbUrunGrubunaGore.UseVisualStyleBackColor = true;
+            // 
+            // lblUrunGrubu
+            // 
+            this.lblUrunGrubu.AutoSize = true;
+            this.lblUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunGrubu.Location = new System.Drawing.Point(9, 189);
+            this.lblUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
+            this.lblUrunGrubu.Name = "lblUrunGrubu";
+            this.lblUrunGrubu.Size = new System.Drawing.Size(133, 25);
+            this.lblUrunGrubu.TabIndex = 4;
+            this.lblUrunGrubu.Text = "Ürün Grubu";
+            this.lblUrunGrubu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpBitisTarihi
+            // 
+            this.dtpBitisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpBitisTarihi.Location = new System.Drawing.Point(14, 416);
+            this.dtpBitisTarihi.Margin = new System.Windows.Forms.Padding(0);
+            this.dtpBitisTarihi.Name = "dtpBitisTarihi";
+            this.dtpBitisTarihi.Size = new System.Drawing.Size(226, 26);
+            this.dtpBitisTarihi.TabIndex = 9;
+            // 
+            // cmbIslemTuru
+            // 
+            this.cmbIslemTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbIslemTuru.FormattingEnabled = true;
+            this.cmbIslemTuru.Items.AddRange(new object[] {
+            "Stok Durumu",
+            "Stok Giriş İzleme"});
+            this.cmbIslemTuru.Location = new System.Drawing.Point(14, 137);
+            this.cmbIslemTuru.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbIslemTuru.Name = "cmbIslemTuru";
+            this.cmbIslemTuru.Size = new System.Drawing.Size(226, 28);
+            this.cmbIslemTuru.TabIndex = 1;
+            // 
+            // lblBaslangicTarihi
+            // 
+            this.lblBaslangicTarihi.AutoSize = true;
+            this.lblBaslangicTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslangicTarihi.Location = new System.Drawing.Point(9, 291);
+            this.lblBaslangicTarihi.Margin = new System.Windows.Forms.Padding(0);
+            this.lblBaslangicTarihi.Name = "lblBaslangicTarihi";
+            this.lblBaslangicTarihi.Size = new System.Drawing.Size(182, 25);
+            this.lblBaslangicTarihi.TabIndex = 6;
+            this.lblBaslangicTarihi.Text = "Başlangıç Tarihi";
+            this.lblBaslangicTarihi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpBaslangicTarihi
+            // 
+            this.dtpBaslangicTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpBaslangicTarihi.Location = new System.Drawing.Point(14, 330);
+            this.dtpBaslangicTarihi.Margin = new System.Windows.Forms.Padding(0);
+            this.dtpBaslangicTarihi.Name = "dtpBaslangicTarihi";
+            this.dtpBaslangicTarihi.Size = new System.Drawing.Size(226, 26);
+            this.dtpBaslangicTarihi.TabIndex = 7;
+            // 
+            // lblFiltrelemeTuru
+            // 
+            this.lblFiltrelemeTuru.AutoSize = true;
+            this.lblFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFiltrelemeTuru.Location = new System.Drawing.Point(9, 9);
+            this.lblFiltrelemeTuru.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFiltrelemeTuru.Name = "lblFiltrelemeTuru";
+            this.lblFiltrelemeTuru.Size = new System.Drawing.Size(171, 25);
+            this.lblFiltrelemeTuru.TabIndex = 2;
+            this.lblFiltrelemeTuru.Text = "Filtreleme Türü";
+            this.lblFiltrelemeTuru.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rdbTumu
+            // 
+            this.rdbTumu.AutoSize = true;
+            this.rdbTumu.Checked = true;
+            this.rdbTumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbTumu.ForeColor = System.Drawing.Color.Navy;
+            this.rdbTumu.Location = new System.Drawing.Point(14, 47);
+            this.rdbTumu.Margin = new System.Windows.Forms.Padding(0);
+            this.rdbTumu.Name = "rdbTumu";
+            this.rdbTumu.Size = new System.Drawing.Size(82, 28);
+            this.rdbTumu.TabIndex = 0;
+            this.rdbTumu.TabStop = true;
+            this.rdbTumu.Text = "Tümü";
+            this.rdbTumu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbTumu.UseVisualStyleBackColor = true;
+            // 
+            // lblIslemTuru
+            // 
+            this.lblIslemTuru.AutoSize = true;
+            this.lblIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIslemTuru.Location = new System.Drawing.Point(9, 109);
+            this.lblIslemTuru.Margin = new System.Windows.Forms.Padding(0);
+            this.lblIslemTuru.Name = "lblIslemTuru";
+            this.lblIslemTuru.Size = new System.Drawing.Size(122, 25);
+            this.lblIslemTuru.TabIndex = 0;
+            this.lblIslemTuru.Text = "İşlem Türü";
+            this.lblIslemTuru.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbUrunGrubu
+            // 
+            this.cmbUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbUrunGrubu.FormattingEnabled = true;
+            this.cmbUrunGrubu.Location = new System.Drawing.Point(14, 225);
+            this.cmbUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbUrunGrubu.Name = "cmbUrunGrubu";
+            this.cmbUrunGrubu.Size = new System.Drawing.Size(226, 28);
+            this.cmbUrunGrubu.TabIndex = 5;
             // 
             // tableLayoutPanel3
             // 
@@ -438,25 +461,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -473,29 +496,6 @@
             this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSonucListesi.Size = new System.Drawing.Size(1551, 789);
             this.gridSonucListesi.TabIndex = 3;
-            // 
-            // pnlUrunAdi
-            // 
-            this.pnlUrunAdi.Controls.Add(this.txtUrunAdi);
-            this.pnlUrunAdi.Controls.Add(this.lblUrunAdi);
-            this.pnlUrunAdi.Location = new System.Drawing.Point(4, 515);
-            this.pnlUrunAdi.Name = "pnlUrunAdi";
-            this.pnlUrunAdi.Size = new System.Drawing.Size(299, 100);
-            this.pnlUrunAdi.TabIndex = 12;
-            this.pnlUrunAdi.Visible = false;
-            // 
-            // cbxTumZamanlar
-            // 
-            this.cbxTumZamanlar.AutoSize = true;
-            this.cbxTumZamanlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbxTumZamanlar.ForeColor = System.Drawing.Color.Navy;
-            this.cbxTumZamanlar.Location = new System.Drawing.Point(14, 465);
-            this.cbxTumZamanlar.Name = "cbxTumZamanlar";
-            this.cbxTumZamanlar.Size = new System.Drawing.Size(142, 24);
-            this.cbxTumZamanlar.TabIndex = 13;
-            this.cbxTumZamanlar.Text = "Tüm Zamanlar";
-            this.cbxTumZamanlar.UseVisualStyleBackColor = true;
-            this.cbxTumZamanlar.CheckedChanged += new System.EventHandler(this.cbxTumZamanlar_CheckedChanged);
             // 
             // FormStokIzleme
             // 
@@ -518,6 +518,8 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.pnlUrunAdi.ResumeLayout(false);
+            this.pnlUrunAdi.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -526,8 +528,6 @@
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudBulunanUrunSayisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
-            this.pnlUrunAdi.ResumeLayout(false);
-            this.pnlUrunAdi.PerformLayout();
             this.ResumeLayout(false);
 
         }
