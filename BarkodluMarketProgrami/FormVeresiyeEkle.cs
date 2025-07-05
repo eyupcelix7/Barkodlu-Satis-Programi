@@ -15,7 +15,6 @@ namespace BarkodluMarketProgrami
     {
         public string veresiyeTur { get; set; } // Al - Ver
         BarkodEntities db = new BarkodEntities();
-        List<int> eklenenler = new List<int>();
         public FormVeresiyeEkle(string vTur = null)
         {
             InitializeComponent();
@@ -47,7 +46,7 @@ namespace BarkodluMarketProgrami
         {
             if (txtKisiAra.Text.Length > 1)
             {
-               var kisiler = db.Kullanici.Where(x => x.AdSoyad.Contains(txtKisiAra.Text)).Select(x => new
+               var kisiler = db.VeresiyeKullanicilar.Where(x => x.AdSoyad.Contains(txtKisiAra.Text)).Select(x => new
                 {
                     x.AdSoyad,
                     x.Id
@@ -62,7 +61,6 @@ namespace BarkodluMarketProgrami
                 else
                 {
                     cbxKisiler.DataSource = null;
-                    eklenenler.Clear();
                 }
             }
             else
@@ -70,14 +68,30 @@ namespace BarkodluMarketProgrami
                 if(txtKisiAra.Text == "")
                 {
                     cbxKisiler.DataSource = null;
-                    eklenenler.Clear();
                     pnlSecilenKisi.Visible = false;
                 }
             }
         }
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cbxKisiler.SelectedValue.ToString());
+            if(txtNumarator.Text != "" && cbxKisiler.Text != "")
+            {
+                Veresiye vK = new Veresiye();
+                vK.IslemNo = null;
+                vK.Tutar = Convert.ToDouble(txtNumarator.Text);
+                vK.KullaniciId = (int)cbxKisiler.SelectedValue;
+                vK.Odeme = false;
+                vK.AlinmaTarih = null;
+                vK.AlinmaTarih = DateTime.Now;
+                db.Veresiye.Add(vK);
+                db.SaveChanges();
+                MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Bir Kişi Seçip, Bir Tutar Giriniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void cbxKisiler_TextChanged(object sender, EventArgs e)
         {
@@ -88,7 +102,22 @@ namespace BarkodluMarketProgrami
         {
             if(lblSecilenKisiDeger.Text != "")
             {
-                MessageBox.Show("Emin misin yarr: "+ cbxKisiler.Text);
+                var detaylar = db.VeresiyeKullanicilar.Where(x => x.Id == (int)cbxKisiler.SelectedValue).SingleOrDefault();
+                var borclar = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue).OrderByDescending(x=> x.AlinmaTarih).ToList();
+                string telefonNo = detaylar.Telefon;
+                string aciklama = detaylar.Aciklama;
+                double guncelBorcTutar = 0.00;
+                string odenmemisBorcTarihleri = string.Empty;
+                foreach(var borc in borclar)
+                {
+                    if (!(bool)borc.Odeme)
+                    {
+                        double borcu = Convert.ToDouble(borc.Tutar);
+                        guncelBorcTutar += borcu;
+                        odenmemisBorcTarihleri += "\n" + borc.AlinmaTarih.ToString() + " - "+ borcu.ToString("C2");
+                    }
+                }
+                MessageBox.Show(cbxKisiler.Text+ ", Detayları :\n\n" + "Telefon Numarası: "+telefonNo+ "\n\nAçıklama: \n" + aciklama+ "\n\nGüncel Borcu: \n" + guncelBorcTutar.ToString("C2")+ "\n\nÖdenmemiş Borçların Alınma Tarihleri: \n" + odenmemisBorcTarihleri, cbxKisiler.Text, MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }

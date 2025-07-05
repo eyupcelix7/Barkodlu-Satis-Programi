@@ -20,5 +20,6 @@ namespace BarkodluMarketProgrami
         public Nullable<int> KullaniciId { get; set; }
         public Nullable<System.DateTime> AlinmaTarih { get; set; }
         public Nullable<System.DateTime> VerilmeTarih { get; set; }
+        public Nullable<double> Tutar { get; set; }
     }
 }
