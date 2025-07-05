@@ -18,9 +18,8 @@ namespace BarkodluMarketProgrami
         public Nullable<int> IslemNo { get; set; }
         public Nullable<bool> Odeme { get; set; }
         public Nullable<int> KullaniciId { get; set; }
-        public Nullable<System.DateTime> AlinmaTarih { get; set; }
-        public Nullable<System.DateTime> VerilmeTarih { get; set; }
         public Nullable<double> Tutar { get; set; }
         public string Kullanici { get; set; }
+        public Nullable<System.DateTime> Tarih { get; set; }
     }
 }

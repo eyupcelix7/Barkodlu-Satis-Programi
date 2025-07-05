@@ -18,5 +18,6 @@ namespace BarkodluMarketProgrami
         public string AdSoyad { get; set; }
         public string Telefon { get; set; }
         public string Aciklama { get; set; }
+        public Nullable<System.DateTime> Tarih { get; set; }
     }
 }

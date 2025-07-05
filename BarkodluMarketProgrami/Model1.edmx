@@ -159,8 +159,7 @@
           <Property Name="Tutar" Type="float" />
           <Property Name="KullaniciId" Type="int" />
           <Property Name="Odeme" Type="bit" />
-          <Property Name="AlinmaTarih" Type="datetime" />
-          <Property Name="VerilmeTarih" Type="datetime" />
+          <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="VeresiyeKullanicilar">
@@ -171,6 +170,7 @@
           <Property Name="AdSoyad" Type="nvarchar" MaxLength="100" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
           <Property Name="Aciklama" Type="nvarchar" MaxLength="500" />
+          <Property Name="Tarih" Type="datetime" />
         </EntityType>
         <EntityContainer Name="BarkodModelStoreContainer">
           <EntitySet Name="Ayarlar" EntityType="Self.Ayarlar" Schema="dbo" store:Type="Tables" />
@@ -308,10 +308,9 @@
           <Property Name="IslemNo" Type="Int32" />
           <Property Name="Odeme" Type="Boolean" />
           <Property Name="KullaniciId" Type="Int32" />
-          <Property Name="AlinmaTarih" Type="DateTime" Precision="3" />
-          <Property Name="VerilmeTarih" Type="DateTime" Precision="3" />
           <Property Name="Tutar" Type="Double" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="UrunGrubu">
           <Key>
@@ -374,6 +373,7 @@
           <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -484,10 +484,9 @@
           <EntitySetMapping Name="Veresiye">
             <EntityTypeMapping TypeName="BarkodModel.Veresiye">
               <MappingFragment StoreEntitySet="Veresiye">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
                 <ScalarProperty Name="Tutar" ColumnName="Tutar" />
-                <ScalarProperty Name="VerilmeTarih" ColumnName="VerilmeTarih" />
-                <ScalarProperty Name="AlinmaTarih" ColumnName="AlinmaTarih" />
                 <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
                 <ScalarProperty Name="Odeme" ColumnName="Odeme" />
                 <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
@@ -555,6 +554,7 @@
           <EntitySetMapping Name="VeresiyeKullanicilar">
             <EntityTypeMapping TypeName="BarkodModel.VeresiyeKullanicilar">
               <MappingFragment StoreEntitySet="VeresiyeKullanicilar">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
