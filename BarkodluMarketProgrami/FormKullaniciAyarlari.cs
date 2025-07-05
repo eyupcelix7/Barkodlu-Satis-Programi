@@ -1,4 +1,5 @@
-﻿using iTextSharp.text;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using iTextSharp.text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace BarkodluMarketProgrami
         }
         BarkodEntities db = new BarkodEntities();
         Random rastgele = new Random();
+        bool basiliMi = false;
+        int basiliRowIndex = 0, hitX = 0, hitY = 0;
         private void FormKullaniciAyarlari_Load(object sender, EventArgs e)
         {
             tabloDoldur();
@@ -29,6 +32,7 @@ namespace BarkodluMarketProgrami
             var kullanicilar = db.Kullanici.Select(
             x => new
             {
+                x.Id,
                 x.AdSoyad,
                 x.Telefon,
                 x.KullaniciKod,
@@ -41,11 +45,11 @@ namespace BarkodluMarketProgrami
                 x.Veresiye,
                 x.Ayarlar,
                 x.Yedekleme,
-                x.KullaniciAyarlari,
-                x.Tarih
+                x.KullaniciAyarlari
             }).ToList();
 
             gridSonucListesi.DataSource = kullanicilar;
+            gridSonucListesi.Columns[0].Visible = false;
             gridSonucListesi.Columns["KullaniciKod"].HeaderText = "Kullanıcı Kodu";
             gridSonucListesi.Columns["AdSoyad"].HeaderText = "Ad Soyad";
             gridSonucListesi.Columns["Sifre"].HeaderText = "Şifre";
@@ -59,17 +63,20 @@ namespace BarkodluMarketProgrami
         }
         private void gridSonucListesi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.Value.ToString() == "True")
+            if(e.Value != null)
             {
-                e.Value = "Evet";
-            }
-            else if (e.Value.ToString() == "False")
-            {
-                e.Value = "Hayır";
-            }
-            else if (gridSonucListesi.Columns[e.ColumnIndex].HeaderText == "Şifre")
-            {
-                e.Value = "*******";
+                if (e.Value.ToString() == "True")
+                {
+                    e.Value = "Evet";
+                }
+                else if (e.Value.ToString() == "False")
+                {
+                    e.Value = "Hayır";
+                }
+                else if (gridSonucListesi.Columns[e.ColumnIndex].HeaderText == "Şifre")
+                {
+                    e.Value = "*******";
+                }
             }
         }
         private void rastgeleKullaniciKodu()
@@ -156,7 +163,7 @@ namespace BarkodluMarketProgrami
         }
         private void gridSonucListesi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int kKod = Convert.ToInt16(gridSonucListesi.Rows[e.RowIndex].Cells[2].Value);
+            int kKod = Convert.ToInt16(gridSonucListesi.Rows[e.RowIndex].Cells[3].Value);
             if (db.Kullanici.Where(x => x.KullaniciKod == kKod).Any()) 
             { 
                 var kullanici = db.Kullanici.Where(x => x.KullaniciKod == kKod).FirstOrDefault();
@@ -176,10 +183,60 @@ namespace BarkodluMarketProgrami
                 cbxKullaniciAyarlari.Checked = kullanici.KullaniciAyarlari ?? false;
             }
         }
-
         private void btnKullaniciKodOlustur_Click(object sender, EventArgs e)
         {
             rastgeleKullaniciKodu();
         }
+        private void gridSonucListesi_MouseDown(object sender, MouseEventArgs e)
+        {
+            var hit = gridSonucListesi.HitTest(e.X, e.Y);
+            hitX = e.X;
+            hitY = e.Y;
+            if (hit.RowIndex >= 0 && hit.ColumnIndex >= 0)
+            {
+                basiliMi = true;
+                timer1.Start();
+                basiliRowIndex = hit.RowIndex;
+            }
+        }
+        private void gridSonucListesi_MouseUp(object sender, MouseEventArgs e)
+        {
+            var hit = gridSonucListesi.HitTest(e.X, e.Y);
+            hitX = e.X;
+            hitY = e.Y;
+            if (hit.RowIndex >= 0 && hit.ColumnIndex >= 0)
+            {
+                basiliMi = false;
+                timer1.Stop();
+                basiliRowIndex = hit.RowIndex;
+            }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (basiliMi)
+            {
+                ContextMenuStrip st = new ContextMenuStrip();
+                ToolStripMenuItem menuItem = new ToolStripMenuItem();
+                menuItem.Text = "Kullanıcıyı Sil";
+                st.Items.Add(menuItem);
+                menuItem.Click += Sil;
+                this.ContextMenuStrip = st;
+                st.Show(gridSonucListesi, new Point(hitX, hitY));
+            }
+        }
+        private void Sil(object sender, EventArgs e)
+        {
+            int id = (int)gridSonucListesi.Rows[basiliRowIndex].Cells[0].Value;
+            if(db.Kullanici.Where(x=> x.Id == id).Any())
+            {
+                var kullanici = db.Kullanici.Where(x => x.Id == id).SingleOrDefault();
+                db.Kullanici.Remove(kullanici);
+                db.SaveChanges();
+                MessageBox.Show("Kullanıcı başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Temizle();
+                tabloDoldur();
+            }
+        }
+
     }
 }

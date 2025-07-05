@@ -16,7 +16,6 @@ namespace BarkodluMarketProgrami
         {
             InitializeComponent();
         }
-
         private void btnAra_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -124,7 +123,6 @@ namespace BarkodluMarketProgrami
             fV.veresiyeTur = "ver";
             fV.ShowDialog();
         }
-
         private void gridSonucListesi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             using(var db = new BarkodEntities())

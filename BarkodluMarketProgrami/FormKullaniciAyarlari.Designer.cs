@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnKullaniciKodOlustur = new System.Windows.Forms.Button();
             this.txtSifreTkr = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblKasiyer = new System.Windows.Forms.Label();
@@ -59,7 +61,7 @@
             this.txtKullaniciKodu = new System.Windows.Forms.TextBox();
             this.lblKullaniciKodu = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.btnKullaniciKodOlustur = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -111,6 +113,23 @@
             this.splitContainer1.Size = new System.Drawing.Size(1425, 818);
             this.splitContainer1.SplitterDistance = 550;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnKullaniciKodOlustur
+            // 
+            this.btnKullaniciKodOlustur.AutoSize = true;
+            this.btnKullaniciKodOlustur.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnKullaniciKodOlustur.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnKullaniciKodOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKullaniciKodOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullaniciKodOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnKullaniciKodOlustur.Location = new System.Drawing.Point(16, 583);
+            this.btnKullaniciKodOlustur.Margin = new System.Windows.Forms.Padding(1);
+            this.btnKullaniciKodOlustur.Name = "btnKullaniciKodOlustur";
+            this.btnKullaniciKodOlustur.Size = new System.Drawing.Size(284, 46);
+            this.btnKullaniciKodOlustur.TabIndex = 82;
+            this.btnKullaniciKodOlustur.Text = "Kullanıcı Kodu Oluştur";
+            this.btnKullaniciKodOlustur.UseVisualStyleBackColor = false;
+            this.btnKullaniciKodOlustur.Click += new System.EventHandler(this.btnKullaniciKodOlustur_Click);
             // 
             // txtSifreTkr
             // 
@@ -420,25 +439,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -457,23 +476,13 @@
             this.gridSonucListesi.TabIndex = 5;
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellDoubleClick);
             this.gridSonucListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSonucListesi_CellFormatting);
+            this.gridSonucListesi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridSonucListesi_MouseDown);
+            this.gridSonucListesi.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridSonucListesi_MouseUp);
             // 
-            // btnKullaniciKodOlustur
+            // timer1
             // 
-            this.btnKullaniciKodOlustur.AutoSize = true;
-            this.btnKullaniciKodOlustur.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnKullaniciKodOlustur.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnKullaniciKodOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKullaniciKodOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKullaniciKodOlustur.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciKodOlustur.Location = new System.Drawing.Point(16, 583);
-            this.btnKullaniciKodOlustur.Margin = new System.Windows.Forms.Padding(1);
-            this.btnKullaniciKodOlustur.Name = "btnKullaniciKodOlustur";
-            this.btnKullaniciKodOlustur.Size = new System.Drawing.Size(284, 46);
-            this.btnKullaniciKodOlustur.TabIndex = 82;
-            this.btnKullaniciKodOlustur.Text = "Kullanıcı Kodu Oluştur";
-            this.btnKullaniciKodOlustur.UseVisualStyleBackColor = false;
-            this.btnKullaniciKodOlustur.Click += new System.EventHandler(this.btnKullaniciKodOlustur_Click);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormKullaniciAyarlari
             // 
@@ -528,5 +537,6 @@
         private System.Windows.Forms.TextBox txtSifreTkr;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnKullaniciKodOlustur;
+        private System.Windows.Forms.Timer timer1;
     }
 }

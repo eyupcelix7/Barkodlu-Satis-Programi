@@ -199,12 +199,6 @@
     <Compile Include="FormUrunGrubuEkle.Designer.cs">
       <DependentUpon>FormUrunGrubuEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVeresiye.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVeresiye.Designer.cs">
-      <DependentUpon>FormVeresiye.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormVeresiyeAlVer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,9 +333,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUrunGrubuEkle.resx">
       <DependentUpon>FormUrunGrubuEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormVeresiye.resx">
-      <DependentUpon>FormVeresiye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiyeAlVer.resx">
       <DependentUpon>FormVeresiyeAlVer.cs</DependentUpon>

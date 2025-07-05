@@ -113,10 +113,7 @@ namespace BarkodluMarketProgrami
                             _formSatis.satisYap("Veresiye");
                             this.Close();
                         }
-                        else
-                        {
-                            MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        else{ MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                         Temizle();
                     }
                 }
