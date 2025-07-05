@@ -79,10 +79,10 @@ namespace BarkodluMarketProgrami
         }
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if(txtNumarator.Text != "" && cbxKisiler.Text != "")
+            if (txtNumarator.Text != "" && cbxKisiler.Text != "")
             {
                 double borcTutar = Convert.ToDouble(txtNumarator.Text);
-                if(veresiyeTur == "ver")
+                if (veresiyeTur == "ver")
                 {
                     DialogResult dR = MessageBox.Show("**Veresiye İşlemi**\n\n" + cbxKisiler.Text + " İsimli Kişiye\n" + borcTutar.ToString("C2") + " Lira Tutarında Veresiye Yazılma İşlemini Onaylıyor Musunuz?", "Veresiye İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (dR == DialogResult.OK)
@@ -92,8 +92,7 @@ namespace BarkodluMarketProgrami
                         vK.Tutar = Convert.ToDouble(txtNumarator.Text);
                         vK.KullaniciId = (int)cbxKisiler.SelectedValue;
                         vK.Odeme = false;
-                        vK.AlinmaTarih = null;
-                        vK.AlinmaTarih = DateTime.Now;
+                        vK.Tarih = DateTime.Now;
                         vK.Kullanici = lblKullanici.Text;
                         db.Veresiye.Add(vK);
                         db.SaveChanges();
@@ -101,10 +100,41 @@ namespace BarkodluMarketProgrami
                         Temizle();
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Lütfen Bir Kişi Seçip, Bir Tutar Giriniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (veresiyeTur == "al")
+                {
+                    var guncelBorc = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue && x.Odeme == false).Sum(x => x.Tutar);
+                    var odenmisTutar = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue && x.Odeme == true).Sum(x => x.Tutar);
+                    if (guncelBorc == null) { guncelBorc = 0.0; }
+                    if (odenmisTutar == null) { odenmisTutar = 0.0; }
+                    double borcT = (double)guncelBorc - (double)odenmisTutar;
+
+                    if (borcT < Convert.ToDouble(txtNumarator.Text))
+                    {
+                        MessageBox.Show("Girilen Ödeme Tutarı Kadar Borç Bulunmuyor !!\nGüncel Borç: "+ borcT, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        DialogResult dR = MessageBox.Show("**Veresiye Ödeme İşlemi**\n\n" + cbxKisiler.Text + " İsimli Kişinin\n" + borcTutar.ToString("C2") + " Lira Tutarında Veresiye Ödeme İşlemini Onaylıyor Musunuz?", "Veresiye Ödeme İşlemi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (dR == DialogResult.OK)
+                        {
+                            Veresiye vK = new Veresiye();
+                            vK.IslemNo = null;
+                            vK.Tutar = Convert.ToDouble(txtNumarator.Text);
+                            vK.KullaniciId = (int)cbxKisiler.SelectedValue;
+                            vK.Odeme = true;
+                            vK.Tarih = DateTime.Now;
+                            vK.Kullanici = lblKullanici.Text;
+                            db.Veresiye.Add(vK);
+                            db.SaveChanges();
+                            MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Temizle();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Bir Kişi Seçip, Bir Tutar Giriniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void cbxKisiler_TextChanged(object sender, EventArgs e)
@@ -117,24 +147,14 @@ namespace BarkodluMarketProgrami
             if(lblSecilenKisiDeger.Text != "")
             {
                 var detaylar = db.VeresiyeKullanicilar.Where(x => x.Id == (int)cbxKisiler.SelectedValue).SingleOrDefault();
-                var borclar = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue).OrderByDescending(x=> x.AlinmaTarih).ToList();
+                var borcTutar = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue && x.Odeme == false).Sum(x=>x.Tutar);
+                var odenmisTutar = db.Veresiye.Where(x => x.KullaniciId == (int)cbxKisiler.SelectedValue && x.Odeme == true).Sum(x => x.Tutar);
+                if(odenmisTutar == null) { odenmisTutar = 0.0; }
+                if(borcTutar == null) { borcTutar = 0.0; }
+                double guncelBorc = (double)borcTutar - (double)odenmisTutar;
                 string telefonNo = detaylar.Telefon;
                 string aciklama = detaylar.Aciklama;
-                double guncelBorcTutar = 0.00;
-                string odenmemisBorcTarihleri = string.Empty;
-                if(veresiyeTur == "ver")
-                {
-                    foreach (var borc in borclar)
-                    {
-                        if (!(bool)borc.Odeme)
-                        {
-                            double borcu = Convert.ToDouble(borc.Tutar);
-                            guncelBorcTutar += borcu;
-                            odenmemisBorcTarihleri += "\n" + borc.AlinmaTarih.ToString() + " - " + borcu.ToString("C2");
-                        }
-                    }
-                    MessageBox.Show(cbxKisiler.Text + ", Detayları :\n\n" + "Telefon Numarası: " + telefonNo + "\n\nAçıklama: \n" + aciklama + "\n\nGüncel Borcu: \n" + guncelBorcTutar.ToString("C2") + "\n\nÖdenmemiş Borçların Alınma Tarihleri: \n" + odenmemisBorcTarihleri, cbxKisiler.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show(cbxKisiler.Text + ", Detayları :\n\n" + "Telefon Numarası: " + telefonNo + "\n\nAçıklama: \n" + aciklama + "\n\nGüncel Borcu: \n" + guncelBorc.ToString("C2"), cbxKisiler.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnYeniKullanici_Click(object sender, EventArgs e)

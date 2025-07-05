@@ -22,10 +22,8 @@ namespace BarkodluMarketProgrami
             using(var db = new BarkodEntities())
             {
                 islemId = (int)db.IslemOzet.Where(x=> x.Id == islemId).FirstOrDefault().IslemNo;
-
                 this.Text = "#" + islemId.ToString() + " İşlem Detayları";
                 lblIslemId.Text = "#" + islemId.ToString() + " Numaralı İşlem";
-
                 if (db.IslemOzet.Where(x => x.IslemNo == islemId).Any()) 
                 {
                     // Tekli İşlem Page

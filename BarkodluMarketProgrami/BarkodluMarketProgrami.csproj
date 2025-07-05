@@ -217,6 +217,12 @@
     <Compile Include="FormVeresiyeRapor.Designer.cs">
       <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVeresiyeRaporDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVeresiyeRaporDetay.Designer.cs">
+      <DependentUpon>FormVeresiyeRaporDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVeresiyeYeniKullanici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiyeRapor.resx">
       <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVeresiyeRaporDetay.resx">
+      <DependentUpon>FormVeresiyeRaporDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiyeYeniKullanici.resx">
       <DependentUpon>FormVeresiyeYeniKullanici.cs</DependentUpon>
