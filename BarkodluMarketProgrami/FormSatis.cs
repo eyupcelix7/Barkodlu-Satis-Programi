@@ -21,9 +21,6 @@ namespace BarkodluMarketProgrami
         Button basiliBtn = null;
         public double nakitKartTutar = 0; // Nakit olarak
         public double veresiyeTutar = 0;
-        public double veresiyeNakitTutar = 0;
-        public double veresiyeKartTutar = 0;
-        public int veresiyeTur = 0; // 0 = Veresiye, 1 = Veresiye-Nakit, 3 = Veresiye-Kart
         DataGridView gridBeklet = null, gridBeklet2 = null; // Bekletme işlemi için DataGridView
         public FormSatis()
         {
@@ -507,13 +504,9 @@ namespace BarkodluMarketProgrami
                     {
                         islemOzet.Aciklama = "Satış İşlemi (" + odemeTuru + ")";
                     }
-                    else if (odemeTuru == "Veresiye" || odemeTuru == "Veresiye-Kart" || odemeTuru == "Veresiye-Nakit")
+                    else if (odemeTuru == "Veresiye")
                     {
                         islemOzet.Aciklama = "Veresiye İşlemi (" + odemeTuru + ")";
-                        Veresiye veresiye = new Veresiye();
-                        veresiye.IslemNo = islemNo;
-                        veresiye.Odeme = false; // Veresiye ödemesi henüz yapılmadı
-                        db.Veresiye.Add(veresiye);
                     }
                 }
                 else
@@ -541,14 +534,6 @@ namespace BarkodluMarketProgrami
                         islemOzet.Nakit = 0;
                         islemOzet.Kart = 0;
                         break;
-                    case "Veresiye-Kart":
-                        islemOzet.Kart = veresiyeKartTutar;
-                        islemOzet.Nakit = 0;
-                        break;
-                    case "Veresiye-Nakit":
-                        islemOzet.Nakit = veresiyeNakitTutar;
-                        islemOzet.Kart = 0;
-                        break;
                 }
                 db.IslemOzet.Add(islemOzet);
                 db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
@@ -572,7 +557,8 @@ namespace BarkodluMarketProgrami
         }
         private void btnVeresiye_Click(object sender, EventArgs e)
         {
-            FormVeresiye veresiyeForm = new FormVeresiye(genelToplam(), this);
+            FormVeresiyeAlVer veresiyeForm = new FormVeresiyeAlVer(genelToplam(), this);
+            veresiyeForm.veresiyeTur = "ver";
             veresiyeForm.ShowDialog();
         }
         private void btnBeklet_Click(object sender, EventArgs e)
