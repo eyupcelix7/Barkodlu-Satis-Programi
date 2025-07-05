@@ -58,10 +58,13 @@ namespace BarkodluMarketProgrami
         private void tabloDoldur(List<IslemOzet> islemOzet, List<Satis> satisOzet)
         {
         }
-
         private void btnVeresiyeAl_Click(object sender, EventArgs e)
         {
-            FormVeresiyeEkle fV = new FormVeresiyeEkle();
+        }
+        private void btnVeresiyeVer_Click(object sender, EventArgs e)
+        {
+            FormVeresiyeAlVer fV = new FormVeresiyeAlVer();
+            fV.veresiyeTur = "ver";
             fV.ShowDialog();
         }
     }

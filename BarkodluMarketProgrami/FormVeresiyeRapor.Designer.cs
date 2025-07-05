@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
             this.lblBitisTarihi = new System.Windows.Forms.Label();
             this.nudTopAlVT = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +47,12 @@
             this.nudTopSatVT = new System.Windows.Forms.NumericUpDown();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.pnlIstatistik = new System.Windows.Forms.Panel();
+            this.lblUyari = new System.Windows.Forms.Label();
+            this.lblTopAlV = new System.Windows.Forms.Label();
+            this.lblTopAlVTutar = new System.Windows.Forms.Label();
+            this.nudTopSatV = new System.Windows.Forms.NumericUpDown();
+            this.lblTopSatV = new System.Windows.Forms.Label();
+            this.nudTopAlV = new System.Windows.Forms.NumericUpDown();
             this.btnPdf = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -55,22 +61,16 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.btnVeresiyeAl = new System.Windows.Forms.Button();
             this.btnVeresiyeVer = new System.Windows.Forms.Button();
-            this.nudTopSatV = new System.Windows.Forms.NumericUpDown();
-            this.lblTopSatV = new System.Windows.Forms.Label();
-            this.nudTopAlV = new System.Windows.Forms.NumericUpDown();
-            this.lblTopAlVTutar = new System.Windows.Forms.Label();
-            this.lblTopAlV = new System.Windows.Forms.Label();
-            this.lblUyari = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopAlVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopSatVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
             this.pnlIstatistik.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpBitisTarihi
@@ -236,25 +236,25 @@
             this.gridSonucListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSonucListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSonucListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSonucListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSonucListesi.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSonucListesi.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSonucListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSonucListesi.EnableHeadersVisualStyles = false;
             this.gridSonucListesi.GridColor = System.Drawing.Color.White;
@@ -290,6 +290,78 @@
             this.pnlIstatistik.Size = new System.Drawing.Size(626, 223);
             this.pnlIstatistik.TabIndex = 88;
             this.pnlIstatistik.Visible = false;
+            // 
+            // lblUyari
+            // 
+            this.lblUyari.AutoSize = true;
+            this.lblUyari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyari.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblUyari.Location = new System.Drawing.Point(6, 18);
+            this.lblUyari.Name = "lblUyari";
+            this.lblUyari.Size = new System.Drawing.Size(155, 26);
+            this.lblUyari.TabIndex = 132;
+            this.lblUyari.Text = "(04.06.2025 - 04.07.2025 \r\nARASINDAKİ KAYITLAR)";
+            // 
+            // lblTopAlV
+            // 
+            this.lblTopAlV.AutoSize = true;
+            this.lblTopAlV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTopAlV.ForeColor = System.Drawing.Color.Navy;
+            this.lblTopAlV.Location = new System.Drawing.Point(5, 176);
+            this.lblTopAlV.Name = "lblTopAlV";
+            this.lblTopAlV.Size = new System.Drawing.Size(174, 20);
+            this.lblTopAlV.TabIndex = 131;
+            this.lblTopAlV.Text = "Toplam Alınan Veresiye";
+            // 
+            // lblTopAlVTutar
+            // 
+            this.lblTopAlVTutar.AutoSize = true;
+            this.lblTopAlVTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTopAlVTutar.ForeColor = System.Drawing.Color.Navy;
+            this.lblTopAlVTutar.Location = new System.Drawing.Point(5, 105);
+            this.lblTopAlVTutar.Name = "lblTopAlVTutar";
+            this.lblTopAlVTutar.Size = new System.Drawing.Size(215, 20);
+            this.lblTopAlVTutar.TabIndex = 130;
+            this.lblTopAlVTutar.Text = "Toplam Alınan Veresiye Tutar";
+            // 
+            // nudTopSatV
+            // 
+            this.nudTopSatV.Location = new System.Drawing.Point(190, 145);
+            this.nudTopSatV.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudTopSatV.Name = "nudTopSatV";
+            this.nudTopSatV.ReadOnly = true;
+            this.nudTopSatV.Size = new System.Drawing.Size(90, 20);
+            this.nudTopSatV.TabIndex = 129;
+            this.nudTopSatV.ThousandsSeparator = true;
+            // 
+            // lblTopSatV
+            // 
+            this.lblTopSatV.AutoSize = true;
+            this.lblTopSatV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTopSatV.ForeColor = System.Drawing.Color.Navy;
+            this.lblTopSatV.Location = new System.Drawing.Point(5, 145);
+            this.lblTopSatV.Name = "lblTopSatV";
+            this.lblTopSatV.Size = new System.Drawing.Size(179, 20);
+            this.lblTopSatV.TabIndex = 128;
+            this.lblTopSatV.Text = "Toplam Satılan Veresiye";
+            // 
+            // nudTopAlV
+            // 
+            this.nudTopAlV.Location = new System.Drawing.Point(190, 176);
+            this.nudTopAlV.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.nudTopAlV.Name = "nudTopAlV";
+            this.nudTopAlV.ReadOnly = true;
+            this.nudTopAlV.Size = new System.Drawing.Size(90, 20);
+            this.nudTopAlV.TabIndex = 127;
+            this.nudTopAlV.ThousandsSeparator = true;
             // 
             // btnPdf
             // 
@@ -425,78 +497,7 @@
             this.btnVeresiyeVer.Size = new System.Drawing.Size(100, 50);
             this.btnVeresiyeVer.TabIndex = 108;
             this.btnVeresiyeVer.UseVisualStyleBackColor = false;
-            // 
-            // nudTopSatV
-            // 
-            this.nudTopSatV.Location = new System.Drawing.Point(190, 145);
-            this.nudTopSatV.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudTopSatV.Name = "nudTopSatV";
-            this.nudTopSatV.ReadOnly = true;
-            this.nudTopSatV.Size = new System.Drawing.Size(90, 20);
-            this.nudTopSatV.TabIndex = 129;
-            this.nudTopSatV.ThousandsSeparator = true;
-            // 
-            // lblTopSatV
-            // 
-            this.lblTopSatV.AutoSize = true;
-            this.lblTopSatV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopSatV.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopSatV.Location = new System.Drawing.Point(5, 145);
-            this.lblTopSatV.Name = "lblTopSatV";
-            this.lblTopSatV.Size = new System.Drawing.Size(179, 20);
-            this.lblTopSatV.TabIndex = 128;
-            this.lblTopSatV.Text = "Toplam Satılan Veresiye";
-            // 
-            // nudTopAlV
-            // 
-            this.nudTopAlV.Location = new System.Drawing.Point(190, 176);
-            this.nudTopAlV.Maximum = new decimal(new int[] {
-            -727379969,
-            232,
-            0,
-            0});
-            this.nudTopAlV.Name = "nudTopAlV";
-            this.nudTopAlV.ReadOnly = true;
-            this.nudTopAlV.Size = new System.Drawing.Size(90, 20);
-            this.nudTopAlV.TabIndex = 127;
-            this.nudTopAlV.ThousandsSeparator = true;
-            // 
-            // lblTopAlVTutar
-            // 
-            this.lblTopAlVTutar.AutoSize = true;
-            this.lblTopAlVTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopAlVTutar.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopAlVTutar.Location = new System.Drawing.Point(5, 105);
-            this.lblTopAlVTutar.Name = "lblTopAlVTutar";
-            this.lblTopAlVTutar.Size = new System.Drawing.Size(215, 20);
-            this.lblTopAlVTutar.TabIndex = 130;
-            this.lblTopAlVTutar.Text = "Toplam Alınan Veresiye Tutar";
-            // 
-            // lblTopAlV
-            // 
-            this.lblTopAlV.AutoSize = true;
-            this.lblTopAlV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTopAlV.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopAlV.Location = new System.Drawing.Point(5, 176);
-            this.lblTopAlV.Name = "lblTopAlV";
-            this.lblTopAlV.Size = new System.Drawing.Size(174, 20);
-            this.lblTopAlV.TabIndex = 131;
-            this.lblTopAlV.Text = "Toplam Alınan Veresiye";
-            // 
-            // lblUyari
-            // 
-            this.lblUyari.AutoSize = true;
-            this.lblUyari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUyari.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblUyari.Location = new System.Drawing.Point(6, 18);
-            this.lblUyari.Name = "lblUyari";
-            this.lblUyari.Size = new System.Drawing.Size(155, 26);
-            this.lblUyari.TabIndex = 132;
-            this.lblUyari.Text = "(04.06.2025 - 04.07.2025 \r\nARASINDAKİ KAYITLAR)";
+            this.btnVeresiyeVer.Click += new System.EventHandler(this.btnVeresiyeVer_Click);
             // 
             // FormVeresiyeRapor
             // 
@@ -513,13 +514,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
             this.pnlIstatistik.ResumeLayout(false);
             this.pnlIstatistik.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).EndInit();
             this.ResumeLayout(false);
 
         }

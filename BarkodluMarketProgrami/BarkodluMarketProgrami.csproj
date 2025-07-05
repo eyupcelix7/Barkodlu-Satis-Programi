@@ -205,17 +205,23 @@
     <Compile Include="FormVeresiye.Designer.cs">
       <DependentUpon>FormVeresiye.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVeresiyeEkle.cs">
+    <Compile Include="FormVeresiyeAlVer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVeresiyeEkle.Designer.cs">
-      <DependentUpon>FormVeresiyeEkle.cs</DependentUpon>
+    <Compile Include="FormVeresiyeAlVer.Designer.cs">
+      <DependentUpon>FormVeresiyeAlVer.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVeresiyeRapor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormVeresiyeRapor.Designer.cs">
       <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVeresiyeYeniKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVeresiyeYeniKullanici.Designer.cs">
+      <DependentUpon>FormVeresiyeYeniKullanici.cs</DependentUpon>
     </Compile>
     <Compile Include="HizliFiyat.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -331,11 +337,14 @@
     <EmbeddedResource Include="FormVeresiye.resx">
       <DependentUpon>FormVeresiye.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVeresiyeEkle.resx">
-      <DependentUpon>FormVeresiyeEkle.cs</DependentUpon>
+    <EmbeddedResource Include="FormVeresiyeAlVer.resx">
+      <DependentUpon>FormVeresiyeAlVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVeresiyeRapor.resx">
       <DependentUpon>FormVeresiyeRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVeresiyeYeniKullanici.resx">
+      <DependentUpon>FormVeresiyeYeniKullanici.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

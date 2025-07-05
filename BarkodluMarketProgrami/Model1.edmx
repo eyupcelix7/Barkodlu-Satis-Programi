@@ -161,6 +161,7 @@
           <Property Name="Odeme" Type="bit" />
           <Property Name="AlinmaTarih" Type="datetime" />
           <Property Name="VerilmeTarih" Type="datetime" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="VeresiyeKullanicilar">
           <Key>
@@ -310,6 +311,7 @@
           <Property Name="AlinmaTarih" Type="DateTime" Precision="3" />
           <Property Name="VerilmeTarih" Type="DateTime" Precision="3" />
           <Property Name="Tutar" Type="Double" />
+          <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="UrunGrubu">
           <Key>
@@ -482,6 +484,7 @@
           <EntitySetMapping Name="Veresiye">
             <EntityTypeMapping TypeName="BarkodModel.Veresiye">
               <MappingFragment StoreEntitySet="Veresiye">
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
                 <ScalarProperty Name="Tutar" ColumnName="Tutar" />
                 <ScalarProperty Name="VerilmeTarih" ColumnName="VerilmeTarih" />
                 <ScalarProperty Name="AlinmaTarih" ColumnName="AlinmaTarih" />
