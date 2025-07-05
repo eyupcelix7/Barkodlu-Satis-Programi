@@ -14,9 +14,20 @@ namespace BarkodluMarketProgrami
     {
         public string veresiyeTur { get; set; } // Al - Ver
         BarkodEntities db = new BarkodEntities();
-        public FormVeresiyeAlVer()
+        // ** Satış Formu İçin **
+        double _toplamTutar = 0.0;
+        private FormSatis _formSatis;
+        bool satis = false;
+        public FormVeresiyeAlVer(double toplamTutar = 0.0, FormSatis form = null)
         {
             InitializeComponent();
+            if(form != null)
+            {
+                _toplamTutar = toplamTutar;
+                _formSatis = form;
+                satis = true;
+                txtNumarator.Text = _toplamTutar.ToString();
+            }
         }
         private void FormVeresiyeAlVer_Load(object sender, EventArgs e)
         {
@@ -88,7 +99,7 @@ namespace BarkodluMarketProgrami
                     if (dR == DialogResult.OK)
                     {
                         Veresiye vK = new Veresiye();
-                        vK.IslemNo = null;
+                        if (satis) { vK.IslemNo = db.Islem.Single().IslemNo; } else { vK.IslemNo = null; }
                         vK.Tutar = Convert.ToDouble(txtNumarator.Text);
                         vK.KullaniciId = (int)cbxKisiler.SelectedValue;
                         vK.Odeme = false;
@@ -96,7 +107,16 @@ namespace BarkodluMarketProgrami
                         vK.Kullanici = lblKullanici.Text;
                         db.Veresiye.Add(vK);
                         db.SaveChanges();
-                        MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (satis)
+                        {
+                            _formSatis.veresiyeTutar = Convert.ToDouble(txtNumarator.Text);
+                            _formSatis.satisYap("Veresiye");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Başarıyla Kaydedildi", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         Temizle();
                     }
                 }

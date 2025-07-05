@@ -31,10 +31,10 @@ namespace BarkodluMarketProgrami
                     var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).Select(x=> new
                     {
                         x.Id,
+                        x.Odeme,
                         x.KullaniciId,
                         x.IslemNo,
                         x.Tutar,
-                        x.Odeme,
                         x.Tarih,
                         x.Kullanici
                     }).OrderByDescending(a => a.Tarih).ToList();
@@ -55,10 +55,10 @@ namespace BarkodluMarketProgrami
                     var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Odeme == false).Select(x => new
                     {
                         x.Id,
+                        x.Odeme,
                         x.KullaniciId,
                         x.IslemNo,
                         x.Tutar,
-                        x.Odeme,
                         x.Tarih,
                         x.Kullanici
                     }).OrderByDescending(a => a.Tarih).ToList();
@@ -79,10 +79,10 @@ namespace BarkodluMarketProgrami
                     var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Odeme == true).Select(x => new
                     {
                         x.Id,
+                        x.Odeme,
                         x.KullaniciId,
                         x.IslemNo,
                         x.Tutar,
-                        x.Odeme,
                         x.Tarih,
                         x.Kullanici
                     }).OrderByDescending(a => a.Tarih).ToList();
@@ -104,12 +104,12 @@ namespace BarkodluMarketProgrami
         private void tabloDuzenle()
         {
             gridSonucListesi.Columns[0].Visible = false; // ID gizliyoruz
-            gridSonucListesi.Columns[1].HeaderText = "Ad Soyad";
-            gridSonucListesi.Columns[2].HeaderText = "Satış Mı?";
-            gridSonucListesi.Columns[3].HeaderText = "Tutar";
-            gridSonucListesi.Columns[4].HeaderText = "Ödeme Mi?";
+            gridSonucListesi.Columns[1].HeaderText = "İşlem";
+            gridSonucListesi.Columns[2].HeaderText = "Ad Soyad";
+            gridSonucListesi.Columns[3].HeaderText = "Satış Mı?";
+            gridSonucListesi.Columns[4].HeaderText = "Tutar";
             gridSonucListesi.Columns[6].HeaderText = "Kullanıcı";
-            gridSonucListesi.Columns[3].DefaultCellStyle.Format = "C2";
+            gridSonucListesi.Columns[4].DefaultCellStyle.Format = "C2";
         }
         private void btnVeresiyeAl_Click(object sender, EventArgs e)
         {
@@ -131,11 +131,22 @@ namespace BarkodluMarketProgrami
             {
                 if (e.ColumnIndex == 1)
                 {
+                    if (e.Value.ToString() == "True")
+                    {
+                        e.Value = "Veresiye";
+                    }
+                    else
+                    {
+                        e.Value = "Ödeme";
+                    }
+                }
+                if (e.ColumnIndex == 2)
+                {
                     int kulId = Convert.ToInt32(e.Value);
                     string adSoyad = db.VeresiyeKullanicilar.Where(x => x.Id == kulId).SingleOrDefault().AdSoyad;
                     e.Value = adSoyad;
                 }
-                else if(e.ColumnIndex == 2)
+                else if(e.ColumnIndex == 3)
                 {
                     if(e.Value != null && e.Value.ToString() != "")
                     {
@@ -146,29 +157,14 @@ namespace BarkodluMarketProgrami
                         e.Value = "Hayır";
                     }
                 }
-                else if(e.ColumnIndex == 4)
-                {
-                    if(e.Value.ToString() == "True")
-                    {
-                        e.Value = "Evet";
-                    }
-                    else
-                    {
-                        e.Value = "Hayır";
-                    }
-                }
             }
         }
-
         private void gridSonucListesi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 1)
-            {
-                FormVeresiyeRaporDetay fVRPD = new FormVeresiyeRaporDetay();
-                fVRPD.veresiyeId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[0].Value);
-                fVRPD.kulId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[1].Value);
-                fVRPD.ShowDialog();
-            }
+            FormVeresiyeRaporDetay fVRPD = new FormVeresiyeRaporDetay();
+            fVRPD.veresiyeId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[0].Value);
+            fVRPD.kulId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[2].Value);
+            fVRPD.ShowDialog();
         }
     }
 }

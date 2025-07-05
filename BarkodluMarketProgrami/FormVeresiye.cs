@@ -13,7 +13,6 @@ namespace BarkodluMarketProgrami
     public partial class FormVeresiye : Form
     {
         double _toplamTutar = 0.0;
-        string odemeSekli;
         private FormSatis _formSatis;
         public FormVeresiye(double toplamTutar, FormSatis form)
         {
@@ -48,36 +47,14 @@ namespace BarkodluMarketProgrami
             double veresiyeMiktar = Convert.ToDouble(txtNumarator.Text);
             double kalan = _toplamTutar - veresiyeMiktar;
             DialogResult result;
-            if (rdbVeresiye.Checked)
-            {
-                result = MessageBox.Show("Veresiye Tutarı: " + veresiyeMiktar.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                odemeSekli = "Veresiye";
-                _formSatis.veresiyeTutar = veresiyeMiktar;
-                _formSatis.veresiyeTur = 0;
-                _formSatis.satisYap("Veresiye");
-            }
-            else if (rdbNakit.Checked)
-            {
-                result = MessageBox.Show("Nakit Tutarı: " + veresiyeMiktar.ToString("C2") +"\nVeresiye Tutarı: "+ kalan.ToString("C2")+ "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                odemeSekli = "Nakit-Veresiye";
-                _formSatis.veresiyeNakitTutar = veresiyeMiktar;
-                _formSatis.veresiyeTur = 1;
-                _formSatis.satisYap("Veresiye-Nakit");
-            }
-            else
-            {
-                result = MessageBox.Show("Kart Tutarı: " + veresiyeMiktar.ToString("C2") + "\nVeresiye Tutarı: " + kalan.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                odemeSekli = "Kart-Veresiye";
-                _formSatis.veresiyeKartTutar = veresiyeMiktar;
-                _formSatis.veresiyeTur = 2;
-                _formSatis.satisYap("Veresiye-Kart");
-            }
+            result = MessageBox.Show("Veresiye Tutarı: " + veresiyeMiktar.ToString("C2") + "\nOnaylıyor Musunuz?", "Veresiye Onaylama", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            _formSatis.veresiyeTutar = veresiyeMiktar;
+            _formSatis.satisYap("Veresiye");
             if (result == DialogResult.Yes)
             {
                 this.Close();
             }
         }
-
         private void rdbVeresiye_Click(object sender, EventArgs e)
         {
             RadioButton rdb = sender as RadioButton;

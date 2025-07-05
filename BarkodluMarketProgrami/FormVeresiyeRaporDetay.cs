@@ -14,6 +14,7 @@ namespace BarkodluMarketProgrami
     {
         public int veresiyeId { get; set; }
         public int kulId { get; set; }
+        int islemNo = 0;
         public FormVeresiyeRaporDetay()
         {
             InitializeComponent();
@@ -33,7 +34,16 @@ namespace BarkodluMarketProgrami
                     var veresiyeKullanici = db.VeresiyeKullanicilar.Where(x => x.Id == kulId).FirstOrDefault();
 
                     txtAdSoyad.Text = veresiyeKullanici.AdSoyad;
-                    if (veresiyeOzet.IslemNo == null) { txtSatis.Text = "Hayır"; } else { txtSatis.Text = "Evet"; lblDetaylar.Visible = true; }
+                    if (veresiyeOzet.IslemNo == null)
+                    {
+                        txtSatis.Text = "Hayır"; 
+                    }
+                    else { 
+                        txtSatis.Text = "Evet";
+                        lblDetaylar.Visible = true;
+                        var islemNoIdBul = (int)db.Veresiye.Where(x => x.Id == veresiyeId).FirstOrDefault().IslemNo;
+                        islemNo = (int)db.IslemOzet.Where(x => x.IslemNo == islemNoIdBul).FirstOrDefault().Id;
+                    }
                     nudTutar.Value = (decimal)veresiyeOzet.Tutar;
                     nudTutar.Maximum = (decimal)veresiyeOzet.Tutar;
                     nudTutar.Minimum = (decimal)veresiyeOzet.Tutar;
@@ -103,6 +113,16 @@ namespace BarkodluMarketProgrami
                         e.Value = "Hayır";
                     }
                 }
+            }
+        }
+
+        private void lblDetaylar_Click(object sender, EventArgs e)
+        {
+            if(txtSatis.Text == "Evet")
+            {
+                FormRaporDetay fRPD = new FormRaporDetay();
+                fRPD.islemId = islemNo;
+                fRPD.ShowDialog();
             }
         }
     }

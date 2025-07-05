@@ -46,11 +46,11 @@
             this.lblIadeMi = new System.Windows.Forms.Label();
             this.lblIslemId = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblDetaylar = new System.Windows.Forms.Label();
+            this.txtOdeme = new System.Windows.Forms.TextBox();
+            this.txtSatis = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtSatis = new System.Windows.Forms.TextBox();
-            this.txtOdeme = new System.Windows.Forms.TextBox();
-            this.lblDetaylar = new System.Windows.Forms.Label();
             this.gridUrunListesi2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -260,6 +260,37 @@
             this.tabPage1.Text = "Tekli Sorgu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblDetaylar
+            // 
+            this.lblDetaylar.AutoSize = true;
+            this.lblDetaylar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDetaylar.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblDetaylar.Location = new System.Drawing.Point(293, 132);
+            this.lblDetaylar.Name = "lblDetaylar";
+            this.lblDetaylar.Size = new System.Drawing.Size(76, 16);
+            this.lblDetaylar.TabIndex = 94;
+            this.lblDetaylar.Text = "(Detaylar)";
+            this.lblDetaylar.Visible = false;
+            this.lblDetaylar.Click += new System.EventHandler(this.lblDetaylar_Click);
+            // 
+            // txtOdeme
+            // 
+            this.txtOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtOdeme.Location = new System.Drawing.Point(129, 218);
+            this.txtOdeme.Name = "txtOdeme";
+            this.txtOdeme.ReadOnly = true;
+            this.txtOdeme.Size = new System.Drawing.Size(157, 26);
+            this.txtOdeme.TabIndex = 93;
+            // 
+            // txtSatis
+            // 
+            this.txtSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSatis.Location = new System.Drawing.Point(165, 126);
+            this.txtSatis.Name = "txtSatis";
+            this.txtSatis.ReadOnly = true;
+            this.txtSatis.Size = new System.Drawing.Size(121, 26);
+            this.txtSatis.TabIndex = 91;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -283,36 +314,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ödemeler";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // txtSatis
-            // 
-            this.txtSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSatis.Location = new System.Drawing.Point(165, 126);
-            this.txtSatis.Name = "txtSatis";
-            this.txtSatis.ReadOnly = true;
-            this.txtSatis.Size = new System.Drawing.Size(121, 26);
-            this.txtSatis.TabIndex = 91;
-            // 
-            // txtOdeme
-            // 
-            this.txtOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOdeme.Location = new System.Drawing.Point(129, 218);
-            this.txtOdeme.Name = "txtOdeme";
-            this.txtOdeme.ReadOnly = true;
-            this.txtOdeme.Size = new System.Drawing.Size(157, 26);
-            this.txtOdeme.TabIndex = 93;
-            // 
-            // lblDetaylar
-            // 
-            this.lblDetaylar.AutoSize = true;
-            this.lblDetaylar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDetaylar.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblDetaylar.Location = new System.Drawing.Point(293, 132);
-            this.lblDetaylar.Name = "lblDetaylar";
-            this.lblDetaylar.Size = new System.Drawing.Size(76, 16);
-            this.lblDetaylar.TabIndex = 94;
-            this.lblDetaylar.Text = "(Detaylar)";
-            this.lblDetaylar.Visible = false;
             // 
             // gridUrunListesi2
             // 
