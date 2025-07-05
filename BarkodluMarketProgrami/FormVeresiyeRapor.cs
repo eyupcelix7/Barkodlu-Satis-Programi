@@ -19,53 +19,156 @@ namespace BarkodluMarketProgrami
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //DateTime baslangicTarihi = DateTime.Parse(dtpBaslangicTarihi.Value.ToShortDateString());
-            //DateTime bitisTarihi = DateTime.Parse(dtpBitisTarihi.Value.ToShortDateString()).AddDays(1);
-            //using (var db = new BarkodEntities())
-            //{
-            //    if (rdbTumu.Checked)
-            //    {
-            //        var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).OrderByDescending(a => a.Tarih).ToList();
-            //        var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-            //        tabloDoldur(islemOzet, satisOzet);
-            //    }
-            //    else if (rdbSatislar.Checked)
-            //    {
-            //        var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == false && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
-            //        var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-            //        tabloDoldur(islemOzet, satisOzet);
-            //    }
-            //    else if (rdbIadeler.Checked)
-            //    {
-            //        var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == true && x.Gelir == false && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
-            //        var satisOzet = db.Satis.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).ToList();
-            //        tabloDoldur(islemOzet, satisOzet);
-            //    }
-            //    else if (rdbGelirler.Checked)
-            //    {
-            //        var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == true && x.Gider == false).OrderByDescending(a => a.Tarih).ToList();
-            //        tabloDoldur(islemOzet, null);
-            //    }
-            //    else if (rdbGiderler.Checked)
-            //    {
-            //        var islemOzet = db.IslemOzet.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Iade == false && x.Gelir == false && x.Gider == true).OrderByDescending(a => a.Tarih).ToList();
-            //        tabloDoldur(islemOzet, null);
-            //    }
-            //}
-            //Cursor.Current = guncelCursor;
+            Cursor.Current = Cursors.WaitCursor;
+            lblUyari.Text = "("+dtpBaslangicTarihi.Value.ToString("dd-MM-yyyy")+" - "+ dtpBitisTarihi.Value.ToString("dd-MM-yyyy") + "\r\nARASINDAKİ KAYITLAR)";
+
+            DateTime baslangicTarihi = DateTime.Parse(dtpBaslangicTarihi.Value.ToShortDateString());
+            DateTime bitisTarihi = DateTime.Parse(dtpBitisTarihi.Value.ToShortDateString()).AddDays(1);
+            using (var db = new BarkodEntities())
+            {
+                if (rdbTumu.Checked)
+                {
+                    var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi).Select(x=> new
+                    {
+                        x.Id,
+                        x.KullaniciId,
+                        x.IslemNo,
+                        x.Tutar,
+                        x.Odeme,
+                        x.Tarih,
+                        x.Kullanici
+                    }).OrderByDescending(a => a.Tarih).ToList();
+                    nudTopVerVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Sum(x => x.Tutar));
+                    nudTopOdVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Sum(x => x.Tutar));
+                    nudTopVerV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Count());
+                    nudTopOdV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Count());
+                    gridSonucListesi.DataSource = veresiyeOzet;
+                    tabloDuzenle();
+                    lblUyari.Visible = true;
+                    if (veresiyeOzet.Count == 0)
+                    {
+                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (rdbOdenilmemisV.Checked)
+                {
+                    var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Odeme == false).Select(x => new
+                    {
+                        x.Id,
+                        x.KullaniciId,
+                        x.IslemNo,
+                        x.Tutar,
+                        x.Odeme,
+                        x.Tarih,
+                        x.Kullanici
+                    }).OrderByDescending(a => a.Tarih).ToList();
+                    nudTopVerVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Sum(x => x.Tutar));
+                    nudTopOdVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Sum(x => x.Tutar));
+                    nudTopVerV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Count());
+                    nudTopOdV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Count());
+                    gridSonucListesi.DataSource = veresiyeOzet;
+                    tabloDuzenle();
+                    lblUyari.Visible = true;
+                    if (veresiyeOzet.Count == 0)
+                    {
+                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (rdbOdenilmisV.Checked)
+                {
+                    var veresiyeOzet = db.Veresiye.Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi && x.Odeme == true).Select(x => new
+                    {
+                        x.Id,
+                        x.KullaniciId,
+                        x.IslemNo,
+                        x.Tutar,
+                        x.Odeme,
+                        x.Tarih,
+                        x.Kullanici
+                    }).OrderByDescending(a => a.Tarih).ToList();
+                    nudTopVerVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Sum(x => x.Tutar));
+                    nudTopOdVT.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Sum(x => x.Tutar));
+                    nudTopVerV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == false).Count());
+                    nudTopOdV.Value = (decimal)Convert.ToDouble(veresiyeOzet.Where(x => x.Odeme == true).Count());
+                    gridSonucListesi.DataSource = veresiyeOzet;
+                    tabloDuzenle();
+                    lblUyari.Visible = true;
+                    if (veresiyeOzet.Count == 0)
+                    {
+                        MessageBox.Show("Belirtilen tarihler arasında işlem bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            Cursor.Current = Cursors.Default;
         }
-        private void tabloDoldur(List<IslemOzet> islemOzet, List<Satis> satisOzet)
+        private void tabloDuzenle()
         {
+            gridSonucListesi.Columns[0].Visible = false; // ID gizliyoruz
+            gridSonucListesi.Columns[1].HeaderText = "Ad Soyad";
+            gridSonucListesi.Columns[2].HeaderText = "Satış Mı?";
+            gridSonucListesi.Columns[3].HeaderText = "Tutar";
+            gridSonucListesi.Columns[4].HeaderText = "Ödeme Mi?";
+            gridSonucListesi.Columns[6].HeaderText = "Kullanıcı";
+            gridSonucListesi.Columns[3].DefaultCellStyle.Format = "C2";
         }
         private void btnVeresiyeAl_Click(object sender, EventArgs e)
         {
+            FormVeresiyeAlVer fV = new FormVeresiyeAlVer();
+            fV.veresiyeTur = "al";
+            fV.ShowDialog();
+
         }
         private void btnVeresiyeVer_Click(object sender, EventArgs e)
         {
             FormVeresiyeAlVer fV = new FormVeresiyeAlVer();
             fV.veresiyeTur = "ver";
             fV.ShowDialog();
+        }
+
+        private void gridSonucListesi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            using(var db = new BarkodEntities())
+            {
+                if (e.ColumnIndex == 1)
+                {
+                    int kulId = Convert.ToInt32(e.Value);
+                    string adSoyad = db.VeresiyeKullanicilar.Where(x => x.Id == kulId).SingleOrDefault().AdSoyad;
+                    e.Value = adSoyad;
+                }
+                else if(e.ColumnIndex == 2)
+                {
+                    if(e.Value != null && e.Value.ToString() != "")
+                    {
+                        e.Value = "Evet";
+                    }
+                    else
+                    {
+                        e.Value = "Hayır";
+                    }
+                }
+                else if(e.ColumnIndex == 4)
+                {
+                    if(e.Value.ToString() == "True")
+                    {
+                        e.Value = "Evet";
+                    }
+                    else
+                    {
+                        e.Value = "Hayır";
+                    }
+                }
+            }
+        }
+
+        private void gridSonucListesi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 1)
+            {
+                FormVeresiyeRaporDetay fVRPD = new FormVeresiyeRaporDetay();
+                fVRPD.veresiyeId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[0].Value);
+                fVRPD.kulId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[1].Value);
+                fVRPD.ShowDialog();
+            }
         }
     }
 }

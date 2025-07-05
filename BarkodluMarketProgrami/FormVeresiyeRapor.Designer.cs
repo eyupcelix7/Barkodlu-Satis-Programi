@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
             this.lblBitisTarihi = new System.Windows.Forms.Label();
-            this.nudTopAlVT = new System.Windows.Forms.NumericUpDown();
+            this.nudTopOdVT = new System.Windows.Forms.NumericUpDown();
             this.lblTopSatVTutar = new System.Windows.Forms.Label();
             this.lblBaslangicTarihi = new System.Windows.Forms.Label();
             this.dtpBaslangicTarihi = new System.Windows.Forms.DateTimePicker();
@@ -44,15 +44,15 @@
             this.lblKullanici = new System.Windows.Forms.Label();
             this.lblRaporlamaTuru = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.nudTopSatVT = new System.Windows.Forms.NumericUpDown();
+            this.nudTopVerVT = new System.Windows.Forms.NumericUpDown();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.pnlIstatistik = new System.Windows.Forms.Panel();
             this.lblUyari = new System.Windows.Forms.Label();
             this.lblTopAlV = new System.Windows.Forms.Label();
             this.lblTopAlVTutar = new System.Windows.Forms.Label();
-            this.nudTopSatV = new System.Windows.Forms.NumericUpDown();
+            this.nudTopVerV = new System.Windows.Forms.NumericUpDown();
             this.lblTopSatV = new System.Windows.Forms.Label();
-            this.nudTopAlV = new System.Windows.Forms.NumericUpDown();
+            this.nudTopOdV = new System.Windows.Forms.NumericUpDown();
             this.btnPdf = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -61,12 +61,12 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.btnVeresiyeAl = new System.Windows.Forms.Button();
             this.btnVeresiyeVer = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlVT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatVT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopOdVT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopVerVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
             this.pnlIstatistik.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopVerV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopOdV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,30 +93,30 @@
             this.lblBitisTarihi.TabIndex = 40;
             this.lblBitisTarihi.Text = "Bitiş Tarihi";
             // 
-            // nudTopAlVT
+            // nudTopOdVT
             // 
-            this.nudTopAlVT.Location = new System.Drawing.Point(231, 105);
-            this.nudTopAlVT.Maximum = new decimal(new int[] {
+            this.nudTopOdVT.Location = new System.Drawing.Point(186, 51);
+            this.nudTopOdVT.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
-            this.nudTopAlVT.Name = "nudTopAlVT";
-            this.nudTopAlVT.ReadOnly = true;
-            this.nudTopAlVT.Size = new System.Drawing.Size(90, 20);
-            this.nudTopAlVT.TabIndex = 125;
-            this.nudTopAlVT.ThousandsSeparator = true;
+            this.nudTopOdVT.Name = "nudTopOdVT";
+            this.nudTopOdVT.ReadOnly = true;
+            this.nudTopOdVT.Size = new System.Drawing.Size(90, 20);
+            this.nudTopOdVT.TabIndex = 125;
+            this.nudTopOdVT.ThousandsSeparator = true;
             // 
             // lblTopSatVTutar
             // 
             this.lblTopSatVTutar.AutoSize = true;
             this.lblTopSatVTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTopSatVTutar.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopSatVTutar.Location = new System.Drawing.Point(5, 70);
+            this.lblTopSatVTutar.Location = new System.Drawing.Point(3, 13);
             this.lblTopSatVTutar.Name = "lblTopSatVTutar";
-            this.lblTopSatVTutar.Size = new System.Drawing.Size(220, 20);
+            this.lblTopSatVTutar.Size = new System.Drawing.Size(170, 20);
             this.lblTopSatVTutar.TabIndex = 89;
-            this.lblTopSatVTutar.Text = "Toplam Satılan Veresiye Tutar";
+            this.lblTopSatVTutar.Text = "Toplam Veresiye Tutarı";
             // 
             // lblBaslangicTarihi
             // 
@@ -145,9 +145,9 @@
             this.rdbOdenilmisV.ForeColor = System.Drawing.Color.Navy;
             this.rdbOdenilmisV.Location = new System.Drawing.Point(14, 133);
             this.rdbOdenilmisV.Name = "rdbOdenilmisV";
-            this.rdbOdenilmisV.Size = new System.Drawing.Size(178, 24);
+            this.rdbOdenilmisV.Size = new System.Drawing.Size(96, 24);
             this.rdbOdenilmisV.TabIndex = 36;
-            this.rdbOdenilmisV.Text = "Ödenilmiş Veresiyeler";
+            this.rdbOdenilmisV.Text = "Ödemeler";
             this.rdbOdenilmisV.UseVisualStyleBackColor = true;
             // 
             // rdbTumu
@@ -171,9 +171,9 @@
             this.rdbOdenilmemisV.ForeColor = System.Drawing.Color.Navy;
             this.rdbOdenilmemisV.Location = new System.Drawing.Point(14, 103);
             this.rdbOdenilmemisV.Name = "rdbOdenilmemisV";
-            this.rdbOdenilmemisV.Size = new System.Drawing.Size(200, 24);
+            this.rdbOdenilmemisV.Size = new System.Drawing.Size(105, 24);
             this.rdbOdenilmemisV.TabIndex = 35;
-            this.rdbOdenilmemisV.Text = "Ödenilmemiş Veresiyeler";
+            this.rdbOdenilmemisV.Text = "Veresiyeler";
             this.rdbOdenilmemisV.UseVisualStyleBackColor = true;
             // 
             // lblKasiyer
@@ -215,19 +215,19 @@
             // 
             this.timer1.Interval = 1000;
             // 
-            // nudTopSatVT
+            // nudTopVerVT
             // 
-            this.nudTopSatVT.Location = new System.Drawing.Point(231, 70);
-            this.nudTopSatVT.Maximum = new decimal(new int[] {
+            this.nudTopVerVT.Location = new System.Drawing.Point(186, 13);
+            this.nudTopVerVT.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
-            this.nudTopSatVT.Name = "nudTopSatVT";
-            this.nudTopSatVT.ReadOnly = true;
-            this.nudTopSatVT.Size = new System.Drawing.Size(90, 20);
-            this.nudTopSatVT.TabIndex = 101;
-            this.nudTopSatVT.ThousandsSeparator = true;
+            this.nudTopVerVT.Name = "nudTopVerVT";
+            this.nudTopVerVT.ReadOnly = true;
+            this.nudTopVerVT.Size = new System.Drawing.Size(90, 20);
+            this.nudTopVerVT.TabIndex = 101;
+            this.nudTopVerVT.ThousandsSeparator = true;
             // 
             // gridSonucListesi
             // 
@@ -271,97 +271,103 @@
             this.gridSonucListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSonucListesi.Size = new System.Drawing.Size(1312, 528);
             this.gridSonucListesi.TabIndex = 4;
+            this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellDoubleClick);
+            this.gridSonucListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSonucListesi_CellFormatting);
             // 
             // pnlIstatistik
             // 
+            this.pnlIstatistik.Controls.Add(this.lblVeresiyeAl);
             this.pnlIstatistik.Controls.Add(this.lblUyari);
             this.pnlIstatistik.Controls.Add(this.lblTopAlV);
             this.pnlIstatistik.Controls.Add(this.lblTopAlVTutar);
-            this.pnlIstatistik.Controls.Add(this.nudTopSatV);
+            this.pnlIstatistik.Controls.Add(this.nudTopVerV);
+            this.pnlIstatistik.Controls.Add(this.lblVeresiyeVer);
             this.pnlIstatistik.Controls.Add(this.lblTopSatV);
-            this.pnlIstatistik.Controls.Add(this.nudTopAlV);
+            this.pnlIstatistik.Controls.Add(this.nudTopOdV);
             this.pnlIstatistik.Controls.Add(this.btnPdf);
-            this.pnlIstatistik.Controls.Add(this.nudTopAlVT);
+            this.pnlIstatistik.Controls.Add(this.nudTopOdVT);
             this.pnlIstatistik.Controls.Add(this.lblTopSatVTutar);
             this.pnlIstatistik.Controls.Add(this.btnExcel);
-            this.pnlIstatistik.Controls.Add(this.nudTopSatVT);
-            this.pnlIstatistik.Location = new System.Drawing.Point(686, 0);
+            this.pnlIstatistik.Controls.Add(this.nudTopVerVT);
+            this.pnlIstatistik.Controls.Add(this.btnVeresiyeAl);
+            this.pnlIstatistik.Controls.Add(this.btnVeresiyeVer);
+            this.pnlIstatistik.Location = new System.Drawing.Point(475, 0);
             this.pnlIstatistik.Name = "pnlIstatistik";
-            this.pnlIstatistik.Size = new System.Drawing.Size(626, 223);
+            this.pnlIstatistik.Size = new System.Drawing.Size(837, 223);
             this.pnlIstatistik.TabIndex = 88;
-            this.pnlIstatistik.Visible = false;
             // 
             // lblUyari
             // 
             this.lblUyari.AutoSize = true;
             this.lblUyari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUyari.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblUyari.Location = new System.Drawing.Point(6, 18);
+            this.lblUyari.Location = new System.Drawing.Point(4, 175);
             this.lblUyari.Name = "lblUyari";
             this.lblUyari.Size = new System.Drawing.Size(155, 26);
             this.lblUyari.TabIndex = 132;
-            this.lblUyari.Text = "(04.06.2025 - 04.07.2025 \r\nARASINDAKİ KAYITLAR)";
+            this.lblUyari.Text = "(04.06.2025 - 04.07.2025 \r\nARASINDAKİ KAYITLAR)\r\n";
+            this.lblUyari.Visible = false;
             // 
             // lblTopAlV
             // 
             this.lblTopAlV.AutoSize = true;
             this.lblTopAlV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTopAlV.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopAlV.Location = new System.Drawing.Point(5, 176);
+            this.lblTopAlV.Location = new System.Drawing.Point(3, 125);
             this.lblTopAlV.Name = "lblTopAlV";
-            this.lblTopAlV.Size = new System.Drawing.Size(174, 20);
+            this.lblTopAlV.Size = new System.Drawing.Size(162, 20);
             this.lblTopAlV.TabIndex = 131;
-            this.lblTopAlV.Text = "Toplam Alınan Veresiye";
+            this.lblTopAlV.Text = "Toplam Ödeme Sayısı";
             // 
             // lblTopAlVTutar
             // 
             this.lblTopAlVTutar.AutoSize = true;
             this.lblTopAlVTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTopAlVTutar.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopAlVTutar.Location = new System.Drawing.Point(5, 105);
+            this.lblTopAlVTutar.Location = new System.Drawing.Point(3, 51);
             this.lblTopAlVTutar.Name = "lblTopAlVTutar";
-            this.lblTopAlVTutar.Size = new System.Drawing.Size(215, 20);
+            this.lblTopAlVTutar.Size = new System.Drawing.Size(161, 20);
             this.lblTopAlVTutar.TabIndex = 130;
-            this.lblTopAlVTutar.Text = "Toplam Alınan Veresiye Tutar";
+            this.lblTopAlVTutar.Text = "Toplam Ödeme Tutarı";
             // 
-            // nudTopSatV
+            // nudTopVerV
             // 
-            this.nudTopSatV.Location = new System.Drawing.Point(190, 145);
-            this.nudTopSatV.Maximum = new decimal(new int[] {
+            this.nudTopVerV.Location = new System.Drawing.Point(186, 88);
+            this.nudTopVerV.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
-            this.nudTopSatV.Name = "nudTopSatV";
-            this.nudTopSatV.ReadOnly = true;
-            this.nudTopSatV.Size = new System.Drawing.Size(90, 20);
-            this.nudTopSatV.TabIndex = 129;
-            this.nudTopSatV.ThousandsSeparator = true;
+            this.nudTopVerV.Name = "nudTopVerV";
+            this.nudTopVerV.ReadOnly = true;
+            this.nudTopVerV.Size = new System.Drawing.Size(90, 20);
+            this.nudTopVerV.TabIndex = 129;
+            this.nudTopVerV.ThousandsSeparator = true;
             // 
             // lblTopSatV
             // 
             this.lblTopSatV.AutoSize = true;
             this.lblTopSatV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTopSatV.ForeColor = System.Drawing.Color.Navy;
-            this.lblTopSatV.Location = new System.Drawing.Point(5, 145);
+            this.lblTopSatV.Location = new System.Drawing.Point(3, 88);
             this.lblTopSatV.Name = "lblTopSatV";
-            this.lblTopSatV.Size = new System.Drawing.Size(179, 20);
+            this.lblTopSatV.Size = new System.Drawing.Size(171, 20);
             this.lblTopSatV.TabIndex = 128;
-            this.lblTopSatV.Text = "Toplam Satılan Veresiye";
+            this.lblTopSatV.Text = "Toplam Veresiye Sayısı";
             // 
-            // nudTopAlV
+            // nudTopOdV
             // 
-            this.nudTopAlV.Location = new System.Drawing.Point(190, 176);
-            this.nudTopAlV.Maximum = new decimal(new int[] {
+            this.nudTopOdV.Location = new System.Drawing.Point(186, 125);
+            this.nudTopOdV.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
-            this.nudTopAlV.Name = "nudTopAlV";
-            this.nudTopAlV.ReadOnly = true;
-            this.nudTopAlV.Size = new System.Drawing.Size(90, 20);
-            this.nudTopAlV.TabIndex = 127;
-            this.nudTopAlV.ThousandsSeparator = true;
+            this.nudTopOdV.Name = "nudTopOdV";
+            this.nudTopOdV.ReadOnly = true;
+            this.nudTopOdV.Size = new System.Drawing.Size(90, 20);
+            this.nudTopOdV.TabIndex = 127;
+            this.nudTopOdV.ThousandsSeparator = true;
             // 
             // btnPdf
             // 
@@ -372,7 +378,7 @@
             this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPdf.ForeColor = System.Drawing.Color.White;
             this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
-            this.btnPdf.Location = new System.Drawing.Point(516, 123);
+            this.btnPdf.Location = new System.Drawing.Point(727, 123);
             this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(100, 70);
@@ -388,7 +394,7 @@
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExcel.ForeColor = System.Drawing.Color.White;
             this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
-            this.btnExcel.Location = new System.Drawing.Point(516, 20);
+            this.btnExcel.Location = new System.Drawing.Point(727, 20);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(100, 70);
@@ -405,11 +411,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.lblVeresiyeAl);
             this.splitContainer1.Panel1.Controls.Add(this.pnlIstatistik);
             this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
-            this.splitContainer1.Panel1.Controls.Add(this.lblVeresiyeVer);
             this.splitContainer1.Panel1.Controls.Add(this.btnAra);
             this.splitContainer1.Panel1.Controls.Add(this.dtpBitisTarihi);
             this.splitContainer1.Panel1.Controls.Add(this.dtpBaslangicTarihi);
@@ -419,8 +423,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.rdbOdenilmemisV);
             this.splitContainer1.Panel1.Controls.Add(this.rdbTumu);
             this.splitContainer1.Panel1.Controls.Add(this.lblRaporlamaTuru);
-            this.splitContainer1.Panel1.Controls.Add(this.btnVeresiyeAl);
-            this.splitContainer1.Panel1.Controls.Add(this.btnVeresiyeVer);
             // 
             // splitContainer1.Panel2
             // 
@@ -434,18 +436,18 @@
             this.lblVeresiyeAl.AutoSize = true;
             this.lblVeresiyeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblVeresiyeAl.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblVeresiyeAl.Location = new System.Drawing.Point(520, 117);
+            this.lblVeresiyeAl.Location = new System.Drawing.Point(490, 145);
             this.lblVeresiyeAl.Name = "lblVeresiyeAl";
-            this.lblVeresiyeAl.Size = new System.Drawing.Size(117, 24);
+            this.lblVeresiyeAl.Size = new System.Drawing.Size(104, 24);
             this.lblVeresiyeAl.TabIndex = 129;
-            this.lblVeresiyeAl.Text = "Veresiye Al";
+            this.lblVeresiyeAl.Text = "Ödeme Al";
             // 
             // lblVeresiyeVer
             // 
             this.lblVeresiyeVer.AutoSize = true;
             this.lblVeresiyeVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblVeresiyeVer.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblVeresiyeVer.Location = new System.Drawing.Point(520, 20);
+            this.lblVeresiyeVer.Location = new System.Drawing.Point(463, 42);
             this.lblVeresiyeVer.Name = "lblVeresiyeVer";
             this.lblVeresiyeVer.Size = new System.Drawing.Size(131, 24);
             this.lblVeresiyeVer.TabIndex = 128;
@@ -475,10 +477,10 @@
             this.btnVeresiyeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnVeresiyeAl.ForeColor = System.Drawing.Color.White;
             this.btnVeresiyeAl.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
-            this.btnVeresiyeAl.Location = new System.Drawing.Point(524, 152);
+            this.btnVeresiyeAl.Location = new System.Drawing.Point(612, 120);
             this.btnVeresiyeAl.Margin = new System.Windows.Forms.Padding(1);
             this.btnVeresiyeAl.Name = "btnVeresiyeAl";
-            this.btnVeresiyeAl.Size = new System.Drawing.Size(100, 50);
+            this.btnVeresiyeAl.Size = new System.Drawing.Size(100, 70);
             this.btnVeresiyeAl.TabIndex = 109;
             this.btnVeresiyeAl.UseVisualStyleBackColor = false;
             this.btnVeresiyeAl.Click += new System.EventHandler(this.btnVeresiyeAl_Click);
@@ -491,10 +493,10 @@
             this.btnVeresiyeVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnVeresiyeVer.ForeColor = System.Drawing.Color.White;
             this.btnVeresiyeVer.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
-            this.btnVeresiyeVer.Location = new System.Drawing.Point(524, 58);
+            this.btnVeresiyeVer.Location = new System.Drawing.Point(612, 20);
             this.btnVeresiyeVer.Margin = new System.Windows.Forms.Padding(1);
             this.btnVeresiyeVer.Name = "btnVeresiyeVer";
-            this.btnVeresiyeVer.Size = new System.Drawing.Size(100, 50);
+            this.btnVeresiyeVer.Size = new System.Drawing.Size(100, 70);
             this.btnVeresiyeVer.TabIndex = 108;
             this.btnVeresiyeVer.UseVisualStyleBackColor = false;
             this.btnVeresiyeVer.Click += new System.EventHandler(this.btnVeresiyeVer_Click);
@@ -509,13 +511,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veresiye Rapor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlVT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatVT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopOdVT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopVerVT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).EndInit();
             this.pnlIstatistik.ResumeLayout(false);
             this.pnlIstatistik.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopSatV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTopAlV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopVerV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTopOdV)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -530,7 +532,7 @@
         private System.Windows.Forms.DateTimePicker dtpBitisTarihi;
         private System.Windows.Forms.Label lblBitisTarihi;
         private System.Windows.Forms.Button btnPdf;
-        private System.Windows.Forms.NumericUpDown nudTopAlVT;
+        private System.Windows.Forms.NumericUpDown nudTopOdVT;
         private System.Windows.Forms.Label lblTopSatVTutar;
         private System.Windows.Forms.Label lblBaslangicTarihi;
         private System.Windows.Forms.DateTimePicker dtpBaslangicTarihi;
@@ -544,16 +546,16 @@
         public System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.Label lblRaporlamaTuru;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.NumericUpDown nudTopSatVT;
+        private System.Windows.Forms.NumericUpDown nudTopVerVT;
         private System.Windows.Forms.DataGridView gridSonucListesi;
         private System.Windows.Forms.Panel pnlIstatistik;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label lblVeresiyeAl;
         private System.Windows.Forms.Label lblVeresiyeVer;
-        private System.Windows.Forms.NumericUpDown nudTopSatV;
+        private System.Windows.Forms.NumericUpDown nudTopVerV;
         private System.Windows.Forms.Label lblTopSatV;
-        private System.Windows.Forms.NumericUpDown nudTopAlV;
+        private System.Windows.Forms.NumericUpDown nudTopOdV;
         private System.Windows.Forms.Label lblUyari;
         private System.Windows.Forms.Label lblTopAlV;
         private System.Windows.Forms.Label lblTopAlVTutar;
