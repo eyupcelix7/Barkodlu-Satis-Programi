@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridUrunListesi = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtKullanici = new System.Windows.Forms.TextBox();
@@ -49,11 +51,14 @@
             this.txtSatis = new System.Windows.Forms.TextBox();
             this.txtOdeme = new System.Windows.Forms.TextBox();
             this.lblDetaylar = new System.Windows.Forms.Label();
+            this.gridUrunListesi2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTutar)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi2)).BeginInit();
             this.SuspendLayout();
             // 
             // gridUrunListesi
@@ -98,6 +103,7 @@
             this.gridUrunListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridUrunListesi.Size = new System.Drawing.Size(786, 514);
             this.gridUrunListesi.TabIndex = 3;
+            this.gridUrunListesi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tableCellFormatting);
             // 
             // tabPage2
             // 
@@ -107,7 +113,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(792, 520);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Geçmiş Borçlar";
+            this.tabPage2.Text = "Borçlar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtKullanici
@@ -269,11 +275,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.gridUrunListesi2);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(792, 520);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Geçmiş Ödemeler";
+            this.tabPage3.Text = "Ödemeler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // txtSatis
@@ -306,6 +314,50 @@
             this.lblDetaylar.Text = "(Detaylar)";
             this.lblDetaylar.Visible = false;
             // 
+            // gridUrunListesi2
+            // 
+            this.gridUrunListesi2.AllowUserToAddRows = false;
+            this.gridUrunListesi2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridUrunListesi2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.gridUrunListesi2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridUrunListesi2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridUrunListesi2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridUrunListesi2.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridUrunListesi2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gridUrunListesi2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridUrunListesi2.EnableHeadersVisualStyles = false;
+            this.gridUrunListesi2.GridColor = System.Drawing.Color.White;
+            this.gridUrunListesi2.Location = new System.Drawing.Point(3, 3);
+            this.gridUrunListesi2.Margin = new System.Windows.Forms.Padding(2);
+            this.gridUrunListesi2.Name = "gridUrunListesi2";
+            this.gridUrunListesi2.ReadOnly = true;
+            this.gridUrunListesi2.RowHeadersVisible = false;
+            this.gridUrunListesi2.RowHeadersWidth = 51;
+            this.gridUrunListesi2.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gridUrunListesi2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridUrunListesi2.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.gridUrunListesi2.RowTemplate.Height = 32;
+            this.gridUrunListesi2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridUrunListesi2.Size = new System.Drawing.Size(786, 514);
+            this.gridUrunListesi2.TabIndex = 4;
+            this.gridUrunListesi2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tableCellFormatting);
+            // 
             // FormVeresiyeRaporDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +373,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +400,6 @@
         private System.Windows.Forms.Label lblDetaylar;
         private System.Windows.Forms.TextBox txtOdeme;
         private System.Windows.Forms.TextBox txtSatis;
+        private System.Windows.Forms.DataGridView gridUrunListesi2;
     }
 }

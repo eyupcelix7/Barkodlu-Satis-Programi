@@ -45,22 +45,63 @@ namespace BarkodluMarketProgrami
 
                     txtKullanici.Text = veresiyeOzet.Kullanici;
 
-                    // Tüm İşlem Page
-                    //var urunler = db.Satis.Where(x => x.IslemNo == islemId).Select(x => new
-                    //{
-                    //    x.UrunAd,
-                    //    x.SatisFiyat,
-                    //    x.Miktar,
-                    //    x.Toplam,
-                    //    x.Tarih
-                    //}).ToList();
-                    //gridUrunListesi.DataSource = urunler;
-                    //gridUrunListesi.Columns[0].HeaderText = "Ürün Adı";
-                    //gridUrunListesi.Columns[1].HeaderText = "Satış Fiyatı";
-                    //gridUrunListesi.Columns[1].DefaultCellStyle.Format = "C2";
-                    //gridUrunListesi.Columns[3].HeaderText = "Toplam Fiyat";
-                    //gridUrunListesi.Columns[3].DefaultCellStyle.Format = "C2";
+                    // Page 2 - 3
+                    var borclar = db.Veresiye.Where(x => x.KullaniciId == kulId && x.Odeme == false).Select(x => new
+                    {
+                        x.Id,
+                        x.KullaniciId,
+                        x.IslemNo,
+                        x.Tutar,
+                        x.Tarih,
+                        x.Kullanici
+                    }).OrderByDescending(a => a.Tarih).ToList();
+                    var odemeler = db.Veresiye.Where(x => x.KullaniciId == kulId && x.Odeme == true).Select(x => new
+                    {
+                        x.Id,
+                        x.KullaniciId,
+                        x.IslemNo,
+                        x.Tutar,
+                        x.Tarih,
+                        x.Kullanici
+                    }).OrderByDescending(a => a.Tarih).ToList();
+                    gridUrunListesi.DataSource = borclar;
+                    gridUrunListesi2.DataSource = odemeler;
+                    gridUrunListesi.Columns[0].Visible = false; // ID gizliyoruz
+                    gridUrunListesi.Columns[1].HeaderText = "Ad Soyad";
+                    gridUrunListesi.Columns[2].HeaderText = "Satış Mı?";
+                    gridUrunListesi.Columns[3].HeaderText = "Tutar";
+                    gridUrunListesi.Columns[5].HeaderText = "Kullanıcı";
+                    gridUrunListesi.Columns[3].DefaultCellStyle.Format = "C2";
+                    gridUrunListesi2.Columns[0].Visible = false; // ID gizliyoruz
+                    gridUrunListesi2.Columns[1].HeaderText = "Ad Soyad";
+                    gridUrunListesi2.Columns[2].HeaderText = "Satış Mı?";
+                    gridUrunListesi2.Columns[3].HeaderText = "Tutar";
+                    gridUrunListesi2.Columns[5].HeaderText = "Kullanıcı";
+                    gridUrunListesi2.Columns[3].DefaultCellStyle.Format = "C2";
+                }
+            }
+        }
 
+        private void tableCellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            using (var db = new BarkodEntities())
+            {
+                if (e.ColumnIndex == 1)
+                {
+                    int kulId = Convert.ToInt32(e.Value);
+                    string adSoyad = db.VeresiyeKullanicilar.Where(x => x.Id == kulId).SingleOrDefault().AdSoyad;
+                    e.Value = adSoyad;
+                }
+                else if (e.ColumnIndex == 2)
+                {
+                    if (e.Value != null && e.Value.ToString() != "")
+                    {
+                        e.Value = "Evet";
+                    }
+                    else
+                    {
+                        e.Value = "Hayır";
+                    }
                 }
             }
         }
