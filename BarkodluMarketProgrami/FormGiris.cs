@@ -105,5 +105,13 @@ namespace BarkodluMarketProgrami
             form.Show();
             this.Hide();
         }
+
+        private void btnVeresiyeIslemleri_Click(object sender, EventArgs e)
+        {
+            FormVeresiyeRapor form = new FormVeresiyeRapor();
+            form.lblKullanici.Text = lblKullanici.Text;
+            form.ShowDialog();
+
+        }
     }
 }

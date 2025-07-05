@@ -260,6 +260,7 @@
             this.btnVeresiyeIslemleri.TabIndex = 5;
             this.btnVeresiyeIslemleri.Text = "Veresiye İşlemleri";
             this.btnVeresiyeIslemleri.UseVisualStyleBackColor = false;
+            this.btnVeresiyeIslemleri.Click += new System.EventHandler(this.btnVeresiyeIslemleri_Click);
             // 
             // btnFiyatGuncelle
             // 
