@@ -113,10 +113,10 @@
             this.splitContainer2.Panel1.Controls.Add(this.dtpBitisTarihi);
             this.splitContainer2.Panel1.Controls.Add(this.cmbIslemTuru);
             this.splitContainer2.Panel1.Controls.Add(this.lblBaslangicTarihi);
+            this.splitContainer2.Panel1.Controls.Add(this.lblIslemTuru);
             this.splitContainer2.Panel1.Controls.Add(this.dtpBaslangicTarihi);
             this.splitContainer2.Panel1.Controls.Add(this.lblFiltrelemeTuru);
             this.splitContainer2.Panel1.Controls.Add(this.rdbTumu);
-            this.splitContainer2.Panel1.Controls.Add(this.lblIslemTuru);
             this.splitContainer2.Panel1.Controls.Add(this.cmbUrunGrubu);
             // 
             // splitContainer2.Panel2
@@ -129,6 +129,8 @@
             // cbxTumZamanlar
             // 
             this.cbxTumZamanlar.AutoSize = true;
+            this.cbxTumZamanlar.Checked = true;
+            this.cbxTumZamanlar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxTumZamanlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxTumZamanlar.ForeColor = System.Drawing.Color.Navy;
             this.cbxTumZamanlar.Location = new System.Drawing.Point(14, 465);
@@ -189,7 +191,7 @@
             this.rdbUrunGrubunaGore.AutoSize = true;
             this.rdbUrunGrubunaGore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbUrunGrubunaGore.ForeColor = System.Drawing.Color.Navy;
-            this.rdbUrunGrubunaGore.Location = new System.Drawing.Point(14, 70);
+            this.rdbUrunGrubunaGore.Location = new System.Drawing.Point(14, 151);
             this.rdbUrunGrubunaGore.Margin = new System.Windows.Forms.Padding(0);
             this.rdbUrunGrubunaGore.Name = "rdbUrunGrubunaGore";
             this.rdbUrunGrubunaGore.Size = new System.Drawing.Size(212, 28);
@@ -202,7 +204,7 @@
             // 
             this.lblUrunGrubu.AutoSize = true;
             this.lblUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunGrubu.Location = new System.Drawing.Point(9, 189);
+            this.lblUrunGrubu.Location = new System.Drawing.Point(10, 201);
             this.lblUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
             this.lblUrunGrubu.Name = "lblUrunGrubu";
             this.lblUrunGrubu.Size = new System.Drawing.Size(133, 25);
@@ -212,6 +214,7 @@
             // 
             // dtpBitisTarihi
             // 
+            this.dtpBitisTarihi.Enabled = false;
             this.dtpBitisTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpBitisTarihi.Location = new System.Drawing.Point(14, 416);
             this.dtpBitisTarihi.Margin = new System.Windows.Forms.Padding(0);
@@ -227,7 +230,7 @@
             this.cmbIslemTuru.Items.AddRange(new object[] {
             "Stok Durumu",
             "Stok Giriş İzleme"});
-            this.cmbIslemTuru.Location = new System.Drawing.Point(14, 137);
+            this.cmbIslemTuru.Location = new System.Drawing.Point(10, 48);
             this.cmbIslemTuru.Margin = new System.Windows.Forms.Padding(0);
             this.cmbIslemTuru.Name = "cmbIslemTuru";
             this.cmbIslemTuru.Size = new System.Drawing.Size(226, 28);
@@ -247,6 +250,7 @@
             // 
             // dtpBaslangicTarihi
             // 
+            this.dtpBaslangicTarihi.Enabled = false;
             this.dtpBaslangicTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpBaslangicTarihi.Location = new System.Drawing.Point(14, 330);
             this.dtpBaslangicTarihi.Margin = new System.Windows.Forms.Padding(0);
@@ -258,7 +262,7 @@
             // 
             this.lblFiltrelemeTuru.AutoSize = true;
             this.lblFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFiltrelemeTuru.Location = new System.Drawing.Point(9, 9);
+            this.lblFiltrelemeTuru.Location = new System.Drawing.Point(5, 94);
             this.lblFiltrelemeTuru.Margin = new System.Windows.Forms.Padding(0);
             this.lblFiltrelemeTuru.Name = "lblFiltrelemeTuru";
             this.lblFiltrelemeTuru.Size = new System.Drawing.Size(171, 25);
@@ -272,7 +276,7 @@
             this.rdbTumu.Checked = true;
             this.rdbTumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbTumu.ForeColor = System.Drawing.Color.Navy;
-            this.rdbTumu.Location = new System.Drawing.Point(14, 47);
+            this.rdbTumu.Location = new System.Drawing.Point(14, 128);
             this.rdbTumu.Margin = new System.Windows.Forms.Padding(0);
             this.rdbTumu.Name = "rdbTumu";
             this.rdbTumu.Size = new System.Drawing.Size(82, 28);
@@ -286,7 +290,7 @@
             // 
             this.lblIslemTuru.AutoSize = true;
             this.lblIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIslemTuru.Location = new System.Drawing.Point(9, 109);
+            this.lblIslemTuru.Location = new System.Drawing.Point(5, 20);
             this.lblIslemTuru.Margin = new System.Windows.Forms.Padding(0);
             this.lblIslemTuru.Name = "lblIslemTuru";
             this.lblIslemTuru.Size = new System.Drawing.Size(122, 25);
@@ -299,7 +303,7 @@
             this.cmbUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbUrunGrubu.FormattingEnabled = true;
-            this.cmbUrunGrubu.Location = new System.Drawing.Point(14, 225);
+            this.cmbUrunGrubu.Location = new System.Drawing.Point(15, 237);
             this.cmbUrunGrubu.Margin = new System.Windows.Forms.Padding(0);
             this.cmbUrunGrubu.Name = "cmbUrunGrubu";
             this.cmbUrunGrubu.Size = new System.Drawing.Size(226, 28);
