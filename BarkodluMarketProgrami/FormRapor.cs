@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace BarkodluMarketProgrami
     {
         bool basiliMi = false;
         int basiliRowIndex = 0, hitX = 0, hitY = 0;
+        BarkodEntities db = new BarkodEntities();
+        List<IslemOzet> tumKayitlar = new List<IslemOzet>();
         public FormRapor()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace BarkodluMarketProgrami
         {
             KartKomisyon kartKomisyon = new KartKomisyon();
             nudKartKomisyon.Value = (decimal) kartKomisyon.KartKomisyonHesapla();
+            tumKayitlar = db.IslemOzet.ToList();
         }
         private void btnAra_Click(object sender, EventArgs e)
         {
@@ -99,14 +103,28 @@ namespace BarkodluMarketProgrami
         }
         private void tabloDuzenle()
         {
+            /* 
+             * 0 - Id
+             * 1 - Satış Numarası
+             * 2 - İade
+             * 3 - Ödeme Şekli
+             * 4 - Nakit
+             * 5 - Kart
+             * 6 - Gelir
+             * 7 - Gider
+             * 8 - Alış Fiyat Toplam
+             * 9 - Açıklama
+             * 10 - Tarih
+             * 11 - Kullanıcı
+             */
             gridSonucListesi.Columns[0].Visible = false; // ID gizliyoruz
             gridSonucListesi.Columns[1].HeaderText = "Satış Numarası";
-            gridSonucListesi.Columns[2].HeaderText = "İade Mi";
+            gridSonucListesi.Columns[2].HeaderText = "İşlem";
             gridSonucListesi.Columns[3].HeaderText = "Ödeme Şekli";
             gridSonucListesi.Columns[4].DefaultCellStyle.Format = "C2";
             gridSonucListesi.Columns[5].DefaultCellStyle.Format = "C2";
-            gridSonucListesi.Columns[6].HeaderText = "Gelir Mi";
-            gridSonucListesi.Columns[7].HeaderText = "Gider Mi";
+            gridSonucListesi.Columns[6].Visible = false;
+            gridSonucListesi.Columns[7].Visible = false;
             gridSonucListesi.Columns[8].HeaderText = "Alış Toplam";
             gridSonucListesi.Columns[8].DefaultCellStyle.Format = "C2";
             gridSonucListesi.Columns[9].HeaderText = "Açıklama";
@@ -115,16 +133,29 @@ namespace BarkodluMarketProgrami
         private void gridSonucListesi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 2 || e.ColumnIndex == 6 || e.ColumnIndex == 7) 
-            { 
-                if(e.Value is bool)
+            {
+                int id = (int)gridSonucListesi.Rows[e.RowIndex].Cells[0].Value;
+                var kayit = tumKayitlar.FirstOrDefault(x => x.Id == id);
+                bool iade = (bool)kayit.Iade;
+                bool gelir = (bool)kayit.Gelir;
+                bool gider = (bool)kayit.Gider;
+                if (kayit != null)
                 {
-                    if((bool)e.Value)
+                    if (iade && !gelir && !gider)
                     {
-                        e.Value = "Evet";
+                        e.Value = "İade";
                     }
-                    else
+                    else if (!iade && !gelir && !gider)
                     {
-                        e.Value = "Hayır";
+                        e.Value = "Satış";
+                    }
+                    else if (gelir && !iade && !gider)
+                    {
+                        e.Value = "Gelir";
+                    }
+                    else if (gider && !gelir && !iade)
+                    {
+                        e.Value = "Gider";
                     }
                 }
             }
@@ -187,7 +218,6 @@ namespace BarkodluMarketProgrami
         {
             Pdf pdf = new Pdf(gridSonucListesi, "Genel Rapor");
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (basiliMi)
