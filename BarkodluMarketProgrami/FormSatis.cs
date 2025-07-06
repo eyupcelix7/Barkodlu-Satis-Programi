@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,7 +96,9 @@ namespace BarkodluMarketProgrami
                     if (gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString() == barkod)
                     {
                         gridSatisListesi.Rows[i].Cells["urunMiktar"].Value = miktar + Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
+                        double kdvTutari =(double) db.Urun.Where(x => x.Barkod == barkod).SingleOrDefault().KdvTutari;
                         gridSatisListesi.Rows[i].Cells["urunToplam"].Value = Math.Round(Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value), 2);
+                        gridSatisListesi.Rows[i].Cells["urunKdv"].Value = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * kdvTutari;
                         eklendiMi = true;
                     }
                 }
@@ -151,6 +154,9 @@ namespace BarkodluMarketProgrami
                     gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value = Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunMiktar"].Value) - 1; // Ürün miktarınız 1 azaltıyoruz
                     // Ürün miktarını azalttığımız zaman ürün toplamındaki fiyatın değişikliği için her 1 eksilmede ürünün genel toplamı ile fiyatı çıkarıyoruz
                     gridSatisListesi.CurrentRow.Cells["urunToplam"].Value = Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunToplam"].Value) - Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunFiyat"].Value);
+                    string barkod = gridSatisListesi.CurrentRow.Cells["urunBarkod"].Value.ToString();
+                    double kdvTutari = (double)db.Urun.Where(x => x.Barkod == barkod).SingleOrDefault().KdvTutari;
+                    gridSatisListesi.CurrentRow.Cells["urunKdv"].Value = Convert.ToDouble(gridSatisListesi.CurrentRow.Cells["urunKdv"].Value) - kdvTutari;
                     // DataGridView'den seçimi temizliyoruz
                     gridSatisListesi.ClearSelection();
                 }
@@ -475,7 +481,7 @@ namespace BarkodluMarketProgrami
                     satis.SatisFiyat = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value.ToString().Replace("₺", "").Trim());
                     satis.Miktar = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
                     satis.Toplam = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunToplam"].Value.ToString().Replace("₺", "").Trim());
-                    satis.KdvTutari = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunKdv"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
+                    satis.KdvTutari = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunKdv"].Value.ToString().Replace("₺", "").Trim());
                     satis.Tarih = DateTime.Now;
                     satis.Kullanici = lblKullanici.Text;
                     satis.Iade = iade;
@@ -538,7 +544,10 @@ namespace BarkodluMarketProgrami
                 db.IslemOzet.Add(islemOzet);
                 db.Islem.First().IslemNo = db.Islem.First().IslemNo + 1;
                 db.SaveChanges();
-                Yazdir yazdir = new Yazdir(islemNo);
+                if ((bool)db.Ayarlar.SingleOrDefault().Yazici)
+                {
+                    Yazdir yazdir = new Yazdir(islemNo);
+                }
                 Temizle();
             }
         }
