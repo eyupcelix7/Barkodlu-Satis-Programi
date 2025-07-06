@@ -147,7 +147,7 @@ namespace BarkodluMarketProgrami
             nudKdvOrani.Value = 1;
             txtBarkod.Focus();
         }
-        private void sonUrunler(int max = 20)
+        private void sonUrunler(int max = 50)
         {
             var urunler = db.Urun.OrderByDescending(a => a.Tarih).Take(max).ToList();
             int i = 0;
@@ -324,7 +324,6 @@ namespace BarkodluMarketProgrami
                 MessageBox.Show("Lütfen işlem türünü seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             if (gridSonucListesi.Rows.Count != 0)

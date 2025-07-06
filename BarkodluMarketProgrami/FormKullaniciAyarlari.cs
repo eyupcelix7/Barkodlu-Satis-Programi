@@ -237,6 +237,5 @@ namespace BarkodluMarketProgrami
                 tabloDoldur();
             }
         }
-
     }
 }

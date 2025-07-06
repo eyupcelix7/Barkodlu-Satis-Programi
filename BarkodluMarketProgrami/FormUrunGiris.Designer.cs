@@ -76,6 +76,8 @@
             this.txtUrunAdiAranan = new System.Windows.Forms.TextBox();
             this.lblUrunAdiAranan = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,8 +91,6 @@
             this.urunKullanici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunDuzenle = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -636,7 +636,7 @@
             this.cbxSonUrunleriGoster.Name = "cbxSonUrunleriGoster";
             this.cbxSonUrunleriGoster.Size = new System.Drawing.Size(336, 22);
             this.cbxSonUrunleriGoster.TabIndex = 22;
-            this.cbxSonUrunleriGoster.Text = "SON EKLENEN ÜRÜNLERİ LİSTELE (20)";
+            this.cbxSonUrunleriGoster.Text = "SON EKLENEN ÜRÜNLERİ LİSTELE (50)";
             this.cbxSonUrunleriGoster.UseVisualStyleBackColor = true;
             this.cbxSonUrunleriGoster.CheckedChanged += new System.EventHandler(this.cbxSonUrunleriGoster_CheckedChanged);
             // 
@@ -761,6 +761,24 @@
             this.gridSonucListesi.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellContentDoubleClick);
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellContentClick);
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Düzenle";
+            this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 130;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.FillWeight = 71.06599F;
+            this.dataGridViewImageColumn2.HeaderText = "Sil";
+            this.dataGridViewImageColumn2.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 92;
+            // 
             // urunBarkod
             // 
             this.urunBarkod.FillWeight = 104.8223F;
@@ -831,6 +849,7 @@
             // urunKdvTutari
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "C2";
             this.urunKdvTutari.DefaultCellStyle = dataGridViewCellStyle5;
             this.urunKdvTutari.HeaderText = "Kdv Tutarı";
             this.urunKdvTutari.MinimumWidth = 6;
@@ -866,24 +885,6 @@
             this.urunSil.MinimumWidth = 6;
             this.urunSil.Name = "urunSil";
             this.urunSil.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Düzenle";
-            this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 130;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.FillWeight = 71.06599F;
-            this.dataGridViewImageColumn2.HeaderText = "Sil";
-            this.dataGridViewImageColumn2.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 92;
             // 
             // FormUrunGiris
             // 
@@ -958,6 +959,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Label lblKasiyer;
+        public System.Windows.Forms.Label lblKullanici;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnHesapMakinesi;
+        private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunBarkod;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunAciklama;
@@ -971,10 +977,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn urunKullanici;
         private System.Windows.Forms.DataGridViewImageColumn urunDuzenle;
         private System.Windows.Forms.DataGridViewImageColumn urunSil;
-        private System.Windows.Forms.Label lblKasiyer;
-        public System.Windows.Forms.Label lblKullanici;
-        private System.Windows.Forms.Button btnExcel;
-        private System.Windows.Forms.Button btnHesapMakinesi;
-        private System.Windows.Forms.Button btnPdf;
     }
 }
