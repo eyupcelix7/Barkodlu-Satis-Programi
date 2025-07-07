@@ -79,6 +79,10 @@ namespace BarkodluMarketProgrami
                 double iadeKdvToplam = Convert.ToDouble(satisOzet.Where(x => x.Iade == true).Sum(x => x.KdvTutari));
                 nudKdvToplam.Value = (decimal)Convert.ToDouble(satisKdvToplam - iadeKdvToplam);
             }
+            else 
+            { 
+                nudKdvToplam.Value = 0; 
+            }
             nudSatisToplamNakit.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Nakit));
             nudSatisToplamKart.Value = (decimal)Convert.ToDouble(islemOzet.Where(x => x.Gelir == false && x.Gider == false && x.Iade == false).Sum(x => x.Kart));
             nudSatislarToplam.Value = Convert.ToDecimal(nudSatisToplamNakit.Value) + Convert.ToDecimal(nudSatisToplamKart.Value);

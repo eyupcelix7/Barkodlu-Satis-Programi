@@ -63,7 +63,14 @@ namespace BarkodluMarketProgrami
                 double genelToplam = 0;
                 foreach (var satisBilgi in satisListe)
                 {
-                    e.Graphics.DrawString(satisBilgi.UrunAd, bilgiFont, Brushes.Black, new Point(5, i));
+                    if(satisBilgi.UrunAd.Length > 19)
+                    {
+                        e.Graphics.DrawString(satisBilgi.UrunAd.Substring(0, 19) + "...", bilgiFont, Brushes.Black, new Point(5, i));
+                    }
+                    else
+                    {
+                        e.Graphics.DrawString(satisBilgi.UrunAd, bilgiFont, Brushes.Black, new Point(5, i));
+                    }
                     e.Graphics.DrawString(satisBilgi.Miktar.ToString(), bilgiFont, Brushes.Black, new Point(90, i));
                     e.Graphics.DrawString(Convert.ToDouble(satisBilgi.SatisFiyat).ToString("C2"), bilgiFont, Brushes.Black, new Point(130, i));
                     e.Graphics.DrawString(Convert.ToDouble(satisBilgi.Toplam).ToString("C2"), bilgiFont, Brushes.Black, new Point(180, i));

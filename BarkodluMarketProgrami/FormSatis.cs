@@ -89,6 +89,7 @@ namespace BarkodluMarketProgrami
         {
             int satirSayisi = gridSatisListesi.Rows.Count;
             bool eklendiMi = false;
+            double kdvTutari = (double)db.Urun.Where(x => x.Barkod == barkod).SingleOrDefault().KdvTutari;
             if (satirSayisi > 0)
             {
                 for (int i = 0; i < satirSayisi; i++)
@@ -96,7 +97,6 @@ namespace BarkodluMarketProgrami
                     if (gridSatisListesi.Rows[i].Cells["urunBarkod"].Value.ToString() == barkod)
                     {
                         gridSatisListesi.Rows[i].Cells["urunMiktar"].Value = miktar + Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value);
-                        double kdvTutari =(double) db.Urun.Where(x => x.Barkod == barkod).SingleOrDefault().KdvTutari;
                         gridSatisListesi.Rows[i].Cells["urunToplam"].Value = Math.Round(Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunFiyat"].Value), 2);
                         gridSatisListesi.Rows[i].Cells["urunKdv"].Value = Convert.ToDouble(gridSatisListesi.Rows[i].Cells["urunMiktar"].Value) * kdvTutari;
                         eklendiMi = true;
@@ -113,9 +113,10 @@ namespace BarkodluMarketProgrami
                 gridSatisListesi.Rows[satirSayisi].Cells["urunFiyat"].Value = urun.SatisFiyat;
                 gridSatisListesi.Rows[satirSayisi].Cells["urunMiktar"].Value = miktar;
                 gridSatisListesi.Rows[satirSayisi].Cells["urunToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
-                gridSatisListesi.Rows[satirSayisi].Cells["urunKdv"].Value = urun.KdvTutari;
+                gridSatisListesi.Rows[satirSayisi].Cells["urunKdv"].Value = Convert.ToDouble(gridSatisListesi.Rows[satirSayisi].Cells["urunMiktar"].Value) * kdvTutari;
                 gridSatisListesi.Rows[satirSayisi].Cells["urunAlisFiyat"].Value = urun.AlisFiyat;
             }
+            nudMiktar.Value = 1;
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -123,9 +124,54 @@ namespace BarkodluMarketProgrami
             {
                 nudMiktar.Value += 1;
                 return true;
-            }
+            } // MİKTAR
+            else if(keyData == Keys.F6)
+            {
+                txtBarkod.Focus();
+            } // BARKOD
+            else if(keyData == Keys.F12)
+            {
+                satisYap("Nakit");
+            } // NAKİT
+            else if(keyData == Keys.F11)
+            {
+                satisYap("Kart");
+            } // KART
+            else if(keyData == Keys.F10)
+            {
+                FormNakitKart nakitKartForm = new FormNakitKart(genelToplam(), this);
+                nakitKartForm.ShowDialog();
+            } // KART - NAKİT
+            else if( keyData == Keys.F9)
+            {
+                FormVeresiyeAlVer veresiyeForm = new FormVeresiyeAlVer(genelToplam(), this);
+                veresiyeForm.veresiyeTur = "ver";
+                veresiyeForm.ShowDialog();
+            } // VERESIYE
+            else if(keyData == Keys.F1)
+            {
+                if (!cbxSatis.Checked)
+                {
+                    cbxSatis.Checked = true;
+                    cbxSatis.Text = "İADE YAPILIYOR";
+                }
+                else
+                {
+                    cbxSatis.Checked = false;
+                    cbxSatis.Text = "SATIŞ YAPILIYOR";
+                }
+                satisYap("Nakit");
+            } // IADE
+            else if (keyData == Keys.F2)
+            {
+                var sonIslemNo = db.Islem.SingleOrDefault().IslemNo - 1;
+                Yazdir yazdir = new Yazdir(sonIslemNo);
+            } // FIS YAZDIR
+            else if (keyData == Keys.F3)
+            {
+                Temizle();
+            } // TEMIZLE
             return base.ProcessCmdKey(ref msg, keyData);
-
         }
         private double genelToplam()
         {
