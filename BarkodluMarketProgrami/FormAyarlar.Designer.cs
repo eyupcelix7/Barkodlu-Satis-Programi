@@ -40,14 +40,12 @@
             this.lblTeraziOnEk = new System.Windows.Forms.Label();
             this.nudKartKomisyon = new System.Windows.Forms.NumericUpDown();
             this.lblAdres = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
             this.lblFirmaAd = new System.Windows.Forms.Label();
             this.lblKartKomisyon = new System.Windows.Forms.Label();
             this.txtAdres = new System.Windows.Forms.TextBox();
             this.cbxYazici = new System.Windows.Forms.CheckBox();
             this.lblTelNo = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnHFiyatKaydet = new System.Windows.Forms.Button();
             this.txtHF5 = new System.Windows.Forms.TextBox();
             this.lblHFiyat5 = new System.Windows.Forms.Label();
             this.txtHF4 = new System.Windows.Forms.TextBox();
@@ -63,13 +61,15 @@
             this.txtHK4 = new System.Windows.Forms.TextBox();
             this.txtHK3 = new System.Windows.Forms.TextBox();
             this.txtHK2 = new System.Windows.Forms.TextBox();
-            this.btnHKKaydet = new System.Windows.Forms.Button();
             this.lblHK5 = new System.Windows.Forms.Label();
             this.lblHK4 = new System.Windows.Forms.Label();
             this.lblHK3 = new System.Windows.Forms.Label();
             this.lblHK2 = new System.Windows.Forms.Label();
             this.txtHK1 = new System.Windows.Forms.TextBox();
             this.lblHK1 = new System.Windows.Forms.Label();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnHFiyatKaydet = new System.Windows.Forms.Button();
+            this.btnHKKaydet = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudKartKomisyon)).BeginInit();
@@ -86,7 +86,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(491, 537);
+            this.tabControl1.Size = new System.Drawing.Size(391, 416);
             this.tabControl1.TabIndex = 97;
             // 
             // tabPage1
@@ -110,7 +110,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(483, 511);
+            this.tabPage1.Size = new System.Drawing.Size(383, 390);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Genel Ayarlar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -225,26 +225,6 @@
             this.lblAdres.TabIndex = 87;
             this.lblAdres.Text = "Adres";
             // 
-            // btnKaydet
-            // 
-            this.btnKaydet.AutoSize = true;
-            this.btnKaydet.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnKaydet.Location = new System.Drawing.Point(10, 326);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnKaydet.Size = new System.Drawing.Size(113, 44);
-            this.btnKaydet.TabIndex = 91;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKaydet.UseVisualStyleBackColor = false;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            // 
             // lblFirmaAd
             // 
             this.lblFirmaAd.AutoSize = true;
@@ -320,30 +300,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(483, 511);
+            this.tabPage2.Size = new System.Drawing.Size(383, 390);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hızlı Fiyatlar";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnHFiyatKaydet
-            // 
-            this.btnHFiyatKaydet.AutoSize = true;
-            this.btnHFiyatKaydet.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnHFiyatKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnHFiyatKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHFiyatKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHFiyatKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnHFiyatKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnHFiyatKaydet.Location = new System.Drawing.Point(8, 218);
-            this.btnHFiyatKaydet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnHFiyatKaydet.Name = "btnHFiyatKaydet";
-            this.btnHFiyatKaydet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnHFiyatKaydet.Size = new System.Drawing.Size(113, 44);
-            this.btnHFiyatKaydet.TabIndex = 113;
-            this.btnHFiyatKaydet.Text = "Kaydet";
-            this.btnHFiyatKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHFiyatKaydet.UseVisualStyleBackColor = false;
-            this.btnHFiyatKaydet.Click += new System.EventHandler(this.btnHFiyatKaydet_Click);
             // 
             // txtHF5
             // 
@@ -456,16 +416,16 @@
             this.tabPage3.Controls.Add(this.txtHK4);
             this.tabPage3.Controls.Add(this.txtHK3);
             this.tabPage3.Controls.Add(this.txtHK2);
-            this.tabPage3.Controls.Add(this.btnHKKaydet);
             this.tabPage3.Controls.Add(this.lblHK5);
             this.tabPage3.Controls.Add(this.lblHK4);
             this.tabPage3.Controls.Add(this.lblHK3);
             this.tabPage3.Controls.Add(this.lblHK2);
             this.tabPage3.Controls.Add(this.txtHK1);
             this.tabPage3.Controls.Add(this.lblHK1);
+            this.tabPage3.Controls.Add(this.btnHKKaydet);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(483, 511);
+            this.tabPage3.Size = new System.Drawing.Size(383, 390);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hızlı Kategoriler";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -505,26 +465,6 @@
             this.txtHK2.Name = "txtHK2";
             this.txtHK2.Size = new System.Drawing.Size(148, 23);
             this.txtHK2.TabIndex = 125;
-            // 
-            // btnHKKaydet
-            // 
-            this.btnHKKaydet.AutoSize = true;
-            this.btnHKKaydet.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnHKKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnHKKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHKKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHKKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnHKKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnHKKaydet.Location = new System.Drawing.Point(8, 218);
-            this.btnHKKaydet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnHKKaydet.Name = "btnHKKaydet";
-            this.btnHKKaydet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnHKKaydet.Size = new System.Drawing.Size(113, 44);
-            this.btnHKKaydet.TabIndex = 124;
-            this.btnHKKaydet.Text = "Kaydet";
-            this.btnHKKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHKKaydet.UseVisualStyleBackColor = false;
-            this.btnHKKaydet.Click += new System.EventHandler(this.btnHKKaydet_Click);
             // 
             // lblHK5
             // 
@@ -595,12 +535,72 @@
             this.lblHK1.TabIndex = 114;
             this.lblHK1.Text = "Hızlı Kategori 1";
             // 
+            // btnKaydet
+            // 
+            this.btnKaydet.AutoSize = true;
+            this.btnKaydet.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
+            this.btnKaydet.Location = new System.Drawing.Point(10, 326);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
+            this.btnKaydet.Size = new System.Drawing.Size(113, 44);
+            this.btnKaydet.TabIndex = 91;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // btnHFiyatKaydet
+            // 
+            this.btnHFiyatKaydet.AutoSize = true;
+            this.btnHFiyatKaydet.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHFiyatKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnHFiyatKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHFiyatKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHFiyatKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnHFiyatKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
+            this.btnHFiyatKaydet.Location = new System.Drawing.Point(8, 218);
+            this.btnHFiyatKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHFiyatKaydet.Name = "btnHFiyatKaydet";
+            this.btnHFiyatKaydet.Padding = new System.Windows.Forms.Padding(2);
+            this.btnHFiyatKaydet.Size = new System.Drawing.Size(113, 44);
+            this.btnHFiyatKaydet.TabIndex = 113;
+            this.btnHFiyatKaydet.Text = "Kaydet";
+            this.btnHFiyatKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHFiyatKaydet.UseVisualStyleBackColor = false;
+            this.btnHFiyatKaydet.Click += new System.EventHandler(this.btnHFiyatKaydet_Click);
+            // 
+            // btnHKKaydet
+            // 
+            this.btnHKKaydet.AutoSize = true;
+            this.btnHKKaydet.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHKKaydet.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnHKKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHKKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHKKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnHKKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
+            this.btnHKKaydet.Location = new System.Drawing.Point(8, 218);
+            this.btnHKKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnHKKaydet.Name = "btnHKKaydet";
+            this.btnHKKaydet.Padding = new System.Windows.Forms.Padding(2);
+            this.btnHKKaydet.Size = new System.Drawing.Size(113, 44);
+            this.btnHKKaydet.TabIndex = 124;
+            this.btnHKKaydet.Text = "Kaydet";
+            this.btnHKKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHKKaydet.UseVisualStyleBackColor = false;
+            this.btnHKKaydet.Click += new System.EventHandler(this.btnHKKaydet_Click);
+            // 
             // FormAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(491, 537);
+            this.ClientSize = new System.Drawing.Size(391, 416);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormAyarlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

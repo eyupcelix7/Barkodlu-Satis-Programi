@@ -146,12 +146,14 @@
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ForeColor = System.Drawing.Color.White;
+            this.btnSil.Image = global::BarkodluMarketProgrami.Properties.Resources.trash;
             this.btnSil.Location = new System.Drawing.Point(246, 1);
             this.btnSil.Margin = new System.Windows.Forms.Padding(1);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(244, 98);
             this.btnSil.TabIndex = 1;
             this.btnSil.Text = "Sil";
+            this.btnSil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
@@ -161,12 +163,14 @@
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
             this.btnEkle.Location = new System.Drawing.Point(1, 1);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(243, 98);
             this.btnEkle.TabIndex = 0;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 

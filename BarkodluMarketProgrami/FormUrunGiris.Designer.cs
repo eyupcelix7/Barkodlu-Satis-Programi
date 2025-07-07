@@ -76,8 +76,6 @@
             this.txtUrunAdiAranan = new System.Windows.Forms.TextBox();
             this.lblUrunAdiAranan = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +89,8 @@
             this.urunKullanici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunDuzenle = new System.Windows.Forms.DataGridViewImageColumn();
             this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -305,14 +305,15 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
             this.btnKaydet.Location = new System.Drawing.Point(1017, 136);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Padding = new System.Windows.Forms.Padding(2);
             this.btnKaydet.Size = new System.Drawing.Size(121, 90);
             this.btnKaydet.TabIndex = 26;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKaydet.Text = " Kaydet";
+            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -324,6 +325,7 @@
             this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTemizle.ForeColor = System.Drawing.Color.White;
+            this.btnTemizle.Image = global::BarkodluMarketProgrami.Properties.Resources.trash;
             this.btnTemizle.Location = new System.Drawing.Point(1017, 28);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
             this.btnTemizle.Name = "btnTemizle";
@@ -331,7 +333,7 @@
             this.btnTemizle.Size = new System.Drawing.Size(121, 90);
             this.btnTemizle.TabIndex = 25;
             this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnTemizle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
@@ -761,24 +763,6 @@
             this.gridSonucListesi.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellContentDoubleClick);
             this.gridSonucListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSonucListesi_CellContentClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Düzenle";
-            this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 130;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.FillWeight = 71.06599F;
-            this.dataGridViewImageColumn2.HeaderText = "Sil";
-            this.dataGridViewImageColumn2.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 92;
-            // 
             // urunBarkod
             // 
             this.urunBarkod.FillWeight = 104.8223F;
@@ -885,6 +869,24 @@
             this.urunSil.MinimumWidth = 6;
             this.urunSil.Name = "urunSil";
             this.urunSil.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Düzenle";
+            this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 130;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.FillWeight = 71.06599F;
+            this.dataGridViewImageColumn2.HeaderText = "Sil";
+            this.dataGridViewImageColumn2.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 92;
             // 
             // FormUrunGiris
             // 

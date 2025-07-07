@@ -85,12 +85,14 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKaydet.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
             this.btnKaydet.Location = new System.Drawing.Point(16, 405);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(119, 46);
+            this.btnKaydet.Size = new System.Drawing.Size(137, 46);
             this.btnKaydet.TabIndex = 91;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 

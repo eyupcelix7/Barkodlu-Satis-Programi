@@ -139,6 +139,7 @@
             // 
             // nudYeniAlisFiyat
             // 
+            this.nudYeniAlisFiyat.DecimalPlaces = 2;
             this.nudYeniAlisFiyat.Location = new System.Drawing.Point(161, 260);
             this.nudYeniAlisFiyat.Maximum = new decimal(new int[] {
             999999,
@@ -164,6 +165,7 @@
             // 
             // nudGuncelAlisFiyat
             // 
+            this.nudGuncelAlisFiyat.DecimalPlaces = 2;
             this.nudGuncelAlisFiyat.Location = new System.Drawing.Point(161, 163);
             this.nudGuncelAlisFiyat.Maximum = new decimal(new int[] {
             999999,
@@ -196,7 +198,7 @@
             this.btnUrunuGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunuGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunuGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunuGuncelle.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
+            this.btnUrunuGuncelle.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
             this.btnUrunuGuncelle.Location = new System.Drawing.Point(14, 314);
             this.btnUrunuGuncelle.Margin = new System.Windows.Forms.Padding(1);
             this.btnUrunuGuncelle.Name = "btnUrunuGuncelle";
@@ -210,6 +212,7 @@
             // 
             // nudGuncelSatisFiyat
             // 
+            this.nudGuncelSatisFiyat.DecimalPlaces = 2;
             this.nudGuncelSatisFiyat.Location = new System.Drawing.Point(161, 124);
             this.nudGuncelSatisFiyat.Maximum = new decimal(new int[] {
             999999,
@@ -223,6 +226,7 @@
             // 
             // nudYeniSatisFiyat
             // 
+            this.nudYeniSatisFiyat.DecimalPlaces = 2;
             this.nudYeniSatisFiyat.Location = new System.Drawing.Point(161, 219);
             this.nudYeniSatisFiyat.Maximum = new decimal(new int[] {
             999999,

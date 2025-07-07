@@ -427,6 +427,28 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\man.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\cash.png" />
+    <None Include="Resources\enter.png" />
+    <None Include="Resources\diskette.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\clerk.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\money-management.png" />
+    <None Include="Resources\money %281%29.png" />
+    <None Include="Resources\cleaning %281%29.png" />
+    <None Include="Resources\milk.png" />
+    <None Include="Resources\in-stock.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\price-tag %281%29.png" />
+    <None Include="Resources\price-tag.png" />
+    <None Include="Resources\barcode-scanner.png" />
+    <None Include="Resources\barcode-product %282%29.png" />
+    <None Include="Resources\barcode-product %281%29.png" />
+    <None Include="Resources\barcode-product.png" />
+    <None Include="Resources\barkod.png" />
+    <None Include="Resources\png-transparent-international-standard-book-number-barcode-scanners-qr-code-publishing-book-white-furniture-text.png" />
     <None Include="Resources\minus.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\pdf.png" />

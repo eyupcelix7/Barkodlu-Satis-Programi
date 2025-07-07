@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKasiyer = new System.Windows.Forms.Label();
-            this.btnBeklet2 = new System.Windows.Forms.Button();
-            this.btnBeklet = new System.Windows.Forms.Button();
             this.lblKullanici = new System.Windows.Forms.Label();
-            this.cbxSatis = new System.Windows.Forms.CheckBox();
             this.txtParaUstu = new System.Windows.Forms.TextBox();
             this.txtOdenen = new System.Windows.Forms.TextBox();
             this.lblParaUstu = new System.Windows.Forms.Label();
@@ -61,12 +58,7 @@
             this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVeresiye = new System.Windows.Forms.Button();
-            this.btnKartNakit = new System.Windows.Forms.Button();
-            this.btnKart = new System.Windows.Forms.Button();
-            this.btnNakit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtToplam = new System.Windows.Forms.TextBox();
             this.lblToplam = new System.Windows.Forms.Label();
@@ -135,6 +127,14 @@
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnBeklet2 = new System.Windows.Forms.Button();
+            this.btnBeklet = new System.Windows.Forms.Button();
+            this.cbxSatis = new System.Windows.Forms.CheckBox();
+            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnVeresiye = new System.Windows.Forms.Button();
+            this.btnKartNakit = new System.Windows.Forms.Button();
+            this.btnKart = new System.Windows.Forms.Button();
+            this.btnNakit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -230,48 +230,6 @@
             this.lblKasiyer.TabIndex = 18;
             this.lblKasiyer.Text = "Kasiyer:";
             // 
-            // btnBeklet2
-            // 
-            this.btnBeklet2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBeklet2.BackColor = System.Drawing.Color.Navy;
-            this.btnBeklet2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.btnBeklet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeklet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBeklet2.ForeColor = System.Drawing.Color.White;
-            this.btnBeklet2.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
-            this.btnBeklet2.Location = new System.Drawing.Point(591, 98);
-            this.btnBeklet2.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBeklet2.Name = "btnBeklet2";
-            this.btnBeklet2.Padding = new System.Windows.Forms.Padding(2);
-            this.btnBeklet2.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet2.TabIndex = 17;
-            this.btnBeklet2.Text = "İŞLEM BEKLET";
-            this.btnBeklet2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBeklet2.UseVisualStyleBackColor = false;
-            this.btnBeklet2.Click += new System.EventHandler(this.btnBeklet2_Click);
-            // 
-            // btnBeklet
-            // 
-            this.btnBeklet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBeklet.BackColor = System.Drawing.Color.Navy;
-            this.btnBeklet.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.btnBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBeklet.ForeColor = System.Drawing.Color.White;
-            this.btnBeklet.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
-            this.btnBeklet.Location = new System.Drawing.Point(388, 98);
-            this.btnBeklet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBeklet.Name = "btnBeklet";
-            this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
-            this.btnBeklet.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet.TabIndex = 16;
-            this.btnBeklet.Text = "İŞLEM BEKLET";
-            this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBeklet.UseVisualStyleBackColor = false;
-            this.btnBeklet.Click += new System.EventHandler(this.btnBeklet_Click);
-            // 
             // lblKullanici
             // 
             this.lblKullanici.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -285,27 +243,6 @@
             this.lblKullanici.Size = new System.Drawing.Size(71, 16);
             this.lblKullanici.TabIndex = 14;
             this.lblKullanici.Text = "eyupcelix7";
-            // 
-            // cbxSatis
-            // 
-            this.cbxSatis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxSatis.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSatis.BackColor = System.Drawing.Color.DarkGreen;
-            this.cbxSatis.CausesValidation = false;
-            this.cbxSatis.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cbxSatis.FlatAppearance.CheckedBackColor = System.Drawing.Color.OrangeRed;
-            this.cbxSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbxSatis.ForeColor = System.Drawing.Color.White;
-            this.cbxSatis.Image = global::BarkodluMarketProgrami.Properties.Resources.cart;
-            this.cbxSatis.Location = new System.Drawing.Point(12, 8);
-            this.cbxSatis.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxSatis.Name = "cbxSatis";
-            this.cbxSatis.Size = new System.Drawing.Size(190, 44);
-            this.cbxSatis.TabIndex = 12;
-            this.cbxSatis.Text = "SATIŞ YAPILIYOR";
-            this.cbxSatis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbxSatis.UseVisualStyleBackColor = false;
             // 
             // txtParaUstu
             // 
@@ -376,7 +313,7 @@
             0});
             this.nudMiktar.Name = "nudMiktar";
             this.nudMiktar.Size = new System.Drawing.Size(66, 23);
-            this.nudMiktar.TabIndex = 7;
+            this.nudMiktar.TabIndex = 1;
             this.nudMiktar.Value = new decimal(new int[] {
             1,
             0,
@@ -424,15 +361,15 @@
             this.gridSatisListesi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gridSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSatisListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSatisListesi.ColumnHeadersHeight = 29;
             this.gridSatisListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.urunBarkod,
@@ -445,15 +382,15 @@
             this.urunGrup,
             this.urunAlisFiyat,
             this.urunSil});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSatisListesi.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSatisListesi.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridSatisListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSatisListesi.EnableHeadersVisualStyles = false;
             this.gridSatisListesi.GridColor = System.Drawing.Color.White;
@@ -495,8 +432,8 @@
             // 
             // urunMiktar
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle2;
             this.urunMiktar.HeaderText = "Miktar";
             this.urunMiktar.MinimumWidth = 6;
             this.urunMiktar.Name = "urunMiktar";
@@ -504,9 +441,9 @@
             // 
             // urunFiyat
             // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle33.Format = "C2";
-            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle3;
             this.urunFiyat.HeaderText = "Fiyat";
             this.urunFiyat.MinimumWidth = 6;
             this.urunFiyat.Name = "urunFiyat";
@@ -514,9 +451,9 @@
             // 
             // urunToplam
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle34.Format = "C2";
-            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle4;
             this.urunToplam.HeaderText = "Toplam";
             this.urunToplam.MinimumWidth = 6;
             this.urunToplam.Name = "urunToplam";
@@ -524,9 +461,9 @@
             // 
             // urunKdv
             // 
-            dataGridViewCellStyle35.Format = "C2";
-            dataGridViewCellStyle35.NullValue = null;
-            this.urunKdv.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.urunKdv.DefaultCellStyle = dataGridViewCellStyle5;
             this.urunKdv.HeaderText = "Kdv Tutarı";
             this.urunKdv.MinimumWidth = 6;
             this.urunKdv.Name = "urunKdv";
@@ -547,14 +484,6 @@
             this.urunAlisFiyat.Name = "urunAlisFiyat";
             this.urunAlisFiyat.ReadOnly = true;
             this.urunAlisFiyat.Visible = false;
-            // 
-            // urunSil
-            // 
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -577,82 +506,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(791, 224);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // btnVeresiye
-            // 
-            this.btnVeresiye.BackColor = System.Drawing.Color.Navy;
-            this.btnVeresiye.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVeresiye.FlatAppearance.BorderSize = 0;
-            this.btnVeresiye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVeresiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnVeresiye.ForeColor = System.Drawing.Color.White;
-            this.btnVeresiye.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
-            this.btnVeresiye.Location = new System.Drawing.Point(476, 2);
-            this.btnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
-            this.btnVeresiye.Name = "btnVeresiye";
-            this.btnVeresiye.Size = new System.Drawing.Size(154, 221);
-            this.btnVeresiye.TabIndex = 4;
-            this.btnVeresiye.Text = "VERESİYE\r\n(F9)";
-            this.btnVeresiye.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnVeresiye.UseVisualStyleBackColor = false;
-            this.btnVeresiye.Click += new System.EventHandler(this.btnVeresiye_Click);
-            // 
-            // btnKartNakit
-            // 
-            this.btnKartNakit.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKartNakit.FlatAppearance.BorderSize = 0;
-            this.btnKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKartNakit.ForeColor = System.Drawing.Color.White;
-            this.btnKartNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
-            this.btnKartNakit.Location = new System.Drawing.Point(318, 2);
-            this.btnKartNakit.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
-            this.btnKartNakit.Name = "btnKartNakit";
-            this.btnKartNakit.Size = new System.Drawing.Size(156, 221);
-            this.btnKartNakit.TabIndex = 2;
-            this.btnKartNakit.Text = " KART + NAKİT\r\n(F10)";
-            this.btnKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnKartNakit.UseVisualStyleBackColor = false;
-            this.btnKartNakit.Click += new System.EventHandler(this.btnKartNakit_Click);
-            // 
-            // btnKart
-            // 
-            this.btnKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.btnKart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKart.FlatAppearance.BorderSize = 0;
-            this.btnKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKart.ForeColor = System.Drawing.Color.White;
-            this.btnKart.Image = global::BarkodluMarketProgrami.Properties.Resources.credit_card;
-            this.btnKart.Location = new System.Drawing.Point(160, 2);
-            this.btnKart.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
-            this.btnKart.Name = "btnKart";
-            this.btnKart.Size = new System.Drawing.Size(156, 221);
-            this.btnKart.TabIndex = 1;
-            this.btnKart.Text = "KREDİ KARTI \r\n(F11)";
-            this.btnKart.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnKart.UseVisualStyleBackColor = false;
-            this.btnKart.Click += new System.EventHandler(this.btnKart_Click);
-            // 
-            // btnNakit
-            // 
-            this.btnNakit.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNakit.FlatAppearance.BorderSize = 0;
-            this.btnNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnNakit.ForeColor = System.Drawing.Color.White;
-            this.btnNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.money;
-            this.btnNakit.Location = new System.Drawing.Point(1, 2);
-            this.btnNakit.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
-            this.btnNakit.Name = "btnNakit";
-            this.btnNakit.Size = new System.Drawing.Size(157, 221);
-            this.btnNakit.TabIndex = 0;
-            this.btnNakit.Text = "NAKİT\r\n(F12)";
-            this.btnNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnNakit.UseVisualStyleBackColor = false;
-            this.btnNakit.Click += new System.EventHandler(this.btnNakit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -718,7 +571,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel5);
             this.splitContainer2.Size = new System.Drawing.Size(1066, 896);
-            this.splitContainer2.SplitterDistance = 543;
+            this.splitContainer2.SplitterDistance = 544;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -771,7 +624,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 543);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 544);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnHizliKategori5
@@ -870,7 +723,7 @@
             this.btnHizli25.Location = new System.Drawing.Point(853, 443);
             this.btnHizli25.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli25.Name = "btnHizli25";
-            this.btnHizli25.Size = new System.Drawing.Size(212, 99);
+            this.btnHizli25.Size = new System.Drawing.Size(212, 100);
             this.btnHizli25.TabIndex = 24;
             this.btnHizli25.Text = "btnHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
@@ -889,7 +742,7 @@
             this.btnHizli24.Location = new System.Drawing.Point(640, 443);
             this.btnHizli24.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli24.Name = "btnHizli24";
-            this.btnHizli24.Size = new System.Drawing.Size(211, 99);
+            this.btnHizli24.Size = new System.Drawing.Size(211, 100);
             this.btnHizli24.TabIndex = 23;
             this.btnHizli24.Text = "btnHizli";
             this.btnHizli24.UseVisualStyleBackColor = false;
@@ -908,7 +761,7 @@
             this.btnHizli23.Location = new System.Drawing.Point(427, 443);
             this.btnHizli23.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli23.Name = "btnHizli23";
-            this.btnHizli23.Size = new System.Drawing.Size(211, 99);
+            this.btnHizli23.Size = new System.Drawing.Size(211, 100);
             this.btnHizli23.TabIndex = 22;
             this.btnHizli23.Text = "btnHizli";
             this.btnHizli23.UseVisualStyleBackColor = false;
@@ -927,7 +780,7 @@
             this.btnHizli22.Location = new System.Drawing.Point(214, 443);
             this.btnHizli22.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli22.Name = "btnHizli22";
-            this.btnHizli22.Size = new System.Drawing.Size(211, 99);
+            this.btnHizli22.Size = new System.Drawing.Size(211, 100);
             this.btnHizli22.TabIndex = 21;
             this.btnHizli22.Text = "btnHizli";
             this.btnHizli22.UseVisualStyleBackColor = false;
@@ -946,7 +799,7 @@
             this.btnHizli21.Location = new System.Drawing.Point(1, 443);
             this.btnHizli21.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli21.Name = "btnHizli21";
-            this.btnHizli21.Size = new System.Drawing.Size(211, 99);
+            this.btnHizli21.Size = new System.Drawing.Size(211, 100);
             this.btnHizli21.TabIndex = 20;
             this.btnHizli21.Text = "btnHizli";
             this.btnHizli21.UseVisualStyleBackColor = false;
@@ -1349,7 +1202,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 350);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 349);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -1371,7 +1224,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 346);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 345);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // btnHFiyat5
@@ -1385,7 +1238,7 @@
             this.btnHFiyat5.Location = new System.Drawing.Point(1, 277);
             this.btnHFiyat5.Margin = new System.Windows.Forms.Padding(1);
             this.btnHFiyat5.Name = "btnHFiyat5";
-            this.btnHFiyat5.Size = new System.Drawing.Size(207, 68);
+            this.btnHFiyat5.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat5.TabIndex = 4;
             this.btnHFiyat5.Text = "btnHFiyat";
             this.btnHFiyat5.UseVisualStyleBackColor = false;
@@ -1472,7 +1325,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 350);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 349);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -1502,7 +1355,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 312);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 311);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnNumVirgul
@@ -1513,10 +1366,10 @@
             this.btnNumVirgul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumVirgul.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNumVirgul.ForeColor = System.Drawing.Color.White;
-            this.btnNumVirgul.Location = new System.Drawing.Point(285, 235);
+            this.btnNumVirgul.Location = new System.Drawing.Point(285, 232);
             this.btnNumVirgul.Margin = new System.Windows.Forms.Padding(1);
             this.btnNumVirgul.Name = "btnNumVirgul";
-            this.btnNumVirgul.Size = new System.Drawing.Size(140, 76);
+            this.btnNumVirgul.Size = new System.Drawing.Size(140, 78);
             this.btnNumVirgul.TabIndex = 12;
             this.btnNumVirgul.Text = ",";
             this.btnNumVirgul.UseVisualStyleBackColor = false;
@@ -1530,10 +1383,10 @@
             this.btnNum0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum0.ForeColor = System.Drawing.Color.White;
-            this.btnNum0.Location = new System.Drawing.Point(143, 235);
+            this.btnNum0.Location = new System.Drawing.Point(143, 232);
             this.btnNum0.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum0.Name = "btnNum0";
-            this.btnNum0.Size = new System.Drawing.Size(140, 76);
+            this.btnNum0.Size = new System.Drawing.Size(140, 78);
             this.btnNum0.TabIndex = 11;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = false;
@@ -1547,10 +1400,10 @@
             this.btnNumBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNumBack.ForeColor = System.Drawing.Color.White;
-            this.btnNumBack.Location = new System.Drawing.Point(1, 235);
+            this.btnNumBack.Location = new System.Drawing.Point(1, 232);
             this.btnNumBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnNumBack.Name = "btnNumBack";
-            this.btnNumBack.Size = new System.Drawing.Size(140, 76);
+            this.btnNumBack.Size = new System.Drawing.Size(140, 78);
             this.btnNumBack.TabIndex = 10;
             this.btnNumBack.Text = "<";
             this.btnNumBack.UseVisualStyleBackColor = false;
@@ -1564,10 +1417,10 @@
             this.btnNum9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum9.ForeColor = System.Drawing.Color.White;
-            this.btnNum9.Location = new System.Drawing.Point(285, 157);
+            this.btnNum9.Location = new System.Drawing.Point(285, 155);
             this.btnNum9.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum9.Name = "btnNum9";
-            this.btnNum9.Size = new System.Drawing.Size(140, 76);
+            this.btnNum9.Size = new System.Drawing.Size(140, 75);
             this.btnNum9.TabIndex = 9;
             this.btnNum9.Text = "9";
             this.btnNum9.UseVisualStyleBackColor = false;
@@ -1581,10 +1434,10 @@
             this.btnNum8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum8.ForeColor = System.Drawing.Color.White;
-            this.btnNum8.Location = new System.Drawing.Point(143, 157);
+            this.btnNum8.Location = new System.Drawing.Point(143, 155);
             this.btnNum8.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum8.Name = "btnNum8";
-            this.btnNum8.Size = new System.Drawing.Size(140, 76);
+            this.btnNum8.Size = new System.Drawing.Size(140, 75);
             this.btnNum8.TabIndex = 8;
             this.btnNum8.Text = "8";
             this.btnNum8.UseVisualStyleBackColor = false;
@@ -1598,10 +1451,10 @@
             this.btnNum7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum7.ForeColor = System.Drawing.Color.White;
-            this.btnNum7.Location = new System.Drawing.Point(1, 157);
+            this.btnNum7.Location = new System.Drawing.Point(1, 155);
             this.btnNum7.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum7.Name = "btnNum7";
-            this.btnNum7.Size = new System.Drawing.Size(140, 76);
+            this.btnNum7.Size = new System.Drawing.Size(140, 75);
             this.btnNum7.TabIndex = 7;
             this.btnNum7.Text = "7";
             this.btnNum7.UseVisualStyleBackColor = false;
@@ -1615,10 +1468,10 @@
             this.btnNum6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum6.ForeColor = System.Drawing.Color.White;
-            this.btnNum6.Location = new System.Drawing.Point(285, 79);
+            this.btnNum6.Location = new System.Drawing.Point(285, 78);
             this.btnNum6.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum6.Name = "btnNum6";
-            this.btnNum6.Size = new System.Drawing.Size(140, 76);
+            this.btnNum6.Size = new System.Drawing.Size(140, 75);
             this.btnNum6.TabIndex = 6;
             this.btnNum6.Text = "6";
             this.btnNum6.UseVisualStyleBackColor = false;
@@ -1632,10 +1485,10 @@
             this.btnNum5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum5.ForeColor = System.Drawing.Color.White;
-            this.btnNum5.Location = new System.Drawing.Point(143, 79);
+            this.btnNum5.Location = new System.Drawing.Point(143, 78);
             this.btnNum5.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum5.Name = "btnNum5";
-            this.btnNum5.Size = new System.Drawing.Size(140, 76);
+            this.btnNum5.Size = new System.Drawing.Size(140, 75);
             this.btnNum5.TabIndex = 5;
             this.btnNum5.Text = "5";
             this.btnNum5.UseVisualStyleBackColor = false;
@@ -1649,10 +1502,10 @@
             this.btnNum4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNum4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNum4.ForeColor = System.Drawing.Color.White;
-            this.btnNum4.Location = new System.Drawing.Point(1, 79);
+            this.btnNum4.Location = new System.Drawing.Point(1, 78);
             this.btnNum4.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum4.Name = "btnNum4";
-            this.btnNum4.Size = new System.Drawing.Size(140, 76);
+            this.btnNum4.Size = new System.Drawing.Size(140, 75);
             this.btnNum4.TabIndex = 4;
             this.btnNum4.Text = "4";
             this.btnNum4.UseVisualStyleBackColor = false;
@@ -1669,7 +1522,7 @@
             this.btnNum3.Location = new System.Drawing.Point(285, 1);
             this.btnNum3.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum3.Name = "btnNum3";
-            this.btnNum3.Size = new System.Drawing.Size(140, 76);
+            this.btnNum3.Size = new System.Drawing.Size(140, 75);
             this.btnNum3.TabIndex = 3;
             this.btnNum3.Text = "3";
             this.btnNum3.UseVisualStyleBackColor = false;
@@ -1686,7 +1539,7 @@
             this.btnNum2.Location = new System.Drawing.Point(143, 1);
             this.btnNum2.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum2.Name = "btnNum2";
-            this.btnNum2.Size = new System.Drawing.Size(140, 76);
+            this.btnNum2.Size = new System.Drawing.Size(140, 75);
             this.btnNum2.TabIndex = 2;
             this.btnNum2.Text = "2";
             this.btnNum2.UseVisualStyleBackColor = false;
@@ -1703,7 +1556,7 @@
             this.btnNum1.Location = new System.Drawing.Point(1, 1);
             this.btnNum1.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum1.Name = "btnNum1";
-            this.btnNum1.Size = new System.Drawing.Size(140, 76);
+            this.btnNum1.Size = new System.Drawing.Size(140, 75);
             this.btnNum1.TabIndex = 1;
             this.btnNum1.Text = "1";
             this.btnNum1.UseVisualStyleBackColor = false;
@@ -1742,7 +1595,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 346);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 345);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // btnTemizle
@@ -1756,7 +1609,7 @@
             this.btnTemizle.Location = new System.Drawing.Point(212, 259);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(210, 86);
+            this.btnTemizle.Size = new System.Drawing.Size(210, 85);
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle\r\n(F3)";
             this.btnTemizle.UseVisualStyleBackColor = false;
@@ -1773,7 +1626,7 @@
             this.btnMiktar.Location = new System.Drawing.Point(1, 259);
             this.btnMiktar.Margin = new System.Windows.Forms.Padding(1);
             this.btnMiktar.Name = "btnMiktar";
-            this.btnMiktar.Size = new System.Drawing.Size(209, 86);
+            this.btnMiktar.Size = new System.Drawing.Size(209, 85);
             this.btnMiktar.TabIndex = 7;
             this.btnMiktar.Text = "Miktar / Adet";
             this.btnMiktar.UseVisualStyleBackColor = false;
@@ -1887,7 +1740,155 @@
             this.dataGridViewImageColumn1.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // btnBeklet2
+            // 
+            this.btnBeklet2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBeklet2.BackColor = System.Drawing.Color.Navy;
+            this.btnBeklet2.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnBeklet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeklet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBeklet2.ForeColor = System.Drawing.Color.White;
+            this.btnBeklet2.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
+            this.btnBeklet2.Location = new System.Drawing.Point(591, 98);
+            this.btnBeklet2.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBeklet2.Name = "btnBeklet2";
+            this.btnBeklet2.Padding = new System.Windows.Forms.Padding(2);
+            this.btnBeklet2.Size = new System.Drawing.Size(190, 44);
+            this.btnBeklet2.TabIndex = 17;
+            this.btnBeklet2.Text = "İŞLEM BEKLET";
+            this.btnBeklet2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBeklet2.UseVisualStyleBackColor = false;
+            this.btnBeklet2.Click += new System.EventHandler(this.btnBeklet2_Click);
+            // 
+            // btnBeklet
+            // 
+            this.btnBeklet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBeklet.BackColor = System.Drawing.Color.Navy;
+            this.btnBeklet.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnBeklet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBeklet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBeklet.ForeColor = System.Drawing.Color.White;
+            this.btnBeklet.Image = global::BarkodluMarketProgrami.Properties.Resources.time_left;
+            this.btnBeklet.Location = new System.Drawing.Point(388, 98);
+            this.btnBeklet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBeklet.Name = "btnBeklet";
+            this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
+            this.btnBeklet.Size = new System.Drawing.Size(190, 44);
+            this.btnBeklet.TabIndex = 16;
+            this.btnBeklet.Text = "İŞLEM BEKLET";
+            this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBeklet.UseVisualStyleBackColor = false;
+            this.btnBeklet.Click += new System.EventHandler(this.btnBeklet_Click);
+            // 
+            // cbxSatis
+            // 
+            this.cbxSatis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxSatis.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbxSatis.BackColor = System.Drawing.Color.DarkGreen;
+            this.cbxSatis.CausesValidation = false;
+            this.cbxSatis.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxSatis.FlatAppearance.CheckedBackColor = System.Drawing.Color.OrangeRed;
+            this.cbxSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxSatis.ForeColor = System.Drawing.Color.White;
+            this.cbxSatis.Image = global::BarkodluMarketProgrami.Properties.Resources.cart;
+            this.cbxSatis.Location = new System.Drawing.Point(12, 8);
+            this.cbxSatis.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSatis.Name = "cbxSatis";
+            this.cbxSatis.Size = new System.Drawing.Size(190, 44);
+            this.cbxSatis.TabIndex = 12;
+            this.cbxSatis.Text = "SATIŞ YAPILIYOR";
+            this.cbxSatis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbxSatis.UseVisualStyleBackColor = false;
+            // 
+            // urunSil
+            // 
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
+            // 
+            // btnVeresiye
+            // 
+            this.btnVeresiye.BackColor = System.Drawing.Color.Navy;
+            this.btnVeresiye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVeresiye.FlatAppearance.BorderSize = 0;
+            this.btnVeresiye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeresiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnVeresiye.ForeColor = System.Drawing.Color.White;
+            this.btnVeresiye.Image = global::BarkodluMarketProgrami.Properties.Resources.time_is_money;
+            this.btnVeresiye.Location = new System.Drawing.Point(476, 2);
+            this.btnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
+            this.btnVeresiye.Name = "btnVeresiye";
+            this.btnVeresiye.Size = new System.Drawing.Size(154, 221);
+            this.btnVeresiye.TabIndex = 4;
+            this.btnVeresiye.Text = "VERESİYE\r\n(F9)";
+            this.btnVeresiye.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnVeresiye.UseVisualStyleBackColor = false;
+            this.btnVeresiye.Click += new System.EventHandler(this.btnVeresiye_Click);
+            // 
+            // btnKartNakit
+            // 
+            this.btnKartNakit.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKartNakit.FlatAppearance.BorderSize = 0;
+            this.btnKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKartNakit.ForeColor = System.Drawing.Color.White;
+            this.btnKartNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.cash;
+            this.btnKartNakit.Location = new System.Drawing.Point(318, 2);
+            this.btnKartNakit.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
+            this.btnKartNakit.Name = "btnKartNakit";
+            this.btnKartNakit.Size = new System.Drawing.Size(156, 221);
+            this.btnKartNakit.TabIndex = 2;
+            this.btnKartNakit.Text = " KART + NAKİT\r\n(F10)";
+            this.btnKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnKartNakit.UseVisualStyleBackColor = false;
+            this.btnKartNakit.Click += new System.EventHandler(this.btnKartNakit_Click);
+            // 
+            // btnKart
+            // 
+            this.btnKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.btnKart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKart.FlatAppearance.BorderSize = 0;
+            this.btnKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKart.ForeColor = System.Drawing.Color.White;
+            this.btnKart.Image = global::BarkodluMarketProgrami.Properties.Resources.credit_card;
+            this.btnKart.Location = new System.Drawing.Point(160, 2);
+            this.btnKart.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
+            this.btnKart.Name = "btnKart";
+            this.btnKart.Size = new System.Drawing.Size(156, 221);
+            this.btnKart.TabIndex = 1;
+            this.btnKart.Text = "KREDİ KARTI \r\n(F11)";
+            this.btnKart.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnKart.UseVisualStyleBackColor = false;
+            this.btnKart.Click += new System.EventHandler(this.btnKart_Click);
+            // 
+            // btnNakit
+            // 
+            this.btnNakit.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNakit.FlatAppearance.BorderSize = 0;
+            this.btnNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnNakit.ForeColor = System.Drawing.Color.White;
+            this.btnNakit.Image = global::BarkodluMarketProgrami.Properties.Resources.money;
+            this.btnNakit.Location = new System.Drawing.Point(1, 2);
+            this.btnNakit.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
+            this.btnNakit.Name = "btnNakit";
+            this.btnNakit.Size = new System.Drawing.Size(157, 221);
+            this.btnNakit.TabIndex = 0;
+            this.btnNakit.Text = "NAKİT\r\n(F12)";
+            this.btnNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnNakit.UseVisualStyleBackColor = false;
+            this.btnNakit.Click += new System.EventHandler(this.btnNakit_Click);
             // 
             // FormSatis
             // 

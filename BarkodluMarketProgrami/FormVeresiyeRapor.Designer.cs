@@ -47,20 +47,20 @@
             this.nudTopVerVT = new System.Windows.Forms.NumericUpDown();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
             this.pnlIstatistik = new System.Windows.Forms.Panel();
+            this.lblVeresiyeAl = new System.Windows.Forms.Label();
             this.lblUyari = new System.Windows.Forms.Label();
             this.lblTopAlV = new System.Windows.Forms.Label();
             this.lblTopAlVTutar = new System.Windows.Forms.Label();
             this.nudTopVerV = new System.Windows.Forms.NumericUpDown();
+            this.lblVeresiyeVer = new System.Windows.Forms.Label();
             this.lblTopSatV = new System.Windows.Forms.Label();
             this.nudTopOdV = new System.Windows.Forms.NumericUpDown();
             this.btnPdf = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lblVeresiyeAl = new System.Windows.Forms.Label();
-            this.lblVeresiyeVer = new System.Windows.Forms.Label();
-            this.btnAra = new System.Windows.Forms.Button();
             this.btnVeresiyeAl = new System.Windows.Forms.Button();
             this.btnVeresiyeVer = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnAra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopOdVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTopVerVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSonucListesi)).BeginInit();
@@ -296,6 +296,17 @@
             this.pnlIstatistik.Size = new System.Drawing.Size(837, 223);
             this.pnlIstatistik.TabIndex = 88;
             // 
+            // lblVeresiyeAl
+            // 
+            this.lblVeresiyeAl.AutoSize = true;
+            this.lblVeresiyeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblVeresiyeAl.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblVeresiyeAl.Location = new System.Drawing.Point(490, 145);
+            this.lblVeresiyeAl.Name = "lblVeresiyeAl";
+            this.lblVeresiyeAl.Size = new System.Drawing.Size(104, 24);
+            this.lblVeresiyeAl.TabIndex = 129;
+            this.lblVeresiyeAl.Text = "Ödeme Al";
+            // 
             // lblUyari
             // 
             this.lblUyari.AutoSize = true;
@@ -344,6 +355,17 @@
             this.nudTopVerV.TabIndex = 129;
             this.nudTopVerV.ThousandsSeparator = true;
             // 
+            // lblVeresiyeVer
+            // 
+            this.lblVeresiyeVer.AutoSize = true;
+            this.lblVeresiyeVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblVeresiyeVer.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblVeresiyeVer.Location = new System.Drawing.Point(463, 42);
+            this.lblVeresiyeVer.Name = "lblVeresiyeVer";
+            this.lblVeresiyeVer.Size = new System.Drawing.Size(131, 24);
+            this.lblVeresiyeVer.TabIndex = 128;
+            this.lblVeresiyeVer.Text = "Veresiye Ver";
+            // 
             // lblTopSatV
             // 
             this.lblTopSatV.AutoSize = true;
@@ -378,7 +400,7 @@
             this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPdf.ForeColor = System.Drawing.Color.White;
             this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
-            this.btnPdf.Location = new System.Drawing.Point(727, 123);
+            this.btnPdf.Location = new System.Drawing.Point(727, 120);
             this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(100, 70);
@@ -400,74 +422,6 @@
             this.btnExcel.Size = new System.Drawing.Size(100, 70);
             this.btnExcel.TabIndex = 114;
             this.btnExcel.UseVisualStyleBackColor = false;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.pnlIstatistik);
-            this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
-            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAra);
-            this.splitContainer1.Panel1.Controls.Add(this.dtpBitisTarihi);
-            this.splitContainer1.Panel1.Controls.Add(this.dtpBaslangicTarihi);
-            this.splitContainer1.Panel1.Controls.Add(this.lblBitisTarihi);
-            this.splitContainer1.Panel1.Controls.Add(this.lblBaslangicTarihi);
-            this.splitContainer1.Panel1.Controls.Add(this.rdbOdenilmisV);
-            this.splitContainer1.Panel1.Controls.Add(this.rdbOdenilmemisV);
-            this.splitContainer1.Panel1.Controls.Add(this.rdbTumu);
-            this.splitContainer1.Panel1.Controls.Add(this.lblRaporlamaTuru);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.gridSonucListesi);
-            this.splitContainer1.Size = new System.Drawing.Size(1312, 761);
-            this.splitContainer1.SplitterDistance = 229;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // lblVeresiyeAl
-            // 
-            this.lblVeresiyeAl.AutoSize = true;
-            this.lblVeresiyeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblVeresiyeAl.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblVeresiyeAl.Location = new System.Drawing.Point(490, 145);
-            this.lblVeresiyeAl.Name = "lblVeresiyeAl";
-            this.lblVeresiyeAl.Size = new System.Drawing.Size(104, 24);
-            this.lblVeresiyeAl.TabIndex = 129;
-            this.lblVeresiyeAl.Text = "Ödeme Al";
-            // 
-            // lblVeresiyeVer
-            // 
-            this.lblVeresiyeVer.AutoSize = true;
-            this.lblVeresiyeVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblVeresiyeVer.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblVeresiyeVer.Location = new System.Drawing.Point(463, 42);
-            this.lblVeresiyeVer.Name = "lblVeresiyeVer";
-            this.lblVeresiyeVer.Size = new System.Drawing.Size(131, 24);
-            this.lblVeresiyeVer.TabIndex = 128;
-            this.lblVeresiyeVer.Text = "Veresiye Ver";
-            // 
-            // btnAra
-            // 
-            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnAra.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnAra.Location = new System.Drawing.Point(341, 152);
-            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(100, 50);
-            this.btnAra.TabIndex = 43;
-            this.btnAra.UseVisualStyleBackColor = false;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // btnVeresiyeAl
             // 
@@ -500,6 +454,52 @@
             this.btnVeresiyeVer.TabIndex = 108;
             this.btnVeresiyeVer.UseVisualStyleBackColor = false;
             this.btnVeresiyeVer.Click += new System.EventHandler(this.btnVeresiyeVer_Click);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.pnlIstatistik);
+            this.splitContainer1.Panel1.Controls.Add(this.lblKasiyer);
+            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAra);
+            this.splitContainer1.Panel1.Controls.Add(this.dtpBitisTarihi);
+            this.splitContainer1.Panel1.Controls.Add(this.dtpBaslangicTarihi);
+            this.splitContainer1.Panel1.Controls.Add(this.lblBitisTarihi);
+            this.splitContainer1.Panel1.Controls.Add(this.lblBaslangicTarihi);
+            this.splitContainer1.Panel1.Controls.Add(this.rdbOdenilmisV);
+            this.splitContainer1.Panel1.Controls.Add(this.rdbOdenilmemisV);
+            this.splitContainer1.Panel1.Controls.Add(this.rdbTumu);
+            this.splitContainer1.Panel1.Controls.Add(this.lblRaporlamaTuru);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gridSonucListesi);
+            this.splitContainer1.Size = new System.Drawing.Size(1312, 761);
+            this.splitContainer1.SplitterDistance = 229;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // btnAra
+            // 
+            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnAra.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
+            this.btnAra.Location = new System.Drawing.Point(341, 152);
+            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(100, 50);
+            this.btnAra.TabIndex = 43;
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // FormVeresiyeRapor
             // 

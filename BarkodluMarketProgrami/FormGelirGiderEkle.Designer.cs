@@ -117,6 +117,7 @@
             this.nudKart.Name = "nudKart";
             this.nudKart.Size = new System.Drawing.Size(106, 20);
             this.nudKart.TabIndex = 40;
+            this.nudKart.ThousandsSeparator = true;
             // 
             // nudNakit
             // 
@@ -130,6 +131,7 @@
             this.nudNakit.Name = "nudNakit";
             this.nudNakit.Size = new System.Drawing.Size(116, 20);
             this.nudNakit.TabIndex = 41;
+            this.nudNakit.ThousandsSeparator = true;
             // 
             // lblAciklama
             // 
@@ -177,12 +179,14 @@
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Image = global::BarkodluMarketProgrami.Properties.Resources.diskette;
             this.btnEkle.Location = new System.Drawing.Point(18, 448);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(1);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(126, 56);
             this.btnEkle.TabIndex = 46;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 

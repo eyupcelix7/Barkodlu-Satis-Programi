@@ -33,6 +33,8 @@
             this.btnNumBack = new System.Windows.Forms.Button();
             this.btnNum9 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblKasiyer = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnYeniKullanici = new System.Windows.Forms.Button();
             this.pnlSecilenKisi = new System.Windows.Forms.Panel();
@@ -55,8 +57,6 @@
             this.btnNum2 = new System.Windows.Forms.Button();
             this.btnNum1 = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.lblKasiyer = new System.Windows.Forms.Label();
-            this.lblKullanici = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -167,6 +167,30 @@
             this.splitContainer1.SplitterDistance = 209;
             this.splitContainer1.TabIndex = 2;
             // 
+            // lblKasiyer
+            // 
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Location = new System.Drawing.Point(384, 9);
+            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(69, 18);
+            this.lblKasiyer.TabIndex = 112;
+            this.lblKasiyer.Text = "Kasiyer:";
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(451, 11);
+            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
+            this.lblKullanici.TabIndex = 111;
+            this.lblKullanici.Text = "eyupcelix7";
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -188,7 +212,7 @@
             this.btnYeniKullanici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeniKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYeniKullanici.ForeColor = System.Drawing.Color.White;
-            this.btnYeniKullanici.Image = global::BarkodluMarketProgrami.Properties.Resources.add;
+            this.btnYeniKullanici.Image = global::BarkodluMarketProgrami.Properties.Resources.man;
             this.btnYeniKullanici.Location = new System.Drawing.Point(432, 77);
             this.btnYeniKullanici.Margin = new System.Windows.Forms.Padding(1);
             this.btnYeniKullanici.Name = "btnYeniKullanici";
@@ -498,30 +522,6 @@
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = false;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // lblKasiyer
-            // 
-            this.lblKasiyer.AutoSize = true;
-            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKasiyer.ForeColor = System.Drawing.Color.Black;
-            this.lblKasiyer.Location = new System.Drawing.Point(384, 9);
-            this.lblKasiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblKasiyer.Name = "lblKasiyer";
-            this.lblKasiyer.Size = new System.Drawing.Size(69, 18);
-            this.lblKasiyer.TabIndex = 112;
-            this.lblKasiyer.Text = "Kasiyer:";
-            // 
-            // lblKullanici
-            // 
-            this.lblKullanici.AutoSize = true;
-            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(451, 11);
-            this.lblKullanici.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
-            this.lblKullanici.TabIndex = 111;
-            this.lblKullanici.Text = "eyupcelix7";
             // 
             // FormVeresiyeAlVer
             // 

@@ -17,6 +17,21 @@ namespace BarkodluMarketProgrami
             InitializeComponent();
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            using (var db = new BarkodEntities())
+            {
+                if(db.Ayarlar.Any())
+                {
+                    string firmaAdi = db.Ayarlar.SingleOrDefault().FirmaAd;
+                    lblFirmaAdi.Text = firmaAdi;
+                }
+                else
+                {
+                    lblFirmaAdi.Text = "FİRMA ADI";
+                }
+            }
+        }
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
             if(txtKulKod.Text != "" && txtSifre.Text != "")
