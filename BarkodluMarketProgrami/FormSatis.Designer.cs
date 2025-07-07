@@ -52,6 +52,16 @@
             this.lblBarkod = new System.Windows.Forms.Label();
             this.lblMiktar = new System.Windows.Forms.Label();
             this.gridSatisListesi = new System.Windows.Forms.DataGridView();
+            this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVeresiye = new System.Windows.Forms.Button();
             this.btnKartNakit = new System.Windows.Forms.Button();
@@ -117,7 +127,7 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnMiktar = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.btnFisYazdir = new System.Windows.Forms.Button();
             this.btnOdenen = new System.Windows.Forms.Button();
             this.btnIade = new System.Windows.Forms.Button();
             this.btnBarkod = new System.Windows.Forms.Button();
@@ -125,16 +135,6 @@
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.urunBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunKdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunSil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -472,6 +472,90 @@
             this.gridSatisListesi.TabIndex = 1;
             this.gridSatisListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSatisListesi_CellContentClick);
             // 
+            // urunBarkod
+            // 
+            this.urunBarkod.HeaderText = "Barkod";
+            this.urunBarkod.MinimumWidth = 6;
+            this.urunBarkod.Name = "urunBarkod";
+            this.urunBarkod.ReadOnly = true;
+            // 
+            // urunAdi
+            // 
+            this.urunAdi.HeaderText = "Ürün Adı";
+            this.urunAdi.MinimumWidth = 6;
+            this.urunAdi.Name = "urunAdi";
+            this.urunAdi.ReadOnly = true;
+            // 
+            // urunBirim
+            // 
+            this.urunBirim.HeaderText = "Birim";
+            this.urunBirim.MinimumWidth = 6;
+            this.urunBirim.Name = "urunBirim";
+            this.urunBirim.ReadOnly = true;
+            // 
+            // urunMiktar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.urunMiktar.HeaderText = "Miktar";
+            this.urunMiktar.MinimumWidth = 6;
+            this.urunMiktar.Name = "urunMiktar";
+            this.urunMiktar.ReadOnly = true;
+            // 
+            // urunFiyat
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle3;
+            this.urunFiyat.HeaderText = "Fiyat";
+            this.urunFiyat.MinimumWidth = 6;
+            this.urunFiyat.Name = "urunFiyat";
+            this.urunFiyat.ReadOnly = true;
+            // 
+            // urunToplam
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle4;
+            this.urunToplam.HeaderText = "Toplam";
+            this.urunToplam.MinimumWidth = 6;
+            this.urunToplam.Name = "urunToplam";
+            this.urunToplam.ReadOnly = true;
+            // 
+            // urunKdv
+            // 
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.urunKdv.DefaultCellStyle = dataGridViewCellStyle5;
+            this.urunKdv.HeaderText = "Kdv Tutarı";
+            this.urunKdv.MinimumWidth = 6;
+            this.urunKdv.Name = "urunKdv";
+            this.urunKdv.ReadOnly = true;
+            // 
+            // urunGrup
+            // 
+            this.urunGrup.HeaderText = "Grup";
+            this.urunGrup.MinimumWidth = 6;
+            this.urunGrup.Name = "urunGrup";
+            this.urunGrup.ReadOnly = true;
+            this.urunGrup.Visible = false;
+            // 
+            // urunAlisFiyat
+            // 
+            this.urunAlisFiyat.HeaderText = "Alış Fiyatı";
+            this.urunAlisFiyat.MinimumWidth = 6;
+            this.urunAlisFiyat.Name = "urunAlisFiyat";
+            this.urunAlisFiyat.ReadOnly = true;
+            this.urunAlisFiyat.Visible = false;
+            // 
+            // urunSil
+            // 
+            this.urunSil.HeaderText = "Sil";
+            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
+            this.urunSil.MinimumWidth = 6;
+            this.urunSil.Name = "urunSil";
+            this.urunSil.ReadOnly = true;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
@@ -634,7 +718,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel5);
             this.splitContainer2.Size = new System.Drawing.Size(1066, 896);
-            this.splitContainer2.SplitterDistance = 541;
+            this.splitContainer2.SplitterDistance = 543;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -687,7 +771,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 541);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1066, 543);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnHizliKategori5
@@ -786,7 +870,7 @@
             this.btnHizli25.Location = new System.Drawing.Point(853, 443);
             this.btnHizli25.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli25.Name = "btnHizli25";
-            this.btnHizli25.Size = new System.Drawing.Size(212, 97);
+            this.btnHizli25.Size = new System.Drawing.Size(212, 99);
             this.btnHizli25.TabIndex = 24;
             this.btnHizli25.Text = "btnHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
@@ -805,7 +889,7 @@
             this.btnHizli24.Location = new System.Drawing.Point(640, 443);
             this.btnHizli24.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli24.Name = "btnHizli24";
-            this.btnHizli24.Size = new System.Drawing.Size(211, 97);
+            this.btnHizli24.Size = new System.Drawing.Size(211, 99);
             this.btnHizli24.TabIndex = 23;
             this.btnHizli24.Text = "btnHizli";
             this.btnHizli24.UseVisualStyleBackColor = false;
@@ -824,7 +908,7 @@
             this.btnHizli23.Location = new System.Drawing.Point(427, 443);
             this.btnHizli23.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli23.Name = "btnHizli23";
-            this.btnHizli23.Size = new System.Drawing.Size(211, 97);
+            this.btnHizli23.Size = new System.Drawing.Size(211, 99);
             this.btnHizli23.TabIndex = 22;
             this.btnHizli23.Text = "btnHizli";
             this.btnHizli23.UseVisualStyleBackColor = false;
@@ -843,7 +927,7 @@
             this.btnHizli22.Location = new System.Drawing.Point(214, 443);
             this.btnHizli22.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli22.Name = "btnHizli22";
-            this.btnHizli22.Size = new System.Drawing.Size(211, 97);
+            this.btnHizli22.Size = new System.Drawing.Size(211, 99);
             this.btnHizli22.TabIndex = 21;
             this.btnHizli22.Text = "btnHizli";
             this.btnHizli22.UseVisualStyleBackColor = false;
@@ -862,7 +946,7 @@
             this.btnHizli21.Location = new System.Drawing.Point(1, 443);
             this.btnHizli21.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli21.Name = "btnHizli21";
-            this.btnHizli21.Size = new System.Drawing.Size(211, 97);
+            this.btnHizli21.Size = new System.Drawing.Size(211, 99);
             this.btnHizli21.TabIndex = 20;
             this.btnHizli21.Text = "btnHizli";
             this.btnHizli21.UseVisualStyleBackColor = false;
@@ -1265,7 +1349,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 352);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1066, 350);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -1287,7 +1371,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 348);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(209, 346);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // btnHFiyat5
@@ -1301,7 +1385,7 @@
             this.btnHFiyat5.Location = new System.Drawing.Point(1, 277);
             this.btnHFiyat5.Margin = new System.Windows.Forms.Padding(1);
             this.btnHFiyat5.Name = "btnHFiyat5";
-            this.btnHFiyat5.Size = new System.Drawing.Size(207, 70);
+            this.btnHFiyat5.Size = new System.Drawing.Size(207, 68);
             this.btnHFiyat5.TabIndex = 4;
             this.btnHFiyat5.Text = "btnHFiyat";
             this.btnHFiyat5.UseVisualStyleBackColor = false;
@@ -1388,7 +1472,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 352);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(426, 350);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -1410,7 +1494,7 @@
             this.tableLayoutPanel8.Controls.Add(this.btnNum2, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnNum1, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 39);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 38);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 4;
@@ -1418,7 +1502,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 313);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(426, 312);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnNumVirgul
@@ -1432,7 +1516,7 @@
             this.btnNumVirgul.Location = new System.Drawing.Point(285, 235);
             this.btnNumVirgul.Margin = new System.Windows.Forms.Padding(1);
             this.btnNumVirgul.Name = "btnNumVirgul";
-            this.btnNumVirgul.Size = new System.Drawing.Size(140, 77);
+            this.btnNumVirgul.Size = new System.Drawing.Size(140, 76);
             this.btnNumVirgul.TabIndex = 12;
             this.btnNumVirgul.Text = ",";
             this.btnNumVirgul.UseVisualStyleBackColor = false;
@@ -1449,7 +1533,7 @@
             this.btnNum0.Location = new System.Drawing.Point(143, 235);
             this.btnNum0.Margin = new System.Windows.Forms.Padding(1);
             this.btnNum0.Name = "btnNum0";
-            this.btnNum0.Size = new System.Drawing.Size(140, 77);
+            this.btnNum0.Size = new System.Drawing.Size(140, 76);
             this.btnNum0.TabIndex = 11;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = false;
@@ -1466,7 +1550,7 @@
             this.btnNumBack.Location = new System.Drawing.Point(1, 235);
             this.btnNumBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnNumBack.Name = "btnNumBack";
-            this.btnNumBack.Size = new System.Drawing.Size(140, 77);
+            this.btnNumBack.Size = new System.Drawing.Size(140, 76);
             this.btnNumBack.TabIndex = 10;
             this.btnNumBack.Text = "<";
             this.btnNumBack.UseVisualStyleBackColor = false;
@@ -1643,7 +1727,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.Controls.Add(this.btnTemizle, 1, 3);
             this.tableLayoutPanel9.Controls.Add(this.btnMiktar, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.button23, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.btnFisYazdir, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.btnOdenen, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.btnIade, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.btnBarkod, 0, 1);
@@ -1658,7 +1742,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 348);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(423, 346);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // btnTemizle
@@ -1669,10 +1753,10 @@
             this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTemizle.ForeColor = System.Drawing.Color.White;
-            this.btnTemizle.Location = new System.Drawing.Point(212, 262);
+            this.btnTemizle.Location = new System.Drawing.Point(212, 259);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(210, 85);
+            this.btnTemizle.Size = new System.Drawing.Size(210, 86);
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
@@ -1686,30 +1770,31 @@
             this.btnMiktar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMiktar.ForeColor = System.Drawing.Color.White;
-            this.btnMiktar.Location = new System.Drawing.Point(1, 262);
+            this.btnMiktar.Location = new System.Drawing.Point(1, 259);
             this.btnMiktar.Margin = new System.Windows.Forms.Padding(1);
             this.btnMiktar.Name = "btnMiktar";
-            this.btnMiktar.Size = new System.Drawing.Size(209, 85);
+            this.btnMiktar.Size = new System.Drawing.Size(209, 86);
             this.btnMiktar.TabIndex = 7;
             this.btnMiktar.Text = "Miktar / Adet";
             this.btnMiktar.UseVisualStyleBackColor = false;
             this.btnMiktar.Click += new System.EventHandler(this.btnMiktar_Click);
             // 
-            // button23
+            // btnFisYazdir
             // 
-            this.button23.BackColor = System.Drawing.Color.Navy;
-            this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button23.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(212, 175);
-            this.button23.Margin = new System.Windows.Forms.Padding(1);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(210, 85);
-            this.button23.TabIndex = 6;
-            this.button23.Text = "Fiş Yazdır";
-            this.button23.UseVisualStyleBackColor = false;
+            this.btnFisYazdir.BackColor = System.Drawing.Color.Navy;
+            this.btnFisYazdir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFisYazdir.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.btnFisYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFisYazdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFisYazdir.ForeColor = System.Drawing.Color.White;
+            this.btnFisYazdir.Location = new System.Drawing.Point(212, 173);
+            this.btnFisYazdir.Margin = new System.Windows.Forms.Padding(1);
+            this.btnFisYazdir.Name = "btnFisYazdir";
+            this.btnFisYazdir.Size = new System.Drawing.Size(210, 84);
+            this.btnFisYazdir.TabIndex = 6;
+            this.btnFisYazdir.Text = "Fiş Yazdır";
+            this.btnFisYazdir.UseVisualStyleBackColor = false;
+            this.btnFisYazdir.Click += new System.EventHandler(this.btnFisYazdir_Click);
             // 
             // btnOdenen
             // 
@@ -1719,10 +1804,10 @@
             this.btnOdenen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdenen.ForeColor = System.Drawing.Color.White;
-            this.btnOdenen.Location = new System.Drawing.Point(1, 175);
+            this.btnOdenen.Location = new System.Drawing.Point(1, 173);
             this.btnOdenen.Margin = new System.Windows.Forms.Padding(1);
             this.btnOdenen.Name = "btnOdenen";
-            this.btnOdenen.Size = new System.Drawing.Size(209, 85);
+            this.btnOdenen.Size = new System.Drawing.Size(209, 84);
             this.btnOdenen.TabIndex = 5;
             this.btnOdenen.Text = "Ödenen";
             this.btnOdenen.UseVisualStyleBackColor = false;
@@ -1736,10 +1821,10 @@
             this.btnIade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIade.ForeColor = System.Drawing.Color.White;
-            this.btnIade.Location = new System.Drawing.Point(212, 88);
+            this.btnIade.Location = new System.Drawing.Point(212, 87);
             this.btnIade.Margin = new System.Windows.Forms.Padding(1);
             this.btnIade.Name = "btnIade";
-            this.btnIade.Size = new System.Drawing.Size(210, 85);
+            this.btnIade.Size = new System.Drawing.Size(210, 84);
             this.btnIade.TabIndex = 4;
             this.btnIade.Text = "İade İşlemi";
             this.btnIade.UseVisualStyleBackColor = false;
@@ -1753,10 +1838,10 @@
             this.btnBarkod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBarkod.ForeColor = System.Drawing.Color.White;
-            this.btnBarkod.Location = new System.Drawing.Point(1, 88);
+            this.btnBarkod.Location = new System.Drawing.Point(1, 87);
             this.btnBarkod.Margin = new System.Windows.Forms.Padding(1);
             this.btnBarkod.Name = "btnBarkod";
-            this.btnBarkod.Size = new System.Drawing.Size(209, 85);
+            this.btnBarkod.Size = new System.Drawing.Size(209, 84);
             this.btnBarkod.TabIndex = 3;
             this.btnBarkod.Text = "Barkod";
             this.btnBarkod.UseVisualStyleBackColor = false;
@@ -1773,7 +1858,7 @@
             this.button19.Location = new System.Drawing.Point(212, 1);
             this.button19.Margin = new System.Windows.Forms.Padding(1);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(210, 85);
+            this.button19.Size = new System.Drawing.Size(210, 84);
             this.button19.TabIndex = 2;
             this.button19.Text = "Menü Düzenle";
             this.button19.UseVisualStyleBackColor = false;
@@ -1789,7 +1874,7 @@
             this.btnDigerUrun.Location = new System.Drawing.Point(1, 1);
             this.btnDigerUrun.Margin = new System.Windows.Forms.Padding(1);
             this.btnDigerUrun.Name = "btnDigerUrun";
-            this.btnDigerUrun.Size = new System.Drawing.Size(209, 85);
+            this.btnDigerUrun.Size = new System.Drawing.Size(209, 84);
             this.btnDigerUrun.TabIndex = 1;
             this.btnDigerUrun.Text = "Diğer Ürün";
             this.btnDigerUrun.UseVisualStyleBackColor = false;
@@ -1802,90 +1887,6 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // urunBarkod
-            // 
-            this.urunBarkod.HeaderText = "Barkod";
-            this.urunBarkod.MinimumWidth = 6;
-            this.urunBarkod.Name = "urunBarkod";
-            this.urunBarkod.ReadOnly = true;
-            // 
-            // urunAdi
-            // 
-            this.urunAdi.HeaderText = "Ürün Adı";
-            this.urunAdi.MinimumWidth = 6;
-            this.urunAdi.Name = "urunAdi";
-            this.urunAdi.ReadOnly = true;
-            // 
-            // urunBirim
-            // 
-            this.urunBirim.HeaderText = "Birim";
-            this.urunBirim.MinimumWidth = 6;
-            this.urunBirim.Name = "urunBirim";
-            this.urunBirim.ReadOnly = true;
-            // 
-            // urunMiktar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.urunMiktar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.urunMiktar.HeaderText = "Miktar";
-            this.urunMiktar.MinimumWidth = 6;
-            this.urunMiktar.Name = "urunMiktar";
-            this.urunMiktar.ReadOnly = true;
-            // 
-            // urunFiyat
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "C2";
-            this.urunFiyat.DefaultCellStyle = dataGridViewCellStyle3;
-            this.urunFiyat.HeaderText = "Fiyat";
-            this.urunFiyat.MinimumWidth = 6;
-            this.urunFiyat.Name = "urunFiyat";
-            this.urunFiyat.ReadOnly = true;
-            // 
-            // urunToplam
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            this.urunToplam.DefaultCellStyle = dataGridViewCellStyle4;
-            this.urunToplam.HeaderText = "Toplam";
-            this.urunToplam.MinimumWidth = 6;
-            this.urunToplam.Name = "urunToplam";
-            this.urunToplam.ReadOnly = true;
-            // 
-            // urunKdv
-            // 
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.urunKdv.DefaultCellStyle = dataGridViewCellStyle5;
-            this.urunKdv.HeaderText = "Kdv Tutarı";
-            this.urunKdv.MinimumWidth = 6;
-            this.urunKdv.Name = "urunKdv";
-            this.urunKdv.ReadOnly = true;
-            // 
-            // urunGrup
-            // 
-            this.urunGrup.HeaderText = "Grup";
-            this.urunGrup.MinimumWidth = 6;
-            this.urunGrup.Name = "urunGrup";
-            this.urunGrup.ReadOnly = true;
-            this.urunGrup.Visible = false;
-            // 
-            // urunAlisFiyat
-            // 
-            this.urunAlisFiyat.HeaderText = "Alış Fiyatı";
-            this.urunAlisFiyat.MinimumWidth = 6;
-            this.urunAlisFiyat.Name = "urunAlisFiyat";
-            this.urunAlisFiyat.ReadOnly = true;
-            this.urunAlisFiyat.Visible = false;
-            // 
-            // urunSil
-            // 
-            this.urunSil.HeaderText = "Sil";
-            this.urunSil.Image = global::BarkodluMarketProgrami.Properties.Resources.cancel;
-            this.urunSil.MinimumWidth = 6;
-            this.urunSil.Name = "urunSil";
-            this.urunSil.ReadOnly = true;
             // 
             // FormSatis
             // 
@@ -1985,7 +1986,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnMiktar;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button btnFisYazdir;
         private System.Windows.Forms.Button btnOdenen;
         private System.Windows.Forms.Button btnIade;
         private System.Windows.Forms.Button btnBarkod;

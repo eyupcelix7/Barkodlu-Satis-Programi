@@ -622,6 +622,11 @@ namespace BarkodluMarketProgrami
                 }
             }
         }
+        private void btnFisYazdir_Click(object sender, EventArgs e)
+        {
+            var sonIslemNo = db.Islem.SingleOrDefault().IslemNo - 1;
+            Yazdir yazdir = new Yazdir(sonIslemNo);
+        }
         private void btnBeklet2_Click(object sender, EventArgs e)
         {
             if (gridSatisListesi.Rows.Count > 0 && gridBeklet2 == null)

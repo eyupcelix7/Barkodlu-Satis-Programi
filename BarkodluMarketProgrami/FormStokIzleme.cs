@@ -179,7 +179,6 @@ namespace BarkodluMarketProgrami
             gridSonucListesi.Columns[5].HeaderText = "Miktar";
             gridSonucListesi.Columns[7].HeaderText = "Kullanıcı";
         }
-
         private void txtUrunAdi_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cmbIslemTuru.SelectedIndex != -1)
