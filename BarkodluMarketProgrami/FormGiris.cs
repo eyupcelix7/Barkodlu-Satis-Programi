@@ -79,7 +79,6 @@ namespace BarkodluMarketProgrami
             form.ShowDialog();
 
         }
-
         private void btnAyarlar_Click(object sender, EventArgs e)
         {
             FormAyarlar form = new FormAyarlar();
@@ -87,18 +86,15 @@ namespace BarkodluMarketProgrami
             form.ShowDialog();
 
         }
-
         private void btnYedekleme_Click(object sender, EventArgs e)
         {
             new Yedekle();
         }
-
         private void btnYedekYükle_Click(object sender, EventArgs e)
         {
             Process.Start(Application.StartupPath + @"\BarkodluSatisProgramiRestore.exe");
             Application.Exit();
         }
-
         private void btnKullaniciDegistir_Click(object sender, EventArgs e)
         {
             FormLogin form = new FormLogin();

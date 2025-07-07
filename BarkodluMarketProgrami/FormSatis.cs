@@ -627,6 +627,18 @@ namespace BarkodluMarketProgrami
             var sonIslemNo = db.Islem.SingleOrDefault().IslemNo - 1;
             Yazdir yazdir = new Yazdir(sonIslemNo);
         }
+        private void btnKullaniciDegistir_Click(object sender, EventArgs e)
+        {
+            FormLogin form = new FormLogin();
+            form.Show();
+            foreach (Form frm in Application.OpenForms.Cast<Form>().ToList())
+            {
+                if (frm != form)
+                {
+                    frm.Hide();
+                }
+            }
+        }
         private void btnBeklet2_Click(object sender, EventArgs e)
         {
             if (gridSatisListesi.Rows.Count > 0 && gridBeklet2 == null)
