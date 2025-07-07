@@ -30,6 +30,7 @@ namespace BarkodluMarketProgrami
         }
         private void FormSatis_Load(object sender, EventArgs e)
         {
+            txtBarkod.Focus();
             hizliUrunDoldur(1);
             hizliKategorilerDoldur();
             hizliFiyatDoldur();

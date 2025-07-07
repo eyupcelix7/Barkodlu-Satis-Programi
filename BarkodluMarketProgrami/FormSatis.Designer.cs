@@ -257,6 +257,7 @@
             this.txtParaUstu.ReadOnly = true;
             this.txtParaUstu.Size = new System.Drawing.Size(102, 19);
             this.txtParaUstu.TabIndex = 11;
+            this.txtParaUstu.TabStop = false;
             // 
             // txtOdenen
             // 
@@ -271,6 +272,7 @@
             this.txtOdenen.ReadOnly = true;
             this.txtOdenen.Size = new System.Drawing.Size(102, 19);
             this.txtOdenen.TabIndex = 10;
+            this.txtOdenen.TabStop = false;
             // 
             // lblParaUstu
             // 
@@ -327,7 +329,7 @@
             this.txtBarkod.Margin = new System.Windows.Forms.Padding(2);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(225, 23);
-            this.txtBarkod.TabIndex = 3;
+            this.txtBarkod.TabIndex = 2;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
             // lblBarkod
@@ -407,6 +409,7 @@
             this.gridSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSatisListesi.Size = new System.Drawing.Size(787, 518);
             this.gridSatisListesi.TabIndex = 1;
+            this.gridSatisListesi.TabStop = false;
             this.gridSatisListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSatisListesi_CellContentClick);
             // 
             // urunBarkod
@@ -537,6 +540,7 @@
             this.txtToplam.ReadOnly = true;
             this.txtToplam.Size = new System.Drawing.Size(151, 25);
             this.txtToplam.TabIndex = 14;
+            this.txtToplam.TabStop = false;
             this.txtToplam.Text = "₺0,00";
             this.txtToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -639,7 +643,7 @@
             this.btnHizliKategori5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.btnHizliKategori5.Name = "btnHizliKategori5";
             this.btnHizliKategori5.Size = new System.Drawing.Size(212, 49);
-            this.btnHizliKategori5.TabIndex = 29;
+            this.btnHizliKategori5.TabIndex = 48;
             this.btnHizliKategori5.Text = "btnHizliKategori";
             this.btnHizliKategori5.UseVisualStyleBackColor = false;
             this.btnHizliKategori5.Click += new System.EventHandler(this.btnHizliKategori_Click);
@@ -656,7 +660,7 @@
             this.btnHizliKategori4.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.btnHizliKategori4.Name = "btnHizliKategori4";
             this.btnHizliKategori4.Size = new System.Drawing.Size(211, 49);
-            this.btnHizliKategori4.TabIndex = 28;
+            this.btnHizliKategori4.TabIndex = 47;
             this.btnHizliKategori4.Text = "btnHizliKategori";
             this.btnHizliKategori4.UseVisualStyleBackColor = false;
             this.btnHizliKategori4.Click += new System.EventHandler(this.btnHizliKategori_Click);
@@ -673,7 +677,7 @@
             this.btnHizliKategori3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.btnHizliKategori3.Name = "btnHizliKategori3";
             this.btnHizliKategori3.Size = new System.Drawing.Size(211, 49);
-            this.btnHizliKategori3.TabIndex = 27;
+            this.btnHizliKategori3.TabIndex = 46;
             this.btnHizliKategori3.Text = "btnHizliKategori";
             this.btnHizliKategori3.UseVisualStyleBackColor = false;
             this.btnHizliKategori3.Click += new System.EventHandler(this.btnHizliKategori_Click);
@@ -690,7 +694,7 @@
             this.btnHizliKategori2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.btnHizliKategori2.Name = "btnHizliKategori2";
             this.btnHizliKategori2.Size = new System.Drawing.Size(211, 49);
-            this.btnHizliKategori2.TabIndex = 26;
+            this.btnHizliKategori2.TabIndex = 45;
             this.btnHizliKategori2.Text = "btnHizliKategori";
             this.btnHizliKategori2.UseVisualStyleBackColor = false;
             this.btnHizliKategori2.Click += new System.EventHandler(this.btnHizliKategori_Click);
@@ -707,7 +711,7 @@
             this.btnHizliKategori1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
             this.btnHizliKategori1.Name = "btnHizliKategori1";
             this.btnHizliKategori1.Size = new System.Drawing.Size(211, 49);
-            this.btnHizliKategori1.TabIndex = 25;
+            this.btnHizliKategori1.TabIndex = 44;
             this.btnHizliKategori1.Text = "btnHizliKategori";
             this.btnHizliKategori1.UseVisualStyleBackColor = false;
             this.btnHizliKategori1.Click += new System.EventHandler(this.btnHizliKategori_Click);
@@ -724,7 +728,7 @@
             this.btnHizli25.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli25.Name = "btnHizli25";
             this.btnHizli25.Size = new System.Drawing.Size(212, 100);
-            this.btnHizli25.TabIndex = 24;
+            this.btnHizli25.TabIndex = 43;
             this.btnHizli25.Text = "btnHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
             this.btnHizli25.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -743,7 +747,7 @@
             this.btnHizli24.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli24.Name = "btnHizli24";
             this.btnHizli24.Size = new System.Drawing.Size(211, 100);
-            this.btnHizli24.TabIndex = 23;
+            this.btnHizli24.TabIndex = 42;
             this.btnHizli24.Text = "btnHizli";
             this.btnHizli24.UseVisualStyleBackColor = false;
             this.btnHizli24.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -762,7 +766,7 @@
             this.btnHizli23.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli23.Name = "btnHizli23";
             this.btnHizli23.Size = new System.Drawing.Size(211, 100);
-            this.btnHizli23.TabIndex = 22;
+            this.btnHizli23.TabIndex = 41;
             this.btnHizli23.Text = "btnHizli";
             this.btnHizli23.UseVisualStyleBackColor = false;
             this.btnHizli23.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -781,7 +785,7 @@
             this.btnHizli22.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli22.Name = "btnHizli22";
             this.btnHizli22.Size = new System.Drawing.Size(211, 100);
-            this.btnHizli22.TabIndex = 21;
+            this.btnHizli22.TabIndex = 40;
             this.btnHizli22.Text = "btnHizli";
             this.btnHizli22.UseVisualStyleBackColor = false;
             this.btnHizli22.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -800,7 +804,7 @@
             this.btnHizli21.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli21.Name = "btnHizli21";
             this.btnHizli21.Size = new System.Drawing.Size(211, 100);
-            this.btnHizli21.TabIndex = 20;
+            this.btnHizli21.TabIndex = 39;
             this.btnHizli21.Text = "btnHizli";
             this.btnHizli21.UseVisualStyleBackColor = false;
             this.btnHizli21.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -819,7 +823,7 @@
             this.btnHizli20.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli20.Name = "btnHizli20";
             this.btnHizli20.Size = new System.Drawing.Size(212, 96);
-            this.btnHizli20.TabIndex = 19;
+            this.btnHizli20.TabIndex = 38;
             this.btnHizli20.Text = "btnHizli";
             this.btnHizli20.UseVisualStyleBackColor = false;
             this.btnHizli20.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -838,7 +842,7 @@
             this.btnHizli19.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli19.Name = "btnHizli19";
             this.btnHizli19.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli19.TabIndex = 18;
+            this.btnHizli19.TabIndex = 37;
             this.btnHizli19.Text = "btnHizli";
             this.btnHizli19.UseVisualStyleBackColor = false;
             this.btnHizli19.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -857,7 +861,7 @@
             this.btnHizli18.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli18.Name = "btnHizli18";
             this.btnHizli18.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli18.TabIndex = 17;
+            this.btnHizli18.TabIndex = 36;
             this.btnHizli18.Text = "btnHizli";
             this.btnHizli18.UseVisualStyleBackColor = false;
             this.btnHizli18.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -876,7 +880,7 @@
             this.btnHizli17.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli17.Name = "btnHizli17";
             this.btnHizli17.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli17.TabIndex = 16;
+            this.btnHizli17.TabIndex = 35;
             this.btnHizli17.Text = "btnHizli";
             this.btnHizli17.UseVisualStyleBackColor = false;
             this.btnHizli17.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -895,7 +899,7 @@
             this.btnHizli16.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli16.Name = "btnHizli16";
             this.btnHizli16.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli16.TabIndex = 15;
+            this.btnHizli16.TabIndex = 34;
             this.btnHizli16.Text = "btnHizli";
             this.btnHizli16.UseVisualStyleBackColor = false;
             this.btnHizli16.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -914,7 +918,7 @@
             this.btnHizli15.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli15.Name = "btnHizli15";
             this.btnHizli15.Size = new System.Drawing.Size(212, 96);
-            this.btnHizli15.TabIndex = 14;
+            this.btnHizli15.TabIndex = 33;
             this.btnHizli15.Text = "btnHizli";
             this.btnHizli15.UseVisualStyleBackColor = false;
             this.btnHizli15.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -933,7 +937,7 @@
             this.btnHizli14.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli14.Name = "btnHizli14";
             this.btnHizli14.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli14.TabIndex = 13;
+            this.btnHizli14.TabIndex = 32;
             this.btnHizli14.Text = "btnHizli";
             this.btnHizli14.UseVisualStyleBackColor = false;
             this.btnHizli14.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -952,7 +956,7 @@
             this.btnHizli13.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli13.Name = "btnHizli13";
             this.btnHizli13.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli13.TabIndex = 12;
+            this.btnHizli13.TabIndex = 31;
             this.btnHizli13.Text = "btnHizli";
             this.btnHizli13.UseVisualStyleBackColor = false;
             this.btnHizli13.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -971,7 +975,7 @@
             this.btnHizli12.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli12.Name = "btnHizli12";
             this.btnHizli12.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli12.TabIndex = 11;
+            this.btnHizli12.TabIndex = 30;
             this.btnHizli12.Text = "btnHizli";
             this.btnHizli12.UseVisualStyleBackColor = false;
             this.btnHizli12.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -990,7 +994,7 @@
             this.btnHizli11.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli11.Name = "btnHizli11";
             this.btnHizli11.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli11.TabIndex = 10;
+            this.btnHizli11.TabIndex = 29;
             this.btnHizli11.Text = "btnHizli";
             this.btnHizli11.UseVisualStyleBackColor = false;
             this.btnHizli11.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1009,7 +1013,7 @@
             this.btnHizli10.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli10.Name = "btnHizli10";
             this.btnHizli10.Size = new System.Drawing.Size(212, 96);
-            this.btnHizli10.TabIndex = 9;
+            this.btnHizli10.TabIndex = 28;
             this.btnHizli10.Text = "btnHizli";
             this.btnHizli10.UseVisualStyleBackColor = false;
             this.btnHizli10.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1028,7 +1032,7 @@
             this.btnHizli9.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli9.Name = "btnHizli9";
             this.btnHizli9.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli9.TabIndex = 8;
+            this.btnHizli9.TabIndex = 27;
             this.btnHizli9.Text = "btnHizli";
             this.btnHizli9.UseVisualStyleBackColor = false;
             this.btnHizli9.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1047,7 +1051,7 @@
             this.btnHizli8.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli8.Name = "btnHizli8";
             this.btnHizli8.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli8.TabIndex = 7;
+            this.btnHizli8.TabIndex = 26;
             this.btnHizli8.Text = "btnHizli";
             this.btnHizli8.UseVisualStyleBackColor = false;
             this.btnHizli8.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1066,7 +1070,7 @@
             this.btnHizli7.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli7.Name = "btnHizli7";
             this.btnHizli7.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli7.TabIndex = 6;
+            this.btnHizli7.TabIndex = 25;
             this.btnHizli7.Text = "btnHizli";
             this.btnHizli7.UseVisualStyleBackColor = false;
             this.btnHizli7.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1085,7 +1089,7 @@
             this.btnHizli6.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli6.Name = "btnHizli6";
             this.btnHizli6.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli6.TabIndex = 5;
+            this.btnHizli6.TabIndex = 24;
             this.btnHizli6.Text = "btnHizli";
             this.btnHizli6.UseVisualStyleBackColor = false;
             this.btnHizli6.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1104,7 +1108,7 @@
             this.btnHizli5.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli5.Name = "btnHizli5";
             this.btnHizli5.Size = new System.Drawing.Size(212, 96);
-            this.btnHizli5.TabIndex = 4;
+            this.btnHizli5.TabIndex = 23;
             this.btnHizli5.Text = "btnHizli";
             this.btnHizli5.UseVisualStyleBackColor = false;
             this.btnHizli5.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1123,7 +1127,7 @@
             this.btnHizli4.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli4.Name = "btnHizli4";
             this.btnHizli4.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli4.TabIndex = 3;
+            this.btnHizli4.TabIndex = 22;
             this.btnHizli4.Text = "btnHizli";
             this.btnHizli4.UseVisualStyleBackColor = false;
             this.btnHizli4.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1142,7 +1146,7 @@
             this.btnHizli3.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli3.Name = "btnHizli3";
             this.btnHizli3.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli3.TabIndex = 2;
+            this.btnHizli3.TabIndex = 21;
             this.btnHizli3.Text = "btnHizli";
             this.btnHizli3.UseVisualStyleBackColor = false;
             this.btnHizli3.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1161,7 +1165,7 @@
             this.btnHizli2.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli2.Name = "btnHizli2";
             this.btnHizli2.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli2.TabIndex = 1;
+            this.btnHizli2.TabIndex = 20;
             this.btnHizli2.Text = "btnHizli";
             this.btnHizli2.UseVisualStyleBackColor = false;
             this.btnHizli2.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1180,7 +1184,7 @@
             this.btnHizli1.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli1.Name = "btnHizli1";
             this.btnHizli1.Size = new System.Drawing.Size(211, 96);
-            this.btnHizli1.TabIndex = 0;
+            this.btnHizli1.TabIndex = 19;
             this.btnHizli1.Text = "btnHizli";
             this.btnHizli1.UseVisualStyleBackColor = false;
             this.btnHizli1.Click += new System.EventHandler(this.hizliUrunEkle);
@@ -1240,6 +1244,7 @@
             this.btnHFiyat5.Name = "btnHFiyat5";
             this.btnHFiyat5.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat5.TabIndex = 4;
+            this.btnHFiyat5.TabStop = false;
             this.btnHFiyat5.Text = "btnHFiyat";
             this.btnHFiyat5.UseVisualStyleBackColor = false;
             this.btnHFiyat5.Click += new System.EventHandler(this.hizliFiyatEkle);
@@ -1257,6 +1262,7 @@
             this.btnHFiyat4.Name = "btnHFiyat4";
             this.btnHFiyat4.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat4.TabIndex = 3;
+            this.btnHFiyat4.TabStop = false;
             this.btnHFiyat4.Text = "btnHFiyat";
             this.btnHFiyat4.UseVisualStyleBackColor = false;
             this.btnHFiyat4.Click += new System.EventHandler(this.hizliFiyatEkle);
@@ -1274,6 +1280,7 @@
             this.btnHFiyat3.Name = "btnHFiyat3";
             this.btnHFiyat3.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat3.TabIndex = 2;
+            this.btnHFiyat3.TabStop = false;
             this.btnHFiyat3.Text = "btnHFiyat";
             this.btnHFiyat3.UseVisualStyleBackColor = false;
             this.btnHFiyat3.Click += new System.EventHandler(this.hizliFiyatEkle);
@@ -1291,6 +1298,7 @@
             this.btnHFiyat2.Name = "btnHFiyat2";
             this.btnHFiyat2.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat2.TabIndex = 1;
+            this.btnHFiyat2.TabStop = false;
             this.btnHFiyat2.Text = "btnHFiyat";
             this.btnHFiyat2.UseVisualStyleBackColor = false;
             this.btnHFiyat2.Click += new System.EventHandler(this.hizliFiyatEkle);
@@ -1308,6 +1316,7 @@
             this.btnHFiyat1.Name = "btnHFiyat1";
             this.btnHFiyat1.Size = new System.Drawing.Size(207, 67);
             this.btnHFiyat1.TabIndex = 0;
+            this.btnHFiyat1.TabStop = false;
             this.btnHFiyat1.Text = "btnHFiyat";
             this.btnHFiyat1.UseVisualStyleBackColor = false;
             this.btnHFiyat1.Click += new System.EventHandler(this.hizliFiyatEkle);
@@ -1371,6 +1380,7 @@
             this.btnNumVirgul.Name = "btnNumVirgul";
             this.btnNumVirgul.Size = new System.Drawing.Size(140, 78);
             this.btnNumVirgul.TabIndex = 12;
+            this.btnNumVirgul.TabStop = false;
             this.btnNumVirgul.Text = ",";
             this.btnNumVirgul.UseVisualStyleBackColor = false;
             this.btnNumVirgul.Click += new System.EventHandler(this.numClick);
@@ -1388,6 +1398,7 @@
             this.btnNum0.Name = "btnNum0";
             this.btnNum0.Size = new System.Drawing.Size(140, 78);
             this.btnNum0.TabIndex = 11;
+            this.btnNum0.TabStop = false;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = false;
             this.btnNum0.Click += new System.EventHandler(this.numClick);
@@ -1405,6 +1416,7 @@
             this.btnNumBack.Name = "btnNumBack";
             this.btnNumBack.Size = new System.Drawing.Size(140, 78);
             this.btnNumBack.TabIndex = 10;
+            this.btnNumBack.TabStop = false;
             this.btnNumBack.Text = "<";
             this.btnNumBack.UseVisualStyleBackColor = false;
             this.btnNumBack.Click += new System.EventHandler(this.numClick);
@@ -1422,6 +1434,7 @@
             this.btnNum9.Name = "btnNum9";
             this.btnNum9.Size = new System.Drawing.Size(140, 75);
             this.btnNum9.TabIndex = 9;
+            this.btnNum9.TabStop = false;
             this.btnNum9.Text = "9";
             this.btnNum9.UseVisualStyleBackColor = false;
             this.btnNum9.Click += new System.EventHandler(this.numClick);
@@ -1439,6 +1452,7 @@
             this.btnNum8.Name = "btnNum8";
             this.btnNum8.Size = new System.Drawing.Size(140, 75);
             this.btnNum8.TabIndex = 8;
+            this.btnNum8.TabStop = false;
             this.btnNum8.Text = "8";
             this.btnNum8.UseVisualStyleBackColor = false;
             this.btnNum8.Click += new System.EventHandler(this.numClick);
@@ -1456,6 +1470,7 @@
             this.btnNum7.Name = "btnNum7";
             this.btnNum7.Size = new System.Drawing.Size(140, 75);
             this.btnNum7.TabIndex = 7;
+            this.btnNum7.TabStop = false;
             this.btnNum7.Text = "7";
             this.btnNum7.UseVisualStyleBackColor = false;
             this.btnNum7.Click += new System.EventHandler(this.numClick);
@@ -1473,6 +1488,7 @@
             this.btnNum6.Name = "btnNum6";
             this.btnNum6.Size = new System.Drawing.Size(140, 75);
             this.btnNum6.TabIndex = 6;
+            this.btnNum6.TabStop = false;
             this.btnNum6.Text = "6";
             this.btnNum6.UseVisualStyleBackColor = false;
             this.btnNum6.Click += new System.EventHandler(this.numClick);
@@ -1490,6 +1506,7 @@
             this.btnNum5.Name = "btnNum5";
             this.btnNum5.Size = new System.Drawing.Size(140, 75);
             this.btnNum5.TabIndex = 5;
+            this.btnNum5.TabStop = false;
             this.btnNum5.Text = "5";
             this.btnNum5.UseVisualStyleBackColor = false;
             this.btnNum5.Click += new System.EventHandler(this.numClick);
@@ -1507,6 +1524,7 @@
             this.btnNum4.Name = "btnNum4";
             this.btnNum4.Size = new System.Drawing.Size(140, 75);
             this.btnNum4.TabIndex = 4;
+            this.btnNum4.TabStop = false;
             this.btnNum4.Text = "4";
             this.btnNum4.UseVisualStyleBackColor = false;
             this.btnNum4.Click += new System.EventHandler(this.numClick);
@@ -1524,6 +1542,7 @@
             this.btnNum3.Name = "btnNum3";
             this.btnNum3.Size = new System.Drawing.Size(140, 75);
             this.btnNum3.TabIndex = 3;
+            this.btnNum3.TabStop = false;
             this.btnNum3.Text = "3";
             this.btnNum3.UseVisualStyleBackColor = false;
             this.btnNum3.Click += new System.EventHandler(this.numClick);
@@ -1541,6 +1560,7 @@
             this.btnNum2.Name = "btnNum2";
             this.btnNum2.Size = new System.Drawing.Size(140, 75);
             this.btnNum2.TabIndex = 2;
+            this.btnNum2.TabStop = false;
             this.btnNum2.Text = "2";
             this.btnNum2.UseVisualStyleBackColor = false;
             this.btnNum2.Click += new System.EventHandler(this.numClick);
@@ -1558,6 +1578,7 @@
             this.btnNum1.Name = "btnNum1";
             this.btnNum1.Size = new System.Drawing.Size(140, 75);
             this.btnNum1.TabIndex = 1;
+            this.btnNum1.TabStop = false;
             this.btnNum1.Text = "1";
             this.btnNum1.UseVisualStyleBackColor = false;
             this.btnNum1.Click += new System.EventHandler(this.numClick);
@@ -1571,7 +1592,7 @@
             this.txtNum.Margin = new System.Windows.Forms.Padding(1);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(424, 36);
-            this.txtNum.TabIndex = 1;
+            this.txtNum.TabIndex = 7;
             // 
             // tableLayoutPanel9
             // 
@@ -1610,7 +1631,7 @@
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(210, 85);
-            this.btnTemizle.TabIndex = 8;
+            this.btnTemizle.TabIndex = 18;
             this.btnTemizle.Text = "Temizle\r\n(F3)";
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
@@ -1627,7 +1648,7 @@
             this.btnMiktar.Margin = new System.Windows.Forms.Padding(1);
             this.btnMiktar.Name = "btnMiktar";
             this.btnMiktar.Size = new System.Drawing.Size(209, 85);
-            this.btnMiktar.TabIndex = 7;
+            this.btnMiktar.TabIndex = 14;
             this.btnMiktar.Text = "Miktar / Adet";
             this.btnMiktar.UseVisualStyleBackColor = false;
             this.btnMiktar.Click += new System.EventHandler(this.btnMiktar_Click);
@@ -1644,7 +1665,7 @@
             this.btnFisYazdir.Margin = new System.Windows.Forms.Padding(1);
             this.btnFisYazdir.Name = "btnFisYazdir";
             this.btnFisYazdir.Size = new System.Drawing.Size(210, 84);
-            this.btnFisYazdir.TabIndex = 6;
+            this.btnFisYazdir.TabIndex = 17;
             this.btnFisYazdir.Text = "Fiş Yazdır\r\n(F2)";
             this.btnFisYazdir.UseVisualStyleBackColor = false;
             this.btnFisYazdir.Click += new System.EventHandler(this.btnFisYazdir_Click);
@@ -1661,7 +1682,7 @@
             this.btnOdenen.Margin = new System.Windows.Forms.Padding(1);
             this.btnOdenen.Name = "btnOdenen";
             this.btnOdenen.Size = new System.Drawing.Size(209, 84);
-            this.btnOdenen.TabIndex = 5;
+            this.btnOdenen.TabIndex = 13;
             this.btnOdenen.Text = "Ödenen";
             this.btnOdenen.UseVisualStyleBackColor = false;
             this.btnOdenen.Click += new System.EventHandler(this.btnOdenen_Click);
@@ -1678,7 +1699,7 @@
             this.btnIade.Margin = new System.Windows.Forms.Padding(1);
             this.btnIade.Name = "btnIade";
             this.btnIade.Size = new System.Drawing.Size(210, 84);
-            this.btnIade.TabIndex = 4;
+            this.btnIade.TabIndex = 16;
             this.btnIade.Text = "İade İşlemi\r\n(F1)";
             this.btnIade.UseVisualStyleBackColor = false;
             this.btnIade.Click += new System.EventHandler(this.btnIade_Click);
@@ -1695,7 +1716,7 @@
             this.btnBarkod.Margin = new System.Windows.Forms.Padding(1);
             this.btnBarkod.Name = "btnBarkod";
             this.btnBarkod.Size = new System.Drawing.Size(209, 84);
-            this.btnBarkod.TabIndex = 3;
+            this.btnBarkod.TabIndex = 12;
             this.btnBarkod.Text = "Barkod";
             this.btnBarkod.UseVisualStyleBackColor = false;
             this.btnBarkod.Click += new System.EventHandler(this.btnBarkod_Click);
@@ -1712,7 +1733,7 @@
             this.btnKullaniciDegistir.Margin = new System.Windows.Forms.Padding(1);
             this.btnKullaniciDegistir.Name = "btnKullaniciDegistir";
             this.btnKullaniciDegistir.Size = new System.Drawing.Size(210, 84);
-            this.btnKullaniciDegistir.TabIndex = 2;
+            this.btnKullaniciDegistir.TabIndex = 15;
             this.btnKullaniciDegistir.Text = "Kullanıcı Değiştir";
             this.btnKullaniciDegistir.UseVisualStyleBackColor = false;
             this.btnKullaniciDegistir.Click += new System.EventHandler(this.btnKullaniciDegistir_Click);
@@ -1729,7 +1750,7 @@
             this.btnDigerUrun.Margin = new System.Windows.Forms.Padding(1);
             this.btnDigerUrun.Name = "btnDigerUrun";
             this.btnDigerUrun.Size = new System.Drawing.Size(209, 84);
-            this.btnDigerUrun.TabIndex = 1;
+            this.btnDigerUrun.TabIndex = 11;
             this.btnDigerUrun.Text = "Diğer Ürün";
             this.btnDigerUrun.UseVisualStyleBackColor = false;
             this.btnDigerUrun.Click += new System.EventHandler(this.btnDigerUrun_Click);
@@ -1758,7 +1779,8 @@
             this.btnBeklet2.Name = "btnBeklet2";
             this.btnBeklet2.Padding = new System.Windows.Forms.Padding(2);
             this.btnBeklet2.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet2.TabIndex = 17;
+            this.btnBeklet2.TabIndex = 50;
+            this.btnBeklet2.TabStop = false;
             this.btnBeklet2.Text = "İŞLEM BEKLET";
             this.btnBeklet2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBeklet2.UseVisualStyleBackColor = false;
@@ -1779,7 +1801,8 @@
             this.btnBeklet.Name = "btnBeklet";
             this.btnBeklet.Padding = new System.Windows.Forms.Padding(2);
             this.btnBeklet.Size = new System.Drawing.Size(190, 44);
-            this.btnBeklet.TabIndex = 16;
+            this.btnBeklet.TabIndex = 49;
+            this.btnBeklet.TabStop = false;
             this.btnBeklet.Text = "İŞLEM BEKLET";
             this.btnBeklet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBeklet.UseVisualStyleBackColor = false;
@@ -1827,7 +1850,7 @@
             this.btnVeresiye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
             this.btnVeresiye.Name = "btnVeresiye";
             this.btnVeresiye.Size = new System.Drawing.Size(154, 221);
-            this.btnVeresiye.TabIndex = 4;
+            this.btnVeresiye.TabIndex = 6;
             this.btnVeresiye.Text = "VERESİYE\r\n(F9)";
             this.btnVeresiye.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnVeresiye.UseVisualStyleBackColor = false;
@@ -1846,7 +1869,7 @@
             this.btnKartNakit.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
             this.btnKartNakit.Name = "btnKartNakit";
             this.btnKartNakit.Size = new System.Drawing.Size(156, 221);
-            this.btnKartNakit.TabIndex = 2;
+            this.btnKartNakit.TabIndex = 5;
             this.btnKartNakit.Text = " KART + NAKİT\r\n(F10)";
             this.btnKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnKartNakit.UseVisualStyleBackColor = false;
@@ -1865,7 +1888,7 @@
             this.btnKart.Margin = new System.Windows.Forms.Padding(2, 2, 0, 1);
             this.btnKart.Name = "btnKart";
             this.btnKart.Size = new System.Drawing.Size(156, 221);
-            this.btnKart.TabIndex = 1;
+            this.btnKart.TabIndex = 4;
             this.btnKart.Text = "KREDİ KARTI \r\n(F11)";
             this.btnKart.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnKart.UseVisualStyleBackColor = false;
@@ -1884,7 +1907,7 @@
             this.btnNakit.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
             this.btnNakit.Name = "btnNakit";
             this.btnNakit.Size = new System.Drawing.Size(157, 221);
-            this.btnNakit.TabIndex = 0;
+            this.btnNakit.TabIndex = 3;
             this.btnNakit.Text = "NAKİT\r\n(F12)";
             this.btnNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnNakit.UseVisualStyleBackColor = false;
