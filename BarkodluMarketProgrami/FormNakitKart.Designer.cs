@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNakitKart));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtNumarator = new System.Windows.Forms.TextBox();
             this.lblNakitMiktar = new System.Windows.Forms.Label();
@@ -373,6 +374,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNakitKart";
             this.Text = "Nakit Tutarı";
             this.Load += new System.EventHandler(this.NakitKartForm_Load);

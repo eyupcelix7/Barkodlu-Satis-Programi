@@ -164,5 +164,13 @@ namespace BarkodluMarketProgrami
             fVRPD.kulId = Convert.ToInt32(gridSonucListesi.Rows[e.RowIndex].Cells[2].Value);
             fVRPD.ShowDialog();
         }
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel excel = new Excel(gridSonucListesi, "Veresiye Rapor");
+        }
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            Pdf pdf = new Pdf(gridSonucListesi, "Veresiye Rapor");
+        }
     }
 }

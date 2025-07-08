@@ -30,9 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRaporDetay));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtGiderMi = new System.Windows.Forms.TextBox();
             this.txtGelirMi = new System.Windows.Forms.TextBox();
             this.txtKullanici = new System.Windows.Forms.TextBox();
@@ -54,13 +54,14 @@
             this.lblNakit = new System.Windows.Forms.Label();
             this.lblIadeMi = new System.Windows.Forms.Label();
             this.lblIslemId = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gridUrunListesi = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAlisFiyatToplam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNakit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKart)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,17 +108,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tekli İşlem";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.gridUrunListesi);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(824, 504);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tüm İşlem";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtGiderMi
             // 
@@ -351,6 +341,17 @@
             this.lblIslemId.TabIndex = 72;
             this.lblIslemId.Text = "# Numaralı İşlem Özeti";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.gridUrunListesi);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(824, 504);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Tüm İşlem";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // gridUrunListesi
             // 
             this.gridUrunListesi.AllowUserToAddRows = false;
@@ -400,6 +401,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 537);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRaporDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rapor Detay";
@@ -407,10 +409,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudAlisFiyatToplam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNakit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKart)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunListesi)).EndInit();
             this.ResumeLayout(false);
 

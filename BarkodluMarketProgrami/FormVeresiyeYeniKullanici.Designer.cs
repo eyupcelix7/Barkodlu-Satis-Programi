@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVeresiyeYeniKullanici));
             this.lblKasiyer = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             this.Controls.Add(this.lblTelNo);
             this.Controls.Add(this.txtAdSoyad);
             this.Controls.Add(this.lblAdSoyad);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVeresiyeYeniKullanici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Kullanıcı Oluştur";

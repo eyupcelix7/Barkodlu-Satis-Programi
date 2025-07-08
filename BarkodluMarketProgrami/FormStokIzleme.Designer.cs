@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStokIzleme));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.cbxTumZamanlar = new System.Windows.Forms.CheckBox();
@@ -48,16 +49,16 @@
             this.rdbTumu = new System.Windows.Forms.RadioButton();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnAra = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.lblKasiyer = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
+            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.nudBulunanUrunSayisi = new System.Windows.Forms.NumericUpDown();
             this.lblBulunanUrunSayisi = new System.Windows.Forms.Label();
             this.gridSonucListesi = new System.Windows.Forms.DataGridView();
-            this.btnTemizle = new System.Windows.Forms.Button();
-            this.btnAra = new System.Windows.Forms.Button();
-            this.btnPdf = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -325,6 +326,40 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(305, 107);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.ForeColor = System.Drawing.Color.White;
+            this.btnTemizle.Image = global::BarkodluMarketProgrami.Properties.Resources.trash;
+            this.btnTemizle.Location = new System.Drawing.Point(153, 1);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(151, 105);
+            this.btnTemizle.TabIndex = 11;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // btnAra
+            // 
+            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnAra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
+            this.btnAra.Location = new System.Drawing.Point(1, 1);
+            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(150, 105);
+            this.btnAra.TabIndex = 10;
+            this.btnAra.Text = "Ara";
+            this.btnAra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
+            // 
             // splitContainer3
             // 
             this.splitContainer3.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -373,6 +408,40 @@
             this.lblKullanici.Size = new System.Drawing.Size(71, 16);
             this.lblKullanici.TabIndex = 76;
             this.lblKullanici.Text = "eyupcelix7";
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
+            this.btnPdf.Location = new System.Drawing.Point(1439, 20);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(88, 74);
+            this.btnPdf.TabIndex = 75;
+            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
+            this.btnExcel.Location = new System.Drawing.Point(1339, 20);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(88, 74);
+            this.btnExcel.TabIndex = 74;
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // nudBulunanUrunSayisi
             // 
@@ -437,74 +506,6 @@
             this.gridSonucListesi.Size = new System.Drawing.Size(1551, 789);
             this.gridSonucListesi.TabIndex = 3;
             // 
-            // btnTemizle
-            // 
-            this.btnTemizle.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.ForeColor = System.Drawing.Color.White;
-            this.btnTemizle.Image = global::BarkodluMarketProgrami.Properties.Resources.trash;
-            this.btnTemizle.Location = new System.Drawing.Point(153, 1);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(1);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(151, 105);
-            this.btnTemizle.TabIndex = 11;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTemizle.UseVisualStyleBackColor = false;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
-            // 
-            // btnAra
-            // 
-            this.btnAra.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnAra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.ForeColor = System.Drawing.Color.White;
-            this.btnAra.Image = global::BarkodluMarketProgrami.Properties.Resources.searchWhite;
-            this.btnAra.Location = new System.Drawing.Point(1, 1);
-            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(150, 105);
-            this.btnAra.TabIndex = 10;
-            this.btnAra.Text = "Ara";
-            this.btnAra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAra.UseVisualStyleBackColor = false;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
-            // 
-            // btnPdf
-            // 
-            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.BackColor = System.Drawing.Color.DarkRed;
-            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPdf.ForeColor = System.Drawing.Color.White;
-            this.btnPdf.Image = global::BarkodluMarketProgrami.Properties.Resources.pdf;
-            this.btnPdf.Location = new System.Drawing.Point(1439, 20);
-            this.btnPdf.Margin = new System.Windows.Forms.Padding(1);
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Size = new System.Drawing.Size(88, 74);
-            this.btnPdf.TabIndex = 75;
-            this.btnPdf.UseVisualStyleBackColor = false;
-            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(124)))), ((int)(((byte)(65)))));
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Image = global::BarkodluMarketProgrami.Properties.Resources.excel;
-            this.btnExcel.Location = new System.Drawing.Point(1339, 20);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(88, 74);
-            this.btnExcel.TabIndex = 74;
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
             // FormStokIzleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +513,7 @@
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1860, 896);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormStokIzleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok İzleme";

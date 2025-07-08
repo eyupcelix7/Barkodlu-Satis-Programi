@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.lblFirmaAdi = new System.Windows.Forms.Label();
             this.txtKulKod = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.txtKulKod.Name = "txtKulKod";
             this.txtKulKod.Size = new System.Drawing.Size(157, 26);
             this.txtKulKod.TabIndex = 3;
-            this.txtKulKod.Text = "171";
             // 
             // label2
             // 
@@ -94,7 +94,6 @@
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(157, 26);
             this.txtSifre.TabIndex = 5;
-            this.txtSifre.Text = "eyup.123";
             // 
             // label4
             // 
@@ -159,6 +158,7 @@
             this.Controls.Add(this.txtKulKod);
             this.Controls.Add(this.lblFirmaAdi);
             this.Controls.Add(this.btnGirisYap);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(710, 325);
             this.MinimumSize = new System.Drawing.Size(710, 325);
             this.Name = "FormLogin";

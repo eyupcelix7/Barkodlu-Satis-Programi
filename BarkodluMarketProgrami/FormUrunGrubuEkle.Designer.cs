@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUrunGrubuEkle));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtGrupAdi = new System.Windows.Forms.TextBox();
             this.lblGrupAdi = new System.Windows.Forms.Label();
@@ -181,6 +182,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(491, 537);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(507, 576);
             this.MinimumSize = new System.Drawing.Size(507, 576);
             this.Name = "FormUrunGrubuEkle";

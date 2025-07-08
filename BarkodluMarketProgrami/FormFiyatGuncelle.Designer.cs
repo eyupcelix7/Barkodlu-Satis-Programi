@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFiyatGuncelle));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblKasiyer = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
@@ -87,8 +88,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.lblUrunAdiSonuc);
             this.splitContainer1.Panel2.Controls.Add(this.txtBarkodSonuc);
             this.splitContainer1.Panel2.Controls.Add(this.lblBarkodSonuc);
-            this.splitContainer1.Size = new System.Drawing.Size(491, 537);
-            this.splitContainer1.SplitterDistance = 121;
+            this.splitContainer1.Size = new System.Drawing.Size(491, 485);
+            this.splitContainer1.SplitterDistance = 109;
             this.splitContainer1.TabIndex = 1;
             // 
             // lblKasiyer
@@ -310,8 +311,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 537);
+            this.ClientSize = new System.Drawing.Size(491, 485);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormFiyatGuncelle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fiyat Güncelle";

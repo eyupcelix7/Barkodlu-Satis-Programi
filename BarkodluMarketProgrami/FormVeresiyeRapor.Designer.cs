@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVeresiyeRapor));
             this.dtpBitisTarihi = new System.Windows.Forms.DateTimePicker();
             this.lblBitisTarihi = new System.Windows.Forms.Label();
             this.nudTopOdVT = new System.Windows.Forms.NumericUpDown();
@@ -406,6 +407,7 @@
             this.btnPdf.Size = new System.Drawing.Size(100, 70);
             this.btnPdf.TabIndex = 115;
             this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // btnExcel
             // 
@@ -422,6 +424,7 @@
             this.btnExcel.Size = new System.Drawing.Size(100, 70);
             this.btnExcel.TabIndex = 114;
             this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnVeresiyeAl
             // 
@@ -507,6 +510,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 761);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVeresiyeRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veresiye Rapor";

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGiris));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblKasiyer = new System.Windows.Forms.Label();
-            this.lblKullanici = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnYedekYükle = new System.Windows.Forms.Button();
             this.btnKullaniciAyarlari = new System.Windows.Forms.Button();
@@ -43,6 +42,8 @@
             this.btnSatis = new System.Windows.Forms.Button();
             this.btnVeresiyeIslemleri = new System.Windows.Forms.Button();
             this.btnFiyatGuncelle = new System.Windows.Forms.Button();
+            this.lblKasiyer = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,30 +74,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(830, 554);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblKasiyer
-            // 
-            this.lblKasiyer.AutoSize = true;
-            this.lblKasiyer.BackColor = System.Drawing.Color.Black;
-            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKasiyer.ForeColor = System.Drawing.Color.White;
-            this.lblKasiyer.Location = new System.Drawing.Point(30, 20);
-            this.lblKasiyer.Name = "lblKasiyer";
-            this.lblKasiyer.Size = new System.Drawing.Size(74, 18);
-            this.lblKasiyer.TabIndex = 1;
-            this.lblKasiyer.Text = "Kasiyer: ";
-            // 
-            // lblKullanici
-            // 
-            this.lblKullanici.AutoSize = true;
-            this.lblKullanici.BackColor = System.Drawing.Color.Black;
-            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullanici.ForeColor = System.Drawing.Color.White;
-            this.lblKullanici.Location = new System.Drawing.Point(94, 22);
-            this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
-            this.lblKullanici.TabIndex = 2;
-            this.lblKullanici.Text = "eyupcelix7";
             // 
             // btnCikis
             // 
@@ -329,6 +306,30 @@
             this.btnFiyatGuncelle.UseVisualStyleBackColor = false;
             this.btnFiyatGuncelle.Click += new System.EventHandler(this.btnFiyatGuncelle_Click);
             // 
+            // lblKasiyer
+            // 
+            this.lblKasiyer.AutoSize = true;
+            this.lblKasiyer.BackColor = System.Drawing.Color.Black;
+            this.lblKasiyer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKasiyer.ForeColor = System.Drawing.Color.White;
+            this.lblKasiyer.Location = new System.Drawing.Point(30, 20);
+            this.lblKasiyer.Name = "lblKasiyer";
+            this.lblKasiyer.Size = new System.Drawing.Size(74, 18);
+            this.lblKasiyer.TabIndex = 1;
+            this.lblKasiyer.Text = "Kasiyer: ";
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.BackColor = System.Drawing.Color.Black;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKullanici.ForeColor = System.Drawing.Color.White;
+            this.lblKullanici.Location = new System.Drawing.Point(94, 22);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(71, 16);
+            this.lblKullanici.TabIndex = 2;
+            this.lblKullanici.Text = "eyupcelix7";
+            // 
             // FormGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +339,7 @@
             this.Controls.Add(this.lblKullanici);
             this.Controls.Add(this.lblKasiyer);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(833, 534);
             this.Name = "FormGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
